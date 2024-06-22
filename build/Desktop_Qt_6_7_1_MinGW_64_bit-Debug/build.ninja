@@ -334,7 +334,7 @@ build app/.qt/qml_imports/NavTool_build.cmake | ${cmake_ninja_workdir}app/.qt/qm
 #############################################
 # Phony custom command for app\CMakeFiles\NavTool_autogen_timestamp_deps
 
-build app/CMakeFiles/NavTool_autogen_timestamp_deps | ${cmake_ninja_workdir}app/CMakeFiles/NavTool_autogen_timestamp_deps: phony C$:/Qt/6.7.1/mingw_64/lib/libQt6Quick.a C$:/Qt/6.7.1/mingw_64/qml/FluentUI/fluentuiplugin.dll C$:/Qt/6.7.1/mingw_64/./bin/moc.exe || C$:/Qt/6.7.1/mingw_64/qml/FluentUI/fluentuiplugin.dll lib/FluentUI/fluentuiplugin_autogen lib/FluentUI/fluentuiplugin_autogen_timestamp_deps lib/FluentUI/fluentuiplugin_tooling
+build app/CMakeFiles/NavTool_autogen_timestamp_deps | ${cmake_ninja_workdir}app/CMakeFiles/NavTool_autogen_timestamp_deps: phony C$:/Qt/6.7.1/mingw_64/./bin/moc.exe C$:/Qt/6.7.1/mingw_64/lib/libQt6Quick.a C$:/Qt/6.7.1/mingw_64/qml/FluentUI/fluentuiplugin.dll || C$:/Qt/6.7.1/mingw_64/qml/FluentUI/fluentuiplugin.dll lib/FluentUI/fluentuiplugin_autogen lib/FluentUI/fluentuiplugin_autogen_timestamp_deps lib/FluentUI/fluentuiplugin_tooling
 
 
 #############################################

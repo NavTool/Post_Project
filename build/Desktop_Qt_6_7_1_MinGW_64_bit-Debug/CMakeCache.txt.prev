@@ -320,6 +320,12 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Build static library.
+FLUENTUI_BUILD_STATIC_LIB:BOOL=OFF
+
+//Path to FluentUI plugin
+FLUENTUI_QML_PLUGIN_DIRECTORY:PATH=
+
 //Value Computed by CMake
 NavTool_BINARY_DIR:STATIC=D:/Dev/NavTool/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/app
 
@@ -416,6 +422,15 @@ Vulkan_LIBRARY:FILEPATH=Vulkan_LIBRARY-NOTFOUND
 
 //Path to a program.
 WINDEPLOYQT_EXECUTABLE:FILEPATH=C:/Qt/6.7.1/mingw_64/bin/windeployqt.exe
+
+//Value Computed by CMake
+fluentuiplugin_BINARY_DIR:STATIC=D:/Dev/NavTool/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/lib/FluentUI
+
+//Value Computed by CMake
+fluentuiplugin_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+fluentuiplugin_SOURCE_DIR:STATIC=D:/Dev/NavTool/lib/FluentUI
 
 
 ########################
@@ -554,7 +569,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
