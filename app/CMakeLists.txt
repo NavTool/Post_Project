@@ -37,7 +37,7 @@ list(APPEND QRC_RESOURCES qml.qrc)
 set_property(SOURCE qml.qrc PROPERTY SKIP_AUTORCC ON)
 
 set(PROJECT_SOURCES
-    main.cpp
+    src/main.cpp
     ${QRC_RESOURCES}
 )
 
