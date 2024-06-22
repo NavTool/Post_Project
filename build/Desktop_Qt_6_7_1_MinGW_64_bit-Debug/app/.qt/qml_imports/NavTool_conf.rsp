@@ -1,0 +1,9 @@
+-rootPath
+D:/Dev/NavTool/app
+-cmake-output
+-output-file
+D:/Dev/NavTool/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/app/.qt/qml_imports/NavTool_conf.cmake
+-importPath
+D:/Dev/NavTool/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/app
+-importPath
+C:/Qt/6.7.1/mingw_64/./qml

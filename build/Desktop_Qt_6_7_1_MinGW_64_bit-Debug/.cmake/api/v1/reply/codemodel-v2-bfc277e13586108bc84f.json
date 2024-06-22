@@ -1,0 +1,288 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "app",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-app-Debug-7be1143b26999f494505.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "app",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						9,
+						18
+					]
+				},
+				{
+					"build" : "lib",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib-Debug-e9069484d90298468a11.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "lib"
+				},
+				{
+					"build" : "lib/FluentUI",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-lib.FluentUI-Debug-119100f8b2d88f9bd3b7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "lib/FluentUI",
+					"targetIndexes" : 
+					[
+						5,
+						6,
+						7,
+						8,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "NavTool",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						9,
+						18
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "fluentuiplugin",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						5,
+						6,
+						7,
+						8,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "NavTool::@5f5a17c01335469806cb",
+					"jsonFile" : "target-NavTool-Debug-808c994c0838da0ecdd1.json",
+					"name" : "NavTool",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "NavTool_autogen::@5f5a17c01335469806cb",
+					"jsonFile" : "target-NavTool_autogen-Debug-bbb1df66a49dbe99fdd8.json",
+					"name" : "NavTool_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "NavTool_autogen_timestamp_deps::@5f5a17c01335469806cb",
+					"jsonFile" : "target-NavTool_autogen_timestamp_deps-Debug-8abbc563943abe0b151b.json",
+					"name" : "NavTool_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "NavTool_qmlimportscan::@5f5a17c01335469806cb",
+					"jsonFile" : "target-NavTool_qmlimportscan-Debug-9ba4e1555a33182af6eb.json",
+					"name" : "NavTool_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Script-UpdateTranslations::@5f5a17c01335469806cb",
+					"jsonFile" : "target-Script-UpdateTranslations-Debug-c4fb79d8806374936a41.json",
+					"name" : "Script-UpdateTranslations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "all_qmllint::@654b02e3b42957e66273",
+					"jsonFile" : "target-all_qmllint-Debug-115ef1f738dbaf420dde.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "all_qmllint_json::@654b02e3b42957e66273",
+					"jsonFile" : "target-all_qmllint_json-Debug-d40051d189e4be479d4a.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "all_qmllint_module::@654b02e3b42957e66273",
+					"jsonFile" : "target-all_qmllint_module-Debug-caad9e0bbc5948bd58ff.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "all_qmltyperegistrations::@654b02e3b42957e66273",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-1da865df29fd97978912.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "big_resources_qml::@5f5a17c01335469806cb",
+					"jsonFile" : "target-big_resources_qml-Debug-2e983c2e2c650306a4ce.json",
+					"name" : "big_resources_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "fluentuiplugin::@654b02e3b42957e66273",
+					"jsonFile" : "target-fluentuiplugin-Debug-6c774963de6745aa0b1c.json",
+					"name" : "fluentuiplugin",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "fluentuiplugin_autogen::@654b02e3b42957e66273",
+					"jsonFile" : "target-fluentuiplugin_autogen-Debug-d9fc72a9c80a02704e1c.json",
+					"name" : "fluentuiplugin_autogen",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "fluentuiplugin_autogen_timestamp_deps::@654b02e3b42957e66273",
+					"jsonFile" : "target-fluentuiplugin_autogen_timestamp_deps-Debug-58431f0a1a7f986cdd11.json",
+					"name" : "fluentuiplugin_autogen_timestamp_deps",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "fluentuiplugin_qmllint::@654b02e3b42957e66273",
+					"jsonFile" : "target-fluentuiplugin_qmllint-Debug-70159665b287573fe54d.json",
+					"name" : "fluentuiplugin_qmllint",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "fluentuiplugin_qmllint_json::@654b02e3b42957e66273",
+					"jsonFile" : "target-fluentuiplugin_qmllint_json-Debug-652248a82823878cef65.json",
+					"name" : "fluentuiplugin_qmllint_json",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "fluentuiplugin_qmllint_module::@654b02e3b42957e66273",
+					"jsonFile" : "target-fluentuiplugin_qmllint_module-Debug-f70e6f23613fe26da25a.json",
+					"name" : "fluentuiplugin_qmllint_module",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "fluentuiplugin_qmltyperegistration::@654b02e3b42957e66273",
+					"jsonFile" : "target-fluentuiplugin_qmltyperegistration-Debug-d3a5cc65074d1137f78d.json",
+					"name" : "fluentuiplugin_qmltyperegistration",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "fluentuiplugin_tooling::@654b02e3b42957e66273",
+					"jsonFile" : "target-fluentuiplugin_tooling-Debug-f6aa491892870affcca7.json",
+					"name" : "fluentuiplugin_tooling",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "rcc_object_qml::@5f5a17c01335469806cb",
+					"jsonFile" : "target-rcc_object_qml-Debug-ed83f866fd8048b8103b.json",
+					"name" : "rcc_object_qml",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Dev/NavTool/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug",
+		"source" : "D:/Dev/NavTool"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

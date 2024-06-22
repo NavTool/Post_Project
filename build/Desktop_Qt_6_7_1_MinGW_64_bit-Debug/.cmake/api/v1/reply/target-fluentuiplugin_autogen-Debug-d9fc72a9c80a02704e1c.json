@@ -1,0 +1,79 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"lib/FluentUI/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 0,
+			"id" : "fluentuiplugin_tooling::@654b02e3b42957e66273"
+		},
+		{
+			"id" : "fluentuiplugin_autogen_timestamp_deps::@654b02e3b42957e66273"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "QtInternalTargets"
+	},
+	"id" : "fluentuiplugin_autogen::@654b02e3b42957e66273",
+	"isGeneratorProvided" : true,
+	"name" : "fluentuiplugin_autogen",
+	"paths" : 
+	{
+		"build" : "lib/FluentUI",
+		"source" : "lib/FluentUI"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1,
+				2
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/lib/FluentUI/CMakeFiles/fluentuiplugin_autogen",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/lib/FluentUI/CMakeFiles/fluentuiplugin_autogen.rule",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/lib/FluentUI/fluentuiplugin_autogen/timestamp.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}
