@@ -36,7 +36,34 @@ qt_add_big_resources(QRC_RESOURCES qml.qrc)
 list(APPEND QRC_RESOURCES qml.qrc)
 set_property(SOURCE qml.qrc PROPERTY SKIP_AUTORCC ON)
 
+include_directories(${PROJECT_NAME} ${CMAKE_BINARY_DIR})
+include_directories(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR})
+
 set(PROJECT_SOURCES
+    res/logo/icon.rc
+    src/app_dmp.h
+    src/AppInfo.cpp
+    src/AppInfo.h
+    src/singleton.h
+    src/stdafx.h
+    src/component/CircularReveal.cpp
+    src/component/CircularReveal.h
+    src/component/FileWatcher.cpp
+    src/component/FileWatcher.h
+    src/component/FpsItem.cpp
+    src/component/FpsItem.h
+    src/component/OpenGLItem.h
+    src/component/OpenGLItem.cpp
+    src/helper/InitializrHelper.h
+    src/helper/InitializrHelper.cpp
+    src/helper/Log.cpp
+    src/helper/Log.h
+    src/helper/Network.h
+    src/helper/Network.cpp
+    src/helper/SettingsHelper.cpp
+    src/helper/SettingsHelper.h
+    src/helper/TranslateHelper.cpp
+    src/helper/TranslateHelper.h
     src/main.cpp
     ${QRC_RESOURCES}
 )
