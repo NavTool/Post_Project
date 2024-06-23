@@ -5,7 +5,7 @@ import FluentUI 1.0
 
 QtObject{
 
-    property int displayMode: FluNavigationViewType.Compact
+    property int displayMode: FluNavigationViewType.Auto
     property string displayName: "NavTool"
     property string displayLogo: "qrc:res/logo/icon-6.png"
 

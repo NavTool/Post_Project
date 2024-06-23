@@ -41,10 +41,10 @@ FluObject{
 
 
     FluPaneItem{
-        title:qsTr("Settings")
+        title:qsTr("设置")
         menuDelegate: paneItemMenu
         icon:FluentIcons.Settings
-        url:"qrc:/qml/page/T_Settings.qml"
+        url:"qrc:/qml/page/SettingPage.qml"
         onTap:{
             navigationView.push(url)
         }

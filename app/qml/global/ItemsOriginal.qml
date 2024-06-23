@@ -18,13 +18,13 @@ FluObject{
     FluPaneItem{
         id:item_home
         count: 0
-        title: qsTr("Home")
+        title: qsTr("主页")
         menuDelegate: paneItemMenu
         infoBadge: FluBadge{
             count: item_home.count
         }
         icon: FluentIcons.Home
-        url: "qrc:/qml/page/T_Home.qml"
+        url: "qrc:/qml/page/Home_Main.qml"
         onTap: {
             if(navigationView.getCurrentUrl()){
                 item_home.count = 0
@@ -36,13 +36,13 @@ FluObject{
     FluPaneItem{
         id:item_nav_tool
         count: 0
-        title: qsTr("Nav Tool")
+        title: qsTr("通用工具")
         menuDelegate: paneItemMenu
         infoBadge: FluBadge{
             count: item_str_mult.count
         }
         icon: FluentIcons.OEM
-        url: "qrc:/module/nav_tool/DashboardPage.qml"
+        url: "qrc:/module/nav_tool/Home_Tool.qml"
         onTap: {
             if(navigationView.getCurrentUrl()){
                 item_str_mult.count = 0
@@ -54,13 +54,13 @@ FluObject{
     FluPaneItem{
         id:item_caster_service
         count: 0
-        title: qsTr("Caster Service")
+        title: qsTr("基站服务")
         menuDelegate: paneItemMenu
         infoBadge: FluBadge{
             count: item_caster_service.count
         }
         icon: FluentIcons.TapAndSend
-        url: "qrc:/module/caster_gui/DashboardPage.qml"
+        url: "qrc:/module/caster_gui/Home_Caster.qml"
         onTap: {
             if(navigationView.getCurrentUrl()){
                 item_caster_service.count = 0
@@ -71,20 +71,16 @@ FluObject{
 
 
 
-
-
-
-
     FluPaneItem{
         id:item_auth_gui
         count: 0
-        title: qsTr("User Management")
+        title: qsTr("用户管理")
         menuDelegate: paneItemMenu
         infoBadge: FluBadge{
             count: item_caster_service.count
         }
-        icon: FluentIcons.PassiveAuthentication
-        url: "qrc:/module/auth_gui/DashboardPage.qml"
+        icon: FluentIcons.ContactInfoMirrored
+        url: "qrc:/module/auth_gui/Home_Auth.qml"
         onTap: {
             if(navigationView.getCurrentUrl()){
                 item_caster_service.count = 0
@@ -96,13 +92,13 @@ FluObject{
     FluPaneItem{
         id:item_str_mult
         count: 0
-        title: qsTr("Stream Tool")
+        title: qsTr("数据流工具")
         menuDelegate: paneItemMenu
         infoBadge: FluBadge{
             count: item_str_mult.count
         }
         icon: FluentIcons.Sort
-        url: "qrc:/module/str_mult/DashboardPage.qml"
+        url: "qrc:/module/str_mult/Home_Strsvr.qml"
         onTap: {
             if(navigationView.getCurrentUrl()){
                 item_str_mult.count = 0
@@ -116,13 +112,13 @@ FluObject{
     FluPaneItem{
         id:item_ntrip_tool
         count: 0
-        title: qsTr("Test Tool")
+        title: qsTr("测试工具")
         menuDelegate: paneItemMenu
         infoBadge: FluBadge{
             count: item_caster_service.count
         }
         icon: FluentIcons.SpeedHigh
-        url: "qrc:/module/test_tool/DashboardPage.qml"
+        url: "qrc:/module/test_tool/Home_Test.qml"
         onTap: {
             if(navigationView.getCurrentUrl()){
                 item_caster_service.count = 0
