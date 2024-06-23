@@ -290,23 +290,23 @@ FluScrollablePage {
     }
 
     ExtraItem{
-        _icon:FluentIcons.Play
+        _icon:FluentIcons.Flow
         _text:qsTr("服务管理")
-        _text_extra:qsTr("启动和停止数据流服务")
+        _text_extra:qsTr("配置和管理各个数据流的状态")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 
     ExtraItem{
         _icon:FluentIcons.SubscriptionAdd
         _text:qsTr("添加数据流")
-        _text_extra:qsTr("查看、管理在线用户的状态和详细信息")
+        _text_extra:qsTr("添加一个新的实时数据流")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 
     ExtraItem{
         _icon:FluentIcons.AllApps
         _text:qsTr("管理数据流")
-        _text_extra:qsTr("查看、管理在线用户的状态和详细信息")
+        _text_extra:qsTr("查看、管理已添加的数据流配置信息")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 
@@ -320,21 +320,21 @@ FluScrollablePage {
     ExtraItem{
         _icon:FluentIcons.AreaChart
         _text:qsTr("状态统计")
-        _text_extra:qsTr("服务运行状态和统计信息")
+        _text_extra:qsTr("服务运行状态和各个数据流统计信息")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 
     ExtraItem{
         _icon:FluentIcons.Settings
         _text:qsTr("服务设置")
-        _text_extra:qsTr("连接、配置和管理Caster服务")
+        _text_extra:qsTr("连接、配置和管理Stream服务")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 
     ExtraItem{
         _icon:FluentIcons.Info
-        _text:qsTr("服务信息")
-        _text_extra:qsTr("软件版本、运行环境")
+        _text:qsTr("版本信息")
+        _text_extra:qsTr("模块版本、运行环境")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 

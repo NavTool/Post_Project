@@ -341,8 +341,8 @@ FluScrollablePage {
 
     ExtraItem{
         _icon:FluentIcons.Info
-        _text:qsTr("服务信息")
-        _text_extra:qsTr("软件版本、运行环境")
+        _text:qsTr("版本信息")
+        _text_extra:qsTr("模块版本、运行环境")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 

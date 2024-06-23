@@ -273,9 +273,30 @@ FluScrollablePage {
     }
 
     ExtraItem{
+        _icon:FluentIcons.DateTime
+        _text:qsTr("时间转换工具")
+        _text_extra:qsTr("不同时间系统间的时间互转")
+        _url:"qrc:/module/str_mult/MonitorPage.qml"
+    }
+
+    ExtraItem{
         _icon:FluentIcons.ChromeSwitch
         _text:qsTr("NMEA-0183 转换工具")
         _text_extra:qsTr("生成和转换GGA、GSV、RMC格式数据")
+        _url:"qrc:/module/str_mult/MonitorPage.qml"
+    }
+
+    ExtraItem{
+        _icon:FluentIcons.Filter
+        _text:qsTr("RTCM3 数据解析工具")
+        _text_extra:qsTr("读取和解析RTCM数据流")
+        _url:"qrc:/module/str_mult/MonitorPage.qml"
+    }
+
+    ExtraItem{
+        _icon: FluentIcons.AreaChart
+        _text:qsTr("Rinex 数据分析工具")
+        _text_extra:qsTr("读取Rinex文件并分析观测数据")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 
@@ -285,7 +306,6 @@ FluScrollablePage {
         _text_extra:qsTr("根据广播星历来计算指定位置的星空图")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
-
 
     ExtraItem{
         _icon:FluentIcons.Info

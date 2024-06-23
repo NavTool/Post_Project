@@ -175,12 +175,14 @@
     </message>
     <message>
         <location filename="module/auth_gui/Home_Auth.qml" line="344"/>
-        <source>服务信息</source>
+        <source>版本信息</source>
+        <oldsource>服务信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="module/auth_gui/Home_Auth.qml" line="345"/>
-        <source>软件版本、运行环境</source>
+        <source>模块版本、运行环境</source>
+        <oldsource>软件版本、运行环境</oldsource>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -271,7 +273,8 @@
     </message>
     <message>
         <location filename="module/caster_gui/Home_Caster.qml" line="336"/>
-        <source>服务信息</source>
+        <source>版本信息</source>
+        <oldsource>服务信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -339,12 +342,14 @@
     </message>
     <message>
         <location filename="module/post_proc/Home_Post.qml" line="308"/>
-        <source>软件信息</source>
+        <source>版本信息</source>
+        <oldsource>软件信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="module/post_proc/Home_Post.qml" line="309"/>
-        <source>软件版本、使用算法和依赖库</source>
+        <source>模块版本、使用算法和依赖库</source>
+        <oldsource>软件版本、使用算法和依赖库</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -385,8 +390,8 @@
     </message>
     <message>
         <location filename="module/str_mult/Home_Strsvr.qml" line="302"/>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="309"/>
-        <source>查看、管理在线用户的状态和详细信息</source>
+        <source>添加一个新的实时数据流</source>
+        <oldsource>查看、管理在线用户的状态和详细信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -396,12 +401,14 @@
     </message>
     <message>
         <location filename="module/str_mult/Home_Strsvr.qml" line="323"/>
-        <source>服务运行状态和统计信息</source>
+        <source>服务运行状态和各个数据流统计信息</source>
+        <oldsource>服务运行状态和统计信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="module/str_mult/Home_Strsvr.qml" line="295"/>
-        <source>启动和停止数据流服务</source>
+        <source>配置和管理各个数据流的状态</source>
+        <oldsource>启动和停止和配置数据流服务</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -412,6 +419,11 @@
     <message>
         <location filename="module/str_mult/Home_Strsvr.qml" line="308"/>
         <source>管理数据流</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="309"/>
+        <source>查看、管理已添加的数据流配置信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -431,17 +443,20 @@
     </message>
     <message>
         <location filename="module/str_mult/Home_Strsvr.qml" line="330"/>
-        <source>连接、配置和管理Caster服务</source>
+        <source>连接、配置和管理Stream服务</source>
+        <oldsource>连接、配置和管理Caster服务</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="module/str_mult/Home_Strsvr.qml" line="336"/>
-        <source>服务信息</source>
+        <source>版本信息</source>
+        <oldsource>服务信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="module/str_mult/Home_Strsvr.qml" line="337"/>
-        <source>软件版本、运行环境</source>
+        <source>模块版本、运行环境</source>
+        <oldsource>软件版本、运行环境</oldsource>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -470,6 +485,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="module/test_tool/Home_Test.qml" line="296"/>
+        <source>连通两个TCP端口，并进行数据互传</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="module/test_tool/Home_Test.qml" line="302"/>
         <source>Ntrip Server 压测工具</source>
         <translation type="unfinished"></translation>
@@ -481,28 +501,26 @@
     </message>
     <message>
         <location filename="module/test_tool/Home_Test.qml" line="303"/>
-        <source>查看、管理在线挂载点的状态和详细信息</source>
+        <source>模拟并创建若干个Ntrip Server挂载点连接</source>
+        <oldsource>模拟并创建若干个Ntrip Server挂载点</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="module/test_tool/Home_Test.qml" line="310"/>
-        <source>查看、管理在线用户的状态和详细信息</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/test_tool/Home_Test.qml" line="296"/>
-        <source>在地图上查看挂载点和用户</source>
+        <source>模拟并创建若干个Ntrip Client用户连接</source>
+        <oldsource>查看、管理在线用户的状态和详细信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="module/test_tool/Home_Test.qml" line="316"/>
-        <source>服务信息</source>
-        <oldsource>服务运行状态和统计信息</oldsource>
+        <source>版本信息</source>
+        <oldsource>服务信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="module/test_tool/Home_Test.qml" line="317"/>
-        <source>软件版本、运行环境</source>
+        <source>工具版本、运行环境</source>
+        <oldsource>软件版本、运行环境</oldsource>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -539,33 +557,63 @@
     </message>
     <message>
         <location filename="module/nav_tool/Home_Tool.qml" line="277"/>
-        <source>NMEA-0183 转换工具</source>
+        <source>时间转换工具</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="module/nav_tool/Home_Tool.qml" line="278"/>
-        <source>生成和转换GGA、GSV、RMC格式数据</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="293"/>
-        <source>工具版本、使用算法和依赖库</source>
+        <source>不同时间系统间的时间互转</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="module/nav_tool/Home_Tool.qml" line="284"/>
+        <source>NMEA-0183 转换工具</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="285"/>
+        <source>生成和转换GGA、GSV、RMC格式数据</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="291"/>
+        <source>RTCM3 数据解析工具</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="292"/>
+        <source>读取和解析RTCM数据流</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="298"/>
+        <source>Rinex 数据分析工具</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="299"/>
+        <source>读取Rinex文件并分析观测数据</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="313"/>
+        <source>工具版本、使用算法和依赖库</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="305"/>
         <source>星空图</source>
         <oldsource>地图</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="285"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="306"/>
         <source>根据广播星历来计算指定位置的星空图</source>
         <oldsource>在地图上查看挂载点和用户</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="292"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="312"/>
         <source>版本信息</source>
         <oldsource>服务运行状态和统计信息</oldsource>
         <translation type="unfinished"></translation>

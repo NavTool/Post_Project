@@ -293,28 +293,28 @@ FluScrollablePage {
         // _icon:FluentIcons.ChromeSwitch
         _icon:FluentIcons.Sort
         _text:qsTr("TCP Server 转发工具")
-        _text_extra:qsTr("在地图上查看挂载点和用户")
+        _text_extra:qsTr("连通两个TCP端口，并进行数据互传")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 
     ExtraItem{
         _icon:FluentIcons.Market
         _text:qsTr("Ntrip Server 压测工具")
-        _text_extra:qsTr("查看、管理在线挂载点的状态和详细信息")
+        _text_extra:qsTr("模拟并创建若干个Ntrip Server挂载点连接")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 
     ExtraItem{
         _icon:FluentIcons.Market
         _text:qsTr("Ntrip Client 压测工具")
-        _text_extra:qsTr("查看、管理在线用户的状态和详细信息")
+        _text_extra:qsTr("模拟并创建若干个Ntrip Client用户连接")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 
     ExtraItem{
         _icon:FluentIcons.Info
-        _text:qsTr("服务信息")
-        _text_extra:qsTr("软件版本、运行环境")
+        _text:qsTr("版本信息")
+        _text_extra:qsTr("工具版本、运行环境")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 
