@@ -127,6 +127,23 @@ FluObject{
         }
     }
 
+    FluPaneItem{
+        id:item_post_proc
+        count: 0
+        title: qsTr("数据解算")
+        menuDelegate: paneItemMenu
+        infoBadge: FluBadge{
+            count: item_caster_service.count
+        }
+        icon: FluentIcons.POI
+        url: "qrc:/module/post_proc/Home_Post.qml"
+        onTap: {
+            if(navigationView.getCurrentUrl()){
+                item_caster_service.count = 0
+            }
+            navigationView.push(url)
+        }
+    }
 
 
     function getRecentlyAddedData(){

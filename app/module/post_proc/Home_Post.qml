@@ -13,7 +13,7 @@ FluScrollablePage {
 
     property var navigationView
 
-    // title: qsTr("Caster Service")
+    // title: qsTr("Position Processing")
 
     // Component.onCompleted: {
     //     var items = []
@@ -82,7 +82,7 @@ FluScrollablePage {
             }
         }
         FluText{
-            text:"Stream Tool"
+            text:"Position Processing"
             font: FluTextStyle.TitleLarge
             anchors{
                 top: parent.top
@@ -290,51 +290,23 @@ FluScrollablePage {
     }
 
     ExtraItem{
-        _icon:FluentIcons.Play
-        _text:qsTr("服务管理")
-        _text_extra:qsTr("启动和停止数据流服务")
+        _icon:FluentIcons.Send
+        _text:qsTr("实时数据处理")
+        _text_extra:qsTr("查看、管理已经注册的账号")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 
     ExtraItem{
-        _icon:FluentIcons.SubscriptionAdd
-        _text:qsTr("添加数据流")
-        _text_extra:qsTr("查看、管理在线用户的状态和详细信息")
-        _url:"qrc:/module/str_mult/MonitorPage.qml"
-    }
-
-    ExtraItem{
-        _icon:FluentIcons.AllApps
-        _text:qsTr("管理数据流")
-        _text_extra:qsTr("查看、管理在线用户的状态和详细信息")
-        _url:"qrc:/module/str_mult/MonitorPage.qml"
-    }
-
-    ExtraItem{
-        _icon:FluentIcons.SaveLocal
-        _text:qsTr("数据本地存储")
-        _text_extra:qsTr("将数据流存储到文件")
-        _url:"qrc:/module/str_mult/MonitorPage.qml"
-    }
-
-    ExtraItem{
-        _icon:FluentIcons.AreaChart
-        _text:qsTr("状态统计")
-        _text_extra:qsTr("服务运行状态和统计信息")
-        _url:"qrc:/module/str_mult/MonitorPage.qml"
-    }
-
-    ExtraItem{
-        _icon:FluentIcons.Settings
-        _text:qsTr("服务设置")
-        _text_extra:qsTr("连接、配置和管理Caster服务")
+        _icon:FluentIcons.SendFill
+        _text:qsTr("事后数据处理")
+        _text_extra:qsTr("查看、管理在线用户")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 
     ExtraItem{
         _icon:FluentIcons.Info
-        _text:qsTr("服务信息")
-        _text_extra:qsTr("软件版本、运行环境")
+        _text:qsTr("软件信息")
+        _text_extra:qsTr("软件版本、使用算法和依赖库")
         _url:"qrc:/module/str_mult/MonitorPage.qml"
     }
 

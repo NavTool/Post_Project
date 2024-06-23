@@ -318,7 +318,7 @@ FluScrollablePage {
     }
 
     ExtraItem{
-        _icon:FluentIcons.CheckboxComposite14
+        _icon:FluentIcons.Permissions
         _text:qsTr("激活和许可")
         _text_extra:qsTr("激活状态、订阅、产品密钥")
         _url:"qrc:/module/str_mult/MonitorPage.qml"

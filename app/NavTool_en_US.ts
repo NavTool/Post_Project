@@ -309,6 +309,106 @@
     </message>
 </context>
 <context>
+    <name>Home_Post</name>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="47"/>
+        <location filename="module/post_proc/Home_Post.qml" line="57"/>
+        <source>Caster Service</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="48"/>
+        <location filename="module/post_proc/Home_Post.qml" line="58"/>
+        <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="287"/>
+        <source>Version and Description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="294"/>
+        <source>用户列表</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="295"/>
+        <source>查看、管理已经注册的账号</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="301"/>
+        <source>在线用户</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="302"/>
+        <source>查看、管理在线用户</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="308"/>
+        <source>添加用户</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="309"/>
+        <source>添加一个新的账号</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="315"/>
+        <source>查找用户</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="316"/>
+        <source>查找指定账户</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="323"/>
+        <source>用户日志</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="324"/>
+        <source>查看用户的登录记录</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="330"/>
+        <source>登录策略</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="331"/>
+        <source>配置用户登录策略</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="337"/>
+        <source>服务设置</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="338"/>
+        <source>连接、配置用户管理数据库</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="344"/>
+        <source>服务信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="345"/>
+        <source>软件版本、运行环境</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Home_Strsvr</name>
     <message>
         <location filename="module/str_mult/Home_Strsvr.qml" line="47"/>
@@ -337,13 +437,6 @@
         <location filename="module/str_mult/Home_Strsvr.qml" line="302"/>
         <location filename="module/str_mult/Home_Strsvr.qml" line="309"/>
         <source>查看、管理在线用户的状态和详细信息</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="302"/>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="309"/>
-        <source>查看、管理在线用户的状态和详细信息</source>
-        <oldsource>在地图上查看挂载点和用户</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -379,12 +472,6 @@
     <message>
         <location filename="module/str_mult/Home_Strsvr.qml" line="316"/>
         <source>将数据流存储到文件</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="323"/>
-        <source>服务运行状态和统计信息</source>
-        <oldsource>激活状态、订阅、产品密钥</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -643,6 +730,12 @@
     <message>
         <location filename="qml/global/ItemsOriginal.qml" line="115"/>
         <source>测试工具</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/global/ItemsOriginal.qml" line="133"/>
+        <source>数据解算</source>
+        <oldsource>数据处理</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
