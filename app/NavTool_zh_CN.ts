@@ -329,7 +329,22 @@
     </message>
     <message>
         <location filename="module/post_proc/Home_Post.qml" line="294"/>
-        <source>用户列表</source>
+        <source>实时数据处理</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="301"/>
+        <source>事后数据处理</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="308"/>
+        <source>软件信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="309"/>
+        <source>软件版本、使用算法和依赖库</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -338,73 +353,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/post_proc/Home_Post.qml" line="301"/>
-        <source>在线用户</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="module/post_proc/Home_Post.qml" line="302"/>
         <source>查看、管理在线用户</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="308"/>
-        <source>添加用户</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="309"/>
-        <source>添加一个新的账号</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="315"/>
-        <source>查找用户</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="316"/>
-        <source>查找指定账户</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="323"/>
-        <source>用户日志</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="324"/>
-        <source>查看用户的登录记录</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="330"/>
-        <source>登录策略</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="331"/>
-        <source>配置用户登录策略</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="337"/>
-        <source>服务设置</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="338"/>
-        <source>连接、配置用户管理数据库</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="344"/>
-        <source>服务信息</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="345"/>
-        <source>软件版本、运行环境</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
