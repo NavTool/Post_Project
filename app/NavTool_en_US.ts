@@ -83,106 +83,194 @@
 <context>
     <name>Home_Auth</name>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="16"/>
-        <source>User Management</source>
+        <location filename="module/auth_gui/Home_Auth.qml" line="47"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="57"/>
+        <source>Caster Service</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="19"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="48"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="58"/>
+        <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="287"/>
         <source>Version and Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="40"/>
-        <source>Monitor</source>
+        <location filename="module/auth_gui/Home_Auth.qml" line="315"/>
+        <source>查找用户</source>
+        <oldsource>用户管理</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="76"/>
-        <source>Stream</source>
+        <location filename="module/auth_gui/Home_Auth.qml" line="316"/>
+        <source>查找指定账户</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="112"/>
-        <source>Option</source>
+        <location filename="module/auth_gui/Home_Auth.qml" line="294"/>
+        <source>用户列表</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="309"/>
+        <source>添加一个新的账号</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="323"/>
+        <source>用户日志</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="324"/>
+        <source>查看用户的登录记录</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="330"/>
+        <source>登录策略</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="331"/>
+        <source>配置用户登录策略</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="338"/>
+        <source>连接、配置用户管理数据库</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="301"/>
+        <source>在线用户</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="302"/>
+        <source>查看、管理在线用户</source>
+        <oldsource>查看、管理在线用户的状态和详细信息</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="295"/>
+        <source>查看、管理已经注册的账号</source>
+        <oldsource>在地图上查看挂载点和用户</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="308"/>
+        <source>添加用户</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="337"/>
+        <source>服务设置</source>
+        <oldsource>服务运行状态和统计信息</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="344"/>
+        <source>服务信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="345"/>
+        <source>软件版本、运行环境</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Home_Caster</name>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="42"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="287"/>
         <source>Version and Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="49"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="294"/>
         <source>在线挂载点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="50"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="295"/>
         <source>查看、管理在线挂载点的状态和详细信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="56"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="301"/>
         <source>在线用户</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="57"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="302"/>
         <source>查看、管理在线用户的状态和详细信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="63"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="308"/>
         <source>地图</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="64"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="309"/>
         <source>在地图上查看挂载点和用户</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="70"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="315"/>
         <source>状态统计</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="71"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="316"/>
         <source>服务运行状态和统计信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="78"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="323"/>
         <source>激活状态、订阅、产品密钥</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="84"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="329"/>
         <source>服务设置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="85"/>
-        <source>连接、配置Caster服务</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="92"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="337"/>
         <source>软件版本、运行环境</source>
         <oldsource>软件版本、运行环境、状态信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="77"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="322"/>
         <source>激活和许可</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="91"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="47"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="57"/>
+        <source>Caster Service</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Home_Caster.qml" line="48"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="58"/>
+        <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Home_Caster.qml" line="330"/>
+        <source>连接、配置和管理Caster服务</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Home_Caster.qml" line="336"/>
         <source>服务信息</source>
         <translation type="unfinished"></translation>
     </message>
@@ -223,84 +311,226 @@
 <context>
     <name>Home_Strsvr</name>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="16"/>
-        <source>Stream Tool</source>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="47"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="57"/>
+        <source>Caster Service</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="19"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="48"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="58"/>
+        <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="287"/>
         <source>Version and Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="40"/>
-        <source>Monitor</source>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="294"/>
+        <source>服务管理</source>
+        <oldsource>在线挂载点</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="76"/>
-        <source>Stream</source>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="302"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="309"/>
+        <source>查看、管理在线用户的状态和详细信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="112"/>
-        <source>Option</source>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="302"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="309"/>
+        <source>查看、管理在线用户的状态和详细信息</source>
+        <oldsource>在地图上查看挂载点和用户</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="322"/>
+        <source>状态统计</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="323"/>
+        <source>服务运行状态和统计信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="295"/>
+        <source>启动和停止数据流服务</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="301"/>
+        <source>添加数据流</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="308"/>
+        <source>管理数据流</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="315"/>
+        <source>数据本地存储</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="316"/>
+        <source>将数据流存储到文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="323"/>
+        <source>服务运行状态和统计信息</source>
+        <oldsource>激活状态、订阅、产品密钥</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="329"/>
+        <source>服务设置</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="330"/>
+        <source>连接、配置和管理Caster服务</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="336"/>
+        <source>服务信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="337"/>
+        <source>软件版本、运行环境</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Home_Test</name>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="16"/>
-        <source>Test Tool</source>
+        <location filename="module/test_tool/Home_Test.qml" line="47"/>
+        <location filename="module/test_tool/Home_Test.qml" line="57"/>
+        <source>Caster Service</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="19"/>
+        <location filename="module/test_tool/Home_Test.qml" line="48"/>
+        <location filename="module/test_tool/Home_Test.qml" line="58"/>
+        <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/test_tool/Home_Test.qml" line="287"/>
         <source>Version and Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="40"/>
-        <source>NTRIP Caster Performance Testing Tool</source>
+        <location filename="module/test_tool/Home_Test.qml" line="295"/>
+        <source>TCP Server 转发工具</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="76"/>
-        <source>Stream</source>
+        <location filename="module/test_tool/Home_Test.qml" line="302"/>
+        <source>Ntrip Server 压测工具</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="112"/>
-        <source>Option</source>
+        <location filename="module/test_tool/Home_Test.qml" line="309"/>
+        <source>Ntrip Client 压测工具</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/test_tool/Home_Test.qml" line="303"/>
+        <source>查看、管理在线挂载点的状态和详细信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/test_tool/Home_Test.qml" line="310"/>
+        <source>查看、管理在线用户的状态和详细信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/test_tool/Home_Test.qml" line="296"/>
+        <source>在地图上查看挂载点和用户</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/test_tool/Home_Test.qml" line="316"/>
+        <source>服务信息</source>
+        <oldsource>服务运行状态和统计信息</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/test_tool/Home_Test.qml" line="317"/>
+        <source>软件版本、运行环境</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Home_Tool</name>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="16"/>
-        <source>Nav Tool</source>
+        <location filename="module/nav_tool/Home_Tool.qml" line="23"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="33"/>
+        <source>Caster Service</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="19"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="24"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="34"/>
+        <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="263"/>
         <source>Version and Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="40"/>
-        <source>Coordinate Transformation</source>
+        <location filename="module/nav_tool/Home_Tool.qml" line="270"/>
+        <source>坐标转换工具</source>
+        <oldsource>在线挂载点</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="76"/>
-        <source>NMEA0183 Converter</source>
+        <location filename="module/nav_tool/Home_Tool.qml" line="271"/>
+        <source>不同坐标系下的坐标互转</source>
+        <oldsource>查看、管理在线挂载点的状态和详细信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="112"/>
-        <source>Sky Plot Generator</source>
+        <location filename="module/nav_tool/Home_Tool.qml" line="277"/>
+        <source>NMEA-0183 转换工具</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="278"/>
+        <source>生成和转换GGA、GSV、RMC格式数据</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="293"/>
+        <source>工具版本、使用算法和依赖库</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="284"/>
+        <source>星空图</source>
+        <oldsource>地图</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="285"/>
+        <source>根据广播星历来计算指定位置的星空图</source>
+        <oldsource>在地图上查看挂载点和用户</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="292"/>
+        <source>版本信息</source>
+        <oldsource>服务运行状态和统计信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
 </context>
