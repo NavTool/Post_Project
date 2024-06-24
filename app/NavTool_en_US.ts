@@ -15,6 +15,14 @@
     </message>
 </context>
 <context>
+    <name>Coord_Transfer</name>
+    <message>
+        <location filename="module/nav_tool/Coord_Transfer.qml" line="51"/>
+        <source>转换结果</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>CrashWindow</name>
     <message>
         <location filename="qml/window/CrashWindow.qml" line="11"/>

@@ -132,5 +132,6 @@
         <file>res/image/control/XamlUICommand.png</file>
         <file>qml/extra/ExtraItem.qml</file>
         <file>module/post_proc/Home_Post.qml</file>
+        <file>module/nav_tool/Coord_Transfer.qml</file>
     </qresource>
 </RCC>
