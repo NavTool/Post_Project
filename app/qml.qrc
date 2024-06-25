@@ -133,5 +133,6 @@
         <file>qml/extra/ExtraItem.qml</file>
         <file>module/post_proc/Home_Post.qml</file>
         <file>module/nav_tool/Coord_Transfer.qml</file>
+        <file>module/caster_gui/Map_Page.qml</file>
     </qresource>
 </RCC>

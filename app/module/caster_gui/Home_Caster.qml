@@ -307,7 +307,7 @@ FluScrollablePage {
         _icon:FluentIcons.POI
         _text:qsTr("地图")
         _text_extra:qsTr("在地图上查看挂载点和用户")
-        _url:"qrc:/module/str_mult/MonitorPage.qml"
+        _url:"qrc:/module/caster_gui/Map_Page.qml"
     }
 
     ExtraItem{
