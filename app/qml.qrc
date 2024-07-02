@@ -5,17 +5,15 @@
         <file>qml/global/ItemsOriginal.qml</file>
         <file>qml/global/qmldir</file>
         <file>qml/window/MainWindow.qml</file>
-        <file>qml/page/SettingPage.qml</file>
+        <file>qml/page/Page_Setting.qml</file>
         <file>qml/component/CodeExpander.qml</file>
         <file>qml/window/PageWindow.qml</file>
         <file>qml/page/Home_Main.qml</file>
         <file>qml/global/GlobalModel.qml</file>
         <file>qml/window/HotloadWindow.qml</file>
-        <file>qml/page/HotloadPage.qml</file>
+        <file>qml/page/Page_Hotload.qml</file>
         <file>module/str_mult/Home_Strsvr.qml</file>
-        <file>module/str_mult/StreamPage.qml</file>
-        <file>module/str_mult/MonitorPage.qml</file>
-        <file>module/str_mult/OptionPage.qml</file>
+        <file>module/str_mult/Page_Option.qml</file>
         <file>module/caster_gui/Home_Caster.qml</file>
         <file>module/test_tool/Home_Test.qml</file>
         <file>module/nav_tool/Home_Tool.qml</file>
@@ -132,7 +130,46 @@
         <file>res/image/control/XamlUICommand.png</file>
         <file>qml/extra/ExtraItem.qml</file>
         <file>module/post_proc/Home_Post.qml</file>
-        <file>module/nav_tool/Coord_Transfer.qml</file>
-        <file>module/caster_gui/Map_Page.qml</file>
+        <file>module/nav_tool/Page_Coord_Transfer.qml</file>
+        <file>module/caster_gui/Page_Map.qml</file>
+        <file>module/caster_gui/Page_Client.qml</file>
+        <file>module/caster_gui/Page_Info.qml</file>
+        <file>module/caster_gui/Page_Licence.qml</file>
+        <file>module/caster_gui/Page_Node_Info.qml</file>
+        <file>module/caster_gui/Page_Redis_Info.qml</file>
+        <file>module/caster_gui/Page_Server.qml</file>
+        <file>module/caster_gui/Page_Setting.qml</file>
+        <file>module/caster_gui/Page_Status.qml</file>
+        <file>qml/Test.qml</file>
+        <file>module/auth_gui/Page_User_Add.qml</file>
+        <file>module/auth_gui/Page_Info.qml</file>
+        <file>module/auth_gui/Page_Login_Policy.qml</file>
+        <file>module/auth_gui/Page_User_Online.qml</file>
+        <file>module/auth_gui/Page_User_Search.qml</file>
+        <file>module/auth_gui/Page_Setting.qml</file>
+        <file>module/auth_gui/Page_User_Record.qml</file>
+        <file>module/auth_gui/Page_User_Log.qml</file>
+        <file>module/nav_tool/Page_Info.qml</file>
+        <file>module/nav_tool/Page_NMEA_Transfer.qml</file>
+        <file>module/nav_tool/Page_Rinex_Decoder.qml</file>
+        <file>module/nav_tool/Page_RTCM_Decoder.qml</file>
+        <file>module/nav_tool/Page_Sky_Plot.qml</file>
+        <file>module/nav_tool/Page_Time_Transfer.qml</file>
+        <file>module/post_proc/Page_Info.qml</file>
+        <file>module/post_proc/Page_Navi.qml</file>
+        <file>module/post_proc/Page_Post.qml</file>
+        <file>module/str_mult/Page_Info.qml</file>
+        <file>module/test_tool/Page_Info.qml</file>
+        <file>module/test_tool/Page_Ntrip_Client_Sim.qml</file>
+        <file>module/test_tool/Page_Ntrip_Server_Sim.qml</file>
+        <file>module/test_tool/Page_TCP_Connector.qml</file>
+        <file>module/str_mult/Page_Service_Manage.qml</file>
+        <file>module/str_mult/Page_Setting.qml</file>
+        <file>module/str_mult/Page_Status.qml</file>
+        <file>module/str_mult/Page_Stream_Add.qml</file>
+        <file>module/str_mult/Page_Stream_Manage.qml</file>
+        <file>module/str_mult/Page_Stream_Persistence.qml</file>
+        <file>qml/page/Page_Info.qml</file>
+        <file>qml/extra/ExtraExpander.qml</file>
     </qresource>
 </RCC>

@@ -21,11 +21,24 @@ FluObject{
     // }
 
 
+
+    FluPaneItem{
+        title: qsTr("Test")
+        visible: isDebugBuild
+        menuDelegate: paneItemMenu
+        icon:FluentIcons.Bug
+        url:"qrc:/qml/Test.qml"
+        onTap:{
+            navigationView.push(url)
+        }
+    }
+
     FluPaneItem{
         title: qsTr("Hotload Page")
+        visible: isDebugBuild
         menuDelegate: paneItemMenu
         icon:FluentIcons.AdjustHologram
-        url:"qrc:/qml/page/HotloadPage.qml"
+        url:"qrc:/qml/page/Page_Hotload.qml"
         onTap:{
             navigationView.push(url)
         }
@@ -33,6 +46,7 @@ FluObject{
 
     FluPaneItem{
         title: qsTr("Hotload Window")
+        visible: isDebugBuild
         icon:FluentIcons.AdjustHologram
         onTapListener: function(){
             FluRouter.navigate("/hotload")
@@ -41,14 +55,25 @@ FluObject{
 
 
     FluPaneItem{
-        title:qsTr("设置")
+        title:qsTr("关于")
         menuDelegate: paneItemMenu
-        icon:FluentIcons.Settings
-        url:"qrc:/qml/page/SettingPage.qml"
+        icon:FluentIcons.Info
+        url:"qrc:/qml/page/Page_Info.qml"
         onTap:{
             navigationView.push(url)
         }
     }
+
+    FluPaneItem{
+        title:qsTr("设置")
+        menuDelegate: paneItemMenu
+        icon:FluentIcons.Settings
+        url:"qrc:/qml/page/Page_Setting.qml"
+        onTap:{
+            navigationView.push(url)
+        }
+    }
+
 
 
 }

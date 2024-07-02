@@ -15,7 +15,7 @@ FluFrame{
     property var _text:qsTr("Undefined")
     property var _text_extra:qsTr("Undefined")
     property string _url :""
-    property alias _button: button
+    property alias button: button
 
     Layout.fillWidth: true
     Layout.preferredHeight: 75
@@ -73,7 +73,7 @@ FluFrame{
         iconSize:15
         anchors{
             right: parent.right
-            rightMargin: 10
+            rightMargin: 25
             verticalCenter: parent.verticalCenter
         }
     }

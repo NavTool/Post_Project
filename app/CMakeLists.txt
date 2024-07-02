@@ -17,7 +17,7 @@ else()
 endif()
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Quick)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick ) #QuickControls2
 
 find_program(QT_LUPDATE NAMES lupdate)
 find_program(QT_LRELEASE NAMES lrelease)
@@ -84,6 +84,7 @@ add_dependencies(${PROJECT_NAME} Script-UpdateTranslations)
 target_link_libraries(${PROJECT_NAME} PRIVATE
     Qt${QT_VERSION_MAJOR}::Core
     Qt${QT_VERSION_MAJOR}::Quick
+    # Qt6::QuickControls2
     fluentuiplugin
 )
 

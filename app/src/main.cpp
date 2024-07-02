@@ -1,5 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+// #include <QQuickStyle>
 #include <QTranslator>
 
 #include <QQmlContext>
@@ -88,8 +89,16 @@ int main(int argc, char *argv[])
     qmlRegisterType<OpenGLItem>(uri,major,minor,"OpenGLItem");
     qmlRegisterUncreatableMetaObject(NetworkType::staticMetaObject, uri, major, minor, "NetworkType", "Access to enums & flags only");
 
+    //    // 设置Qt Quick Controls的风格
+    // QQuickStyle::setStyle("Material");  // 或其他风格，如 "Fusion", "Imagine", "Universal" 等
+
     QQmlApplicationEngine engine;
     TranslateHelper::getInstance()->init(&engine);
+#ifdef QT_DEBUG  //传递程序的构建类型，来隐藏部分Debug调试使用的功能
+    engine.rootContext()->setContextProperty("isDebugBuild",true);
+#else
+    engine.rootContext()->setContextProperty("isDebugBuild",false);
+#endif
     engine.rootContext()->setContextProperty("AppInfo",AppInfo::getInstance());
     engine.rootContext()->setContextProperty("SettingsHelper",SettingsHelper::getInstance());
     engine.rootContext()->setContextProperty("InitializrHelper",InitializrHelper::getInstance());

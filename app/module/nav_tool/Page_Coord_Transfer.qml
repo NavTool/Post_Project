@@ -11,11 +11,7 @@ import "../../qml/extra"
 
 
 FluContentPage{
-    title: "Coord Transfer"
-
-
-
-
+    title: qsTr("Coord Transfer")
 
     ColumnLayout
     {

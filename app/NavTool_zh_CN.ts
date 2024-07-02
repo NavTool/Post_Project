@@ -15,14 +15,6 @@
     </message>
 </context>
 <context>
-    <name>Coord_Transfer</name>
-    <message>
-        <location filename="module/nav_tool/Coord_Transfer.qml" line="51"/>
-        <source>转换结果</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>CrashWindow</name>
     <message>
         <location filename="qml/window/CrashWindow.qml" line="11"/>
@@ -91,104 +83,97 @@
 <context>
     <name>Home_Auth</name>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="47"/>
-        <location filename="module/auth_gui/Home_Auth.qml" line="57"/>
-        <source>Caster Service</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="48"/>
-        <location filename="module/auth_gui/Home_Auth.qml" line="58"/>
-        <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="287"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="17"/>
         <source>Version and Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="315"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="45"/>
         <source>查找用户</source>
         <oldsource>用户管理</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="316"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="46"/>
         <source>查找指定账户</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="294"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="24"/>
         <source>用户列表</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="309"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="14"/>
+        <source>User Management</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Home_Auth.qml" line="39"/>
         <source>添加一个新的账号</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="323"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="53"/>
         <source>用户日志</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="324"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="54"/>
         <source>查看用户的登录记录</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="330"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="60"/>
         <source>登录策略</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="331"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="61"/>
         <source>配置用户登录策略</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="338"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="68"/>
         <source>连接、配置用户管理数据库</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="301"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="31"/>
         <source>在线用户</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="302"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="32"/>
         <source>查看、管理在线用户</source>
         <oldsource>查看、管理在线用户的状态和详细信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="295"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="25"/>
         <source>查看、管理已经注册的账号</source>
         <oldsource>在地图上查看挂载点和用户</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="308"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="38"/>
         <source>添加用户</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="337"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="67"/>
         <source>服务设置</source>
         <oldsource>服务运行状态和统计信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="344"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="74"/>
         <source>版本信息</source>
         <oldsource>服务信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/auth_gui/Home_Auth.qml" line="345"/>
+        <location filename="module/auth_gui/Home_Auth.qml" line="75"/>
         <source>模块版本、运行环境</source>
         <oldsource>软件版本、运行环境</oldsource>
         <translation type="unfinished"></translation>
@@ -197,90 +182,134 @@
 <context>
     <name>Home_Caster</name>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="287"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="17"/>
         <source>Version and Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="294"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="54"/>
+        <source>Service Node-A3F2
+运行中</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Home_Caster.qml" line="55"/>
+        <source>Node:127.0.0.1:4202
+connect:6366
+server/client:2847/3519</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Home_Caster.qml" line="64"/>
+        <source>Service Node-B1C0
+运行中</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Home_Caster.qml" line="65"/>
+        <source>Node:127.0.0.1:4203
+connect:6366
+server/client:2847/3519</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Home_Caster.qml" line="74"/>
+        <source>Redis Server-已连接
+运行中</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Home_Caster.qml" line="75"/>
+        <source>Node:127.0.0.1:6379
+connect:6366
+server/client:2847/3519</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Home_Caster.qml" line="93"/>
+        <source>添加节点监控</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Home_Caster.qml" line="200"/>
         <source>在线挂载点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="295"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="201"/>
         <source>查看、管理在线挂载点的状态和详细信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="301"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="207"/>
         <source>在线用户</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="302"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="208"/>
         <source>查看、管理在线用户的状态和详细信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="308"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="214"/>
         <source>地图</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="309"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="215"/>
         <source>在地图上查看挂载点和用户</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="315"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="221"/>
         <source>状态统计</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="316"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="222"/>
         <source>服务运行状态和统计信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="323"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="229"/>
         <source>激活状态、订阅、产品密钥</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="329"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="235"/>
         <source>服务设置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="337"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="243"/>
         <source>软件版本、运行环境</source>
         <oldsource>软件版本、运行环境、状态信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="322"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="228"/>
         <source>激活和许可</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="47"/>
-        <location filename="module/caster_gui/Home_Caster.qml" line="57"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="14"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="84"/>
         <source>Caster Service</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="48"/>
-        <location filename="module/caster_gui/Home_Caster.qml" line="58"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="85"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="94"/>
         <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="330"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="236"/>
         <source>连接、配置和管理Caster服务</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/caster_gui/Home_Caster.qml" line="336"/>
+        <location filename="module/caster_gui/Home_Caster.qml" line="242"/>
         <source>版本信息</source>
         <oldsource>服务信息</oldsource>
         <translation type="unfinished"></translation>
@@ -289,32 +318,43 @@
 <context>
     <name>Home_Main</name>
     <message>
-        <location filename="qml/page/Home_Main.qml" line="40"/>
+        <location filename="qml/page/Home_Main.qml" line="51"/>
         <source>GitHub HomePage</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Home_Main.qml" line="41"/>
+        <location filename="qml/page/Home_Main.qml" line="52"/>
         <source>The NavTool Organiaztion Github Web page.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Home_Main.qml" line="20"/>
+        <location filename="qml/page/Home_Main.qml" line="21"/>
         <source>NavTool Project</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Home_Main.qml" line="21"/>
+        <location filename="qml/page/Home_Main.qml" line="22"/>
         <source>A Navigation Tool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Home_Main.qml" line="30"/>
+        <location filename="qml/page/Home_Main.qml" line="41"/>
+        <source>Navigation X</source>
+        <oldsource>Precision Navigation</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Home_Main.qml" line="42"/>
+        <source></source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Home_Main.qml" line="31"/>
         <source>Caster Service</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Home_Main.qml" line="31"/>
+        <location filename="qml/page/Home_Main.qml" line="32"/>
         <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -322,147 +362,133 @@
 <context>
     <name>Home_Post</name>
     <message>
-        <location filename="module/post_proc/Home_Post.qml" line="47"/>
-        <location filename="module/post_proc/Home_Post.qml" line="57"/>
-        <source>Caster Service</source>
+        <location filename="module/post_proc/Home_Post.qml" line="14"/>
+        <source>Position Processing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/post_proc/Home_Post.qml" line="48"/>
-        <location filename="module/post_proc/Home_Post.qml" line="58"/>
-        <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="287"/>
+        <location filename="module/post_proc/Home_Post.qml" line="17"/>
         <source>Version and Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/post_proc/Home_Post.qml" line="294"/>
+        <location filename="module/post_proc/Home_Post.qml" line="24"/>
         <source>实时数据处理</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/post_proc/Home_Post.qml" line="301"/>
+        <location filename="module/post_proc/Home_Post.qml" line="25"/>
+        <source>接入实时数据或记录文件进行定位解算</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="31"/>
         <source>事后数据处理</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/post_proc/Home_Post.qml" line="308"/>
+        <location filename="module/post_proc/Home_Post.qml" line="32"/>
+        <source>导入观测文件或记录文件进行定位解算</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Home_Post.qml" line="38"/>
         <source>版本信息</source>
         <oldsource>软件信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/post_proc/Home_Post.qml" line="309"/>
+        <location filename="module/post_proc/Home_Post.qml" line="39"/>
         <source>模块版本、使用算法和依赖库</source>
         <oldsource>软件版本、使用算法和依赖库</oldsource>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="295"/>
-        <source>查看、管理已经注册的账号</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/post_proc/Home_Post.qml" line="302"/>
-        <source>查看、管理在线用户</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Home_Strsvr</name>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="47"/>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="57"/>
-        <source>Caster Service</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="48"/>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="58"/>
-        <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="287"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="17"/>
         <source>Version and Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="294"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="24"/>
         <source>服务管理</source>
         <oldsource>在线挂载点</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="302"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="32"/>
         <source>添加一个新的实时数据流</source>
         <oldsource>查看、管理在线用户的状态和详细信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="322"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="52"/>
         <source>状态统计</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="323"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="53"/>
         <source>服务运行状态和各个数据流统计信息</source>
         <oldsource>服务运行状态和统计信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="295"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="25"/>
         <source>配置和管理各个数据流的状态</source>
         <oldsource>启动和停止和配置数据流服务</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="301"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="14"/>
+        <source>Stream Service</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="31"/>
         <source>添加数据流</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="308"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="38"/>
         <source>管理数据流</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="309"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="39"/>
         <source>查看、管理已添加的数据流配置信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="315"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="45"/>
         <source>数据本地存储</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="316"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="46"/>
         <source>将数据流存储到文件</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="329"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="59"/>
         <source>服务设置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="330"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="60"/>
         <source>连接、配置和管理Stream服务</source>
         <oldsource>连接、配置和管理Caster服务</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="336"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="66"/>
         <source>版本信息</source>
         <oldsource>服务信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/Home_Strsvr.qml" line="337"/>
+        <location filename="module/str_mult/Home_Strsvr.qml" line="67"/>
         <source>模块版本、运行环境</source>
         <oldsource>软件版本、运行环境</oldsource>
         <translation type="unfinished"></translation>
@@ -471,62 +497,55 @@
 <context>
     <name>Home_Test</name>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="47"/>
-        <location filename="module/test_tool/Home_Test.qml" line="57"/>
-        <source>Caster Service</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/test_tool/Home_Test.qml" line="48"/>
-        <location filename="module/test_tool/Home_Test.qml" line="58"/>
-        <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/test_tool/Home_Test.qml" line="287"/>
+        <location filename="module/test_tool/Home_Test.qml" line="17"/>
         <source>Version and Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="295"/>
+        <location filename="module/test_tool/Home_Test.qml" line="25"/>
         <source>TCP Server 转发工具</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="296"/>
+        <location filename="module/test_tool/Home_Test.qml" line="26"/>
         <source>连通两个TCP端口，并进行数据互传</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="302"/>
+        <location filename="module/test_tool/Home_Test.qml" line="32"/>
         <source>Ntrip Server 压测工具</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="309"/>
+        <location filename="module/test_tool/Home_Test.qml" line="39"/>
         <source>Ntrip Client 压测工具</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="303"/>
+        <location filename="module/test_tool/Home_Test.qml" line="33"/>
         <source>模拟并创建若干个Ntrip Server挂载点连接</source>
         <oldsource>模拟并创建若干个Ntrip Server挂载点</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="310"/>
+        <location filename="module/test_tool/Home_Test.qml" line="14"/>
+        <source>Test Tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/test_tool/Home_Test.qml" line="40"/>
         <source>模拟并创建若干个Ntrip Client用户连接</source>
         <oldsource>查看、管理在线用户的状态和详细信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="316"/>
+        <location filename="module/test_tool/Home_Test.qml" line="46"/>
         <source>版本信息</source>
         <oldsource>服务信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="317"/>
+        <location filename="module/test_tool/Home_Test.qml" line="47"/>
         <source>工具版本、运行环境</source>
         <oldsource>软件版本、运行环境</oldsource>
         <translation type="unfinished"></translation>
@@ -535,103 +554,88 @@
 <context>
     <name>Home_Tool</name>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="23"/>
-        <location filename="module/nav_tool/Home_Tool.qml" line="33"/>
-        <source>Caster Service</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="24"/>
-        <location filename="module/nav_tool/Home_Tool.qml" line="34"/>
-        <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="263"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="17"/>
         <source>Version and Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="270"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="24"/>
         <source>坐标转换工具</source>
         <oldsource>在线挂载点</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="271"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="25"/>
         <source>不同坐标系下的坐标互转</source>
         <oldsource>查看、管理在线挂载点的状态和详细信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="277"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="31"/>
         <source>时间转换工具</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="278"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="32"/>
         <source>不同时间系统间的时间互转</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="284"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="38"/>
         <source>NMEA-0183 转换工具</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="285"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="39"/>
         <source>生成和转换GGA、GSV、RMC格式数据</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="291"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="45"/>
         <source>RTCM3 数据解析工具</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="292"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="46"/>
         <source>读取和解析RTCM数据流</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="298"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="52"/>
         <source>Rinex 数据分析工具</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="299"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="53"/>
         <source>读取Rinex文件并分析观测数据</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="313"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="67"/>
         <source>工具版本、使用算法和依赖库</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="305"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="59"/>
         <source>星空图</source>
         <oldsource>地图</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="306"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="14"/>
+        <source>Nav Tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="60"/>
         <source>根据广播星历来计算指定位置的星空图</source>
         <oldsource>在地图上查看挂载点和用户</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="312"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="66"/>
         <source>版本信息</source>
         <oldsource>服务运行状态和统计信息</oldsource>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>HotloadPage</name>
-    <message>
-        <location filename="qml/page/HotloadPage.qml" line="39"/>
-        <source>Drag in a qml file</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -674,20 +678,30 @@
 <context>
     <name>ItemsFooter</name>
     <message>
-        <location filename="qml/global/ItemsFooter.qml" line="25"/>
+        <location filename="qml/global/ItemsFooter.qml" line="26"/>
+        <source>Test</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/global/ItemsFooter.qml" line="37"/>
         <location filename="qml/qml/global/ItemsFooter.qml" line="25"/>
         <source>Hotload Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/global/ItemsFooter.qml" line="35"/>
+        <location filename="qml/global/ItemsFooter.qml" line="48"/>
         <location filename="qml/qml/global/ItemsFooter.qml" line="35"/>
         <source>Hotload Window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/global/ItemsFooter.qml" line="44"/>
+        <location filename="qml/global/ItemsFooter.qml" line="68"/>
         <source>设置</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/global/ItemsFooter.qml" line="58"/>
+        <source>关于</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -839,152 +853,595 @@
     </message>
 </context>
 <context>
-    <name>MonitorPage</name>
+    <name>Page_Client</name>
     <message>
-        <location filename="module/str_mult/MonitorPage.qml" line="12"/>
-        <source>Str Monitor</source>
+        <location filename="module/caster_gui/Page_Client.qml" line="10"/>
+        <source>Client</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/MonitorPage.qml" line="36"/>
-        <location filename="module/str_mult/MonitorPage.qml" line="60"/>
-        <source>Add Stream</source>
+        <location filename="module/caster_gui/Page_Client.qml" line="13"/>
+        <source>开发中...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>OptionPage</name>
+    <name>Page_Coord_Transfer</name>
     <message>
-        <location filename="module/str_mult/OptionPage.qml" line="15"/>
+        <location filename="module/nav_tool/Page_Coord_Transfer.qml" line="14"/>
+        <source>Coord Transfer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Coord_Transfer.qml" line="47"/>
+        <source>转换结果</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Hotload</name>
+    <message>
+        <location filename="qml/page/Page_Hotload.qml" line="39"/>
+        <source>Drag in a qml file</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Info</name>
+    <message>
+        <location filename="module/auth_gui/Page_Info.qml" line="11"/>
+        <location filename="module/caster_gui/Page_Info.qml" line="11"/>
+        <location filename="module/nav_tool/Page_Info.qml" line="11"/>
+        <location filename="module/post_proc/Page_Info.qml" line="11"/>
+        <location filename="module/str_mult/Page_Info.qml" line="11"/>
+        <location filename="module/test_tool/Page_Info.qml" line="11"/>
+        <location filename="qml/page/Page_Info.qml" line="13"/>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Page_Info.qml" line="14"/>
+        <location filename="module/caster_gui/Page_Info.qml" line="14"/>
+        <location filename="module/nav_tool/Page_Info.qml" line="14"/>
+        <location filename="module/post_proc/Page_Info.qml" line="14"/>
+        <location filename="module/str_mult/Page_Info.qml" line="14"/>
+        <location filename="module/test_tool/Page_Info.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Info.qml" line="21"/>
+        <source>软件信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Info.qml" line="112"/>
+        <source>激活状态</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Info.qml" line="201"/>
+        <source>构建信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Info.qml" line="282"/>
+        <source>支持与许可</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Licence</name>
+    <message>
+        <location filename="module/caster_gui/Page_Licence.qml" line="11"/>
+        <source>Licence</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Page_Licence.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Login_Policy</name>
+    <message>
+        <location filename="module/auth_gui/Page_Login_Policy.qml" line="11"/>
+        <source>Login Policy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Page_Login_Policy.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_NMEA_Transfer</name>
+    <message>
+        <location filename="module/nav_tool/Page_NMEA_Transfer.qml" line="11"/>
+        <source>NMEA Transfer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_NMEA_Transfer.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Navi</name>
+    <message>
+        <location filename="module/post_proc/Page_Navi.qml" line="11"/>
+        <source>Navi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Page_Navi.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Node_Info</name>
+    <message>
+        <location filename="module/caster_gui/Page_Node_Info.qml" line="11"/>
+        <source>Node</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Page_Node_Info.qml" line="13"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Ntrip_Client_Sim</name>
+    <message>
+        <location filename="module/test_tool/Page_Ntrip_Client_Sim.qml" line="11"/>
+        <source>Ntrip Client Sim</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/test_tool/Page_Ntrip_Client_Sim.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Ntrip_Server_Sim</name>
+    <message>
+        <location filename="module/test_tool/Page_Ntrip_Server_Sim.qml" line="11"/>
+        <source>Ntrip Server Sim</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/test_tool/Page_Ntrip_Server_Sim.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Option</name>
+    <message>
+        <location filename="module/str_mult/Page_Option.qml" line="15"/>
         <source>Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/OptionPage.qml" line="25"/>
+        <location filename="module/str_mult/Page_Option.qml" line="25"/>
         <source>Standard Button</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/OptionPage.qml" line="27"/>
+        <location filename="module/str_mult/Page_Option.qml" line="27"/>
         <source>Click StandardButton</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/OptionPage.qml" line="40"/>
+        <location filename="module/str_mult/Page_Option.qml" line="40"/>
         <source>Disabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/OptionPage.qml" line="62"/>
+        <location filename="module/str_mult/Page_Option.qml" line="62"/>
         <source>Connect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/OptionPage.qml" line="103"/>
+        <location filename="module/str_mult/Page_Option.qml" line="103"/>
         <source>Stream</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/str_mult/OptionPage.qml" line="141"/>
+        <location filename="module/str_mult/Page_Option.qml" line="141"/>
         <source>Option</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>SettingPage</name>
+    <name>Page_Post</name>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="11"/>
+        <location filename="module/post_proc/Page_Post.qml" line="11"/>
+        <source>Post</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Page_Post.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_RTCM_Decoder</name>
+    <message>
+        <location filename="module/nav_tool/Page_RTCM_Decoder.qml" line="11"/>
+        <source>RTCM Decoder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_RTCM_Decoder.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Redis_Info</name>
+    <message>
+        <location filename="module/caster_gui/Page_Redis_Info.qml" line="11"/>
+        <source>Redis</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Page_Redis_Info.qml" line="13"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Rinex_Decoder</name>
+    <message>
+        <location filename="module/nav_tool/Page_Rinex_Decoder.qml" line="11"/>
+        <source>Rinex Decoder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Rinex_Decoder.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Server</name>
+    <message>
+        <location filename="module/caster_gui/Page_Server.qml" line="11"/>
+        <source>Server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Page_Server.qml" line="13"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Service_Manage</name>
+    <message>
+        <location filename="module/str_mult/Page_Service_Manage.qml" line="11"/>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Page_Service_Manage.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Setting</name>
+    <message>
+        <location filename="qml/page/Page_Setting.qml" line="11"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="29"/>
+        <location filename="qml/page/Page_Setting.qml" line="29"/>
         <source>Current Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="35"/>
+        <location filename="qml/page/Page_Setting.qml" line="35"/>
         <source>Check for Updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="51"/>
+        <location filename="qml/page/Page_Setting.qml" line="51"/>
         <source>Use System AppBar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="67"/>
+        <location filename="qml/page/Page_Setting.qml" line="67"/>
         <source>Fits AppBar Windows</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="78"/>
+        <location filename="qml/page/Page_Setting.qml" line="78"/>
         <source>Friendly Reminder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="79"/>
+        <location filename="qml/page/Page_Setting.qml" line="79"/>
         <source>This action requires a restart of the program to take effect, is it restarted?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="81"/>
+        <location filename="qml/page/Page_Setting.qml" line="81"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="82"/>
+        <location filename="qml/page/Page_Setting.qml" line="82"/>
         <source>OK</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="101"/>
+        <location filename="qml/page/Page_Setting.qml" line="101"/>
         <source>Dark Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="106"/>
+        <location filename="qml/page/Page_Setting.qml" line="106"/>
         <source>System</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="106"/>
+        <location filename="qml/page/Page_Setting.qml" line="106"/>
         <source>Light</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="106"/>
+        <location filename="qml/page/Page_Setting.qml" line="106"/>
         <source>Dark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="131"/>
+        <location filename="qml/page/Page_Setting.qml" line="131"/>
         <source>Navigation View Display Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="136"/>
+        <location filename="qml/page/Page_Setting.qml" line="136"/>
         <source>Open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="136"/>
+        <location filename="qml/page/Page_Setting.qml" line="136"/>
         <source>Compact</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="136"/>
+        <location filename="qml/page/Page_Setting.qml" line="136"/>
         <source>Minimal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="136"/>
+        <location filename="qml/page/Page_Setting.qml" line="136"/>
         <source>Auto</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/SettingPage.qml" line="172"/>
+        <location filename="qml/page/Page_Setting.qml" line="172"/>
         <source>Language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Page_Setting.qml" line="11"/>
+        <location filename="module/caster_gui/Page_Setting.qml" line="11"/>
+        <source>Setting</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Page_Setting.qml" line="14"/>
+        <location filename="module/caster_gui/Page_Setting.qml" line="13"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Page_Setting.qml" line="15"/>
+        <source>Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Page_Setting.qml" line="25"/>
+        <source>Standard Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Page_Setting.qml" line="27"/>
+        <source>Click StandardButton</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Page_Setting.qml" line="40"/>
+        <source>Disabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Page_Setting.qml" line="62"/>
+        <source>Connect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Page_Setting.qml" line="103"/>
+        <source>Stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Page_Setting.qml" line="141"/>
+        <source>Option</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Sky_Plot</name>
+    <message>
+        <location filename="module/nav_tool/Page_Sky_Plot.qml" line="11"/>
+        <source>Sky Plot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Sky_Plot.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Status</name>
+    <message>
+        <location filename="module/caster_gui/Page_Status.qml" line="11"/>
+        <source>Status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/caster_gui/Page_Status.qml" line="13"/>
+        <location filename="module/str_mult/Page_Status.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Page_Status.qml" line="11"/>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Stream_Add</name>
+    <message>
+        <location filename="module/str_mult/Page_Stream_Add.qml" line="12"/>
+        <source>str2str_mult</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Page_Stream_Add.qml" line="39"/>
+        <location filename="module/str_mult/Page_Stream_Add.qml" line="63"/>
+        <source>Add Stream</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Stream_Manage</name>
+    <message>
+        <location filename="module/str_mult/Page_Stream_Manage.qml" line="11"/>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Page_Stream_Manage.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Stream_Persistence</name>
+    <message>
+        <location filename="module/str_mult/Page_Stream_Persistence.qml" line="11"/>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/str_mult/Page_Stream_Persistence.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_TCP_Connector</name>
+    <message>
+        <location filename="module/test_tool/Page_TCP_Connector.qml" line="11"/>
+        <source>TCP Connector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/test_tool/Page_TCP_Connector.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Time_Transfer</name>
+    <message>
+        <location filename="module/nav_tool/Page_Time_Transfer.qml" line="11"/>
+        <source>Time Transfer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Time_Transfer.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_User_Add</name>
+    <message>
+        <location filename="module/auth_gui/Page_User_Add.qml" line="11"/>
+        <source>Add User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Page_User_Add.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_User_Log</name>
+    <message>
+        <location filename="module/auth_gui/Page_User_Log.qml" line="11"/>
+        <source>User Log</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Page_User_Log.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_User_Online</name>
+    <message>
+        <location filename="module/auth_gui/Page_User_Online.qml" line="11"/>
+        <source>Online User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Page_User_Online.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_User_Record</name>
+    <message>
+        <location filename="module/auth_gui/Page_User_Record.qml" line="11"/>
+        <source>User Record</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Page_User_Record.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_User_Search</name>
+    <message>
+        <location filename="module/auth_gui/Page_User_Search.qml" line="11"/>
+        <source>Search User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/auth_gui/Page_User_Search.qml" line="14"/>
+        <source>开发中...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1083,20 +1540,6 @@
     </message>
 </context>
 <context>
-    <name>StreamPage</name>
-    <message>
-        <location filename="module/str_mult/StreamPage.qml" line="12"/>
-        <source>str2str_mult</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="module/str_mult/StreamPage.qml" line="39"/>
-        <location filename="module/str_mult/StreamPage.qml" line="63"/>
-        <source>Add Stream</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>T_BarChart</name>
     <message>
         <location filename="qml/chart/T_BarChart.qml" line="10"/>
@@ -1149,6 +1592,14 @@
     <message>
         <location filename="qml/chart/T_ScatterChart.qml" line="10"/>
         <source>Scatter Chart</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Test</name>
+    <message>
+        <location filename="qml/Test.qml" line="15"/>
+        <source>TabView Example</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
