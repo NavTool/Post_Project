@@ -42,6 +42,13 @@ FluScrollablePage {
     }
 
     ExtraItem{
+        _icon:FluentIcons.Replay
+        _text:qsTr("实时数据流模拟工具")
+        _text_extra:qsTr("根据数据流记录文件和时间戳文件，复现实时数据流")
+        _url:"qrc:/module/test_tool/Page_Ntrip_Client_Sim.qml"
+    }
+
+    ExtraItem{
         _icon:FluentIcons.Info
         _text:qsTr("版本信息")
         _text_extra:qsTr("工具版本、运行环境")

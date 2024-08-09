@@ -27,7 +27,8 @@ FluObject{
         visible: isDebugBuild
         menuDelegate: paneItemMenu
         icon:FluentIcons.Bug
-        url:"qrc:/qml/Test.qml"
+        url:"qrc:/qml/page/Test_Hotload.qml"
+        //url:"qrc:/qml/Test.qml"
         onTap:{
             navigationView.push(url)
         }

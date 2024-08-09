@@ -1,6 +1,6 @@
 import QtQuick
 
-import FluentUI
+import FluentUI 1.0
 
 import "../../qml/window"
 import "../../qml/global"

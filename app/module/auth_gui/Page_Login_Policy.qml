@@ -15,4 +15,5 @@ FluContentPage {
         font: FluTextStyle.Title
         anchors.centerIn: parent
     }
+
 }

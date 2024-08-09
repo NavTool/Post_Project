@@ -171,5 +171,13 @@
         <file>module/str_mult/Page_Stream_Persistence.qml</file>
         <file>qml/page/Page_Info.qml</file>
         <file>qml/extra/ExtraExpander.qml</file>
+        <file>qml/extra/ExtraIcon.qml</file>
+        <file>res/font/FluentSystemIcons-Regular.ttf</file>
+        <file>qml/extra/ExtraIcons.qml</file>
+        <file>module/file_conv/Page_Conv.qml</file>
+        <file>module/file_conv/Home_Conv.qml</file>
+        <file>module/file_conv/Page_Format.qml</file>
+        <file>module/file_conv/Page_Info.qml</file>
+        <file>qml/page/Test_Hotload.qml</file>
     </qresource>
 </RCC>

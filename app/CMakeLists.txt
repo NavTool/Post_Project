@@ -64,6 +64,7 @@ set(PROJECT_SOURCES
     src/helper/SettingsHelper.h
     src/helper/TranslateHelper.cpp
     src/helper/TranslateHelper.h
+    src/extra/ExtraIconsDef.h
     src/main.cpp
     ${QRC_RESOURCES}
 )

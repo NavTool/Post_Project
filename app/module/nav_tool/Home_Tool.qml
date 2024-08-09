@@ -62,6 +62,13 @@ FluScrollablePage {
     }
 
     ExtraItem{
+        _icon:FluentIcons.MapPin
+        _text:qsTr("位置查询工具")
+        _text_extra:qsTr("根据坐标查询位置或根据位置查询坐标")
+        _url:"qrc:/module/nav_tool/Page_Sky_Plot.qml"
+    }
+
+    ExtraItem{
         _icon:FluentIcons.Info
         _text:qsTr("版本信息")
         _text_extra:qsTr("工具版本、使用算法和依赖库")

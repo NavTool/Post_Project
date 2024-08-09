@@ -24,6 +24,8 @@
 #include "src/helper/Network.h"
 #include "src/helper/Log.h"
 
+#include "src/extra/ExtraIconsDef.h"
+
 #ifdef FLUENTUI_BUILD_STATIC_LIB
 #if (QT_VERSION > QT_VERSION_CHECK(6, 2, 0))
 Q_IMPORT_QML_PLUGIN(FluentUIPlugin)
@@ -88,6 +90,8 @@ int main(int argc, char *argv[])
     qmlRegisterType<NetworkParams>(uri,major,minor,"NetworkParams");
     qmlRegisterType<OpenGLItem>(uri,major,minor,"OpenGLItem");
     qmlRegisterUncreatableMetaObject(NetworkType::staticMetaObject, uri, major, minor, "NetworkType", "Access to enums & flags only");
+
+    qmlRegisterUncreatableMetaObject(Extra_Regular_Icons::staticMetaObject,"Extra", major, minor,"RegularIcons", "Access to enums only");
 
     //    // 设置Qt Quick Controls的风格
     // QQuickStyle::setStyle("Material");  // 或其他风格，如 "Fusion", "Imagine", "Universal" 等

@@ -316,6 +316,51 @@ server/client:2847/3519</source>
     </message>
 </context>
 <context>
+    <name>Home_Conv</name>
+    <message>
+        <location filename="module/file_conv/Home_Conv.qml" line="14"/>
+        <source>File Format Convert</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/file_conv/Home_Conv.qml" line="17"/>
+        <source>Version and Description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/file_conv/Home_Conv.qml" line="24"/>
+        <source>原始观测数据转换</source>
+        <oldsource>GNSS原始观测数据转换</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/file_conv/Home_Conv.qml" line="25"/>
+        <source>Rinex、RTCM格式数据转换</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/file_conv/Home_Conv.qml" line="31"/>
+        <source>结果文件格式转换</source>
+        <oldsource>GNSS结果文件格式转换</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/file_conv/Home_Conv.qml" line="32"/>
+        <source>定位结果文件格式转换</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/file_conv/Home_Conv.qml" line="38"/>
+        <source>版本信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/file_conv/Home_Conv.qml" line="39"/>
+        <source>模块版本、使用算法和依赖库</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Home_Main</name>
     <message>
         <location filename="qml/page/Home_Main.qml" line="51"/>
@@ -540,12 +585,22 @@ server/client:2847/3519</source>
     </message>
     <message>
         <location filename="module/test_tool/Home_Test.qml" line="46"/>
+        <source>实时数据流模拟工具</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/test_tool/Home_Test.qml" line="47"/>
+        <source>根据数据流记录文件和时间戳文件，复现实时数据流</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/test_tool/Home_Test.qml" line="53"/>
         <source>版本信息</source>
         <oldsource>服务信息</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/test_tool/Home_Test.qml" line="47"/>
+        <location filename="module/test_tool/Home_Test.qml" line="54"/>
         <source>工具版本、运行环境</source>
         <oldsource>软件版本、运行环境</oldsource>
         <translation type="unfinished"></translation>
@@ -611,7 +666,17 @@ server/client:2847/3519</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="66"/>
+        <source>位置查询工具</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="module/nav_tool/Home_Tool.qml" line="67"/>
+        <source>根据坐标查询位置或根据位置查询坐标</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="74"/>
         <source>工具版本、使用算法和依赖库</source>
         <translation type="unfinished"></translation>
     </message>
@@ -633,7 +698,7 @@ server/client:2847/3519</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="66"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="73"/>
         <source>版本信息</source>
         <oldsource>服务运行状态和统计信息</oldsource>
         <translation type="unfinished"></translation>
@@ -683,24 +748,24 @@ server/client:2847/3519</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/global/ItemsFooter.qml" line="37"/>
+        <location filename="qml/global/ItemsFooter.qml" line="38"/>
         <location filename="qml/qml/global/ItemsFooter.qml" line="25"/>
         <source>Hotload Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/global/ItemsFooter.qml" line="48"/>
+        <location filename="qml/global/ItemsFooter.qml" line="49"/>
         <location filename="qml/qml/global/ItemsFooter.qml" line="35"/>
         <source>Hotload Window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/global/ItemsFooter.qml" line="68"/>
+        <location filename="qml/global/ItemsFooter.qml" line="69"/>
         <source>设置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/global/ItemsFooter.qml" line="58"/>
+        <location filename="qml/global/ItemsFooter.qml" line="59"/>
         <source>关于</source>
         <translation type="unfinished"></translation>
     </message>
@@ -756,6 +821,11 @@ server/client:2847/3519</source>
         <location filename="qml/global/ItemsOriginal.qml" line="133"/>
         <source>数据解算</source>
         <oldsource>数据处理</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/global/ItemsOriginal.qml" line="152"/>
+        <source>文件转换</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -866,6 +936,19 @@ server/client:2847/3519</source>
     </message>
 </context>
 <context>
+    <name>Page_Conv</name>
+    <message>
+        <location filename="module/file_conv/Page_Conv.qml" line="11"/>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/file_conv/Page_Conv.qml" line="14"/>
+        <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Page_Coord_Transfer</name>
     <message>
         <location filename="module/nav_tool/Page_Coord_Transfer.qml" line="14"/>
@@ -875,6 +958,19 @@ server/client:2847/3519</source>
     <message>
         <location filename="module/nav_tool/Page_Coord_Transfer.qml" line="47"/>
         <source>转换结果</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Format</name>
+    <message>
+        <location filename="module/file_conv/Page_Format.qml" line="11"/>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/file_conv/Page_Format.qml" line="14"/>
+        <source>开发中...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -891,6 +987,7 @@ server/client:2847/3519</source>
     <message>
         <location filename="module/auth_gui/Page_Info.qml" line="11"/>
         <location filename="module/caster_gui/Page_Info.qml" line="11"/>
+        <location filename="module/file_conv/Page_Info.qml" line="11"/>
         <location filename="module/nav_tool/Page_Info.qml" line="11"/>
         <location filename="module/post_proc/Page_Info.qml" line="11"/>
         <location filename="module/str_mult/Page_Info.qml" line="11"/>
@@ -902,6 +999,7 @@ server/client:2847/3519</source>
     <message>
         <location filename="module/auth_gui/Page_Info.qml" line="14"/>
         <location filename="module/caster_gui/Page_Info.qml" line="14"/>
+        <location filename="module/file_conv/Page_Info.qml" line="14"/>
         <location filename="module/nav_tool/Page_Info.qml" line="14"/>
         <location filename="module/post_proc/Page_Info.qml" line="14"/>
         <location filename="module/str_mult/Page_Info.qml" line="14"/>
@@ -1598,7 +1696,7 @@ server/client:2847/3519</source>
 <context>
     <name>Test</name>
     <message>
-        <location filename="qml/Test.qml" line="15"/>
+        <location filename="qml/Test.qml" line="20"/>
         <source>TabView Example</source>
         <translation type="unfinished"></translation>
     </message>

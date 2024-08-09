@@ -146,6 +146,24 @@ FluObject{
     }
 
 
+    FluPaneItem{
+        id:item_file_conv
+        count: 0
+        title: qsTr("文件转换")
+        menuDelegate: paneItemMenu
+        infoBadge: FluBadge{
+            count: item_caster_service.count
+        }
+        icon: FluentIcons.SyncFolder
+        url: "qrc:/module/file_conv/Home_Conv.qml"
+        onTap: {
+            if(navigationView.getCurrentUrl()){
+                item_caster_service.count = 0
+            }
+            navigationView.push(url)
+        }
+    }
+
     function getRecentlyAddedData(){
         var arr = []
         var items = navigationView.getItems();

@@ -141,7 +141,7 @@ FluScrollablePage {
                         value:"0000/0/0"
                     },
                     {
-                        key:"特征码",
+                        key:"设备码",
                         value:"1c99a3cc-d75e-4da9-8e94-00d89a7dffde"
                     },
                     {
