@@ -20,7 +20,7 @@ else ()
 endif ()
 
 #设置版本号
-add_definitions(-DFLUENTUI_VERSION=1,7,5,0)
+add_definitions(-DFLUENTUI_VERSION=1,7,7,0)
 
 if (FLUENTUI_BUILD_STATIC_LIB)
     add_definitions(-DFLUENTUI_BUILD_STATIC_LIB)
@@ -30,8 +30,8 @@ endif ()
 option(FLUENTUI_BUILD_STATIC_LIB "Build static library." OFF)
 
 #导入Qt相关依赖包
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Quick Qml)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick)
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Quick Qml Widgets PrintSupport)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick Widgets PrintSupport)
 
 set(QT_SDK_DIR "${Qt${QT_VERSION_MAJOR}_DIR}/../../..")
 cmake_path(SET QT_SDK_DIR NORMALIZE ${QT_SDK_DIR})
@@ -184,6 +184,8 @@ target_compile_definitions(${PROJECT_NAME}
 #去掉mingw生成的动态库libxxx前缀lib，不去掉前缀会导致 module "FluentUI" plugin "fluentuiplugin" not found
 if (MINGW)
     set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
+    #解决编译器报 too many sections的问题
+    target_compile_options(${PROJECT_NAME} PRIVATE -Wa,-mbig-obj)
 endif ()
 
 #MSVC Debug 添加后缀d，与Qt插件风格保持一致
@@ -196,6 +198,8 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
         Qt${QT_VERSION_MAJOR}::Core
         Qt${QT_VERSION_MAJOR}::Quick
         Qt${QT_VERSION_MAJOR}::Qml
+        Qt${QT_VERSION_MAJOR}::Widgets
+        Qt${QT_VERSION_MAJOR}::PrintSupport
 )
 if(APPLE)
     find_library(CARBON_LIBRARY Carbon)
@@ -215,6 +219,10 @@ elseif(UNIX)
     endif()
     target_link_libraries(${PROJECT_NAME} PRIVATE X11)
 endif()
+
+target_include_directories(${PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/qmlcustomplot
+)
 
 if ((${QT_VERSION_MAJOR} LESS_EQUAL 6) AND (CMAKE_BUILD_TYPE MATCHES "Release"))
     find_program(QML_PLUGIN_DUMP NAMES qmlplugindump)

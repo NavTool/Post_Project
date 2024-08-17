@@ -22,8 +22,10 @@ FluContentPage {
 
     property int global_value:0
 
+    property alias set_value:inner_value_test.inner_value
 
-    Row{
+
+    Column{
 
         //一个组件的基本组成
         FluTextBox{
@@ -71,6 +73,34 @@ FluContentPage {
                 root.setglobal_value(text);
             }
         }
+
+
+        FluTextBox{
+
+            property int inner_value
+
+            id:inner_value_test
+
+            onTextChanged: {
+                inner_value=text
+            }
+
+            onInner_valueChanged: {
+                text=inner_value
+            }
+        }
+
+
+        FluButton
+        {
+
+
+            onClicked: {
+                set_value++
+            }
+        }
+
+
     }
 
 
