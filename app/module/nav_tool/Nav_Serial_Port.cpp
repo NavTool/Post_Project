@@ -1,5 +1,5 @@
 #include"Nav_Serial_Port.h"
-#include <QVariant.h>
+#include <QVariant>
 
 Nav_Serial_Port::Nav_Serial_Port(QObject *parent)
     : QObject{parent}

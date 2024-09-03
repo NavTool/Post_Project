@@ -686,7 +686,7 @@ FluContentPage {
         port_name_model.clear()
         var list=nav_serial_port.getAvailableSerialPort()
         console.log(list)
-        showSuccess(list)
+        // showSuccess(list)
 
         for(var i=0;i<list.length;i++)
         {

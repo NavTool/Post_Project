@@ -1260,240 +1260,240 @@ server/client:2847/3519</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="72"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="78"/>
         <source>串口选择</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="78"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="84"/>
         <source>刷新串口列表</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="98"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="104"/>
         <source>设置串口：</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="107"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="113"/>
         <source>波特率</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="122"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="129"/>
         <source>设置波特率:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="131"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="138"/>
         <source>停止位</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="145"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="152"/>
         <source>设置停止位:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="154"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="161"/>
         <source>数据位</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="168"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="175"/>
         <source>设置数据位:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="177"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="184"/>
         <source>校验位</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="191"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="198"/>
         <source>设置检验位:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="200"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="207"/>
         <source>串口操作</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="209"/>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="233"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="216"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="240"/>
         <source>打开串口</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="217"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="224"/>
         <source>打开串口成功</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="218"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="225"/>
         <source>关闭串口</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="222"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="229"/>
         <source>打开串口失败</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="232"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="239"/>
         <source>关闭串口成功</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="247"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="254"/>
         <source>保存窗口</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="253"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="260"/>
         <source>清除接收</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="257"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="264"/>
         <source>接收缓冲区已清空</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="268"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="275"/>
         <source>16进制显示</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="274"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="287"/>
         <source>自动保存</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="284"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="297"/>
         <source>DTR</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="289"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="302"/>
         <source>RTS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="298"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="311"/>
         <source>时间戳</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="304"/>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="457"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="317"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="470"/>
         <source>1000</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="309"/>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="462"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="322"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="475"/>
         <source>ms</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="330"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="343"/>
         <source>单条发送</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="337"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="350"/>
         <source>多条发送</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="344"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="357"/>
         <source>协议传输</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="395"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="408"/>
         <source>发送</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="404"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="417"/>
         <source>串口未连接</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="411"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="424"/>
         <source>清除发送</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="415"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="428"/>
         <source>发送缓冲区已清空</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="446"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="459"/>
         <source>定时发送</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="451"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="464"/>
         <source>   周期</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="487"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="500"/>
         <source>停止发送</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="492"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="505"/>
         <source>发送文件</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="496"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="509"/>
         <source>打开文件</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="511"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="524"/>
         <source>十六进制发送</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="516"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="529"/>
         <source>发送新行</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="560"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="573"/>
         <source>连接状态:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="566"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="579"/>
         <source>未连接</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="566"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="579"/>
         <source>已连接</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="571"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="584"/>
         <source>发送字节：</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="582"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="595"/>
         <source>接收字节：</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Serial_Port.qml" line="618"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="631"/>
         <source>当前时间:</source>
         <translation type="unfinished"></translation>
     </message>
