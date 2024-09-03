@@ -1,6 +1,11 @@
 import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import Qt.labs.qmlmodels
 
-import FluentUI 1.0
+import FluentUI
+
+import frame
 
 import "../../qml/window"
 import "../../qml/global"

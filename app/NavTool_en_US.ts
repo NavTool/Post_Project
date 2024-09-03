@@ -38,6 +38,39 @@
     </message>
 </context>
 <context>
+    <name>Dialog_AddStation</name>
+    <message>
+        <location filename="module/post_proc/Dialog_AddStation.qml" line="16"/>
+        <source>Friendly Reminder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Dialog_AddStation.qml" line="17"/>
+        <source>Data is loading, please wait...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Dialog_AddStation.qml" line="18"/>
+        <source>Unload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Dialog_AddStation.qml" line="35"/>
+        <source>Click the Cancel Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Dialog_AddStation.qml" line="37"/>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/post_proc/Dialog_AddStation.qml" line="39"/>
+        <source>Test the InfoBar level on top of the Popup</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ExtraItem</name>
     <message>
         <location filename="qml/extra/ExtraItem.qml" line="15"/>
@@ -676,7 +709,17 @@ server/client:2847/3519</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="73"/>
+        <source>串口工具</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="module/nav_tool/Home_Tool.qml" line="74"/>
+        <source>通过串口连接到设备</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Home_Tool.qml" line="81"/>
         <source>工具版本、使用算法和依赖库</source>
         <translation type="unfinished"></translation>
     </message>
@@ -698,7 +741,7 @@ server/client:2847/3519</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Home_Tool.qml" line="73"/>
+        <location filename="module/nav_tool/Home_Tool.qml" line="80"/>
         <source>版本信息</source>
         <oldsource>服务运行状态和统计信息</oldsource>
         <translation type="unfinished"></translation>
@@ -1210,6 +1253,252 @@ server/client:2847/3519</source>
     </message>
 </context>
 <context>
+    <name>Page_Serial_Port</name>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="28"/>
+        <source>串口调试工具</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="72"/>
+        <source>串口选择</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="78"/>
+        <source>刷新串口列表</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="98"/>
+        <source>设置串口：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="107"/>
+        <source>波特率</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="122"/>
+        <source>设置波特率:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="131"/>
+        <source>停止位</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="145"/>
+        <source>设置停止位:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="154"/>
+        <source>数据位</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="168"/>
+        <source>设置数据位:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="177"/>
+        <source>校验位</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="191"/>
+        <source>设置检验位:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="200"/>
+        <source>串口操作</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="209"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="233"/>
+        <source>打开串口</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="217"/>
+        <source>打开串口成功</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="218"/>
+        <source>关闭串口</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="222"/>
+        <source>打开串口失败</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="232"/>
+        <source>关闭串口成功</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="247"/>
+        <source>保存窗口</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="253"/>
+        <source>清除接收</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="257"/>
+        <source>接收缓冲区已清空</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="268"/>
+        <source>16进制显示</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="274"/>
+        <source>自动保存</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="284"/>
+        <source>DTR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="289"/>
+        <source>RTS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="298"/>
+        <source>时间戳</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="304"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="457"/>
+        <source>1000</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="309"/>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="462"/>
+        <source>ms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="330"/>
+        <source>单条发送</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="337"/>
+        <source>多条发送</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="344"/>
+        <source>协议传输</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="395"/>
+        <source>发送</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="404"/>
+        <source>串口未连接</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="411"/>
+        <source>清除发送</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="415"/>
+        <source>发送缓冲区已清空</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="446"/>
+        <source>定时发送</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="451"/>
+        <source>   周期</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="487"/>
+        <source>停止发送</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="492"/>
+        <source>发送文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="496"/>
+        <source>打开文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="511"/>
+        <source>十六进制发送</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="516"/>
+        <source>发送新行</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="560"/>
+        <source>连接状态:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="566"/>
+        <source>未连接</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="566"/>
+        <source>已连接</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="571"/>
+        <source>发送字节：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="582"/>
+        <source>接收字节：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/nav_tool/Page_Serial_Port.qml" line="618"/>
+        <source>当前时间:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Page_Server</name>
     <message>
         <location filename="module/caster_gui/Page_Server.qml" line="11"/>
@@ -1383,12 +1672,12 @@ server/client:2847/3519</source>
 <context>
     <name>Page_Sky_Plot</name>
     <message>
-        <location filename="module/nav_tool/Page_Sky_Plot.qml" line="11"/>
+        <location filename="module/nav_tool/Page_Sky_Plot.qml" line="16"/>
         <source>Sky Plot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="module/nav_tool/Page_Sky_Plot.qml" line="14"/>
+        <location filename="module/nav_tool/Page_Sky_Plot.qml" line="19"/>
         <source>开发中...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1696,8 +1985,104 @@ server/client:2847/3519</source>
 <context>
     <name>Test</name>
     <message>
-        <location filename="qml/Test.qml" line="20"/>
+        <location filename="qml/Test.qml" line="21"/>
         <source>TabView Example</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="109"/>
+        <source>添加/修改参数</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="116"/>
+        <source>请输入配置项</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="122"/>
+        <source>请输入参数</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="130"/>
+        <source>添加配置</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="145"/>
+        <source>已存在该配置，更新配置值并启用配置！</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="150"/>
+        <source>配置添加成功</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="160"/>
+        <source>保存配置</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="163"/>
+        <source>配置保存成功</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="178"/>
+        <source>配置项</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="184"/>
+        <source>参数</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="189"/>
+        <source>禁用/启用</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="194"/>
+        <location filename="qml/Test.qml" line="272"/>
+        <source>删除</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="278"/>
+        <source>配置项已删除</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="501"/>
+        <source>Friendly Reminder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="502"/>
+        <source>Data is loading, please wait...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="503"/>
+        <source>Unload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="521"/>
+        <source>Click the Cancel Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="523"/>
+        <source>OK</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/Test.qml" line="525"/>
+        <source>Test the InfoBar level on top of the Popup</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

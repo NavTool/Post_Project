@@ -179,5 +179,7 @@
         <file>module/file_conv/Page_Format.qml</file>
         <file>module/file_conv/Page_Info.qml</file>
         <file>qml/page/Test_Hotload.qml</file>
+        <file>module/post_proc/Dialog_AddStation.qml</file>
+        <file>module/nav_tool/Page_Serial_Port.qml</file>
     </qresource>
 </RCC>

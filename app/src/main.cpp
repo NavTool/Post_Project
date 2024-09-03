@@ -1,16 +1,14 @@
-#include <QGuiApplication>
-#include <QQmlApplicationEngine>
-// #include <QQuickStyle>
-#include <QTranslator>
-
-#include <QQmlContext>
-#include <QDir>
-#include <QQuickWindow>
-#include <QNetworkProxy>
-#include <QSslConfiguration>
-#include <QProcess>
 #include <QtQml/qqmlextensionplugin.h>
+
+#include <QApplication>
+#include <QDir>
 #include <QLoggingCategory>
+#include <QNetworkProxy>
+#include <QProcess>
+#include <QQmlApplicationEngine>
+#include <QQmlContext>
+#include <QQuickWindow>
+#include <QSslConfiguration>
 
 #include "Version.h"
 #include "AppInfo.h"
@@ -25,6 +23,9 @@
 #include "src/helper/Log.h"
 
 #include "src/extra/ExtraIconsDef.h"
+#include "src/test.h"
+
+#include "module/nav_tool/Nav_Serial_Port.h"
 
 #ifdef FLUENTUI_BUILD_STATIC_LIB
 #if (QT_VERSION > QT_VERSION_CHECK(6, 2, 0))
@@ -83,6 +84,9 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
+    qmlRegisterType<Nav_Serial_Port>(uri, major, minor, "Nav_Serial_Port");
+    qmlRegisterType<DataClass>(uri, major, minor, "DataClass");
+    qmlRegisterType<TestClass>(uri, major, minor, "TestClass");
     qmlRegisterType<CircularReveal>(uri, major, minor, "CircularReveal");
     qmlRegisterType<FileWatcher>(uri, major, minor, "FileWatcher");
     qmlRegisterType<FpsItem>(uri, major, minor, "FpsItem");

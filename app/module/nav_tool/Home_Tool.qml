@@ -69,6 +69,13 @@ FluScrollablePage {
     }
 
     ExtraItem{
+        _icon:FluentIcons.Link
+        _text:qsTr("串口工具")
+        _text_extra:qsTr("通过串口连接到设备")
+        _url:"qrc:/module/nav_tool/Page_Serial_Port.qml"
+    }
+
+    ExtraItem{
         _icon:FluentIcons.Info
         _text:qsTr("版本信息")
         _text_extra:qsTr("工具版本、使用算法和依赖库")

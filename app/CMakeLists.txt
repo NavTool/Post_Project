@@ -66,7 +66,11 @@ set(PROJECT_SOURCES
     src/helper/TranslateHelper.h
     src/extra/ExtraIconsDef.h
     src/main.cpp
+    src/test.h
+    src/test.cpp
     ${QRC_RESOURCES}
+    module/nav_tool/Nav_Serial_Port.h
+    module/nav_tool/Nav_Serial_Port.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -85,7 +89,7 @@ add_dependencies(${PROJECT_NAME} Script-UpdateTranslations)
 target_link_libraries(${PROJECT_NAME} PRIVATE
     Qt${QT_VERSION_MAJOR}::Core
     Qt${QT_VERSION_MAJOR}::Quick
-    # Qt6::QuickControls2
+    Qt${QT_VERSION_MAJOR}::SerialPort
     fluentuiplugin
 )
 

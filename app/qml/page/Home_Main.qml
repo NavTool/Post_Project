@@ -202,7 +202,44 @@ FluScrollablePage{
         Layout.leftMargin: 20
     }
 
+    FluButton{
+        id:err1
 
+        onClicked: {
+            showLoading("x",false)
+            timer2.start()
+            timer.start()
+        }
+        Timer{
+
+            property int percent: 0
+
+            id:timer2
+
+            repeat: true
+            interval: 100
+
+
+            onTriggered: {
+                percent+=2
+                showLoading(percent+"%",false)
+
+            }
+        }
+
+
+        Timer{
+            id:timer
+
+            interval: 5100
+
+            onTriggered: {
+
+                hideLoading()
+                timer2.stop()
+            }
+        }
+    }
 
 }
 
