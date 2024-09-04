@@ -20,6 +20,63 @@ FluScrollablePage {
 
     title: qsTr("TabView Example")
 
+
+
+
+    FluFrame{
+
+        Layout.fillWidth: true
+        Layout.preferredHeight: 500
+        padding: 10
+
+
+        visible: true
+        width: 600
+        height: 400
+        // title: "Serial Port Tool"
+
+
+
+        Flickable {
+            width: 200
+            height: 300
+
+            contentHeight: myContent.height
+
+            Rectangle {
+                id: myContent
+                width: 200
+                height: dynamicHeight
+                color: "lightblue"
+
+                property int dynamicHeight: 300
+
+                Button {
+                    text: "Increase Height"
+                    onClicked: {
+                       myContent.dynamicHeight += 50
+                        console.log("Content Height Changed:", contentHeight)
+                    }
+                }
+            }
+
+
+
+            onContentHeightChanged: {
+                console.log("Content Height Changed:", contentHeight)
+
+                contentY =myContent.height-300
+            }
+        }
+
+
+
+
+    }
+
+
+
+
     FluFrame{
 
         Layout.fillWidth: true
