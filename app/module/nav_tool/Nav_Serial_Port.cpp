@@ -297,5 +297,6 @@ bool Nav_Serial_Port::clearRecvBuffer()
     _recvbuffer.clear();
     recvbyte(_recvbuffer.size());
     sendbyte(0);
+    return true;
 }
 

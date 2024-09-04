@@ -305,7 +305,7 @@ FluContentPage {
 
                     onClicked: {
                         root.recv_buffer=""
-                        showInfo(qsTr("接收缓冲区已清空"))
+                        showInfo(qsTr("接收窗口已清空"))
                     }
                 }
             }
