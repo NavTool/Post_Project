@@ -1,5 +1,5 @@
 #include <QtQml/qqmlextensionplugin.h>
-
+#include <QtWidgets/QApplication>
 #include <QApplication>
 #include <QDir>
 #include <QLoggingCategory>
@@ -16,6 +16,7 @@
 #include "src/component/FileWatcher.h"
 #include "src/component/FpsItem.h"
 #include "src/component/OpenGLItem.h"
+#include "src/frame.hpp"
 #include "src/helper/SettingsHelper.h"
 #include "src/helper/InitializrHelper.h"
 #include "src/helper/TranslateHelper.h"
@@ -25,7 +26,8 @@
 #include "src/extra/ExtraIconsDef.h"
 #include "src/test.h"
 
-#include "module/nav_tool/Nav_Serial_Port.h"
+#include "module/module.hpp"
+
 
 #ifdef FLUENTUI_BUILD_STATIC_LIB
 #if (QT_VERSION > QT_VERSION_CHECK(6, 2, 0))
@@ -61,11 +63,11 @@ int main(int argc, char *argv[])
     qputenv("QSG_RENDER_LOOP","basic");
 #endif
 
-    QGuiApplication::setOrganizationName("NavTool");
-    QGuiApplication::setOrganizationDomain("https://github.com/NavTool");
-    QGuiApplication::setApplicationName("NavTool");
-    QGuiApplication::setApplicationDisplayName("NavTool");
-    QGuiApplication::setApplicationVersion(PROJECT_SET_VERSION);
+    QGuiApplication::setOrganizationName(EXE_ORGANIZATION_NAME);
+    QGuiApplication::setOrganizationDomain(EXE_ORGANIZATION_DOMAIN);
+    QGuiApplication::setApplicationName(EXE_APPLICATION_NAME);
+    QGuiApplication::setApplicationDisplayName(EXE_APPLICATION_DISPLAY_NAME);
+    QGuiApplication::setApplicationVersion(EXE_APPLICATION_VERSION);
     QGuiApplication::setQuitOnLastWindowClosed(false);
 
     SettingsHelper::getInstance()->init(argv);
@@ -82,36 +84,16 @@ int main(int argc, char *argv[])
 #endif
 #endif
 
-    QGuiApplication app(argc, argv);
-
-    qmlRegisterType<Nav_Serial_Port>(uri, major, minor, "Nav_Serial_Port");
-    qmlRegisterType<DataClass>(uri, major, minor, "DataClass");
-    qmlRegisterType<TestClass>(uri, major, minor, "TestClass");
-    qmlRegisterType<CircularReveal>(uri, major, minor, "CircularReveal");
-    qmlRegisterType<FileWatcher>(uri, major, minor, "FileWatcher");
-    qmlRegisterType<FpsItem>(uri, major, minor, "FpsItem");
-    qmlRegisterType<NetworkCallable>(uri,major,minor,"NetworkCallable");
-    qmlRegisterType<NetworkParams>(uri,major,minor,"NetworkParams");
-    qmlRegisterType<OpenGLItem>(uri,major,minor,"OpenGLItem");
-    qmlRegisterUncreatableMetaObject(NetworkType::staticMetaObject, uri, major, minor, "NetworkType", "Access to enums & flags only");
-
-    qmlRegisterUncreatableMetaObject(Extra_Regular_Icons::staticMetaObject,"Extra", major, minor,"RegularIcons", "Access to enums only");
-
-    //    // 设置Qt Quick Controls的风格
-    // QQuickStyle::setStyle("Material");  // 或其他风格，如 "Fusion", "Imagine", "Universal" 等
+    // QGuiApplication app(argc, argv);
+    QApplication app(argc, argv);//由QGuiApplication切换为QApplication，来使得可以只用chart功能
 
     QQmlApplicationEngine engine;
     TranslateHelper::getInstance()->init(&engine);
-#ifdef QT_DEBUG  //传递程序的构建类型，来隐藏部分Debug调试使用的功能
-    engine.rootContext()->setContextProperty("isDebugBuild",true);
-#else
-    engine.rootContext()->setContextProperty("isDebugBuild",false);
-#endif
-    engine.rootContext()->setContextProperty("AppInfo",AppInfo::getInstance());
-    engine.rootContext()->setContextProperty("SettingsHelper",SettingsHelper::getInstance());
-    engine.rootContext()->setContextProperty("InitializrHelper",InitializrHelper::getInstance());
-    engine.rootContext()->setContextProperty("TranslateHelper",TranslateHelper::getInstance());
-    engine.rootContext()->setContextProperty("Network",Network::getInstance());
+
+    Register_qml_module(); //将自定义模块类型注册到qml中
+    Register_qml_frame_type(); //将框架模块注类型册到qml中
+    Register_qml_frame_define(engine.rootContext());//注册宏定义到qml中
+    Register_qml_frame_instance(engine.rootContext());//注册单例到qml中
 
     const QUrl url(QStringLiteral("qrc:qml/App.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,

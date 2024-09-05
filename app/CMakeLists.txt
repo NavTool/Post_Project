@@ -66,30 +66,44 @@ set(PROJECT_SOURCES
     src/helper/TranslateHelper.h
     src/extra/ExtraIconsDef.h
     src/main.cpp
+    src/frame.hpp
     src/test.h
     src/test.cpp
+    module/module.hpp
     ${QRC_RESOURCES}
-    module/nav_tool/Nav_Serial_Port.h
-    module/nav_tool/Nav_Serial_Port.cpp
+
+)
+
+set(MODULE_SOURCE
+    module/nav_tool/Serial_Port/Nav_Serial_Port.h
+    module/nav_tool/Serial_Port/Nav_Serial_Port.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(${PROJECT_NAME}
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        ${MODULE_SOURCE}
     )
 else()
     add_executable(${PROJECT_NAME}
         ${PROJECT_SOURCES}
+        ${MODULE_SOURCE}
     )
 endif()
 
 add_dependencies(${PROJECT_NAME} Script-UpdateTranslations)
 
+find_package(Qt6 REQUIRED COMPONENTS Charts Core Gui Qml Quick)
 target_link_libraries(${PROJECT_NAME} PRIVATE
     Qt${QT_VERSION_MAJOR}::Core
     Qt${QT_VERSION_MAJOR}::Quick
     Qt${QT_VERSION_MAJOR}::SerialPort
+    Qt::Charts
+    Qt::Core
+    Qt::Gui
+    Qt::Qml
+    Qt::Quick
     fluentuiplugin
 )
 

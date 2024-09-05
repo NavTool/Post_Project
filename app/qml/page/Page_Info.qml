@@ -39,27 +39,27 @@ FluScrollablePage {
                 rows:[
                     {
                         key:"软件名称",
-                        value:"Nav Tool"
+                        value:INFO_APP_NAME
                     },
                     {
                         key:"版本",
-                        value:"内测版本"
+                        value:INFO_VERSION_TYPE
                     },
                     {
                         key:"版本号",
-                        value:"1.0.0.0"
-                    },
-                    {
-                        key:"发布日期",
-                        value:"2024/7/2"
+                        value:INFO_APP_VERSION
                     },
                     {
                         key:"GIT版本",
-                        value:"1.1.5-15-gba609412-dev"
+                        value:INFO_GIT_VERSION
                     },
                     {
                         key:"TAG版本",
-                        value:"ba609412"
+                        value:INFO_TAG_VERSION
+                    },
+                    {
+                        key:"提交日期",
+                        value:INFO_SUBMIT_TIME
                     }
                 ]
             }
@@ -134,7 +134,7 @@ FluScrollablePage {
                     },
                     {
                         key:"激活状态",
-                        value:"已激活"
+                        value:"无需激活"
                     },
                     {
                         key:"过期时间",
@@ -202,7 +202,7 @@ FluScrollablePage {
         headerIcon: FluentIcons.Repair
 
         expand:false
-        contentHeight: 100
+        contentHeight: 120
 
         TableView{
             anchors.fill: parent
@@ -220,15 +220,19 @@ FluScrollablePage {
                 rows:[
                     {
                         key:"编译环境",
-                        value:"Windows 11 build 22631"
+                        value:BUILD_SYSTEM
+                    },
+                    {
+                        key:"编译架构",
+                        value:BUILD_SYSTEM_PROCESSOR
                     },
                     {
                         key:"编译器版本",
-                        value:"Qt 6.6.3 (MSVC 2019, x86_64)"
+                        value:BUILD_COMPILER_VERSION
                     },
                     {
                         key:"构建日期",
-                        value:"2024/7/2"
+                        value:BUILD_DATE
                     }
                 ]
             }
@@ -283,7 +287,7 @@ FluScrollablePage {
         headerIcon: FluentIcons.Unknown
 
         expand:false
-        contentHeight: 130
+        contentHeight: 150
 
         TableView{
             anchors.fill: parent
@@ -300,20 +304,25 @@ FluScrollablePage {
                 rows:[
                     {
                         key:"开发组织",
-                        value:"NavTool"
-                    },
-                    {
-                        key:"官方网站",
-                        value:"https://github.com/NavTool"
-                    },
-                    {
-                        key:"项目网站",
-                        value:"https://github.com/NavTool/NavTool"
+                        value:SUPPORT_DEVELOPER
                     },
                     {
                         key:"许可信息",
                         value:"MIT Licence"
+                    },
+                    {
+                        key:"官方网站",
+                        value:SUPPORT_OFFICIAL_DOMAIN
+                    },
+                    {
+                        key:"项目网站",
+                        value:SUPPORT_PROJECT_DOMAIN
+                    },
+                    {
+                        key:"问题反馈",
+                        value:SUPPORT_FEEDBACK
                     }
+
                 ]
             }
 

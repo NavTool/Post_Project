@@ -9,8 +9,6 @@ struct Person {
 
     int age;
     bool isStudent;
-
-
     bool operator==(const Person& other) const {
         return age == other.age && isStudent == other.isStudent;
     }

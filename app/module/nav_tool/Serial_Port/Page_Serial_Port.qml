@@ -7,12 +7,13 @@ import QtQuick.Dialogs
 import Qt.labs.platform
 import FluentUI 1.0
 
-import frame
+// import frame 1.0
+import nav_serial_port 1.0
 
-import "../../qml/window"
-import "../../qml/global"
-import "../../qml/component"
-import "../../qml/extra"
+import "../../../qml/window"
+import "../../../qml/global"
+import "../../../qml/component"
+import "../../../qml/extra"
 
 FluContentPage {
 
@@ -852,12 +853,12 @@ FluContentPage {
     {
         port_name_model.clear()
         var list=nav_serial_port.getAvailableSerialPort()
-        console.log(list)
+        // console.log(list)
         // showSuccess(list)
 
         for(var i=0;i<list.length;i++)
         {
-            console.log(list[i])
+            // console.log(list[i])
             port_name_model.append({"text":list[i].portname})// +":"+ list[i].description})
         }
     }
@@ -924,7 +925,7 @@ FluContentPage {
                 hexString += hex.toUpperCase() + " ";
             }
         }
-        return hexString.trim(); // 返回最终的十六进制字符串
+        return hexString.trim() + " "; // 返回最终的十六进制字符串
     }
 
     function toAbsolutePath(fileUrl) {

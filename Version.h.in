@@ -1,9 +1,36 @@
 #pragma once
- 
+
+// 版本相关信息
 #define PROJECT_SET_NAME "@PROJECT_NAME@"
 
 #define PROJECT_SET_VERSION "@PROJECT_VERSION@"
 #define PROJECT_GIT_VERSION "@PROJECT_GIT_VERSION@"
 #define PROJECT_TAG_VERSION "@PROJECT_TAG_VERSION@"
+#define PORJECT_UPDATE_TIME "@GIT_COMMIT_DATE@" // 代码提交日期
 
+// 软件信息
+#define INFO_APP_NAME "@PROJECT_NAME@"           // 软件名称
+#define INFO_VERSION_TYPE "develop"              // 软件版本类型
+#define INFO_APP_VERSION "@PROJECT_VERSION@"     // 软件版本号
+#define INFO_GIT_VERSION "@PROJECT_GIT_VERSION@" // GIT版本
+#define INFO_TAG_VERSION "@PROJECT_TAG_VERSION@" // TAG版本
+#define INFO_SUBMIT_TIME "@GIT_COMMIT_DATE@"     // 提交日期   //git版本提交日期（精确到分）
 
+// 构建相关信息
+#define BUILD_SYSTEM "@CMAKE_SYSTEM@"                     // 编译环境
+#define BUILD_SYSTEM_PROCESSOR "@CMAKE_SYSTEM_PROCESSOR@" // 处理器架构
+#define BUILD_COMPILER_VERSION "@QT_COMPILER_VERSION@"    // 编译器版本
+#define BUILD_DATE "@BUILD_DATE@"                         // 编译日期  可执行程序生成日期（精确到日）
+
+// 支持信息
+#define SUPPORT_DEVELOPER "NavTool"                          // 开发组织
+#define SUPPORT_OFFICIAL_DOMAIN "https://github.com/NavTool" // 官方网站
+#define SUPPORT_PROJECT_DOMAIN "https://github.com/NavTool/NavTool"  // 项目网站
+#define SUPPORT_FEEDBACK "https://github.com/NavTool"        // 反馈
+
+// 图形化程序相关信息
+#define EXE_APPLICATION_NAME "NavTool"                       // 应用程序名
+#define EXE_APPLICATION_DISPLAY_NAME "NavTool"               // 应用程序显示名
+#define EXE_APPLICATION_VERSION "1.0"                        // 应用程序版本
+#define EXE_ORGANIZATION_NAME "NavTool"                      // 组织名称
+#define EXE_ORGANIZATION_DOMAIN "https://github.com/NavTool" // 组织域名

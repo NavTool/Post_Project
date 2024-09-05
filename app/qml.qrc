@@ -18,14 +18,6 @@
         <file>module/test_tool/Home_Test.qml</file>
         <file>module/nav_tool/Home_Tool.qml</file>
         <file>module/auth_gui/Home_Auth.qml</file>
-        <file>res/logo/icon.png</file>
-        <file>res/logo/icon-0.png</file>
-        <file>res/logo/icon-1.png</file>
-        <file>res/logo/icon-2.png</file>
-        <file>res/logo/icon-3.png</file>
-        <file>res/logo/icon-4.png</file>
-        <file>res/logo/icon-5.png</file>
-        <file>res/logo/icon-6.png</file>
         <file>res/logo/logo.ico</file>
         <file>res/image/ic_home_github.png</file>
         <file>res/image/bg_home_header.png</file>
@@ -180,6 +172,19 @@
         <file>module/file_conv/Page_Info.qml</file>
         <file>qml/page/Test_Hotload.qml</file>
         <file>module/post_proc/Dialog_AddStation.qml</file>
-        <file>module/nav_tool/Page_Serial_Port.qml</file>
+        <file>module/nav_tool/Serial_Port/Page_Serial_Port.qml</file>
+        <file>res/logo/icon.png</file>
+        <file>res/logo/icon-0.png</file>
+        <file>res/logo/icon-1.png</file>
+        <file>res/logo/icon-2.ico</file>
+        <file>res/logo/icon-2.png</file>
+        <file>res/logo/icon-2.svg</file>
+        <file>res/logo/icon-3.png</file>
+        <file>res/logo/icon-4.png</file>
+        <file>res/logo/icon-5.png</file>
+        <file>res/logo/icon-6.png</file>
+        <file>res/logo/real_use.svg</file>
+        <file>res/logo/real_use.ico</file>
+        <file>res/logo/real_use.png</file>
     </qresource>
 </RCC>

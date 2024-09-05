@@ -242,13 +242,13 @@ void Nav_Serial_Port::sendSerialData(const QString &data)
     sendbyte(_sendbyte+=data.size());
     _serialPort->write(data.toStdString().c_str());
     if(_sendNewLine){
-#if defined(Q_OS_WIN)
-        _serialPort->write("\r\n"); // Windows: CRLF
-#else
-        _serialPort->write("\n"); // Linux/Unix: LF
-#endif
+        _serialPort->write("\r\n");
+        // #if defined(Q_OS_WIN)
+        //         _serialPort->write("\r\n"); // Windows: CRLF
+        // #else
+        //         _serialPort->write("\n"); // Linux/Unix: LF
+        // #endif
     }
-
 }
 
 bool Nav_Serial_Port::saveDataToFile(const QString &filepath, const QString &data)

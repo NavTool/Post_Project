@@ -7,6 +7,6 @@ QtObject{
 
     property int displayMode: FluNavigationViewType.Auto
     property string displayName: "NavTool"
-    property string displayLogo: "qrc:res/logo/icon-6.png"
+    property string displayLogo: "qrc:res/logo/real_use.png"
 
 }

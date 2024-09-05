@@ -72,7 +72,7 @@ FluScrollablePage {
         _icon:FluentIcons.Link
         _text:qsTr("串口工具")
         _text_extra:qsTr("通过串口连接到设备")
-        _url:"qrc:/module/nav_tool/Page_Serial_Port.qml"
+        _url:"qrc:/module/nav_tool/Serial_Port/Page_Serial_Port.qml"
     }
 
     ExtraItem{

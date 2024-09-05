@@ -18,6 +18,7 @@ add_subdirectory(app)
 add_subdirectory(lib)
 
 
+
 # 默认版本号
 set(VERSION_MAJOR 1)
 set(VERSION_MINOR 0)
@@ -75,21 +76,56 @@ else()
         OUTPUT_STRIP_TRAILING_WHITESPACE
     )
     set(VERSION_EXTRA ${UPDATE_COUNT})
+
+
+    execute_process(
+        COMMAND git log -1 --format=%cd --date=iso
+        WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+        OUTPUT_VARIABLE GIT_COMMIT_DATE
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+    )
 endif()
 
+# 获取Qt版本和编译器信息
+set(QtVersion ${Qt6Core_VERSION})
+# 获取编译器信息
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    if (MINGW)
+        set(Compiler "MinGW ${CMAKE_CXX_COMPILER_VERSION}")
+    else()
+        set(Compiler "GCC ${CMAKE_CXX_COMPILER_VERSION}")
+    endif()
+elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+    set(Compiler "MSVC ${CMAKE_CXX_COMPILER_VERSION}")
+elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+    set(Compiler "Clang ${CMAKE_CXX_COMPILER_VERSION}")
+else()
+    set(Compiler "${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}")
+endif()
+# 获取系统架构
+set(Arch ${CMAKE_SYSTEM_PROCESSOR})
+# 输出完整的版本信息
+set(QT_COMPILER_VERSION "Qt ${QtVersion} (${Compiler}, ${Arch})")
 
 # 设置项目的版本号
 set(PROJECT_VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}.${VERSION_EXTRA}")
-
+# 设置可执行程序名称
 set(EXE_NAME "${PROJECT_NAME}-${PROJECT_VERSION}")
+# 设置编构建时间
+string(TIMESTAMP BUILD_DATE "%Y-%m-%d")
 
 message(STATUS "")
 message(STATUS "------- ${PROJECT_NAME} -------")
-
+message(STATUS "BINARY_NAME: ${EXE_NAME}")
 message(STATUS "DEV VERSION: ${PROJECT_VERSION}")
 message(STATUS "GIT VERSION: ${PROJECT_GIT_VERSION}")
 message(STATUS "TAG VERSION: ${PROJECT_TAG_VERSION}")
-message(STATUS "BINARY_NAME: ${EXE_NAME}")
+message(STATUS "CMAKE_SYSTEM: ${CMAKE_SYSTEM}")
+message(STATUS "CMAKE_SYSTEM_PROCESSOR: ${CMAKE_SYSTEM_PROCESSOR}")
+message(STATUS "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
+# message(STATUS "CMAKE_CXX_COMPILER_ID: ${CMAKE_CXX_COMPILER_ID}")
+# message(STATUS "CMAKE_CXX_COMPILER_VERSION: ${CMAKE_CXX_COMPILER_VERSION}")
+message(STATUS "QT_COMPILER_VERSION: ${QT_COMPILER_VERSION}")
 
 #基于version.h.in 生成 version.h
 configure_file(${CMAKE_SOURCE_DIR}/Version.h.in Version.h @ONLY)
