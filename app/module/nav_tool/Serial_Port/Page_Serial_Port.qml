@@ -885,7 +885,7 @@ FluContentPage {
     //发送数据
     function send_message()
     {
-        console.log(send_buffer)
+        // console.log(send_buffer)
         return nav_serial_port.sendSerialData(root.send_buffer);
     }
 
@@ -969,7 +969,7 @@ FluContentPage {
                 root.recv_buffer+=data
             }
 
-            console.log(data)
+            // console.log(data)
         }
     }
 

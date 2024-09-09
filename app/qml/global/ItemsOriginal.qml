@@ -164,6 +164,19 @@ FluObject{
         }
     }
 
+
+    FluPaneItem{
+        id:item_lincese_tool
+        count: 0
+        title: qsTr("激活工具")
+        menuDelegate: paneItemMenu
+        icon: FluentIcons.Completed
+        url: "qrc:/module/license_tool/Hmoe_License.qml"
+        onTap: {
+            navigationView.push(url)
+        }
+    }
+
     function getRecentlyAddedData(){
         var arr = []
         var items = navigationView.getItems();

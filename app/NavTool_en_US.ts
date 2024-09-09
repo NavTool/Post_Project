@@ -114,6 +114,53 @@
     </message>
 </context>
 <context>
+    <name>Hmoe_License</name>
+    <message>
+        <location filename="module/license_tool/Hmoe_License.qml" line="14"/>
+        <source>User Management</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/license_tool/Hmoe_License.qml" line="17"/>
+        <source>Version and Description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/license_tool/Hmoe_License.qml" line="24"/>
+        <source>生成工具</source>
+        <oldsource>用户列表</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/license_tool/Hmoe_License.qml" line="25"/>
+        <source>生成密钥</source>
+        <oldsource>查看、管理已经注册的账号</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/license_tool/Hmoe_License.qml" line="31"/>
+        <source>验证工具</source>
+        <oldsource>在线用户</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/license_tool/Hmoe_License.qml" line="32"/>
+        <source>验证注册的密钥</source>
+        <oldsource>查看、管理在线用户</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/license_tool/Hmoe_License.qml" line="39"/>
+        <source>版本信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/license_tool/Hmoe_License.qml" line="40"/>
+        <source>模块版本、运行环境</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Home_Auth</name>
     <message>
         <location filename="module/auth_gui/Home_Auth.qml" line="17"/>
@@ -869,6 +916,11 @@ server/client:2847/3519</source>
     <message>
         <location filename="qml/global/ItemsOriginal.qml" line="152"/>
         <source>文件转换</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/global/ItemsOriginal.qml" line="171"/>
+        <source>激活工具</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

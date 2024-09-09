@@ -77,6 +77,9 @@ set(PROJECT_SOURCES
 set(MODULE_SOURCE
     module/nav_tool/Serial_Port/Nav_Serial_Port.h
     module/nav_tool/Serial_Port/Nav_Serial_Port.cpp
+
+    module/license_tool/License_Generate/Nav_License_Gen.h
+    module/license_tool/License_Generate/Nav_License_Gen.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

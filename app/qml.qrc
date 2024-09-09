@@ -186,5 +186,7 @@
         <file>res/logo/real_use.svg</file>
         <file>res/logo/real_use.ico</file>
         <file>res/logo/real_use.png</file>
+        <file>module/license_tool/Hmoe_License.qml</file>
+        <file>module/license_tool/License_Generate/Page_License_Gen.qml</file>
     </qresource>
 </RCC>

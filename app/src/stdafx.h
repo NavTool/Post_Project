@@ -1,5 +1,8 @@
 #pragma once
 
+
+#define qsTr(a)  QObject::tr(a)
+
 #define Q_PROPERTY_AUTO_P(TYPE, M)                                                                                   \
 Q_PROPERTY(TYPE M MEMBER _##M NOTIFY M##Changed)                                                                     \
     public:                                                                                                          \
