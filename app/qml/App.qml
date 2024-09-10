@@ -37,13 +37,8 @@ FluLauncher {
         FluTheme.animationEnabled = true
         FluRouter.routes = {
             "/":"qrc:/qml/window/MainWindow.qml",
-            "/about":"qrc:/qml/window/AboutWindow.qml",
-            "/login":"qrc:/qml/window/LoginWindow.qml",
             "/hotload":"qrc:/qml/window/HotloadWindow.qml",
             "/crash":"qrc:/qml/window/CrashWindow.qml",
-            "/singleTaskWindow":"qrc:/qml/window/SingleTaskWindow.qml",
-            "/standardWindow":"qrc:/qml/window/StandardWindow.qml",
-            "/singleInstanceWindow":"qrc:/qml/window/SingleInstanceWindow.qml",
             "/pageWindow":"qrc:/qml/window/PageWindow.qml"
         }
         var args = Qt.application.arguments

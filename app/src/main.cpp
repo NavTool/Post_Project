@@ -12,19 +12,13 @@
 
 #include "Version.h"
 #include "AppInfo.h"
-#include "src/component/CircularReveal.h"
-#include "src/component/FileWatcher.h"
-#include "src/component/FpsItem.h"
-#include "src/component/OpenGLItem.h"
+
 #include "src/frame.hpp"
 #include "src/helper/SettingsHelper.h"
-#include "src/helper/InitializrHelper.h"
 #include "src/helper/TranslateHelper.h"
 #include "src/helper/Network.h"
 #include "src/helper/Log.h"
 
-#include "src/extra/ExtraIconsDef.h"
-#include "src/test.h"
 
 #include "module/module.hpp"
 
@@ -43,8 +37,7 @@ Q_IMPORT_QML_PLUGIN(FluentUIPlugin)
 int main(int argc, char *argv[])
 {
     const char *uri = "frame";
-    int major = 1;
-    int minor = 0;
+
 #ifdef WIN32
     ::SetUnhandledExceptionFilter(MyUnhandledExceptionFilter);
     qputenv("QT_QPA_PLATFORM","windows:darkmode=2");
@@ -63,6 +56,8 @@ int main(int argc, char *argv[])
     qputenv("QSG_RENDER_LOOP","basic");
 #endif
 
+
+    //设置可执行程序基本信息
     QGuiApplication::setOrganizationName(EXE_ORGANIZATION_NAME);
     QGuiApplication::setOrganizationDomain(EXE_ORGANIZATION_DOMAIN);
     QGuiApplication::setApplicationName(EXE_APPLICATION_NAME);
@@ -70,6 +65,7 @@ int main(int argc, char *argv[])
     QGuiApplication::setApplicationVersion(EXE_APPLICATION_VERSION);
     QGuiApplication::setQuitOnLastWindowClosed(false);
 
+    //初始化全局配置
     SettingsHelper::getInstance()->init(argv);
     Log::setup(argv,uri);
 
@@ -88,7 +84,8 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);//由QGuiApplication切换为QApplication，来使得可以只用chart功能
 
     QQmlApplicationEngine engine;
-    TranslateHelper::getInstance()->init(&engine);
+
+    TranslateHelper::getInstance()->init(&engine);    //初始化翻译模块，载入对应的qm文件，来显示对应语言
 
     Register_qml_module(); //将自定义模块类型注册到qml中
     Register_qml_frame_type(); //将框架模块注类型册到qml中
@@ -102,6 +99,11 @@ int main(int argc, char *argv[])
                 QCoreApplication::exit(-1);
         }, Qt::QueuedConnection);
     engine.load(url);
+
+    const int exec = QApplication::exec();
+    if (exec == 931) {
+        QProcess::startDetached(qApp->applicationFilePath(), qApp->arguments());
+    }
 
     return app.exec();
 }
