@@ -80,7 +80,14 @@ set(MODULE_SOURCE
 
     module/license_tool/License_Generate/Nav_License_Gen.h
     module/license_tool/License_Generate/Nav_License_Gen.cpp
+    module/license_tool/License_Check/Nav_License_Check.h
+    module/license_tool/License_Check/Nav_License_Check.cpp
+    module/license_tool/src/license_register.h
+    module/license_tool/src/license_register.cpp
+    module/license_tool/src/aes.h
+    module/license_tool/src/aes.c
 )
+
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(${PROJECT_NAME}

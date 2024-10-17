@@ -11,12 +11,10 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core SerialPort)
 
-
 set(FLUENTUI_QML_PLUGIN_DIRECTORY ${CMAKE_BINARY_DIR}/lib/FluentUI CACHE STRING "force set this option" FORCE)
 
 add_subdirectory(app)
 add_subdirectory(lib)
-
 
 
 # 默认版本号
