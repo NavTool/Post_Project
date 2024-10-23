@@ -34,27 +34,38 @@ set(QT_SDK_DIR "${Qt6_DIR}/../../..")
 cmake_path(SET QT_SDK_DIR NORMALIZE ${QT_SDK_DIR})
 
 set(QML_FILES
-    App.qml
-    MainWindow.qml
-    MainScreen.qml
+    qml/App.qml
+    qml/window/MainWindow.qml
+    qml/screen/MainScreen.qml
+    qml/page/Page_Home.qml
+    qml/page/Page_Setting.qml
 )
 
+# qml单例对象
 set(QML_SINGLETONS
- 
+    qml/Global.qml
 )
 
 set(RESOURCES_FILES
-    logo.png
+    res/logo.png
     NavTool_zh_CN.qm
     NavTool_en_US.qm
 )
-
+include_directories(${PROJECT_NAME} ${CMAKE_BINARY_DIR})
+# include_directories(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/module)
 set(SOURCE_FILES
-    main.cpp
-    stdafx.h
-    AppInfo.h AppInfo.cpp
-    Log.h Log.cpp
+    src/main.cpp
+    src/stdafx.h
+    src/frame.hpp
+    src/AppInfo.h src/AppInfo.cpp
+    src/Log.h src/Log.cpp
+    src/FpsItem.h  src/FpsItem.cpp
+    src/SettingsHelper.h   src/SettingsHelper.cpp
+    src/CircularReveal.h   src/CircularReveal.cpp
+    module/module.hpp
 )
+
+
 
 set_source_files_properties(${QML_SINGLETONS} PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
 

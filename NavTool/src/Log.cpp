@@ -94,6 +94,9 @@ static inline void messageHandler(const QtMsgType type, const QMessageLogContext
     if (message == "Could not get the INetworkConnection instance for the adapter GUID.") {
         return;
     }
+    if (message == "Retrying to obtain clipboard.") {
+        return;
+    }
     if (logLevelMap[type] > g_logLevel) {
         return;
     }

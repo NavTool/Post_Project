@@ -10,7 +10,7 @@ Item{
         Image{
             width: 60
             height: 60
-            source: "qrc:/qt/qml/NavTool/logo.png"
+            source: "qrc:/qt/qml/NavTool/res/logo.png"
             anchors.horizontalCenter: parent.horizontalCenter
         }
         Label{
