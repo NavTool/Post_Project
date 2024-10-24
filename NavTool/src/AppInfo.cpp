@@ -3,9 +3,10 @@
 #include <QQmlContext>
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include "Version.h"
 
 AppInfo::AppInfo(QObject *parent) : QObject{parent} {
-    version(PROJECT_VERSION);
+    version(PROJECT_SET_VERSION);
     m_locales << "en_US";
     m_locales << "zh_CN";
     m_locale = QLocale::system().name();

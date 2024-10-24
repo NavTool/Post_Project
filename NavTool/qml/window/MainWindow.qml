@@ -3,7 +3,8 @@ import QtQuick.Layouts
 import QtQuick.Controls
 import FluentUI.Controls
 import FluentUI.impl
-import Frame
+// import Frame
+import NavTool
 import Qt.labs.platform as P
 
 FramelessWindow {
@@ -22,6 +23,7 @@ FramelessWindow {
     appBar: AppBar{
         implicitHeight: 48
         windowIcon: Item{}
+        width:parent.width
         action: RowLayout{
             IconButton{
                 id: btn_dark
@@ -36,6 +38,10 @@ FramelessWindow {
                 ToolTip.delay: Theme.toolbarDelay
                 onClicked: handleDarkChanged(this)
             }
+            Item{
+                width:parent.width-100
+            }
+
             IconButton{
                 id: btn_stick_on_top
                 implicitWidth: 46
@@ -58,6 +64,10 @@ FramelessWindow {
             }
         }
     }
+
+
+
+
     initialItem: resolvedUrl("qml/screen/MainScreen.qml")
     Component.onCompleted: {
         tour.open()
@@ -76,8 +86,8 @@ FramelessWindow {
     P.SystemTrayIcon {
         id: system_tray
         visible: true
-        icon.source: "qrc:/qt/qml/NavTool/res/logo.png"
-        tooltip: "FluentUI-Gallery"
+        icon.source: Global.windowIcon
+        tooltip: Global.windowName
         menu: P.Menu {
             P.MenuItem {
                 text: qsTr("Exit")

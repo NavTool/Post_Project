@@ -5,7 +5,7 @@
 #include "AppInfo.h"
 #include "CircularReveal.h"
 // #include "component/FileWatcher.h"
-// #include "component/FpsItem.h"
+#include "FpsItem.h"
 // #include "component/OpenGLItem.h"
  #include "SettingsHelper.h"
 // #include "helper/InitializrHelper.h"
@@ -24,7 +24,7 @@ inline void Register_qml_frame_type(){
     // qmlRegisterType<TestClass>("frame", major, minor, "TestClass");
     qmlRegisterType<CircularReveal>("Frame", major, minor, "CircularReveal");
     // qmlRegisterType<FileWatcher>("frame", major, minor, "FileWatcher");
-    // qmlRegisterType<FpsItem>("frame", major, minor, "FpsItem");
+    qmlRegisterType<FpsItem>("frame", major, minor, "FpsItem");
     // qmlRegisterType<NetworkCallable>("frame",major,minor,"NetworkCallable");
     // qmlRegisterType<NetworkParams>("frame",major,minor,"NetworkParams");
     // qmlRegisterType<OpenGLItem>("frame",major,minor,"OpenGLItem");
@@ -74,6 +74,8 @@ inline void Register_qml_frame_instance(QQmlContext *context)
     // context->setContextProperty("InitializrHelper",InitializrHelper::getInstance());
     // context->setContextProperty("TranslateHelper",TranslateHelper::getInstance());
     // context->setContextProperty("Network",Network::getInstance());
+
+
 }
 
 

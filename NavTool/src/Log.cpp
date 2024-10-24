@@ -1,4 +1,5 @@
 #include "Log.h"
+#include "Version.h"
 #include <QtCore/qdebug.h>
 #include <QtCore/qfile.h>
 #include <QtCore/qtextstream.h>
@@ -195,7 +196,7 @@ void Log::setup(char *argv[], const QString &app, int level) {
     qInstallMessageHandler(messageHandler);
     qInfo() << "===================================================";
     qInfo() << "[AppName]" << g_app;
-    qInfo() << "[AppVersion]" << PROJECT_VERSION;
+    qInfo() << "[AppVersion]" << PROJECT_TAG_VERSION;
     qInfo() << "[AppPath]" << applicationPath;
     qInfo() << "[QtVersion]" << QT_VERSION_STR;
 #ifdef WIN32

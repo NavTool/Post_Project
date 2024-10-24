@@ -34,3 +34,4 @@
 #define EXE_APPLICATION_VERSION "1.0"                        // 应用程序版本
 #define EXE_ORGANIZATION_NAME "NavTool"                      // 组织名称
 #define EXE_ORGANIZATION_DOMAIN "https://github.com/NavTool" // 组织域名
+#define EXE_APPLICATION_COPYRIGHT "Copyright (c) 2024 NavTool's Lab. All rights reserved." //

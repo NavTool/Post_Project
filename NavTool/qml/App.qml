@@ -2,10 +2,11 @@ import QtQuick
 import QtQuick.Controls
 import FluentUI.Controls
 // import Frame
+import NavTool
 
 Starter {
     id: starter
-
+    appId: PROJECT_TAG_VERSION
     singleton: true
     windowIcon:Global.windowIcon
     onActiveApplicationChanged:

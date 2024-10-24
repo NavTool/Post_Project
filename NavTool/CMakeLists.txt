@@ -7,10 +7,10 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(PROJECT_APP_NAME "NavTool")
-set(PROJECT_COMPANY "ZhuZiChu")
-set(PROJECT_COPYRIGHT "Copyright (c) 2024 ZhuZiChu's Lab. All rights reserved.")
-set(PROJECT_DOMAIN "com.zhuzichu.cn.fluentui")
-set(PROJECT_DESCRIPTION "A QML project showcasing Fluent UI components and styles inspired by Microsoft's Fluent Design System.")
+# set(PROJECT_COMPANY "ZhuZiChu")
+# set(PROJECT_COPYRIGHT "Copyright (c) 2024 ZhuZiChu's Lab. All rights reserved.")
+# set(PROJECT_DOMAIN "com.zhuzichu.cn.fluentui")
+# set(PROJECT_DESCRIPTION "A QML project showcasing Fluent UI components and styles inspired by Microsoft's Fluent Design System.")
 
 if(WIN32)
     set(APPLICATION_DIR_PATH ${CMAKE_CURRENT_BINARY_DIR})
@@ -142,11 +142,11 @@ endif()
 target_compile_definitions(${PROJECT_NAME} PRIVATE
     QT_MESSAGELOGCONTEXT
     PROJECT_NAME="${PROJECT_NAME}"
-    PROJECT_APP_NAME="${PROJECT_APP_NAME}"
-    PROJECT_COMPANY="${PROJECT_COMPANY}"
-    PROJECT_DOMAIN="${PROJECT_DOMAIN}"
-	PROJECT_DESCRIPTION="${PROJECT_DESCRIPTION}"
-    PROJECT_VERSION="${PROJECT_VERSION}"
+    # PROJECT_APP_NAME="${PROJECT_APP_NAME}"
+    # PROJECT_COMPANY="${PROJECT_COMPANY}"
+    # PROJECT_DOMAIN="${PROJECT_DOMAIN}"
+    # PROJECT_DESCRIPTION="${PROJECT_DESCRIPTION}"
+    # PROJECT_VERSION="${PROJECT_VERSION}"
     PROJECT_SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}"
     PROJECT_HOTLOAD_ENABLED="${HOTLOAD_ENABLED}"
 )

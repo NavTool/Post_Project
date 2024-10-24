@@ -2,6 +2,29 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
+    <name>AppBarEX</name>
+    <message>
+        <location filename="qml/extra/AppBarEX.qml" line="105"/>
+        <source>Minimized</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/extra/AppBarEX.qml" line="122"/>
+        <source>Restore</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/extra/AppBarEX.qml" line="122"/>
+        <source>Maximized</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/extra/AppBarEX.qml" line="152"/>
+        <source>Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Dialog_AddStation</name>
     <message>
         <location filename="module/post_proc/Dialog_AddStation.qml" line="16"/>
@@ -642,19 +665,16 @@ server/client:2847/3519</source>
 <context>
     <name>MainScreen</name>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="17"/>
         <source>Welcome to FluentUI</source>
-        <translation type="unfinished">欢迎使用FluentUI</translation>
+        <translation type="obsolete">欢迎使用FluentUI</translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="22"/>
         <source>Learn FluentUI</source>
-        <translation type="unfinished">学习FluentUI</translation>
+        <translation type="obsolete">学习FluentUI</translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="36"/>
         <source>Author&apos;s WeChat ID: </source>
-        <translation type="unfinished">作者微信号: </translation>
+        <translation type="obsolete">作者微信号: </translation>
     </message>
 </context>
 <context>
@@ -664,88 +684,88 @@ server/client:2847/3519</source>
         <translation type="obsolete">作者微信号: </translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="35"/>
+        <location filename="qml/window/MainWindow.qml" line="37"/>
         <source>Light</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="35"/>
+        <location filename="qml/window/MainWindow.qml" line="37"/>
         <source>Dark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="49"/>
+        <location filename="qml/window/MainWindow.qml" line="55"/>
         <source>Sticky on Top cancelled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="49"/>
-        <location filename="qml/window/MainWindow.qml" line="57"/>
+        <location filename="qml/window/MainWindow.qml" line="55"/>
+        <location filename="qml/window/MainWindow.qml" line="63"/>
         <source>Sticky on Top</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="56"/>
+        <location filename="qml/window/MainWindow.qml" line="62"/>
         <source>Dark Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="56"/>
+        <location filename="qml/window/MainWindow.qml" line="62"/>
         <source>Here you can switch to night mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="57"/>
+        <location filename="qml/window/MainWindow.qml" line="63"/>
         <source>From here, you can switch to the top of the window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="83"/>
+        <location filename="qml/window/MainWindow.qml" line="93"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="154"/>
+        <location filename="qml/window/MainWindow.qml" line="164"/>
         <source>Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="161"/>
+        <location filename="qml/window/MainWindow.qml" line="171"/>
         <source>Are you sure you want to exit the program?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="166"/>
+        <location filename="qml/window/MainWindow.qml" line="176"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="172"/>
+        <location filename="qml/window/MainWindow.qml" line="182"/>
         <source>Minimize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="174"/>
+        <location filename="qml/window/MainWindow.qml" line="184"/>
         <source>Friendly Reminder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="174"/>
+        <location filename="qml/window/MainWindow.qml" line="184"/>
         <source>FluentUI-Gallery is hidden from the tray, click on the tray to activate the window again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="180"/>
+        <location filename="qml/window/MainWindow.qml" line="190"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="195"/>
+        <location filename="qml/window/MainWindow.qml" line="205"/>
         <source>Friendly reminder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="203"/>
+        <location filename="qml/window/MainWindow.qml" line="213"/>
         <source>The program is already running. The parameter is -&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -805,44 +825,9 @@ server/client:2847/3519</source>
 <context>
     <name>Page_Home</name>
     <message>
-        <location filename="qml/page/Page_Home.qml" line="21"/>
-        <source>NavTool Project</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Home.qml" line="22"/>
-        <source>A Navigation Tool</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Home.qml" line="31"/>
-        <source>Caster Service</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Home.qml" line="32"/>
-        <source>A Multi platform Ntrip Caster based on Libevent and Redis implementation, support Ntrip1.0/2.0 protocol.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Home.qml" line="41"/>
-        <source>Navigation X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="qml/page/Page_Home.qml" line="42"/>
         <source></source>
         <translation></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Home.qml" line="51"/>
-        <source>GitHub HomePage</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Home.qml" line="52"/>
-        <source>The NavTool Organiaztion Github Web page.</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1390,98 +1375,108 @@ server/client:2847/3519</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="11"/>
+        <location filename="qml/page/Page_Setting.qml" line="10"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="29"/>
-        <source>Current Version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Setting.qml" line="35"/>
-        <source>Check for Updates</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Setting.qml" line="51"/>
-        <source>Use System AppBar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Setting.qml" line="67"/>
-        <source>Fits AppBar Windows</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Setting.qml" line="78"/>
+        <location filename="qml/page/Page_Setting.qml" line="20"/>
         <source>Friendly Reminder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="79"/>
+        <location filename="qml/page/Page_Setting.qml" line="31"/>
         <source>This action requires a restart of the program to take effect, is it restarted?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="81"/>
-        <source>Cancel</source>
+        <location filename="qml/page/Page_Setting.qml" line="36"/>
+        <source>Theme mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="82"/>
-        <source>OK</source>
+        <location filename="qml/page/Page_Setting.qml" line="42"/>
+        <source>system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="101"/>
-        <source>Dark Mode</source>
+        <location filename="qml/page/Page_Setting.qml" line="49"/>
+        <source>light</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="106"/>
-        <source>System</source>
+        <location filename="qml/page/Page_Setting.qml" line="56"/>
+        <source>dark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="106"/>
-        <source>Light</source>
+        <location filename="qml/page/Page_Setting.qml" line="64"/>
+        <source>Window background effect (works only on Windows 11)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="106"/>
-        <source>Dark</source>
+        <location filename="qml/page/Page_Setting.qml" line="80"/>
+        <source>normal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="131"/>
-        <source>Navigation View Display Mode</source>
+        <location filename="qml/page/Page_Setting.qml" line="87"/>
+        <source>mica</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Setting.qml" line="94"/>
+        <source>acrylic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Setting.qml" line="102"/>
+        <source>Navigation Pane Display Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Setting.qml" line="108"/>
+        <source>top</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Setting.qml" line="115"/>
+        <source>open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Setting.qml" line="122"/>
+        <source>compact</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Setting.qml" line="129"/>
+        <source>minimal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="qml/page/Page_Setting.qml" line="136"/>
-        <source>Open</source>
+        <source>auto</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="136"/>
-        <source>Compact</source>
+        <location filename="qml/page/Page_Setting.qml" line="144"/>
+        <source>NavigationView Display Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="136"/>
-        <source>Minimal</source>
+        <location filename="qml/page/Page_Setting.qml" line="144"/>
+        <source>Here you can switch to navigationView display mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="136"/>
-        <source>Auto</source>
+        <location filename="qml/page/Page_Setting.qml" line="186"/>
+        <source>Accent Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="172"/>
-        <source>Language</source>
+        <location filename="qml/page/Page_Setting.qml" line="222"/>
+        <source>Locale</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

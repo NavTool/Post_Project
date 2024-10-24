@@ -1,189 +1,238 @@
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Window 2.15
-import QtQuick.Controls 2.15
-import FluentUI 1.0
-import "../component"
-import "../global"
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
+import FluentUI.Controls
+import FluentUI.impl
+import NavTool
 
-FluScrollablePage{
+ScrollablePage {
 
     title: qsTr("Settings")
+    columnSpacing: 24
 
-    FluEvent{
-        name: "checkUpdateFinish"
-        onTriggered: {
-            btn_checkupdate.loading = false
-        }
-    }
-
-    FluFrame{
-        Layout.fillWidth: true
-        Layout.topMargin: 20
-        Layout.preferredHeight: 60
-        padding: 10
-        Row{
-            spacing: 20
-            anchors.verticalCenter: parent.verticalCenter
-            FluText{
-                text: "%1 v%2".arg(qsTr("Current Version")).arg(AppInfo.version)
-                font: FluTextStyle.Body
-                anchors.verticalCenter: parent.verticalCenter
-            }
-            FluLoadingButton{
-                id: btn_checkupdate
-                text: qsTr("Check for Updates")
-                anchors.verticalCenter: parent.verticalCenter
-                onClicked: {
-                    loading = true
-                    FluEventBus.post("checkUpdate")
-                }
-            }
-        }
-    }
-
-    FluFrame{
-        Layout.fillWidth: true
-        Layout.topMargin: 20
-        height: 50
-        padding: 10
-        FluCheckBox{
-            text: qsTr("Use System AppBar")
-            checked: FluApp.useSystemAppBar
-            anchors.verticalCenter: parent.verticalCenter
-            onClicked: {
-                FluApp.useSystemAppBar = !FluApp.useSystemAppBar
-                dialog_restart.open()
-            }
-        }
-    }
-
-    FluFrame{
-        Layout.fillWidth: true
-        Layout.topMargin: 20
-        height: 50
-        padding: 10
-        FluCheckBox{
-            text:qsTr("Fits AppBar Windows")
-            checked: window.fitsAppBarWindows
-            anchors.verticalCenter: parent.verticalCenter
-            onClicked: {
-                window.fitsAppBarWindows = !window.fitsAppBarWindows
-            }
-        }
-    }
-
-    FluContentDialog{
+    Dialog {
         id: dialog_restart
+        x: Math.ceil((parent.width - width) / 2)
+        y: Math.ceil((parent.height - height) / 2)
+        parent: Overlay.overlay
+        modal: true
+        width: 300
         title: qsTr("Friendly Reminder")
-        message: qsTr("This action requires a restart of the program to take effect, is it restarted?")
-        buttonFlags: FluContentDialogType.NegativeButton | FluContentDialogType.PositiveButton
-        negativeText: qsTr("Cancel")
-        positiveText: qsTr("OK")
-        onPositiveClicked: {
-            FluRouter.exit(931)
+        standardButtons: Dialog.Yes | Dialog.No
+        onAccepted: {
+            WindowRouter.exit(931)
+        }
+        Column {
+            spacing: 20
+            anchors.fill: parent
+            Label {
+                width: parent.width
+                wrapMode: Label.WrapAnywhere
+                text: qsTr("This action requires a restart of the program to take effect, is it restarted?")
+            }
         }
     }
-
-    FluFrame{
+    GroupBox{
+        title: qsTr("Theme mode")
         Layout.fillWidth: true
-        Layout.topMargin: 20
-        height: 128
-        padding: 10
-
-        ColumnLayout{
-            spacing: 5
-            anchors{
-                top: parent.top
-                left: parent.left
+        ColumnLayout {
+            anchors.fill: parent
+            RadioButton {
+                checked: Theme.darkMode === FluentUI.System
+                text: qsTr("system")
+                onClicked: {
+                    Theme.darkMode = FluentUI.System
+                }
             }
-            FluText{
-                text: qsTr("Dark Mode")
-                font: FluTextStyle.BodyStrong
-                Layout.bottomMargin: 4
+            RadioButton {
+                checked: Theme.darkMode === FluentUI.Light
+                text: qsTr("light")
+                onClicked: {
+                    Theme.darkMode = FluentUI.Light
+                }
             }
-            Repeater{
-                model: [{title:qsTr("System"),mode:FluThemeType.System},{title:qsTr("Light"),mode:FluThemeType.Light},{title:qsTr("Dark"),mode:FluThemeType.Dark}]
-                delegate: FluRadioButton{
-                    checked : FluTheme.darkMode === modelData.mode
-                    text:modelData.title
-                    clickListener:function(){
-                        FluTheme.darkMode = modelData.mode
-                    }
+            RadioButton {
+                checked: Theme.darkMode === FluentUI.Dark
+                text: qsTr("dark")
+                onClicked: {
+                    Theme.darkMode = FluentUI.Dark
                 }
             }
         }
     }
-
-    FluFrame{
+    GroupBox{
+        title: qsTr("Window background effect (works only on Windows 11)")
         Layout.fillWidth: true
-        Layout.topMargin: 20
-        height: 160
-        padding: 10
-
-        ColumnLayout{
-            spacing: 5
-            anchors{
-                top: parent.top
-                left: parent.left
-            }
-            FluText{
-                text:qsTr("Navigation View Display Mode")
-                font: FluTextStyle.BodyStrong
-                Layout.bottomMargin: 4
-            }
-            Repeater{
-                model: [{title:qsTr("Open"),mode:FluNavigationViewType.Open},{title:qsTr("Compact"),mode:FluNavigationViewType.Compact},{title:qsTr("Minimal"),mode:FluNavigationViewType.Minimal},{title:qsTr("Auto"),mode:FluNavigationViewType.Auto}]
-                delegate: FluRadioButton{
-                    text: modelData.title
-                    checked: GlobalModel.displayMode === modelData.mode
-                    clickListener:function(){
-                        console.log("dispay")
-                        GlobalModel.displayMode = modelData.mode
+        ColumnLayout {
+            anchors.fill: parent
+            Button{
+                text: window.visibility === Window.FullScreen ? "Windowed" : "FullScreen"
+                onClicked: {
+                    if(window.visibility === Window.FullScreen){
+                        window.showNormal()
+                    }else{
+                        window.showFullScreen()
                     }
                 }
+            }
+            RadioButton {
+                checked: Global.windowEffect === WindowEffectType.Normal
+                text: qsTr("normal")
+                onClicked: {
+                    Global.windowEffect = WindowEffectType.Normal
+                }
+            }
+            RadioButton {
+                checked: Global.windowEffect === WindowEffectType.Mica
+                text: qsTr("mica")
+                onClicked: {
+                    Global.windowEffect = WindowEffectType.Mica
+                }
+            }
+            RadioButton {
+                checked: Global.windowEffect === WindowEffectType.Acrylic
+                text: qsTr("acrylic")
+                onClicked: {
+                    Global.windowEffect = WindowEffectType.Acrylic
+                }
+            }
+        }
+    }
+    GroupBox{
+        title: qsTr("Navigation Pane Display Mode")
+        Layout.fillWidth: true
+        ColumnLayout {
+            anchors.fill: parent
+            RadioButton {
+                checked: Global.displayMode === NavigationViewType.Top
+                text: qsTr("top")
+                onClicked: {
+                    Global.displayMode = NavigationViewType.Top
+                }
+            }
+            RadioButton {
+                checked: Global.displayMode === NavigationViewType.Open
+                text: qsTr("open")
+                onClicked: {
+                    Global.displayMode = NavigationViewType.Open
+                }
+            }
+            RadioButton {
+                checked: Global.displayMode === NavigationViewType.Compact
+                text: qsTr("compact")
+                onClicked: {
+                    Global.displayMode = NavigationViewType.Compact
+                }
+            }
+            RadioButton {
+                checked: Global.displayMode === NavigationViewType.Minimal
+                text: qsTr("minimal")
+                onClicked: {
+                    Global.displayMode = NavigationViewType.Minimal
+                }
+            }
+            RadioButton {
+                checked: Global.displayMode === NavigationViewType.Auto
+                text: qsTr("auto")
+                onClicked: {
+                    Global.displayMode = NavigationViewType.Auto
+                }
+            }
+        }
+        Component.onCompleted: {
+            if(window.tourSteps){
+                window.tourSteps.append({title:qsTr("NavigationView Display Mode"),description: qsTr("Here you can switch to navigationView display mode."),target:()=>this,isLast: true})
             }
         }
     }
 
     ListModel{
-        id:model_language
+        id: accentColors
         ListElement{
-            name:"en"
+            name: "Yellow"
+            color: function(){return Colors.yellow}
         }
         ListElement{
-            name:"zh"
+            name: "Orange"
+            color: function(){return Colors.orange}
+        }
+        ListElement{
+            name: "Red"
+            color: function(){return Colors.red}
+        }
+        ListElement{
+            name: "Magenta"
+            color: function(){return Colors.magenta}
+        }
+        ListElement{
+            name: "Purple"
+            color: function(){return Colors.purple}
+        }
+        ListElement{
+            name: "Blue"
+            color: function(){return Colors.blue}
+        }
+        ListElement{
+            name: "Teal"
+            color: function(){return Colors.teal}
+        }
+        ListElement{
+            name: "Green"
+            color: function(){return Colors.green}
         }
     }
 
-    FluFrame{
+    GroupBox{
+        title: qsTr("Accent Color")
         Layout.fillWidth: true
-        Layout.topMargin: 20
-        height: 80
-        padding: 10
-
-        ColumnLayout{
+        Flow {
             spacing: 10
-            anchors{
-                top: parent.top
-                left: parent.left
-            }
-            FluText{
-                text:qsTr("Language")
-                font: FluTextStyle.BodyStrong
-                Layout.bottomMargin: 4
-            }
-            Flow{
-                spacing: 5
-                Repeater{
-                    model: TranslateHelper.languages
-                    delegate: FluRadioButton{
-                        checked: TranslateHelper.current === modelData
-                        text:modelData
-                        clickListener:function(){
-                            TranslateHelper.current = modelData
-                            dialog_restart.open()
+            anchors.fill: parent
+            Repeater{
+                model: accentColors
+                delegate: Rectangle{
+                    implicitWidth: 48
+                    implicitHeight: 48
+                    radius: 4
+                    border.color: model.color().darkest()
+                    border.width: 1
+                    color: mouse_item_accent_color.containsMouse? model.color().lightest() : model.color().normal
+                    Icon{
+                        source: FluentIcons.graph_CheckMark
+                        width: 24
+                        height: 24
+                        anchors.centerIn: parent
+                        color: Colors.basedOnLuminance(parent.color)
+                        visible: model.color() === Theme.accentColor
+                    }
+                    MouseArea{
+                        id: mouse_item_accent_color
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        onClicked: {
+                            Theme.accentColor = model.color()
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    GroupBox{
+        title: qsTr("Locale")
+        Layout.fillWidth: true
+        Flow {
+            spacing: 10
+            anchors.fill: parent
+            Repeater{
+                model: AppInfo.locales
+                delegate: RadioButton{
+                    text: modelData
+                    checked: AppInfo.locale === modelData
+                    onClicked: {
+                        AppInfo.locale = modelData
+                        SettingsHelper.saveLocale(modelData)
+                        dialog_restart.open()
                     }
                 }
             }
