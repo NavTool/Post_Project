@@ -663,6 +663,89 @@ server/client:2847/3519</source>
     </message>
 </context>
 <context>
+    <name>MainScreen</name>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="99"/>
+        <source>自动保存</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="125"/>
+        <source>AutoSave is Turn On!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="128"/>
+        <source>AutoSave is Turn Off!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="146"/>
+        <source>The project has been saved!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="683"/>
+        <source>Hide Top Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="683"/>
+        <source>Show Top Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="692"/>
+        <source>Show Menu Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="708"/>
+        <source>Hide Left Sidebar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="708"/>
+        <source>Show Left Sidebar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="716"/>
+        <source>Hide Right Sidebar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="716"/>
+        <source>Show Right Sidebar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="725"/>
+        <source>Hide Bottom Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="725"/>
+        <source>Show Bottom Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="737"/>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="744"/>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/MainScreen.qml" line="752"/>
+        <source>More</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MainWindow</name>
     <message>
         <location filename="qml/window/MainWindow.qml" line="37"/>
@@ -701,52 +784,52 @@ server/client:2847/3519</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="93"/>
+        <location filename="qml/window/MainWindow.qml" line="90"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="164"/>
+        <location filename="qml/window/MainWindow.qml" line="161"/>
         <source>Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="171"/>
+        <location filename="qml/window/MainWindow.qml" line="168"/>
         <source>Are you sure you want to exit the program?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="176"/>
+        <location filename="qml/window/MainWindow.qml" line="173"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="182"/>
+        <location filename="qml/window/MainWindow.qml" line="179"/>
         <source>Minimize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="184"/>
+        <location filename="qml/window/MainWindow.qml" line="181"/>
         <source>Friendly Reminder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="184"/>
+        <location filename="qml/window/MainWindow.qml" line="181"/>
         <source>FluentUI-Gallery is hidden from the tray, click on the tray to activate the window again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="190"/>
+        <location filename="qml/window/MainWindow.qml" line="187"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="205"/>
+        <location filename="qml/window/MainWindow.qml" line="202"/>
         <source>Friendly reminder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="213"/>
+        <location filename="qml/window/MainWindow.qml" line="210"/>
         <source>The program is already running. The parameter is -&gt;</source>
         <translation type="unfinished"></translation>
     </message>

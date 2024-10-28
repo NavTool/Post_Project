@@ -14,4 +14,11 @@ QtObject {
 
     property var windowName: EXE_APPLICATION_NAME
     property var windowIcon:  "qrc:/qt/qml/NavTool/res/logo.png"
+
+
+    property int displayScreen:0   //0:初始页面  1：主要页面  2：文件页面
+
+    property int mainScreenHeaderBarCurrentIndex:1   //主页面
+
+
 }

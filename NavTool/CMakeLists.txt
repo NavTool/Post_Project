@@ -36,8 +36,15 @@ cmake_path(SET QT_SDK_DIR NORMALIZE ${QT_SDK_DIR})
 set(QML_FILES
     qml/App.qml
     qml/window/MainWindow.qml
+    qml/screen/RootScreen.qml
+    qml/screen/InitScreen.qml
     qml/screen/MainScreen.qml
+    qml/screen/FileScreen.qml
     qml/page/Page_Home.qml
+    qml/page/Page_Open.qml
+    qml/page/Page_New.qml
+    qml/page/Page_Start.qml
+    qml/page/Page_About.qml
     qml/page/Page_Setting.qml
 )
 
