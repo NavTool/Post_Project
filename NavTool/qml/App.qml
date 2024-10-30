@@ -1,14 +1,15 @@
 import QtQuick
 import QtQuick.Controls
 import FluentUI.Controls
+import FluentUI.impl
 // import Frame
 import NavTool
 
 Starter {
     id: starter
-    appId: PROJECT_TAG_VERSION
+    appId: INFO_APP_NAME
     singleton: true
-    windowIcon:Global.windowIcon
+    //windowIcon:Global.windowIcon
     onActiveApplicationChanged:
         (args)=> {
             WindowRouter.go("/",{type:0,args:args})
@@ -20,10 +21,11 @@ Starter {
         }
     }
     Component.onCompleted: {
+        R.windowIcon =Global.windowIcon
         Global.starter = starter
         Theme.darkMode = SettingsHelper.getDarkMode()
         WindowRouter.routes = {
-            "/": resolvedUrl("qml/window/MainWindow.qml")
+            "/": R.resolvedUrl("qml/window/MainWindow.qml")
         }
         WindowRouter.go("/")
     }

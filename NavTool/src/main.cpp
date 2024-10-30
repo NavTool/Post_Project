@@ -12,6 +12,9 @@
 #include "module/module.hpp"
 #include "frame.hpp"
 
+// #include <QtWebEngineQuick>
+#include <QtWebEngineQuick/qtwebenginequickglobal.h>
+
 #ifdef FLUENTUI_BUILD_STATIC_LIB
 Q_IMPORT_QML_PLUGIN(FluentUIPlugin)
 #endif
@@ -22,11 +25,15 @@ int main(int argc, char *argv[])
     qputenv("QT_QUICK_CONTROLS_STYLE", "FluentUI");
 
     //设置程序的基本信息
-    QGuiApplication::setOrganizationName(EXE_ORGANIZATION_NAME);
-    QGuiApplication::setOrganizationDomain(EXE_ORGANIZATION_DOMAIN);
     QGuiApplication::setApplicationName(EXE_APPLICATION_NAME);
     QGuiApplication::setApplicationDisplayName(EXE_APPLICATION_DISPLAY_NAME);
     QGuiApplication::setApplicationVersion(EXE_APPLICATION_VERSION);
+    QGuiApplication::setOrganizationName(EXE_ORGANIZATION_NAME);
+    QGuiApplication::setOrganizationDomain(EXE_ORGANIZATION_DOMAIN);
+
+    //初始化WebEngine
+    QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
+    QtWebEngineQuick::initialize();
 
     //初始化日志，传入可执行程序路径和应用程序名称
     Log::setup(argv, EXE_APPLICATION_DISPLAY_NAME);

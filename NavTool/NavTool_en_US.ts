@@ -58,6 +58,79 @@
     </message>
 </context>
 <context>
+    <name>Eharts_Plot</name>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="11"/>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="21"/>
+        <source>Friendly Reminder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="33"/>
+        <source>This action requires a restart of the program to take effect, is it restarted?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="38"/>
+        <source>Theme mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="44"/>
+        <source>system</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="51"/>
+        <source>light</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="58"/>
+        <source>dark</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="66"/>
+        <source>Window background effect (works only on Windows 11)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="82"/>
+        <source>normal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="89"/>
+        <source>mica</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="96"/>
+        <source>acrylic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="141"/>
+        <source>Accent Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="177"/>
+        <source>Locale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="module/plot/Eharts_Plot.qml" line="198"/>
+        <source>Auout</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Hmoe_License</name>
     <message>
         <location filename="module/license_tool/Hmoe_License.qml" line="14"/>
@@ -685,62 +758,62 @@ server/client:2847/3519</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="683"/>
+        <location filename="qml/screen/MainScreen.qml" line="675"/>
         <source>Hide Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="683"/>
+        <location filename="qml/screen/MainScreen.qml" line="675"/>
         <source>Show Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="692"/>
+        <location filename="qml/screen/MainScreen.qml" line="684"/>
         <source>Show Menu Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="708"/>
+        <location filename="qml/screen/MainScreen.qml" line="700"/>
         <source>Hide Left Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="708"/>
+        <location filename="qml/screen/MainScreen.qml" line="700"/>
         <source>Show Left Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="716"/>
+        <location filename="qml/screen/MainScreen.qml" line="708"/>
         <source>Hide Right Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="716"/>
+        <location filename="qml/screen/MainScreen.qml" line="708"/>
         <source>Show Right Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="725"/>
+        <location filename="qml/screen/MainScreen.qml" line="717"/>
         <source>Hide Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="725"/>
+        <location filename="qml/screen/MainScreen.qml" line="717"/>
         <source>Show Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="737"/>
+        <location filename="qml/screen/MainScreen.qml" line="729"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="744"/>
+        <location filename="qml/screen/MainScreen.qml" line="736"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="752"/>
+        <location filename="qml/screen/MainScreen.qml" line="744"/>
         <source>More</source>
         <translation type="unfinished"></translation>
     </message>
@@ -831,6 +904,43 @@ server/client:2847/3519</source>
     <message>
         <location filename="qml/window/MainWindow.qml" line="210"/>
         <source>The program is already running. The parameter is -&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>NavBar_Start</name>
+    <message>
+        <location filename="qml/component/NavBar_Start.qml" line="14"/>
+        <source>tex222t</source>
+        <oldsource>text</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_About</name>
+    <message>
+        <location filename="qml/page/Page_About.qml" line="9"/>
+        <source>Info</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_About.qml" line="17"/>
+        <source>软件信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_About.qml" line="108"/>
+        <source>激活状态</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_About.qml" line="197"/>
+        <source>构建信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_About.qml" line="282"/>
+        <source>支持与许可</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1439,108 +1549,73 @@ server/client:2847/3519</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="10"/>
+        <location filename="qml/page/Page_Setting.qml" line="11"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="20"/>
+        <location filename="qml/page/Page_Setting.qml" line="21"/>
         <source>Friendly Reminder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="31"/>
+        <location filename="qml/page/Page_Setting.qml" line="33"/>
         <source>This action requires a restart of the program to take effect, is it restarted?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="36"/>
+        <location filename="qml/page/Page_Setting.qml" line="38"/>
         <source>Theme mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="42"/>
+        <location filename="qml/page/Page_Setting.qml" line="44"/>
         <source>system</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="49"/>
+        <location filename="qml/page/Page_Setting.qml" line="51"/>
         <source>light</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="56"/>
+        <location filename="qml/page/Page_Setting.qml" line="58"/>
         <source>dark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="64"/>
+        <location filename="qml/page/Page_Setting.qml" line="66"/>
         <source>Window background effect (works only on Windows 11)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="80"/>
+        <location filename="qml/page/Page_Setting.qml" line="82"/>
         <source>normal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="87"/>
+        <location filename="qml/page/Page_Setting.qml" line="89"/>
         <source>mica</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="94"/>
+        <location filename="qml/page/Page_Setting.qml" line="96"/>
         <source>acrylic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="102"/>
-        <source>Navigation Pane Display Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Setting.qml" line="108"/>
-        <source>top</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Setting.qml" line="115"/>
-        <source>open</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Setting.qml" line="122"/>
-        <source>compact</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Setting.qml" line="129"/>
-        <source>minimal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Setting.qml" line="136"/>
-        <source>auto</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Setting.qml" line="144"/>
-        <source>NavigationView Display Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Setting.qml" line="144"/>
-        <source>Here you can switch to navigationView display mode.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/page/Page_Setting.qml" line="186"/>
+        <location filename="qml/page/Page_Setting.qml" line="141"/>
         <source>Accent Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Setting.qml" line="222"/>
+        <location filename="qml/page/Page_Setting.qml" line="177"/>
         <source>Locale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Setting.qml" line="198"/>
+        <source>Auout</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

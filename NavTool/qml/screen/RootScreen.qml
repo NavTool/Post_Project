@@ -9,7 +9,7 @@ Item{
 
     id:root
 
-     property var initialItem
+    property var initialItem
 
     anchors.fill:parent
 
@@ -28,31 +28,29 @@ Item{
         }
     }
 
-
-
     Component.onCompleted:{
-        initialItem=resolvedUrl("qml/screen/InitScreen.qml")
+        initialItem=R.resolvedUrl("qml/screen/InitScreen.qml")
     }
-
 
     Connections{
         target:Global
 
-       function onDisplayScreenChanged(){
+        function onDisplayScreenChanged(){
+            console.log("change:",Global.displayScreen)
 
-           if(Global.displayScreen==2)
-           {
-               initialItem=resolvedUrl("qml/screen/FileScreen.qml")
-           }
-           else if(Global.displayScreen==1) //=1
-           {
-               initialItem=resolvedUrl("qml/screen/MainScreen.qml")
-           }
-           else
-           {
-                initialItem=resolvedUrl("qml/screen/InitScreen.qml")
-           }
-       }
+            if(Global.displayScreen==2)
+            {
+                initialItem=R.resolvedUrl("qml/screen/FileScreen.qml")
+            }
+            else if(Global.displayScreen==1) //=1
+            {
+                initialItem=R.resolvedUrl("qml/screen/MainScreen.qml")
+            }
+            else
+            {
+                initialItem=R.resolvedUrl("qml/screen/InitScreen.qml")
+            }
+        }
 
 
 

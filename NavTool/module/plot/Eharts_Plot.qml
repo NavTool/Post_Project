@@ -6,7 +6,7 @@ import FluentUI.Controls
 import FluentUI.impl
 import NavTool
 
-ScrollablePage{
+ScrollablePage {
 
     title: qsTr("Settings")
     columnSpacing: 24

@@ -81,7 +81,7 @@ Item{
         }
         Row{
             id: row
-            spacing:10
+            spacing:6
             Image{
                 source: Global.windowIcon
                 width: 20
@@ -200,34 +200,6 @@ Item{
         Item{
             width:5
         }
-
-        // Item{
-        //     width:project_state.width+40
-        //     height:35
-
-        //     IconButton{
-        //         anchors.fill:parent
-        //     }
-
-        //     Row{
-        //         id:project_state
-
-        //         anchors{
-        //             centerIn: parent
-        //         }
-        //         spacing:15
-        //         CopyableText{
-        //             text:"xxxxxxx测试工程xxxx.cps"+ " - "+ "未保存"
-        //             font:Typography.body
-        //             anchors.verticalCenter: parent.verticalCenter
-        //         }
-
-        //         Icon{
-        //             source:FluentIcons.graph_ChevronDownMed
-        //             anchors.verticalCenter: parent.verticalCenter
-        //         }
-        //     }
-        // }
     }
 
     //应用顶部  右侧按钮，从右向左排列
@@ -273,7 +245,7 @@ Item{
             left:parent.left
             right:parent.right
             top:parent.top
-            topMargin:40
+            topMargin:50
             bottom:parent.bottom
         }
 
@@ -290,16 +262,39 @@ Item{
                 id: tab_model
                 ListElement{
                     title: "文件"
+                    url: ""
                 }
                 ListElement{
-                    title: "工程"
+                    title: "开始"
+                    key: "/navbar/start"
                 }
                 ListElement{
-                    title: "分析"
+                    title: "视图"
                 }
-                ListElement{
-                    title: "工具"
-                }
+                // ListElement{
+                //     title: "GNSS"
+                // }
+                // ListElement{
+                //     title: "RTK"
+                // }
+                // ListElement{
+                //     title: "静态网"
+                // }
+                // ListElement{
+                //     title: "精密单点定位"
+                // }
+                // ListElement{
+                //     title: "组合导航"
+                // }
+                // ListElement{
+                //     title: "分析"
+                // }
+                // ListElement{
+                //     title: "工具"
+                // }
+                // ListElement{
+                //     title: "帮助"
+                // }
             }
 
             TabBar {
@@ -427,11 +422,11 @@ Item{
                                 text:"2"
                             }
 
-                            Rectangle{
-                                anchors.fill:parent
+                            // Rectangle{
+                            //     anchors.fill:parent
 
-                                color:"blue"
-                            }
+                            //     color:"blue"
+                            // }
                         }
                     }
                 }
@@ -461,11 +456,11 @@ Item{
                             Text{
                                 text:"3"
                             }
-                            Rectangle{
-                                anchors.fill:parent
+                            // Rectangle{
+                            //     anchors.fill:parent
 
-                                color:"red"
-                            }
+                            //     color:"red"
+                            // }
 
                         }
 
@@ -480,11 +475,11 @@ Item{
                                 text:"4"
                             }
 
-                            Rectangle{
-                                anchors.fill:parent
+                            // Rectangle{
+                            //     anchors.fill:parent
 
-                                color:"black"
-                            }
+                            //     color:"black"
+                            // }
                         }
                     }
                 }
@@ -510,11 +505,11 @@ Item{
                             Text{
                                 text:"5"
                             }
-                            Rectangle{
-                                anchors.fill:parent
+                            // Rectangle{
+                            //     anchors.fill:parent
 
-                                color:"green"
-                            }
+                            //     color:"green"
+                            // }
                         }
 
                         //页面右侧框架下部
@@ -529,11 +524,11 @@ Item{
                                 text:"6"
                             }
 
-                            Rectangle{
-                                anchors.fill:parent
+                            // Rectangle{
+                            //     anchors.fill:parent
 
-                                color:"orange"
-                            }
+                            //     color:"orange"
+                            // }
                         }
                     }
                 }
@@ -564,27 +559,24 @@ Item{
                 Repeater{
                     model:tab_model
                     AutoLoader{
-                        property var modelData: model
-                        sourceComponent: comp_page
+                        id: loader_panne
+                        source: page_router.toUrl(model.key)
+                    }
+                }
+
+
+                PageRouter{
+                    id: page_router
+                    routes: {
+                         "/navbar/start": R.resolvedUrl("qml/component/NavBar_Start.qml"),
                     }
                 }
             }
 
-            Component{
-                id:comp_page
-                Rectangle{
-                    // visible:false
-                    anchors.fill: parent
 
-                    radius: 5
-                    color:Theme.dark ?  Qt.rgba(62/255,62/255,62/255,1) : Qt.rgba(254/255,254/255,254/255,1)
 
-                    Frame{
-                        anchors.fill: parent
-                    }
 
-                }
-            }
+
 
         }
 

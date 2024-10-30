@@ -28,7 +28,7 @@ add_definitions(-DAPP_VERSION=${VERSION_STR})
 
 set(QML_IMPORT_PATH ${CMAKE_BINARY_DIR}/qt/qml CACHE STRING "" FORCE)
 
-find_package(Qt6 COMPONENTS Quick REQUIRED)
+find_package(Qt6 COMPONENTS Quick WebEngineQuick REQUIRED)
 
 set(QT_SDK_DIR "${Qt6_DIR}/../../..")
 cmake_path(SET QT_SDK_DIR NORMALIZE ${QT_SDK_DIR})
@@ -46,6 +46,8 @@ set(QML_FILES
     qml/page/Page_Start.qml
     qml/page/Page_About.qml
     qml/page/Page_Setting.qml
+    module/plot/Eharts_Plot.qml
+    qml/component/NavBar_Start.qml
 )
 
 # qml单例对象
@@ -57,6 +59,9 @@ set(RESOURCES_FILES
     res/logo.png
     NavTool_zh_CN.qm
     NavTool_en_US.qm
+    module/plot/echarts.js
+    module/plot/echart_dev.html
+
 )
 include_directories(${PROJECT_NAME} ${CMAKE_BINARY_DIR})
 # include_directories(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/module)
@@ -130,6 +135,7 @@ endif()
 target_link_libraries(
     ${PROJECT_NAME} PRIVATE
     Qt6::Quick
+    Qt6::WebEngineQuick
     FluentUI
     FluentUIImpl
     FluentUIControls

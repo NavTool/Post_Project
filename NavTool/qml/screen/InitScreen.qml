@@ -10,8 +10,6 @@ import NavTool
 Rectangle {
     id: control
 
-
-
     property list<QtObject> originalItems : [
         PaneItem{
             key: "/start/start"
@@ -33,36 +31,22 @@ Rectangle {
             icon.name: FluentIcons.graph_FolderOpen
             icon.width:30
             icon.height:30
-        },
-        PaneItem{
-            count:1
-            key: "1"
-            title: "page"
-            icon.name: FluentIcons.graph_FolderOpen
-            icon.width:30
-            icon.height:30
         }
     ]
     property list<QtObject> originalFooterItems : [
         PaneItem{
-            icon.name: FluentIcons.graph_Info
-            key: "/test/settings"
-            title: "About"
-        },
-        PaneItem{
             icon.name: FluentIcons.graph_Settings
-            key: "/test/addnewitem"
+            key: "/start/setting"
             title: "Settings"
         }
     ]
     PageRouter{
         id: page_router
         routes: {
-            "/start/start": "qrc:/qt/qml/NavTool/qml/page/Page_Start.qml",
-            "/start/new": "qrc:/qt/qml/NavTool/qml/page/Page_New.qml",
-            "/start/open": "qrc:/qt/qml/NavTool/qml/page/Page_Open.qml",
-            "/start/about": "qrc:/qt/qml/NavTool/qml/page/Page_About.qml",
-            "/start/setting": "qrc:/qt/qml/NavTool/qml/page/Page_Setting.qml"
+            "/start/start": R.resolvedUrl("qml/page/Page_Start.qml"),
+            "/start/new": R.resolvedUrl("qml/page/Page_New.qml"),
+            "/start/open": R.resolvedUrl("qml/page/Page_Open.qml"),
+            "/start/setting": R.resolvedUrl("qml/page/Page_Setting.qml")
         }
     }
 
@@ -162,14 +146,7 @@ Rectangle {
     onTap:
         (item)=>{
             if(item.key){
-                if(item.count==1)
-                {
-                    Global.displayScreen=1
-                }
-                else
-                {
-                    page_router.go(item.key,{info:item.title})
-                }
+                page_router.go(item.key,{info:item.title})
             }
         }
 

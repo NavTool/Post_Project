@@ -35,11 +35,7 @@ inline void Register_qml_frame_type(){
 
 inline void Register_qml_frame_define(QQmlContext *context)
 {
-    context->setContextProperty("PROJECT_SET_NAME",PROJECT_SET_NAME);
-    context->setContextProperty("PROJECT_SET_VERSION",PROJECT_SET_VERSION);
-    context->setContextProperty("PROJECT_GIT_VERSION",PROJECT_GIT_VERSION);
-    context->setContextProperty("PROJECT_TAG_VERSION",PROJECT_TAG_VERSION);
-    context->setContextProperty("PORJECT_UPDATE_TIME",PORJECT_UPDATE_TIME);
+
     context->setContextProperty("INFO_APP_NAME",INFO_APP_NAME);
     context->setContextProperty("INFO_VERSION_TYPE",INFO_VERSION_TYPE);
     context->setContextProperty("INFO_APP_VERSION",INFO_APP_VERSION);
@@ -54,11 +50,8 @@ inline void Register_qml_frame_define(QQmlContext *context)
     context->setContextProperty("SUPPORT_OFFICIAL_DOMAIN",SUPPORT_OFFICIAL_DOMAIN);
     context->setContextProperty("SUPPORT_PROJECT_DOMAIN",SUPPORT_PROJECT_DOMAIN);
     context->setContextProperty("SUPPORT_FEEDBACK",SUPPORT_FEEDBACK);
-    context->setContextProperty("EXE_APPLICATION_NAME",EXE_APPLICATION_NAME);
-    context->setContextProperty("EXE_APPLICATION_DISPLAY_NAME",EXE_APPLICATION_DISPLAY_NAME);
-    context->setContextProperty("EXE_APPLICATION_VERSION",EXE_APPLICATION_VERSION);
-    context->setContextProperty("EXE_ORGANIZATION_NAME",EXE_ORGANIZATION_NAME);
-    context->setContextProperty("EXE_ORGANIZATION_DOMAIN",EXE_ORGANIZATION_DOMAIN);
+    context->setContextProperty("SUPPORT_COPYRIGHT",SUPPORT_COPYRIGHT);
+
 }
 
 inline void Register_qml_frame_instance(QQmlContext *context)

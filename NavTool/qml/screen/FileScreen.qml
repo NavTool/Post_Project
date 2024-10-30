@@ -9,7 +9,6 @@ Item{
 
     id:root
 
-
     width: parent.width
     height: 460
     property list<QtObject> originalItems : [
@@ -19,66 +18,102 @@ Item{
             icon.name: FluentIcons.graph_Back
         },
         PaneItem{
-            key: "/start/start"
+            key: "/file/start"
             title: "Start"
             icon.name: FluentIcons.graph_Home
         },
         PaneItem{
-            key: "/start/new"
+            key: "/file/new"
             title: "New"
             icon.name: FluentIcons.graph_Page
         },
         PaneItem{
-            key: "/start/open"
+            key: "/file/open"
             title: "Open"
             icon.name: FluentIcons.graph_FolderOpen
+        },
+        PaneItemSeparator{},
+        PaneItem{
+            key: "/file/info"
+            title: "Info"
+            icon.name: FluentIcons.graph_Tablet
+        },
+        PaneItem{
+            key: "/file/save"
+            title: "Save"
+            icon.name: FluentIcons.graph_Save
+        },
+        PaneItem{
+            key: "/file/saveas"
+            title: "Save As"
+            icon.name: FluentIcons.graph_SaveAs
+        },
+        PaneItem{
+            key: "/file/export"
+            title: "Export"
+            icon.name: FluentIcons.graph_Export
+        },
+        PaneItem{
+            key: "/file/close"
+            title: "Close"
+            icon.name: FluentIcons.graph_ChromeClose
         }
     ]
     property list<QtObject> originalFooterItems : [
         PaneItem{
             icon.name: FluentIcons.graph_Settings
-            key: "/test/settings"
+            key: "/file/setting"
             title: "Settings"
-        },
-        PaneItem{
-            icon.name: FluentIcons.graph_Contact
-            key: "/test/addnewitem"
-            title: "Add New Item"
         }
     ]
     PageRouter{
         id: page_router
         routes: {
-            "/": "qrc:/qt/qml/Gallery/res/qml/page/T_Test.qml",
-            "/test/track": "qrc:/qt/qml/Gallery/res/qml/page/T_Test.qml",
-            "/test/mail": "qrc:/qt/qml/Gallery/res/qml/page/T_Test.qml",
-            "/test/calendar": "qrc:/qt/qml/Gallery/res/qml/page/T_Test.qml",
-            "/test/newitem": "qrc:/qt/qml/Gallery/res/qml/page/T_Test.qml",
-            "/test/settings": "qrc:/qt/qml/Gallery/res/qml/page/T_Test.qml",
-            "/test/addnewitem": "qrc:/qt/qml/Gallery/res/qml/page/T_Test.qml"
+            "/file/start": R.resolvedUrl("qml/page/Page_Start.qml"),
+            "/file/new": R.resolvedUrl("qml/page/Page_New.qml"),
+            "/file/open": R.resolvedUrl("qml/page/Page_Open.qml"),
+            "/file/setting": R.resolvedUrl("qml/page/Page_Setting.qml")
         }
     }
     NavigationView{
         anchors.fill: parent
-        logo: "qrc:/qt/qml/Gallery/res/image/logo.png"
-        title: "FluentUI Gallery"
+        logo: Global.windowIcon
+        title: Global.windowName
         router: page_router
         items: originalItems
         footerItems: originalFooterItems
         displayMode: NavigationViewType.Open
         sideBarShadow: false
-        property int sideItemHeight: 60
-
+        sideItemHeight: 60
+        sideBarWidth: 200
+        goBackButton.visible:false
+        logoDelegate: comp_logo
 
         onTap:
             (item)=>{
                 if(item.key){
-                    page_router.go(item.key,{info:item.title})
+                    if(item.title===""){
+                        Global.displayScreen=1
+                    }
+                    else
+                    {
+                        page_router.go(item.key,{info:item.title})
+                    }
                 }
             }
         Component.onCompleted: {
-            page_router.go("/",{info:"Home"})
+            page_router.go("/file/start",{info:"Satrt"})
         }
+
+        Component{
+            id: comp_logo
+            Image{
+                width: Global.windowIcon ? 20 : 0
+                height: width
+                source: Global.windowIcon ? Global.windowIcon : ""
+            }
+        }
+
     }
 }
 

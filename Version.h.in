@@ -1,13 +1,14 @@
 #pragma once
 
-// 版本相关信息
+// 版本内部信息
 #define PROJECT_SET_NAME "@PROJECT_NAME@"
-
 #define PROJECT_SET_VERSION "@PROJECT_VERSION@"
 #define PROJECT_GIT_VERSION "@PROJECT_GIT_VERSION@"
 #define PROJECT_TAG_VERSION "@PROJECT_TAG_VERSION@"
 #define PORJECT_UPDATE_TIME "@GIT_COMMIT_DATE@" // 代码提交日期
 
+
+//下面是图形化界面展示的信息（暴露给图形化界面的一些宏定义）
 // 软件信息
 #define INFO_APP_NAME "@PROJECT_NAME@"           // 软件名称
 #define INFO_VERSION_TYPE "develop"              // 软件版本类型
@@ -27,12 +28,15 @@
 #define SUPPORT_OFFICIAL_DOMAIN "https://github.com/NavTool" // 官方网站
 #define SUPPORT_PROJECT_DOMAIN "https://github.com/NavTool/NavTool"  // 项目网站
 #define SUPPORT_FEEDBACK "https://github.com/NavTool"        // 反馈
+#define SUPPORT_COPYRIGHT "\u00A9 2024 NavTool's Lab. All rights reserved." //
 
+
+
+// 这些是用来设置程序的基本信息的（QGuiApplication::setxxxxx）（不暴露给界面）
 // 图形化程序相关信息
 #define EXE_APPLICATION_NAME "NavTool"                       // 应用程序名
 #define EXE_APPLICATION_DISPLAY_NAME "NavTool"               // 应用程序显示名
 #define EXE_APPLICATION_VERSION "1.0"                        // 应用程序版本
 #define EXE_ORGANIZATION_NAME "NavTool"                      // 组织名称
 #define EXE_ORGANIZATION_DOMAIN "https://github.com/NavTool" // 组织域名
-#define EXE_APPLICATION_COPYRIGHT "Copyright (c) 2024 NavTool's Lab. All rights reserved." //
 #define EXE_APPLICATION_CDESCRIPTION "A Navigation Tool"
