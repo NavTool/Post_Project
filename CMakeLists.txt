@@ -95,7 +95,20 @@ else()
 endif()
 
 # 获取Qt版本和编译器信息
-set(QtVersion ${Qt6Core_VERSION})
+find_package(Qt6 COMPONENTS Core QUIET)
+if (NOT Qt6_FOUND)
+    find_package(Qt5 COMPONENTS Core REQUIRED)
+endif()
+
+# 获取并显示 Qt 版本（包括子版本）
+if (Qt6Core_VERSION)
+    set(QtVersion ${Qt6Core_VERSION})
+elseif (Qt5Core_VERSION)
+    set(QtVersion ${Qt5Core_VERSION})
+else()
+    message(FATAL_ERROR "Qt not found")
+endif()
+
 # 获取编译器信息
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     if (MINGW)
