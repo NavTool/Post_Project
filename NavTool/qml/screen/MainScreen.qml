@@ -9,20 +9,11 @@ Item{
 
     id:root
 
-    property bool visable_menu_bar:true  //顶部菜单栏可视
-    property bool visable_top_side:true  //顶部菜单栏可视
-    property bool visable_left_side:true //左侧可视
-    property bool visable_right_side:true //右侧可视
-    property bool visable_bottom_side:true //底部可视
-
-
     Component.onCompleted:{
         window.setHitTestVisible(top_bar_left) //设置组件id来顶部的按键可以使用
         window.setHitTestVisible(top_bar_right) //设置组件id来顶部的按键可以使用
         window.setHitTestVisible(project_info)
     }
-
-
 
     property list<QtObject> navbar_items : [
         PaneItem{
@@ -59,7 +50,6 @@ Item{
         }
     ]
 
-
     PageRouter{
         id: navbar_router
         routes: {
@@ -72,6 +62,47 @@ Item{
             "/navbar/about": R.resolvedUrl("qml/component/NavBar_Support.qml")
         }
     }
+
+
+    PageRouter{
+        id: body_lefttop_router
+        routes: {
+            "/body/lefttop": R.resolvedUrl("qml/component/SidePage_Resource.qml"),
+        }
+    }
+    PageRouter{
+        id: body_leftbottom_router
+        routes: {
+            "/body/leftbottom": R.resolvedUrl("qml/component/SidePage_Property.qml"),
+        }
+    }
+    PageRouter{
+        id: body_midtop_router
+        routes: {
+            "/body/midtop/map": R.resolvedUrl("qml/page/Page_Map.qml"),
+            "/body/midtop/table": R.resolvedUrl("qml/page/Page_Table.qml"),
+        }
+    }
+    PageRouter{
+        id: body_midbottom_router
+        routes: {
+            "/body/midbottom": R.resolvedUrl("qml/component/SidePage_Log.qml"),
+        }
+    }
+    PageRouter{
+        id: body_righttop_router
+        routes: {
+            "/body/righttop": R.resolvedUrl("qml/component/SidePage_Info.qml"),
+        }
+    }
+    PageRouter{
+        id: body_rightbottom_router
+        routes: {
+            "/body/rightbottom": R.resolvedUrl("qml/component/SidePage_Status.qml"),
+        }
+    }
+
+
 
 
     InfoBarManager{
@@ -305,7 +336,7 @@ Item{
         Item{
             id:header
             property alias header_bar: bar
-            height:root.visable_menu_bar?28:0
+            height:Global.visable_menu_bar?28:0
             width:parent.width
             clip:true
 
@@ -353,7 +384,7 @@ Item{
 
             IconButton{
                 text: "Fold"
-                icon.name:root.visable_top_side? FluentIcons.graph_ChevronUp:FluentIcons.graph_ChevronDown
+                icon.name:Global.visable_top_side? FluentIcons.graph_ChevronUp:FluentIcons.graph_ChevronDown
                 icon.width: 15
                 icon.height: 15
                 spacing: 0
@@ -366,7 +397,7 @@ Item{
                 }
 
                 onClicked:{
-                    root.visable_top_side=!root.visable_top_side
+                    Global.visable_top_side=!Global.visable_top_side
                 }
             }
         }
@@ -379,7 +410,7 @@ Item{
                 bottom:footer.top
                 left:parent.left
                 right:parent.right
-                topMargin:1
+                topMargin:5
                 leftMargin:5
                 rightMargin:5
             }
@@ -394,7 +425,7 @@ Item{
                 Item {
                     clip: true
 
-                    visible:root.visable_left_side
+                    visible:Global.visable_left_side
 
                     implicitWidth: body.width*0.15
                     implicitHeight: body.height
@@ -413,16 +444,19 @@ Item{
                             implicitHeight: parent.height*0.7
                             // SplitView.maximumWidth: 400
                             // SplitView.maximumHeight: 400
+                            SplitView.minimumHeight: Global.visable_top_side?header_extra.height:0
 
-                            Text{
-                                text:"1"
+                            PageRouterView{
+                                id: lefttop_panne
+                                anchors.fill: parent
+                                anchors.topMargin: Global.visable_top_side?header_extra.height:0
+                                router: body_lefttop_router
+                                clip: true
+
+                                Component.onCompleted: {
+                                    body_lefttop_router.go("/body/lefttop")
+                                }
                             }
-
-                            // Rectangle{
-                            //     anchors.fill:parent
-
-                            //     color:"yellow"
-                            // }
                         }
 
                         //页面左侧框架下部
@@ -435,15 +469,17 @@ Item{
                             SplitView.fillWidth: true
                             SplitView.fillHeight: true
 
-                            Text{
-                                text:"2"
+                            PageRouterView{
+                                id: leftbottom_panne
+                                anchors.fill: parent
+                                // anchors.topMargin: Global.visable_top_side?header_extra.height:0
+                                router: body_leftbottom_router
+                                clip: true
+
+                                Component.onCompleted: {
+                                    body_leftbottom_router.go("/body/leftbottom")
+                                }
                             }
-
-                            // Rectangle{
-                            //     anchors.fill:parent
-
-                            //     color:"blue"
-                            // }
                         }
                     }
                 }
@@ -469,40 +505,46 @@ Item{
                             SplitView.fillHeight: true
                             // SplitView.maximumWidth: 400
                             // SplitView.maximumHeight: 400
+                            SplitView.minimumHeight: Global.visable_top_side?header_extra.height:0
 
-                            Text{
-                                text:"3"
+                            PageRouterView{
+                                id: midtop_panne
+                                anchors.fill: parent
+                                anchors.topMargin: Global.visable_top_side?header_extra.height:0
+                                router: body_midtop_router
+                                clip: true
+
+                                Component.onCompleted: {
+                                    body_midtop_router.go("/body/midtop/table")
+                                }
                             }
-                            // Rectangle{
-                            //     anchors.fill:parent
-
-                            //     color:"red"
-                            // }
 
                         }
 
                         //页面中间框架下部
                         Item {
                             clip: true
-                            visible:root.visable_bottom_side
+                            visible:Global.visable_bottom_side
                             implicitWidth: parent.width
                             implicitHeight: parent.height*0.15
 
-                            Text{
-                                text:"4"
+                            PageRouterView{
+                                id: midbottom_panne
+                                anchors.fill: parent
+                                // anchors.topMargin: Global.visable_top_side?header_extra.height:0
+                                router: body_midbottom_router
+                                clip: true
+
+                                Component.onCompleted: {
+                                    body_midbottom_router.go("/body/midbottom")
+                                }
                             }
-
-                            // Rectangle{
-                            //     anchors.fill:parent
-
-                            //     color:"black"
-                            // }
                         }
                     }
                 }
                 Item {
                     clip: true
-                    visible:root.visable_right_side
+                    visible:Global.visable_right_side
 
                     implicitWidth: body.width*0.15
                     implicitHeight: body.height
@@ -518,15 +560,20 @@ Item{
                             implicitHeight: parent.height*0.55
                             // SplitView.maximumWidth: 400
                             // SplitView.maximumHeight: 400
+                            // SplitView.minimumWidth: 50
+                            SplitView.minimumHeight: Global.visable_top_side?header_extra.height:0
 
-                            Text{
-                                text:"5"
+                            PageRouterView{
+                                id: righttop_panne
+                                anchors.fill: parent
+                                anchors.topMargin: Global.visable_top_side?header_extra.height:0
+                                router: body_righttop_router
+                                clip: true
+
+                                Component.onCompleted: {
+                                    body_righttop_router.go("/body/righttop")
+                                }
                             }
-                            // Rectangle{
-                            //     anchors.fill:parent
-
-                            //     color:"green"
-                            // }
                         }
 
                         //页面右侧框架下部
@@ -537,15 +584,17 @@ Item{
                             SplitView.fillWidth: true
                             SplitView.fillHeight: true
 
-                            Text{
-                                text:"6"
+                            PageRouterView{
+                                id: rightbottom_panne
+                                anchors.fill: parent
+                                // anchors.topMargin: Global.visable_top_side?header_extra.height:0
+                                router: body_rightbottom_router
+                                clip: true
+
+                                Component.onCompleted: {
+                                    body_rightbottom_router.go("/body/rightbottom")
+                                }
                             }
-
-                            // Rectangle{
-                            //     anchors.fill:parent
-
-                            //     color:"orange"
-                            // }
                         }
                     }
                 }
@@ -555,9 +604,9 @@ Item{
         //顶部功能栏
         Item{
             id:header_extra
-            visible:root.visable_top_side
+            visible:Global.visable_top_side
 
-            width:parent.width-20
+            width:parent.width-10
             height:100
 
             anchors{
@@ -609,7 +658,7 @@ Item{
                     icon.color:"Grey"
 
                     onClicked:{
-                        root.visable_left_side=!root.visable_left_side
+                        Global.visable_left_side=!Global.visable_left_side
                     }
                 }
             }
@@ -642,7 +691,7 @@ Item{
                     icon.color:"Grey"
 
                     onClicked:{
-                        root.visable_right_side=!root.visable_right_side
+                        Global.visable_right_side=!Global.visable_right_side
                     }
                 }
 
@@ -656,7 +705,7 @@ Item{
                     icon.color:"Grey"
 
                     onClicked:{
-                        root.visable_bottom_side=!root.visable_bottom_side
+                        Global.visable_bottom_side=!Global.visable_bottom_side
                     }
                 }
             }
@@ -667,23 +716,23 @@ Item{
 
                 MenuItem{
                     icon.name: FluentIcons.graph_GlobalNavButton
-                    text:root.visable_top_side?qsTr("Hide Top Bar"): qsTr("Show Top Bar")
+                    text:Global.visable_top_side?qsTr("Hide Top Bar"): qsTr("Show Top Bar")
 
                     onTriggered:{
-                        root.visable_top_side=!root.visable_top_side
+                        Global.visable_top_side=!Global.visable_top_side
                     }
                 }
 
                 MenuItem{
-                    icon.name:root.visable_menu_bar?FluentIcons.graph_CheckMark:FluentIcons.graph_CheckboxIndeterminate
+                    icon.name:Global.visable_menu_bar?FluentIcons.graph_CheckMark:FluentIcons.graph_CheckboxIndeterminate
                     text:qsTr("Show Menu Bar")
 
                     onTriggered:{
-                        root.visable_menu_bar=!root.visable_menu_bar
+                        Global.visable_menu_bar=!Global.visable_menu_bar
 
-                        if(root.visable_menu_bar==false)
+                        if(Global.visable_menu_bar==false)
                         {
-                            root.visable_top_side=false
+                            Global.visable_top_side=false
                         }
                     }
                 }
@@ -692,27 +741,27 @@ Item{
 
                 MenuItem{
                     icon.name: FluentIcons.graph_ResizeMouseTall
-                    text:root.visable_left_side?qsTr("Hide Left Sidebar"): qsTr("Show Left Sidebar")
+                    text:Global.visable_left_side?qsTr("Hide Left Sidebar"): qsTr("Show Left Sidebar")
 
                     onTriggered:{
-                        root.visable_left_side=!root.visable_left_side
+                        Global.visable_left_side=!Global.visable_left_side
                     }
                 }
                 MenuItem{
                     icon.name:  FluentIcons.graph_ResizeMouseTall
-                    text: root.visable_right_side?qsTr("Hide Right Sidebar"): qsTr("Show Right Sidebar")
+                    text: Global.visable_right_side?qsTr("Hide Right Sidebar"): qsTr("Show Right Sidebar")
 
                     onTriggered:{
-                        root.visable_right_side=!root.visable_right_side
+                        Global.visable_right_side=!Global.visable_right_side
                     }
                 }
 
                 MenuItem{
                     icon.name:  FluentIcons.graph_ResizeMouseWide
-                    text: root.visable_bottom_side?qsTr("Hide Bottom Bar"): qsTr("Show Bottom Bar")
+                    text: Global.visable_bottom_side?qsTr("Hide Bottom Bar"): qsTr("Show Bottom Bar")
 
                     onTriggered:{
-                        root.visable_bottom_side=!root.visable_bottom_side
+                        Global.visable_bottom_side=!Global.visable_bottom_side
                     }
                 }
 

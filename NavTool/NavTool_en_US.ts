@@ -25,6 +25,109 @@
     </message>
 </context>
 <context>
+    <name>DataGridController</name>
+    <message>
+        <location filename="src/DataGridController.h" line="20"/>
+        <source>John</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="20"/>
+        <source>Alice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="20"/>
+        <source>Michael</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="20"/>
+        <source>Sophia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="20"/>
+        <source>David</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="21"/>
+        <source>Emma</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="21"/>
+        <source>Chris</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="21"/>
+        <source>Olivia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="21"/>
+        <source>Daniel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="21"/>
+        <source>Isabella</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="22"/>
+        <source>123 Main St</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="22"/>
+        <source>456 Oak Ave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="22"/>
+        <source>789 Pine Rd</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="23"/>
+        <source>321 Maple Dr</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="23"/>
+        <source>654 Birch Ln</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="36"/>
+        <source>A software engineer with a passion for coding.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="37"/>
+        <source>Loves outdoor activities and traveling.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="38"/>
+        <source>An artist who enjoys painting and sculpting.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="39"/>
+        <source>A teacher dedicated to inspiring students.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/DataGridController.h" line="40"/>
+        <source>A chef with a love for culinary experiments.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Dialog_AddStation</name>
     <message>
         <location filename="module/post_proc/Dialog_AddStation.qml" line="16"/>
@@ -738,82 +841,82 @@ server/client:2847/3519</source>
 <context>
     <name>MainScreen</name>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="151"/>
+        <location filename="qml/screen/MainScreen.qml" line="182"/>
         <source>自动保存</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="177"/>
+        <location filename="qml/screen/MainScreen.qml" line="208"/>
         <source>AutoSave is Turn On!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="180"/>
+        <location filename="qml/screen/MainScreen.qml" line="211"/>
         <source>AutoSave is Turn Off!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="198"/>
+        <location filename="qml/screen/MainScreen.qml" line="229"/>
         <source>The project has been saved!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="670"/>
+        <location filename="qml/screen/MainScreen.qml" line="719"/>
         <source>Hide Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="670"/>
+        <location filename="qml/screen/MainScreen.qml" line="719"/>
         <source>Show Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="679"/>
+        <location filename="qml/screen/MainScreen.qml" line="728"/>
         <source>Show Menu Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="695"/>
+        <location filename="qml/screen/MainScreen.qml" line="744"/>
         <source>Hide Left Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="695"/>
+        <location filename="qml/screen/MainScreen.qml" line="744"/>
         <source>Show Left Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="703"/>
+        <location filename="qml/screen/MainScreen.qml" line="752"/>
         <source>Hide Right Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="703"/>
+        <location filename="qml/screen/MainScreen.qml" line="752"/>
         <source>Show Right Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="712"/>
+        <location filename="qml/screen/MainScreen.qml" line="761"/>
         <source>Hide Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="712"/>
+        <location filename="qml/screen/MainScreen.qml" line="761"/>
         <source>Show Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="724"/>
+        <location filename="qml/screen/MainScreen.qml" line="773"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="731"/>
+        <location filename="qml/screen/MainScreen.qml" line="780"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/MainScreen.qml" line="739"/>
+        <location filename="qml/screen/MainScreen.qml" line="788"/>
         <source>More</source>
         <translation type="unfinished"></translation>
     </message>
@@ -989,13 +1092,6 @@ server/client:2847/3519</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_GNSS.qml" line="233"/>
-        <location filename="qml/component/NavBar_GNSS.qml" line="300"/>
-        <source>模板管理</source>
-        <oldsource>动态基线列表</oldsource>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="qml/component/NavBar_GNSS.qml" line="312"/>
         <source>基线结果</source>
         <translation type="unfinished"></translation>
@@ -1045,7 +1141,8 @@ server/client:2847/3519</source>
     </message>
     <message>
         <location filename="qml/component/NavBar_INS.qml" line="63"/>
-        <source>杆臂值</source>
+        <source>配置参数</source>
+        <oldsource>杆臂值</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1794,6 +1891,144 @@ server/client:2847/3519</source>
     </message>
 </context>
 <context>
+    <name>Page_Map</name>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="51"/>
+        <source>导入</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="64"/>
+        <source>导入配置</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="75"/>
+        <source>基线重构</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="89"/>
+        <source>文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="106"/>
+        <source>新建站点</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="118"/>
+        <source>管理站点</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="129"/>
+        <source>编辑站点</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="143"/>
+        <source>站点</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="160"/>
+        <source>平面视图</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="173"/>
+        <source>显示格网</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="188"/>
+        <source>图层管理</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="202"/>
+        <source>视图</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="222"/>
+        <source>资源视图</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="235"/>
+        <source>站点列表</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="245"/>
+        <source>文件列表</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="259"/>
+        <source>基线列表</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="270"/>
+        <source>数据区间</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="284"/>
+        <source>闭合环</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="295"/>
+        <source>数据检核</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="311"/>
+        <source>资源管理</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="332"/>
+        <source>工程信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="344"/>
+        <source>工程配置</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="357"/>
+        <source>显示配置</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="368"/>
+        <source>存储配置</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="379"/>
+        <source>保存</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="390"/>
+        <source>导出</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Map.qml" line="404"/>
+        <source>工程</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Page_NMEA_Transfer</name>
     <message>
         <location filename="module/nav_tool/Page_NMEA_Transfer.qml" line="11"/>
@@ -2443,6 +2678,94 @@ server/client:2847/3519</source>
     </message>
 </context>
 <context>
+    <name>Page_Table</name>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="110"/>
+        <source>Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="119"/>
+        <source>Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="134"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="185"/>
+        <source>Clear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="191"/>
+        <source>Add a row of Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="197"/>
+        <source>Insert a Row</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="200"/>
+        <source>Focus not acquired: Please click any item in the form as the target for insertion!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="207"/>
+        <source>Deletes the selected row of data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="211"/>
+        <source>Please select a row of data first!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="218"/>
+        <source>Modify the first row of data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="243"/>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="250"/>
+        <source>Avatar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="258"/>
+        <source>Age</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="264"/>
+        <source>Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="270"/>
+        <source>Description</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="276"/>
+        <source>Move</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table.qml" line="285"/>
+        <source>Action</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Page_Time_Transfer</name>
     <message>
         <location filename="module/nav_tool/Page_Time_Transfer.qml" line="11"/>
@@ -2517,6 +2840,140 @@ server/client:2847/3519</source>
     <message>
         <location filename="module/auth_gui/Page_User_Search.qml" line="14"/>
         <source>开发中...</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SidePage_Info</name>
+    <message>
+        <location filename="qml/component/SidePage_Info.qml" line="20"/>
+        <source>Screenshots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Info.qml" line="32"/>
+        <source>Send Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Info.qml" line="44"/>
+        <source>Open Gallery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Info.qml" line="56"/>
+        <source>Lock Gallery</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SidePage_Resource</name>
+    <message>
+        <location filename="qml/component/SidePage_Resource.qml" line="131"/>
+        <source>Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>TreeDataGridController</name>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="23"/>
+        <source>John</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="23"/>
+        <source>Alice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="23"/>
+        <source>Michael</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="23"/>
+        <source>Sophia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="23"/>
+        <source>David</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="24"/>
+        <source>Emma</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="24"/>
+        <source>Chris</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="24"/>
+        <source>Olivia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="24"/>
+        <source>Daniel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="24"/>
+        <source>Isabella</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="25"/>
+        <source>123 Main St</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="25"/>
+        <source>456 Oak Ave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="25"/>
+        <source>789 Pine Rd</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="26"/>
+        <source>321 Maple Dr</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="26"/>
+        <source>654 Birch Ln</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="39"/>
+        <source>A software engineer with a passion for coding.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="40"/>
+        <source>Loves outdoor activities and traveling.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="41"/>
+        <source>An artist who enjoys painting and sculpting.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="42"/>
+        <source>A teacher dedicated to inspiring students.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="src/TreeDataGridController.h" line="43"/>
+        <source>A chef with a love for culinary experiments.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

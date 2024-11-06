@@ -59,8 +59,8 @@ FramelessWindow {
                 }
             }
             Component.onCompleted: {
-                window.tourSteps.append({title:qsTr("Dark Mode"),description: qsTr("Here you can switch to night mode."),target:()=>btn_dark})
-                window.tourSteps.append({title:qsTr("Sticky on Top"),description: qsTr("From here, you can switch to the top of the window."),target:()=>btn_stick_on_top})
+                window.tourSteps.push({title:qsTr("Dark Mode"),description: qsTr("Here you can switch to night mode."),target:()=>btn_dark})
+                window.tourSteps.push({title:qsTr("Sticky on Top"),description: qsTr("From here, you can switch to the top of the window."),target:()=>btn_stick_on_top,isLast: true})
             }
         }
     }

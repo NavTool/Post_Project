@@ -54,6 +54,13 @@ set(QML_FILES
     qml/component/NavBar_INS.qml
     qml/component/NavBar_Tool.qml
     qml/component/NavBar_Support.qml
+    qml/component/SidePage_Info.qml
+    qml/component/SidePage_Log.qml
+    qml/component/SidePage_Property.qml
+    qml/component/SidePage_Resource.qml
+    qml/component/SidePage_Status.qml
+    qml/page/Page_Map.qml
+    qml/page/Page_Table.qml
 
 )
 
@@ -64,6 +71,27 @@ set(QML_SINGLETONS
 
 set(RESOURCES_FILES
     res/logo.png
+    res/image/logo.png
+    res/image/ic_avatar.jpg
+    res/image/ic_spinner.png
+    res/image/avatar_1.svg
+    res/image/avatar_2.svg
+    res/image/avatar_3.svg
+    res/image/avatar_4.svg
+    res/image/avatar_5.svg
+    res/image/avatar_6.svg
+    res/image/avatar_7.svg
+    res/image/avatar_8.svg
+    res/image/avatar_9.svg
+    res/image/avatar_10.svg
+    res/image/avatar_11.svg
+    res/image/avatar_12.svg
+    res/image/banner_1.webp
+    res/image/banner_2.webp
+    res/image/banner_3.webp
+    res/image/bg_scenic.webp
+    res/image/ic_folder.png
+    res/image/ic_file_text.png
     NavTool_zh_CN.qm
     NavTool_en_US.qm
     module/plot/echarts.js
@@ -81,6 +109,9 @@ set(SOURCE_FILES
     src/FpsItem.h  src/FpsItem.cpp
     src/SettingsHelper.h   src/SettingsHelper.cpp
     src/CircularReveal.h   src/CircularReveal.cpp
+    src/TreeDataGridController.h src/TreeDataGridController.cpp
+    src/FileTreeDataController.h src/FileTreeDataController.cpp
+    src/DataGridController.h src/DataGridController.cpp
     module/module.hpp
 )
 

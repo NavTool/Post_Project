@@ -36,7 +36,7 @@ Item{
         target:Global
 
         function onDisplayScreenChanged(){
-            console.log("change:",Global.displayScreen)
+            // console.log("change:",Global.displayScreen)
 
             if(Global.displayScreen==2)
             {
