@@ -5,17 +5,26 @@ import FluentUI.impl
 import QtWebEngine
 ContentPage{
 
+    Column{
+        WebEngineView {
+            id:web
+            width:1280
+            height: 720
+            url: "https://echarts.apache.org"
 
-    WebEngineView {
-        id:web
-        anchors.fill: parent
-        url: "https://echarts.apache.org"
 
-
-        onNewWindowRequested: (url) =>{
-            web.url=url
+            onNewWindowRequested: (url) =>{
+                web.url=url
+            }
         }
+
+
     }
+
+
+
+
+
 
 
 }

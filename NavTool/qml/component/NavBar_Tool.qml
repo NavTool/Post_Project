@@ -29,12 +29,12 @@ Item{
         id:function_box
         anchors.fill: parent
         padding: groupbox_padding
+
         Flickable{
 
             anchors.fill: parent
             contentWidth: rowItem.width
             // contentHeight: rowItem.height
-            interactive: contentWidth > width
 
             Row{
                 id:rowItem
@@ -47,12 +47,13 @@ Item{
                             width: implicitWidth
                             Row {
                                 padding: group_padding
+
                                 IconButton {
-                                    text: qsTr("导入")
+                                    text: qsTr("结果图表")
                                     // width: iconbutton_width
                                     height:function_height.height  // 设置按键的高度
 
-                                    icon.name: FluentIcons.graph_ReturnToWindow
+                                    icon.name: FluentIcons.graph_AreaChart
                                     icon.width: iconbutton_size
                                     icon.height: iconbutton_size
                                     spacing: iconbutton_spacing
@@ -61,7 +62,146 @@ Item{
 
                                 Column {
                                     IconButton {
-                                        text: qsTr("导入配置")
+                                        text: qsTr("时间序列图")
+                                        // width: iconbutton_width
+                                        // height: function_height.height*0.4// 半高按钮的高度
+
+                                        icon.name: FluentIcons.graph_AreaChart
+                                        icon.width: iconbutton_size*0.8
+                                        icon.height: iconbutton_size*0.8
+                                        spacing: 5
+                                    }
+
+                                    IconButton {
+                                        text: qsTr("平面轨迹图")
+                                        // width: iconbutton_width
+                                        // height: function_height.height*0.4// 半高按钮的高度
+
+                                        icon.name: FluentIcons.graph_AreaChart
+                                        icon.width: iconbutton_size*0.8
+                                        icon.height: iconbutton_size*0.8
+                                        spacing: 5
+                                    }
+                                }
+
+
+                                IconButton {
+                                    text: qsTr("质量图表")
+                                    // width: iconbutton_width
+                                    height:function_height.height  // 设置按键的高度
+
+                                    icon.name: FluentIcons.graph_PieSingle
+                                    icon.width: iconbutton_size
+                                    icon.height: iconbutton_size
+                                    spacing: iconbutton_spacing
+                                    display: IconButton.TextUnderIcon
+                                }
+
+                                Column {
+                                    IconButton {
+                                        text: qsTr("时间覆盖图")
+                                        // width: iconbutton_width
+                                        // height: function_height.height*0.4// 半高按钮的高度
+
+                                        icon.name: FluentIcons.graph_AreaChart
+                                        icon.width: iconbutton_size*0.8
+                                        icon.height: iconbutton_size*0.8
+                                        spacing: 5
+                                    }
+
+
+                                }
+                            }
+                        }
+                        Label{
+                            height:groupname_height
+                            text:qsTr("数据可视化")
+                            font:Typography.bodyStrong
+                            // color:Theme.res.textFillColorPrimary
+                            anchors.horizontalCenter: parent.horizontalCenter
+                        }
+                    }
+                }
+
+
+
+                Frame{
+                    width: implicitWidth
+
+                    Column{
+                        Frame{
+                            width: implicitWidth
+                            Row {
+                                padding: group_padding
+                                IconButton {
+                                    text: qsTr("质量分析")
+                                    // width: iconbutton_width
+                                    height:function_height.height  // 设置按键的高度
+
+                                    icon.name: FluentIcons.graph_MultiSelect
+                                    icon.width: iconbutton_size
+                                    icon.height: iconbutton_size
+                                    spacing: iconbutton_spacing
+                                    display: IconButton.TextUnderIcon
+                                }
+                                Column {
+                                    IconButton {
+                                        text: qsTr("分析配置")
+                                        // width: iconbutton_width
+                                        // height: function_height.height*0.4// 半高按钮的高度
+
+                                        icon.name: FluentIcons.graph_Equalizer
+                                        icon.width: iconbutton_size*0.8
+                                        icon.height: iconbutton_size*0.8
+                                        spacing: 5
+                                    }
+
+                                    IconButton {
+                                        text: qsTr("分析报告")
+                                        // width: iconbutton_width
+                                        // height: function_height.height*0.4// 半高按钮的高度
+
+                                        icon.name: FluentIcons.graph_ReportDocument
+                                        icon.width: iconbutton_size*0.8
+                                        icon.height: iconbutton_size*0.8
+                                        spacing: 5
+                                    }
+                                }
+                            }
+                        }
+                        Label{
+                            height:groupname_height
+                            text:qsTr("质检工具")
+                            font:Typography.bodyStrong
+                            // color:Theme.res.textFillColorPrimary
+                            anchors.horizontalCenter: parent.horizontalCenter
+                        }
+                    }
+                }
+
+                Frame{
+                    width: implicitWidth
+
+                    Column{
+                        Frame{
+                            width: implicitWidth
+                            Row {
+                                padding: group_padding
+
+                                IconButton {
+                                    text: qsTr("Rinex转换")
+                                    // width: iconbutton_width
+                                    height:function_height.height  // 设置按键的高度
+
+                                    icon.name: FluentIcons.graph_Bug
+                                    icon.width: iconbutton_size
+                                    icon.height: iconbutton_size
+                                    spacing: iconbutton_spacing
+                                    display: IconButton.TextUnderIcon
+                                }
+                                Column {
+                                    IconButton {
+                                        text: qsTr("转换配置")
                                         // width: iconbutton_width
                                         // height: function_height.height*0.4// 半高按钮的高度
 
@@ -72,300 +212,7 @@ Item{
                                     }
 
                                     IconButton {
-                                        text: qsTr("基线重构")
-                                        // width: iconbutton_width
-                                        // height: function_height.height*0.4// 半高按钮的高度
-
-                                        icon.name: FluentIcons.graph_FileExplorer
-                                        icon.width: iconbutton_size*0.8
-                                        icon.height: iconbutton_size*0.8
-                                        spacing: 5
-                                    }
-                                }
-                            }
-                        }
-                        Label{
-                            height:groupname_height
-                            text:qsTr("文件")
-                            font:Typography.bodyStrong
-                            // color:Theme.res.textFillColorPrimary
-                            anchors.horizontalCenter: parent.horizontalCenter
-                        }
-                    }
-                }
-
-                Frame{
-                    width: implicitWidth
-
-                    Column{
-                        Frame{
-                            width: implicitWidth
-                            Row {
-                                padding: group_padding
-                                IconButton {
-                                    text: qsTr("新建站点")
-                                    // width: iconbutton_width
-                                    height:function_height.height  // 设置按键的高度
-
-                                    icon.name: FluentIcons.graph_MapPin
-                                    icon.width: iconbutton_size
-                                    icon.height: iconbutton_size
-                                    spacing: iconbutton_spacing
-                                    display: IconButton.TextUnderIcon
-                                }
-                                Column {
-                                    IconButton {
-                                        text: qsTr("管理站点")
-                                        // width: iconbutton_width
-                                        // height: function_height.height*0.4// 半高按钮的高度
-
-                                        icon.name: FluentIcons.graph_GroupList
-                                        icon.width: iconbutton_size*0.8
-                                        icon.height: iconbutton_size*0.8
-                                        spacing: 5
-                                    }
-
-                                    IconButton {
-                                        text: qsTr("编辑站点")
-                                        // width: iconbutton_width
-                                        // height: function_height.height*0.4// 半高按钮的高度
-
-                                        icon.name: FluentIcons.graph_Edit
-                                        icon.width: iconbutton_size*0.8
-                                        icon.height: iconbutton_size*0.8
-                                        spacing: 5
-                                    }
-                                }
-                            }
-                        }
-                        Label{
-                            height:groupname_height
-                            text:qsTr("站点")
-                            font:Typography.bodyStrong
-                            // color:Theme.res.textFillColorPrimary
-                            anchors.horizontalCenter: parent.horizontalCenter
-                        }
-                    }
-                }
-
-                Frame{
-                    width: implicitWidth
-
-                    Column{
-                        Frame{
-                            width: implicitWidth
-                            Row {
-                                padding: group_padding
-                                IconButton {
-                                    text: qsTr("平面视图")
-                                    // width: iconbutton_width
-                                    height:function_height.height  // 设置按键的高度
-
-                                    icon.name: FluentIcons.graph_TiltUp
-                                    icon.width: iconbutton_size
-                                    icon.height: iconbutton_size
-                                    spacing: iconbutton_spacing
-                                    display: IconButton.TextUnderIcon
-                                }
-                                Column {
-
-                                    IconButton {
-                                        text: qsTr("显示格网")
-                                        // width: iconbutton_width
-                                        // height: function_height.height*0.4// 半高按钮的高度
-
-                                        icon.name: FluentIcons.graph_TiltDown
-                                        icon.width: iconbutton_size*0.8
-                                        icon.height: iconbutton_size*0.8
-                                        spacing: 5
-
-                                        highlighted: checked
-                                        checked: false
-                                        checkable: true
-                                    }
-
-                                    IconButton {
-                                        text: qsTr("图层管理")
-                                        // width: iconbutton_width
-                                        // height: function_height.height*0.4// 半高按钮的高度
-
-                                        icon.name: FluentIcons.graph_MapLayers
-                                        icon.width: iconbutton_size*0.8
-                                        icon.height: iconbutton_size*0.8
-                                        spacing: 5
-                                    }
-                                }
-                            }
-                        }
-                        Label{
-                            height:groupname_height
-                            text:qsTr("视图")
-                            font:Typography.bodyStrong
-                            // color:Theme.res.textFillColorPrimary
-                            anchors.horizontalCenter: parent.horizontalCenter
-                        }
-                    }
-                }
-
-
-
-
-                Frame{
-                    width: implicitWidth
-
-                    Column{
-                        Frame{
-                            width: implicitWidth
-                            Row {
-                                padding: group_padding
-                                IconButton {
-                                    text: qsTr("资源视图")
-                                    // width: iconbutton_width
-                                    height:function_height.height  // 设置按键的高度
-
-                                    icon.name: FluentIcons.graph_DeviceLaptopNoPic
-                                    icon.width: iconbutton_size
-                                    icon.height: iconbutton_size
-                                    spacing: iconbutton_spacing
-                                    display: IconButton.TextUnderIcon
-                                }
-
-                                Column {
-                                    IconButton {
-                                        text: qsTr("站点列表")
-                                        // width: iconbutton_width
-                                        // height: function_height.height*0.4// 半高按钮的高度
-
-                                        icon.name: FluentIcons.graph_BulletedList
-                                        icon.width: iconbutton_size*0.8
-                                        icon.height: iconbutton_size*0.8
-                                        spacing: 5
-                                    }
-                                    IconButton {
-                                        text: qsTr("文件列表")
-                                        // width: iconbutton_width
-                                        // height: function_height.height*0.4// 半高按钮的高度
-
-                                        icon.name: FluentIcons.graph_BulletedList
-                                        icon.width: iconbutton_size*0.8
-                                        icon.height: iconbutton_size*0.8
-                                        spacing: 5
-                                    }
-
-                                }
-
-                                Column {
-                                    IconButton {
-                                        text: qsTr("基线列表")
-                                        // width: iconbutton_width
-                                        // height: function_height.height*0.4// 半高按钮的高度
-
-                                        icon.name: FluentIcons.graph_BulletedList
-                                        icon.width: iconbutton_size*0.8
-                                        icon.height: iconbutton_size*0.8
-                                        spacing: 5
-                                    }
-
-                                    IconButton {
-                                        text: qsTr("数据区间")
-                                        // width: iconbutton_width
-                                        // height: function_height.height*0.4// 半高按钮的高度
-
-                                        icon.name: FluentIcons.graph_BulletedList
-                                        icon.width: iconbutton_size*0.8
-                                        icon.height: iconbutton_size*0.8
-                                        spacing: 5
-
-                                    }
-                                }
-
-                                Column {
-                                    IconButton {
-                                        text: qsTr("闭合环")
-                                        // width: iconbutton_width
-                                        // height: function_height.height*0.4// 半高按钮的高度
-
-                                        icon.name: FluentIcons.graph_AllApps
-                                        icon.width: iconbutton_size*0.8
-                                        icon.height: iconbutton_size*0.8
-                                        spacing: 5
-                                    }
-
-                                    IconButton {
-                                        text: qsTr("数据检核")
-                                        // width: iconbutton_width
-                                        // height: function_height.height*0.4// 半高按钮的高度
-
-                                        icon.name: FluentIcons.graph_CheckList
-                                        icon.width: iconbutton_size*0.8
-                                        icon.height: iconbutton_size*0.8
-                                        spacing: 5
-
-                                    }
-                                }
-
-                            }
-                        }
-                        Label{
-                            height:groupname_height
-                            text:qsTr("资源管理")
-                            font:Typography.bodyStrong
-                            // color:Theme.res.textFillColorPrimary
-                            anchors.horizontalCenter: parent.horizontalCenter
-                        }
-                    }
-                }
-
-
-
-
-                Frame{
-                    width: implicitWidth
-
-                    Column{
-                        Frame{
-                            width: implicitWidth
-                            Row {
-                                padding: group_padding
-
-                                IconButton {
-                                    text: qsTr("工程信息")
-                                    // width: iconbutton_width
-                                    height:function_height.height  // 设置按键的高度
-
-                                    icon.name: FluentIcons.graph_Paste
-                                    icon.width: iconbutton_size
-                                    icon.height: iconbutton_size
-                                    spacing: iconbutton_spacing
-                                    display: IconButton.TextUnderIcon
-                                }
-
-                                IconButton {
-                                    text: qsTr("工程配置")
-                                    // width: iconbutton_width
-                                    height:function_height.height  // 设置按键的高度
-
-                                    icon.name: FluentIcons.graph_Label
-                                    icon.width: iconbutton_size
-                                    icon.height: iconbutton_size
-                                    spacing: iconbutton_spacing
-                                    display: IconButton.TextUnderIcon
-                                }
-
-                                Column {
-                                    IconButton {
-                                        text: qsTr("显示配置")
-                                        // width: iconbutton_width
-                                        // height: function_height.height*0.4// 半高按钮的高度
-
-                                        icon.name: FluentIcons.graph_ProvisioningPackage
-                                        icon.width: iconbutton_size*0.8
-                                        icon.height: iconbutton_size*0.8
-                                        spacing: 5
-                                    }
-
-                                    IconButton {
-                                        text: qsTr("存储配置")
+                                        text: qsTr("查看输出")
                                         // width: iconbutton_width
                                         // height: function_height.height*0.4// 半高按钮的高度
 
@@ -376,32 +223,34 @@ Item{
                                     }
                                 }
                                 IconButton {
-                                    text: qsTr("保存")
+                                    text: qsTr("文件合并")
                                     // width: iconbutton_width
                                     height:function_height.height  // 设置按键的高度
 
-                                    icon.name: FluentIcons.graph_Save
+                                    icon.name: FluentIcons.graph_MergeCall
                                     icon.width: iconbutton_size
                                     icon.height: iconbutton_size
                                     spacing: iconbutton_spacing
                                     display: IconButton.TextUnderIcon
                                 }
                                 IconButton {
-                                    text: qsTr("导出")
+                                    text: qsTr("文件拆分")
                                     // width: iconbutton_width
                                     height:function_height.height  // 设置按键的高度
 
-                                    icon.name: FluentIcons.graph_Share
+                                    icon.name: FluentIcons.graph_PrivateCall
                                     icon.width: iconbutton_size
                                     icon.height: iconbutton_size
                                     spacing: iconbutton_spacing
                                     display: IconButton.TextUnderIcon
                                 }
+
+
                             }
                         }
                         Label{
                             height:groupname_height
-                            text:qsTr("工程")
+                            text:qsTr("文件工具")
                             font:Typography.bodyStrong
                             // color:Theme.res.textFillColorPrimary
                             anchors.horizontalCenter: parent.horizontalCenter
@@ -410,9 +259,8 @@ Item{
                 }
 
             }
+
         }
     }
-
-
 
 }

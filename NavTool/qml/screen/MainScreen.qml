@@ -22,6 +22,58 @@ Item{
         window.setHitTestVisible(project_info)
     }
 
+
+
+    property list<QtObject> navbar_items : [
+        PaneItem{
+            key: "/"
+            title: "文件"
+        },
+        PaneItem{
+            key: "/navbar/start"
+            title: "开始"
+        },
+        PaneItem{
+            key: "/navbar/view"
+            title: "视图"
+        },
+        PaneItem{
+            key: "/navbar/net"
+            title: "静态网"
+        },
+        PaneItem{
+            key: "/navbar/gnss"
+            title: "GNSS"
+        },
+        PaneItem{
+            key: "/navbar/ins"
+            title: "组合导航"
+        },
+        PaneItem{
+            key: "/navbar/tool"
+            title: "工具"
+        },
+        PaneItem{
+            key: "/navbar/about"
+            title: "关于"
+        }
+    ]
+
+
+    PageRouter{
+        id: navbar_router
+        routes: {
+            "/navbar/start": R.resolvedUrl("qml/component/NavBar_Start.qml"),
+            "/navbar/view": R.resolvedUrl("qml/component/NavBar_View.qml"),
+            "/navbar/net": R.resolvedUrl("qml/component/NavBar_NET.qml"),
+            "/navbar/gnss": R.resolvedUrl("qml/component/NavBar_GNSS.qml"),
+            "/navbar/ins": R.resolvedUrl("qml/component/NavBar_INS.qml"),
+            "/navbar/tool": R.resolvedUrl("qml/component/NavBar_Tool.qml"),
+            "/navbar/about": R.resolvedUrl("qml/component/NavBar_Support.qml")
+        }
+    }
+
+
     InfoBarManager{
         id: info_manager_topright
         target: root
@@ -252,50 +304,10 @@ Item{
         //主页面顶部菜单栏
         Item{
             id:header
-
             property alias header_bar: bar
-
             height:root.visable_menu_bar?28:0
             width:parent.width
             clip:true
-            ListModel{
-                id: tab_model
-                ListElement{
-                    title: "文件"
-                    url: ""
-                }
-                ListElement{
-                    title: "开始"
-                    key: "/navbar/start"
-                }
-                ListElement{
-                    title: "视图"
-                }
-                // ListElement{
-                //     title: "GNSS"
-                // }
-                // ListElement{
-                //     title: "RTK"
-                // }
-                // ListElement{
-                //     title: "静态网"
-                // }
-                // ListElement{
-                //     title: "精密单点定位"
-                // }
-                // ListElement{
-                //     title: "组合导航"
-                // }
-                // ListElement{
-                //     title: "分析"
-                // }
-                // ListElement{
-                //     title: "工具"
-                // }
-                // ListElement{
-                //     title: "帮助"
-                // }
-            }
 
             TabBar {
                 id: bar
@@ -312,25 +324,30 @@ Item{
 
                 clip: true
                 Repeater {
-                    model: tab_model
+                    model: navbar_items
                     TabButton {
                         id: btn_tab
                         text: model.title
                         font:Typography.body
                         height:22
-
-                        onClicked:
-                        {
-                            if(bar.currentIndex!=0)
-                            {
-                                Global.mainScreenHeaderBarCurrentIndex=bar.currentIndex
-                            }
-                            else
-                            {
-                                Global.displayScreen=2
-                            }
-                        }
                     }
+                }
+
+                onCurrentIndexChanged: {
+                    if(navbar_items[bar.currentIndex].key=="/")
+                    {
+                        Global.displayScreen=2;
+                    }
+                    else
+                    {
+                        navbar_router.go(navbar_items[bar.currentIndex].key,{info:navbar_items[bar.currentIndex].title})
+                        Global.mainScreenHeaderBarCurrentIndex=bar.currentIndex
+                    }
+                }
+
+                Component.onCompleted: {
+                    bar.currentIndex=Global.mainScreenHeaderBarCurrentIndex
+                    navbar_router.go(navbar_items[bar.currentIndex].key,{info:navbar_items[bar.currentIndex].title})
                 }
             }
 
@@ -538,7 +555,6 @@ Item{
         //顶部功能栏
         Item{
             id:header_extra
-
             visible:root.visable_top_side
 
             width:parent.width-20
@@ -550,33 +566,12 @@ Item{
                 horizontalCenter:parent.horizontalCenter
             }
 
-            StackLayout {
-                id:bar_items
-                currentIndex: header.header_bar.currentIndex
-                anchors{
-                    fill:parent
-                }
-                Repeater{
-                    model:tab_model
-                    AutoLoader{
-                        id: loader_panne
-                        source: page_router.toUrl(model.key)
-                    }
-                }
-
-
-                PageRouter{
-                    id: page_router
-                    routes: {
-                         "/navbar/start": R.resolvedUrl("qml/component/NavBar_Start.qml"),
-                    }
-                }
+            PageRouterView{
+                id: navbar_panne
+                anchors.fill: parent
+                router: navbar_router
+                clip: true
             }
-
-
-
-
-
 
         }
 
@@ -791,5 +786,6 @@ Item{
             }
         }
     }
+
 
 }

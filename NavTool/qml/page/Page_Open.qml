@@ -56,4 +56,17 @@ ScrollablePage{
      }
 
 
+    WebEngineView {
+        id:web2
+        width:1280
+        height: 720
+        url: "https://echarts.apache.org/examples/zh/editor.html?c=line-race"
+
+
+        onNewWindowRequested: (url) =>{
+            web2.url=url
+        }
+    }
+
+
 }

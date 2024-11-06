@@ -48,6 +48,13 @@ set(QML_FILES
     qml/page/Page_Setting.qml
     module/plot/Eharts_Plot.qml
     qml/component/NavBar_Start.qml
+    qml/component/NavBar_View.qml
+    qml/component/NavBar_GNSS.qml
+    qml/component/NavBar_NET.qml
+    qml/component/NavBar_INS.qml
+    qml/component/NavBar_Tool.qml
+    qml/component/NavBar_Support.qml
+
 )
 
 # qml单例对象
