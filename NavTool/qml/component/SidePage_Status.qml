@@ -10,6 +10,12 @@ Frame{
 
     property string title
     property PageContext context
+
+    Label{
+        text:qsTr("任务状态栏")
+    }
+
+
     Column{
 
         anchors.centerIn: parent

@@ -12,6 +12,10 @@ Frame{
     property string title
     property PageContext context
 
+    Label{
+        text:qsTr("资源管理栏")
+    }
+
 
     // title: qsTr("")
     property int depthPadding: 15

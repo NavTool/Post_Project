@@ -59,8 +59,10 @@ set(QML_FILES
     qml/component/SidePage_Property.qml
     qml/component/SidePage_Resource.qml
     qml/component/SidePage_Status.qml
+    qml/page/Page_Main.qml
     qml/page/Page_Map.qml
     qml/page/Page_Table.qml
+    qml/page/Page_Blank.qml
 
 )
 

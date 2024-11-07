@@ -67,38 +67,39 @@ Item{
     PageRouter{
         id: body_lefttop_router
         routes: {
-            "/body/lefttop": R.resolvedUrl("qml/component/SidePage_Resource.qml"),
+            "/body/lefttop": R.resolvedUrl("qml/component/SidePage_Resource.qml")
         }
     }
     PageRouter{
         id: body_leftbottom_router
         routes: {
-            "/body/leftbottom": R.resolvedUrl("qml/component/SidePage_Property.qml"),
+            "/body/leftbottom": R.resolvedUrl("qml/component/SidePage_Info.qml")
         }
     }
     PageRouter{
         id: body_midtop_router
         routes: {
+            "/body/midtop/blank": R.resolvedUrl("qml/page/Page_Blank.qml"),
             "/body/midtop/map": R.resolvedUrl("qml/page/Page_Map.qml"),
-            "/body/midtop/table": R.resolvedUrl("qml/page/Page_Table.qml"),
+            "/body/midtop/main": R.resolvedUrl("qml/page/Page_Main.qml")
         }
     }
     PageRouter{
         id: body_midbottom_router
         routes: {
-            "/body/midbottom": R.resolvedUrl("qml/component/SidePage_Log.qml"),
+            "/body/midbottom": R.resolvedUrl("qml/component/SidePage_Log.qml")
         }
     }
     PageRouter{
         id: body_righttop_router
         routes: {
-            "/body/righttop": R.resolvedUrl("qml/component/SidePage_Info.qml"),
+            "/body/righttop": R.resolvedUrl("qml/component/SidePage_Property.qml")
         }
     }
     PageRouter{
         id: body_rightbottom_router
         routes: {
-            "/body/rightbottom": R.resolvedUrl("qml/component/SidePage_Status.qml"),
+            "/body/rightbottom": R.resolvedUrl("qml/component/SidePage_Status.qml")
         }
     }
 
@@ -336,7 +337,7 @@ Item{
         Item{
             id:header
             property alias header_bar: bar
-            height:Global.visable_menu_bar?28:0
+            height:Global.visable_header?28:0
             width:parent.width
             clip:true
 
@@ -384,7 +385,7 @@ Item{
 
             IconButton{
                 text: "Fold"
-                icon.name:Global.visable_top_side? FluentIcons.graph_ChevronUp:FluentIcons.graph_ChevronDown
+                icon.name:Global.visable_header_extra? FluentIcons.graph_ChevronUp:FluentIcons.graph_ChevronDown
                 icon.width: 15
                 icon.height: 15
                 spacing: 0
@@ -397,7 +398,7 @@ Item{
                 }
 
                 onClicked:{
-                    Global.visable_top_side=!Global.visable_top_side
+                    Global.visable_header_extra=!Global.visable_header_extra
                 }
             }
         }
@@ -424,9 +425,7 @@ Item{
                 //页面左侧框架
                 Item {
                     clip: true
-
                     visible:Global.visable_left_side
-
                     implicitWidth: body.width*0.15
                     implicitHeight: body.height
                     // SplitView.maximumWidth: 400
@@ -435,21 +434,23 @@ Item{
                     SplitView {
                         id:split_layout1
                         anchors.fill: parent
+                        anchors.topMargin: header_extra.visible?header_extra.height:0
                         orientation: Qt.Vertical
 
                         //页面左侧框架上部
                         Item {
                             clip: true
+                            visible:Global.visable_left_top_side
                             implicitWidth: parent.width
                             implicitHeight: parent.height*0.7
                             // SplitView.maximumWidth: 400
                             // SplitView.maximumHeight: 400
-                            SplitView.minimumHeight: Global.visable_top_side?header_extra.height:0
+                            // SplitView.minimumHeight: header_extra.visible?header_extra.height:0
 
                             PageRouterView{
                                 id: lefttop_panne
                                 anchors.fill: parent
-                                anchors.topMargin: Global.visable_top_side?header_extra.height:0
+
                                 router: body_lefttop_router
                                 clip: true
 
@@ -462,8 +463,7 @@ Item{
                         //页面左侧框架下部
                         Item {
                             clip: true
-                            visible:true
-
+                            visible:Global.visable_left_bottom_side
                             // SplitView.minimumWidth: 50
                             // SplitView.minimumHeight: 50
                             SplitView.fillWidth: true
@@ -472,7 +472,6 @@ Item{
                             PageRouterView{
                                 id: leftbottom_panne
                                 anchors.fill: parent
-                                // anchors.topMargin: Global.visable_top_side?header_extra.height:0
                                 router: body_leftbottom_router
                                 clip: true
 
@@ -485,7 +484,7 @@ Item{
                 }
                 Item {
                     clip: true
-                    id: centerItem
+                    visible:Global.visable_mid_side
                     // SplitView.minimumWidth: 50
                     // SplitView.minimumHeight: 50
                     SplitView.fillWidth: true
@@ -493,30 +492,54 @@ Item{
                     SplitView {
                         id:split_layout2
                         anchors.fill: parent
+                        anchors.topMargin: header_extra.visible?header_extra.height:0
                         orientation: Qt.Vertical
 
                         //页面中间框架上部
                         Item {
                             clip: true
+                            visible:Global.visable_mid_top_side
                             implicitWidth:500
                             implicitHeight: 400
-
                             SplitView.fillWidth: true
                             SplitView.fillHeight: true
                             // SplitView.maximumWidth: 400
                             // SplitView.maximumHeight: 400
-                            SplitView.minimumHeight: Global.visable_top_side?header_extra.height:0
+                            // SplitView.minimumHeight: header_extra.visible?header_extra.height:0
 
                             PageRouterView{
                                 id: midtop_panne
                                 anchors.fill: parent
-                                anchors.topMargin: Global.visable_top_side?header_extra.height:0
+                                // anchors.topMargin: header_extra.visible?header_extra.height:0
                                 router: body_midtop_router
                                 clip: true
 
                                 Component.onCompleted: {
-                                    body_midtop_router.go("/body/midtop/table")
+                                    body_midtop_router.go("/body/midtop/blank")
                                 }
+
+                                Connections{
+                                    target:Global
+
+                                    function onDisplayPageChanged(){
+                                        // console.log("change:",Global.displayScreen)
+
+                                        if(Global.displayPage==2)
+                                        {
+                                            body_midtop_router.go("/body/midtop/main")
+                                        }
+                                        else if(Global.displayPage==1) //=1
+                                        {
+                                             body_midtop_router.go("/body/midtop/map")
+                                        }
+                                        else
+                                        {
+                                             body_midtop_router.go("/body/midtop/blank")
+                                        }
+                                    }
+
+                                }
+
                             }
 
                         }
@@ -524,14 +547,13 @@ Item{
                         //页面中间框架下部
                         Item {
                             clip: true
-                            visible:Global.visable_bottom_side
+                            visible:Global.visable_mid_bottom_side
                             implicitWidth: parent.width
-                            implicitHeight: parent.height*0.15
+                            implicitHeight: parent.height*0.25
 
                             PageRouterView{
                                 id: midbottom_panne
                                 anchors.fill: parent
-                                // anchors.topMargin: Global.visable_top_side?header_extra.height:0
                                 router: body_midbottom_router
                                 clip: true
 
@@ -545,28 +567,29 @@ Item{
                 Item {
                     clip: true
                     visible:Global.visable_right_side
-
                     implicitWidth: body.width*0.15
                     implicitHeight: body.height
                     SplitView {
                         id:split_layout3
                         anchors.fill: parent
+                        anchors.topMargin: header_extra.visible?header_extra.height:0
                         orientation: Qt.Vertical
 
                         //页面右侧框架上部
                         Item {
                             clip: true
+                            visible:Global.visable_right_top_side
                             implicitWidth: parent.width
                             implicitHeight: parent.height*0.55
                             // SplitView.maximumWidth: 400
                             // SplitView.maximumHeight: 400
                             // SplitView.minimumWidth: 50
-                            SplitView.minimumHeight: Global.visable_top_side?header_extra.height:0
+                            //SplitView.minimumHeight: header_extra.visible?header_extra.height:0
 
                             PageRouterView{
                                 id: righttop_panne
                                 anchors.fill: parent
-                                anchors.topMargin: Global.visable_top_side?header_extra.height:0
+                                //anchors.topMargin: header_extra.visible?header_extra.height:0
                                 router: body_righttop_router
                                 clip: true
 
@@ -579,6 +602,7 @@ Item{
                         //页面右侧框架下部
                         Item {
                             clip: true
+                            visible:Global.visable_right_bottom_side
                             // SplitView.minimumWidth: 50
                             // SplitView.minimumHeight: 50
                             SplitView.fillWidth: true
@@ -587,7 +611,6 @@ Item{
                             PageRouterView{
                                 id: rightbottom_panne
                                 anchors.fill: parent
-                                // anchors.topMargin: Global.visable_top_side?header_extra.height:0
                                 router: body_rightbottom_router
                                 clip: true
 
@@ -604,7 +627,7 @@ Item{
         //顶部功能栏
         Item{
             id:header_extra
-            visible:Global.visable_top_side
+            visible:Global.visable_header_extra
 
             width:parent.width-10
             height:100
@@ -634,105 +657,32 @@ Item{
             width:parent.width
             height:25
 
-            // 左侧按钮，从左到右排列
-            RowLayout {
-                id:foot_bar_left
-
-                anchors
-                {
-                    left:parent.left
-                    leftMargin:0
-                    verticalCenter: parent.verticalCenter
-                }
-
-                Layout.fillWidth: true  // 左侧区域填充可用空间
-                spacing: 0
-
-                IconButton{
-                    text: "Fold"
-                    icon.name: FluentIcons.graph_ResizeMouseTall
-                    icon.width: 18
-                    icon.height: 18
-                    spacing: 5
-                    display: IconButton.IconOnly
-                    icon.color:"Grey"
-
-                    onClicked:{
-                        Global.visable_left_side=!Global.visable_left_side
-                    }
-                }
-            }
 
 
-            // 右侧按钮，从右向左排列
-            RowLayout {
-                id:foot_bar_right
-
-                anchors
-                {
-                    left:parent.left
-                    leftMargin:0
-                    verticalCenter: parent.verticalCenter
-                }
-
-                spacing: 0
-
-                // 设置 LayoutMirroring 使其从右向左排列
-                LayoutMirroring.enabled: true
-                LayoutMirroring.childrenInherit: true
-                IconButton{
-                    text: "Fold"
-                    icon.name: FluentIcons.graph_ResizeMouseTall
-                    icon.width: 18
-                    icon.height: 18
-                    spacing: 5
-                    display: IconButton.IconOnly
-                    rotation:180
-                    icon.color:"Grey"
-
-                    onClicked:{
-                        Global.visable_right_side=!Global.visable_right_side
-                    }
-                }
-
-                IconButton{
-                    text: "Fold"
-                    icon.name: FluentIcons.graph_ResizeMouseWide
-                    icon.width: 18
-                    icon.height: 18
-                    spacing: 5
-                    display: IconButton.IconOnly
-                    icon.color:"Grey"
-
-                    onClicked:{
-                        Global.visable_bottom_side=!Global.visable_bottom_side
-                    }
-                }
-            }
 
             Menu {
-                id:menu
+                id:footer_menu
                 width:180
 
                 MenuItem{
                     icon.name: FluentIcons.graph_GlobalNavButton
-                    text:Global.visable_top_side?qsTr("Hide Top Bar"): qsTr("Show Top Bar")
+                    text:Global.visable_header_extra?qsTr("Hide Top Bar"): qsTr("Show Top Bar")
 
                     onTriggered:{
-                        Global.visable_top_side=!Global.visable_top_side
+                        Global.visable_header_extra=!Global.visable_header_extra
                     }
                 }
 
                 MenuItem{
-                    icon.name:Global.visable_menu_bar?FluentIcons.graph_CheckMark:FluentIcons.graph_CheckboxIndeterminate
+                    icon.name:Global.visable_header?FluentIcons.graph_CheckMark:FluentIcons.graph_CheckboxIndeterminate
                     text:qsTr("Show Menu Bar")
 
                     onTriggered:{
-                        Global.visable_menu_bar=!Global.visable_menu_bar
+                        Global.visable_header=!Global.visable_header
 
-                        if(Global.visable_menu_bar==false)
+                        if(Global.visable_header==false)
                         {
-                            Global.visable_top_side=false
+                            Global.visable_header_extra=false
                         }
                     }
                 }
@@ -758,10 +708,10 @@ Item{
 
                 MenuItem{
                     icon.name:  FluentIcons.graph_ResizeMouseWide
-                    text: Global.visable_bottom_side?qsTr("Hide Bottom Bar"): qsTr("Show Bottom Bar")
+                    text: Global.visable_mid_bottom_side?qsTr("Hide Bottom Bar"): qsTr("Show Bottom Bar")
 
                     onTriggered:{
-                        Global.visable_bottom_side=!Global.visable_bottom_side
+                        Global.visable_mid_bottom_side=!Global.visable_mid_bottom_side
                     }
                 }
 
@@ -798,12 +748,227 @@ Item{
                 onPressed: (mouse) => {
                                if (mouse.button === Qt.RightButton) {
                                    // 显示菜单，并设置菜单显示位置为鼠标点击的位置
-                                   menu.open();
-                                   menu.x = mouse.x;
-                                   menu.y = mouse.y;
+                                   footer_menu.open();
+                                   footer_menu.x = mouse.x;
+                                   footer_menu.y = mouse.y;
                                }
                            }
             }
+
+
+            // 左侧按钮，从左到右排列
+            RowLayout {
+                id:foot_bar_left
+
+                anchors
+                {
+                    left:parent.left
+                    leftMargin:0
+                    verticalCenter: parent.verticalCenter
+                }
+
+                Layout.fillWidth: true  // 左侧区域填充可用空间
+                spacing: 0
+
+                IconButton{
+                    text: "Fold"
+                    icon.name: FluentIcons.graph_ResizeMouseTall
+                    icon.width: 18
+                    icon.height: 18
+                    spacing: 5
+                    display: IconButton.IconOnly
+                    icon.color:"Grey"
+
+                    onClicked:{
+                        Global.visable_left_side=!Global.visable_left_side
+                        if(Global.visable_left_side)
+                        {
+                            if(!Global.visable_left_top_side && !Global.visable_left_bottom_side)
+                            {
+                                Global.visable_left_top_side=true;
+                                Global.visable_left_bottom_side=true;
+                            }
+                        }
+                    }
+
+                    MouseArea {
+                        anchors.fill: parent
+                        acceptedButtons: Qt.RightButton  // 仅接受右键点击
+
+                        onPressed: (mouse) => {
+                                       if (mouse.button === Qt.RightButton) {
+                                           // 显示菜单，并设置菜单显示位置为鼠标点击的位置
+                                           footer_left_menu.open();
+                                           footer_left_menu.x = mouse.x;
+                                           footer_left_menu.y = mouse.y;
+                                       }
+                                   }
+                    }
+
+                    Menu {
+                        id:footer_left_menu
+                        width:180
+
+                        MenuItem{
+                            icon.name:Global.visable_left_top_side?FluentIcons.graph_CheckMark:FluentIcons.graph_CheckboxIndeterminate
+                            text:qsTr("Show Left Top Bar")
+
+                            onTriggered:{
+                                Global.visable_left_top_side=!Global.visable_left_top_side
+                                Global.update_visable()
+                            }
+                        }
+                        MenuItem{
+                            icon.name:Global.visable_left_bottom_side?FluentIcons.graph_CheckMark:FluentIcons.graph_CheckboxIndeterminate
+                            text:qsTr("Show Left Bottom Bar")
+
+                            onTriggered:{
+                                Global.visable_left_bottom_side=!Global.visable_left_bottom_side
+                                Global.update_visable()
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            // 右侧按钮，从右向左排列
+            RowLayout {
+                id:foot_bar_right
+
+                anchors
+                {
+                    left:parent.left
+                    leftMargin:0
+                    verticalCenter: parent.verticalCenter
+                }
+
+                spacing: 0
+
+                // 设置 LayoutMirroring 使其从右向左排列
+                LayoutMirroring.enabled: true
+                LayoutMirroring.childrenInherit: true
+                IconButton{
+                    text: "Fold"
+                    icon.name: FluentIcons.graph_ResizeMouseTall
+                    icon.width: 18
+                    icon.height: 18
+                    spacing: 5
+                    display: IconButton.IconOnly
+                    rotation:180
+                    icon.color:"Grey"
+
+                    onClicked:{
+                        Global.visable_right_side=!Global.visable_right_side
+                        if(Global.visable_right_side)
+                        {
+                            if(!Global.visable_right_top_side && !Global.visable_right_bottom_side)
+                            {
+                                Global.visable_right_top_side=true;
+                                Global.visable_right_bottom_side=true;
+                            }
+                        }
+                    }
+                    MouseArea {
+                        anchors.fill: parent
+                        acceptedButtons: Qt.RightButton  // 仅接受右键点击
+
+                        onPressed: (mouse) => {
+                                       if (mouse.button === Qt.RightButton) {
+                                           // 显示菜单，并设置菜单显示位置为鼠标点击的位置
+                                           footer_right_menu.open();
+                                           footer_right_menu.x = mouse.x;
+                                           footer_right_menu.y = mouse.y;
+                                       }
+                                   }
+                    }
+
+                    Menu {
+                        id:footer_right_menu
+                        width:180
+
+                        MenuItem{
+                            icon.name:Global.visable_right_top_side?FluentIcons.graph_CheckMark:FluentIcons.graph_CheckboxIndeterminate
+                            text:qsTr("Show Right Top Bar")
+
+                            onTriggered:{
+                                Global.visable_right_top_side=!Global.visable_right_top_side
+                                Global.update_visable()
+                            }
+                        }
+                        MenuItem{
+                            icon.name:Global.visable_right_bottom_side?FluentIcons.graph_CheckMark:FluentIcons.graph_CheckboxIndeterminate
+                            text:qsTr("Show Right Bottom Bar")
+
+                            onTriggered:{
+                                Global.visable_right_bottom_side=!Global.visable_right_bottom_side
+                                Global.update_visable()
+                            }
+                        }
+                    }
+                }
+
+                IconButton{
+                    text: "Fold"
+                    icon.name: FluentIcons.graph_ResizeMouseWide
+                    icon.width: 18
+                    icon.height: 18
+                    spacing: 5
+                    display: IconButton.IconOnly
+                    icon.color:"Grey"
+
+                    onClicked:{
+                        Global.visable_mid_bottom_side=!Global.visable_mid_bottom_side
+                        if(Global.visable_mid_side)
+                        {
+                            if(!Global.visable_mid_top_side)
+                            {
+                                Global.visable_mid_top_side=true;
+                            }
+                        }
+                    }
+
+                    MouseArea {
+                        anchors.fill: parent
+                        acceptedButtons: Qt.RightButton  // 仅接受右键点击
+
+                        onPressed: (mouse) => {
+                                       if (mouse.button === Qt.RightButton) {
+                                           // 显示菜单，并设置菜单显示位置为鼠标点击的位置
+                                           footer_mid_menu.open();
+                                           footer_mid_menu.x = mouse.x;
+                                           footer_mid_menu.y = mouse.y;
+                                       }
+                                   }
+                    }
+
+                    Menu {
+                        id:footer_mid_menu
+                        width:180
+
+                        MenuItem{
+                            icon.name:Global.visable_mid_top_side?FluentIcons.graph_CheckMark:FluentIcons.graph_CheckboxIndeterminate
+                            text:qsTr("Show Mid Top Bar")
+
+                            onTriggered:{
+                                Global.visable_mid_top_side=!Global.visable_mid_top_side
+                                Global.update_visable()
+                            }
+                        }
+                        MenuItem{
+                            icon.name:Global.visable_mid_bottom_side?FluentIcons.graph_CheckMark:FluentIcons.graph_CheckboxIndeterminate
+                            text:qsTr("Show Mid Bottom Bar")
+
+                            onTriggered:{
+                                Global.visable_mid_bottom_side=!Global.visable_mid_bottom_side
+                                Global.update_visable()
+                            }
+                        }
+                    }
+
+                }
+            }
+
         }
     }
 
@@ -835,6 +1000,7 @@ Item{
             }
         }
     }
+
 
 
 }

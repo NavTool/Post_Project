@@ -281,7 +281,7 @@ Item{
 
                                 Column {
                                     IconButton {
-                                        text: qsTr("资源视图")
+                                        text: qsTr("资源管理栏")
                                         // width: iconbutton_width
                                         // height: function_height.height*0.4// 半高按钮的高度
 
@@ -291,11 +291,15 @@ Item{
                                         spacing: 5
 
                                         highlighted: checked
-                                        checked: false
                                         checkable: true
+                                        checked:Global.visable_left_top_side
+                                        onCheckedChanged: {
+                                            Global.visable_left_top_side=checked
+                                            Global.update_visable()
+                                        }
                                     }
                                     IconButton {
-                                        text: qsTr("信息视图")
+                                        text: qsTr("图层管理栏")
                                         // width: iconbutton_width
                                         // height: function_height.height*0.4// 半高按钮的高度
 
@@ -305,29 +309,36 @@ Item{
                                         spacing: 5
 
                                         highlighted: checked
-                                        checked: false
                                         checkable: true
+                                        checked:Global.visable_left_bottom_side
+                                        onCheckedChanged: {
+                                            Global.visable_left_bottom_side=checked
+                                            Global.update_visable()
+                                        }
                                     }
-
                                 }
                                 Column {
                                     IconButton {
-                                        text: qsTr("导航栏")
+                                        text: qsTr("主视图")
                                         // width: iconbutton_width
                                         // height: function_height.height*0.4// 半高按钮的高度
 
-                                        icon.name: FluentIcons.graph_BulletedList
+                                        icon.name: FluentIcons.graph_DeviceLaptopNoPic
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
 
                                         highlighted: checked
-                                        checked: false
                                         checkable: true
+                                        checked:Global.visable_mid_top_side
+                                        onCheckedChanged: {
+                                            Global.visable_mid_top_side=checked
+                                            Global.update_visable()
+                                        }
                                     }
 
                                     IconButton {
-                                        text: qsTr("状态栏")
+                                        text: qsTr("日志栏")
                                         // width: iconbutton_width
                                         // height: function_height.height*0.4// 半高按钮的高度
 
@@ -337,14 +348,18 @@ Item{
                                         spacing: 5
 
                                         highlighted: checked
-                                        checked: false
                                         checkable: true
+                                        checked:Global.visable_mid_bottom_side
+                                        onCheckedChanged: {
+                                            Global.visable_mid_bottom_side=checked
+                                            Global.update_visable()
+                                        }
                                     }
                                 }
 
                                 Column {
                                     IconButton {
-                                        text: qsTr("属性视图")
+                                        text: qsTr("属性栏")
                                         // width: iconbutton_width
                                         // height: function_height.height*0.4// 半高按钮的高度
 
@@ -354,12 +369,16 @@ Item{
                                         spacing: 5
 
                                         highlighted: checked
-                                        checked: false
                                         checkable: true
+                                        checked:Global.visable_right_top_side
+                                        onCheckedChanged: {
+                                            Global.visable_right_top_side=checked
+                                            Global.update_visable()
+                                        }
                                     }
 
                                     IconButton {
-                                        text: qsTr("状态视图")
+                                        text: qsTr("任务状态栏")
                                         // width: iconbutton_width
                                         // height: function_height.height*0.4// 半高按钮的高度
 
@@ -369,15 +388,19 @@ Item{
                                         spacing: 5
 
                                         highlighted: checked
-                                        checked: false
                                         checkable: true
+                                        checked:Global.visable_right_bottom_side
+                                        onCheckedChanged: {
+                                            Global.visable_right_bottom_side=checked
+                                            Global.update_visable()
+                                        }
                                     }
                                 }
                             }
                         }
                         Label{
                             height:groupname_height
-                            text:qsTr("窗口")
+                            text:qsTr("视图管理")
                             font:Typography.bodyStrong
                             // color:Theme.res.textFillColorPrimary
                             anchors.horizontalCenter: parent.horizontalCenter

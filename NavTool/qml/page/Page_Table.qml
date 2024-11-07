@@ -292,7 +292,7 @@ Frame{
         }
     }
     Component.onCompleted: {
-        controller.loadData(100000)
+        controller.loadData(1000)
     }
     Pane{
         id: panel_loading

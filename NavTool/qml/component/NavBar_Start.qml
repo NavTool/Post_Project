@@ -166,6 +166,10 @@ Item{
                                     icon.height: iconbutton_size
                                     spacing: iconbutton_spacing
                                     display: IconButton.TextUnderIcon
+
+                                    onClicked: {
+                                        Global.displayPage=1
+                                    }
                                 }
                                 Column {
 
@@ -228,6 +232,10 @@ Item{
                                     icon.height: iconbutton_size
                                     spacing: iconbutton_spacing
                                     display: IconButton.TextUnderIcon
+
+                                    onClicked: {
+                                        Global.displayPage=2
+                                    }
                                 }
 
                                 Column {

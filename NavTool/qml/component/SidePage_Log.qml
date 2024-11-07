@@ -21,34 +21,13 @@ Frame{
     ListModel{
         id: tab_model
         ListElement{
-            title: "First"
-            accentColor: function(){
-                return colors[Math.floor(Math.random() * 8)]
-            }
+            title: "操作日志"
         }
         ListElement{
-            title: "Second"
-            accentColor: function(){
-                return colors[Math.floor(Math.random() * 8)]
-            }
+            title: "任务输出"
         }
         ListElement{
-            title: "Third"
-            accentColor: function(){
-                return colors[Math.floor(Math.random() * 8)]
-            }
-        }
-        ListElement{
-            title: "Fourth"
-            accentColor: function(){
-                return colors[Math.floor(Math.random() * 8)]
-            }
-        }
-        ListElement{
-            title: "Fifth"
-            accentColor: function(){
-                return colors[Math.floor(Math.random() * 8)]
-            }
+            title: "Console"
         }
     }
 
@@ -72,7 +51,7 @@ Frame{
                 font: Typography.titleLarge
                 anchors.centerIn: parent
                 text: modelData.title
-                color: modelData.accentColor().normal
+                //color: modelData.accentColor().normal
             }
         }
     }

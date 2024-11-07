@@ -11,10 +11,10 @@ FramelessWindow {
     id: window
     property alias infoBarManager: infobar_manager
     property alias tourSteps: tour.steps
-    width: 1424
-    height: 744
-    minimumWidth: 484
-    minimumHeight: 484
+    width: 1280
+    height: 720
+    minimumWidth: 480
+    minimumHeight: 320
     visible: true
     fitsAppBarWindows: true
     launchMode: WindowType.SingleInstance
