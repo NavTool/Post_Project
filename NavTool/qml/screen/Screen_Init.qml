@@ -6,9 +6,14 @@ import FluentUI.impl
 import NavTool
 
 
-
 Rectangle {
     id: control
+
+    anchors.fill: parent
+
+    // property string title
+    property PageContext context
+
 
     property list<QtObject> originalItems : [
         PaneItem{

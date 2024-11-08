@@ -65,7 +65,7 @@ FramelessWindow {
         }
     }
 
-    initialItem: R.resolvedUrl("qml/screen/RootScreen.qml")
+    initialItem: R.resolvedUrl("qml/screen/Screen_Root.qml")
     Component.onCompleted: {
         tour.open()
     }

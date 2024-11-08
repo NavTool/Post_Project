@@ -9,12 +9,16 @@ Item{
 
     id:root
 
+    property string title
+    property PageContext context
+
     Component.onCompleted:{
         window.setHitTestVisible(top_bar_left) //设置组件id来顶部的按键可以使用
         window.setHitTestVisible(top_bar_right) //设置组件id来顶部的按键可以使用
         window.setHitTestVisible(project_info)
     }
 
+    //导航栏菜单元素
     property list<QtObject> navbar_items : [
         PaneItem{
             key: "/"
@@ -50,6 +54,7 @@ Item{
         }
     ]
 
+    //导航栏具体条目
     PageRouter{
         id: navbar_router
         routes: {
@@ -63,43 +68,70 @@ Item{
         }
     }
 
-
-    PageRouter{
-        id: body_lefttop_router
-        routes: {
-            "/body/lefttop": R.resolvedUrl("qml/component/SidePage_Resource.qml")
-        }
-    }
-    PageRouter{
-        id: body_leftbottom_router
-        routes: {
-            "/body/leftbottom": R.resolvedUrl("qml/component/SidePage_Info.qml")
-        }
+    //主页面导航栏
+    ListModel{
+        id: body_midtop_info_model
+        ListElement{key:"/page/blank";title:qsTr("空白页");icon:""}
+        ListElement{key:"/page/map";title:qsTr("平面视图");icon:""}
+        ListElement{key:"/page/table";title:qsTr("资源视图");icon:""}
+        ListElement{key:"/page/dataspan";title:qsTr("数据区间");icon:""}
     }
     PageRouter{
         id: body_midtop_router
         routes: {
-            "/body/midtop/blank": R.resolvedUrl("qml/page/Page_Blank.qml"),
-            "/body/midtop/map": R.resolvedUrl("qml/page/Page_Map.qml"),
-            "/body/midtop/main": R.resolvedUrl("qml/page/Page_Main.qml")
+            "/page/blank": R.resolvedUrl("qml/page/Page_Blank.qml"),
+            "/page/map": R.resolvedUrl("qml/page/Page_Map.qml"),
+            "/page/table": R.resolvedUrl("qml/page/Page_Table.qml"),
+            "/page/dataspan": R.resolvedUrl("qml/page/Page_DataSpan.qml")
         }
     }
+    //中下导航栏
     PageRouter{
         id: body_midbottom_router
         routes: {
-            "/body/midbottom": R.resolvedUrl("qml/component/SidePage_Log.qml")
+            "/sidepage/log": R.resolvedUrl("qml/component/SidePage_Log.qml")
         }
     }
+
+    //左上导航栏
+    PageRouter{
+        id: body_lefttop_router
+        routes: {
+            "/sidepage/resource": R.resolvedUrl("qml/component/SidePage_Resource.qml"),
+            "/sidepage/layer": R.resolvedUrl("qml/component/SidePage_Layer.qml"),
+            "/sidepage/property": R.resolvedUrl("qml/component/SidePage_Property.qml"),
+            "/sidepage/status": R.resolvedUrl("qml/component/SidePage_Status.qml")
+        }
+    }
+    //左下导航栏
+    PageRouter{
+        id: body_leftbottom_router
+        routes: {
+            "/sidepage/resource": R.resolvedUrl("qml/component/SidePage_Resource.qml"),
+            "/sidepage/layer": R.resolvedUrl("qml/component/SidePage_Layer.qml"),
+            "/sidepage/property": R.resolvedUrl("qml/component/SidePage_Property.qml"),
+            "/sidepage/status": R.resolvedUrl("qml/component/SidePage_Status.qml")
+        }
+    }
+
+    //右上导航栏
     PageRouter{
         id: body_righttop_router
         routes: {
-            "/body/righttop": R.resolvedUrl("qml/component/SidePage_Property.qml")
+            "/sidepage/resource": R.resolvedUrl("qml/component/SidePage_Resource.qml"),
+            "/sidepage/layer": R.resolvedUrl("qml/component/SidePage_Layer.qml"),
+            "/sidepage/property": R.resolvedUrl("qml/component/SidePage_Property.qml"),
+            "/sidepage/status": R.resolvedUrl("qml/component/SidePage_Status.qml")
         }
     }
+    //右下导航栏
     PageRouter{
         id: body_rightbottom_router
         routes: {
-            "/body/rightbottom": R.resolvedUrl("qml/component/SidePage_Status.qml")
+            "/sidepage/resource": R.resolvedUrl("qml/component/SidePage_Resource.qml"),
+            "/sidepage/layer": R.resolvedUrl("qml/component/SidePage_Layer.qml"),
+            "/sidepage/property": R.resolvedUrl("qml/component/SidePage_Property.qml"),
+            "/sidepage/status": R.resolvedUrl("qml/component/SidePage_Status.qml")
         }
     }
 
@@ -352,7 +384,7 @@ Item{
                     horizontalCenter:parent.horizontalCenter
                 }
 
-                currentIndex:Global.mainScreenHeaderBarCurrentIndex
+                currentIndex:Global.navbarCurrentIndex
 
                 clip: true
                 Repeater {
@@ -368,17 +400,17 @@ Item{
                 onCurrentIndexChanged: {
                     if(navbar_items[bar.currentIndex].key=="/")
                     {
-                        Global.displayScreen=2;
+                        Global.displayScreen="/screen/file";
                     }
                     else
                     {
                         navbar_router.go(navbar_items[bar.currentIndex].key,{info:navbar_items[bar.currentIndex].title})
-                        Global.mainScreenHeaderBarCurrentIndex=bar.currentIndex
+                        Global.navbarCurrentIndex=bar.currentIndex
                     }
                 }
 
                 Component.onCompleted: {
-                    bar.currentIndex=Global.mainScreenHeaderBarCurrentIndex
+                    bar.currentIndex=Global.navbarCurrentIndex
                     navbar_router.go(navbar_items[bar.currentIndex].key,{info:navbar_items[bar.currentIndex].title})
                 }
             }
@@ -450,12 +482,18 @@ Item{
                             PageRouterView{
                                 id: lefttop_panne
                                 anchors.fill: parent
-
                                 router: body_lefttop_router
                                 clip: true
 
                                 Component.onCompleted: {
-                                    body_lefttop_router.go("/body/lefttop")
+                                    body_lefttop_router.go(Global.displayLeftTop)
+                                }
+
+                                Connections{
+                                    target:Global
+                                    function onDisplayLeftTopChanged(){
+                                        body_lefttop_router.go(Global.displayLeftTop)
+                                    }
                                 }
                             }
                         }
@@ -476,7 +514,14 @@ Item{
                                 clip: true
 
                                 Component.onCompleted: {
-                                    body_leftbottom_router.go("/body/leftbottom")
+                                    body_leftbottom_router.go(Global.displayLeftBottom)
+                                }
+
+                                Connections{
+                                    target:Global
+                                    function onDisplayLeftBottomChanged(){
+                                        body_leftbottom_router.go(Global.displayLeftBottom)
+                                    }
                                 }
                             }
                         }
@@ -507,6 +552,134 @@ Item{
                             // SplitView.maximumHeight: 400
                             // SplitView.minimumHeight: header_extra.visible?header_extra.height:0
 
+
+                            // Item{
+                            //     anchors.fill: parent
+
+
+                            //     Component{
+                            //         id:com_page
+                            //         Item{
+                            //             id:root
+                            //             property var initialItem
+                            //             anchors.fill: parent
+
+                            //             property string title
+                            //             property PageContext context
+
+                            //             HotLoader{
+                            //                 id: loader_container
+                            //                 FluentUI.dark: control.FluentUI.dark
+                            //                 anchors{
+                            //                     fill: parent
+                            //                     topMargin: fitsAppBarWindows ? 0 : layout_appbar.height
+                            //                 }
+                            //                 source: {
+                            //                     if(root.initialItem){
+                            //                         return root.initialItem
+                            //                     }
+                            //                     return ""
+                            //                 }
+                            //             }
+                            //             Component.onCompleted:{
+                            //                 initialItem=body_midtop_router.toUrl(Global.displayMidTop)
+                            //             }
+                            //         }
+                            //     }
+
+
+                            //     Component.onCompleted: {
+                            //         //创建一个新窗格，查找指定的key的信息
+                            //         for (var j = 0; j < body_midtop_info_model.count; j++) {
+                            //             let item = body_midtop_info_model.get(j)
+                            //             console.log(item.key)
+                            //             if(Global.displayMidTop===item.key)
+                            //             {
+                            //                 //不存在，创建一个新的auto_loader页面，页面指向这个页面，添加到tab中
+                            //                 tab_view.appendTab(item.key,item.icon,item.title,com_page)
+                            //                 return
+                            //             }
+                            //         }
+
+                            //         throw new Error(`updateTabView '${Global.displayMidTop}' not found!`);
+                            //     }
+
+                            //     Item{
+                            //         anchors.fill: parent
+                            //         TabViewEx{
+                            //             id:tab_view
+                            //             addButtonVisibility:false
+                            //             tabWidthBehavior:TabViewType.SizeToContent
+                            //             closeButtonVisibility:TabViewType.OnHover
+                            //         }
+                            //     }
+
+                            //     Connections{
+                            //         target:Global
+                            //         function onDisplayMidTopChanged(){
+                            //             //从tab_view中查找是否已经存在该页面
+                            //             for(var i=0;i<tab_view.tab_model.count;i++)
+                            //             {
+                            //                 let item=tab_view.tab_model.get(i)
+                            //                 if(Global.displayMidTop===item.key)
+                            //                 {
+                            //                     //存在，页面切换到页面的current_index
+                            //                     console.log(i)
+                            //                     tab_view.tab_nav.currentIndex=i;
+                            //                     return
+                            //                 }
+                            //             }
+
+                            //             //不存在，创建一个新窗格，查找指定的key的信息
+                            //             for (var j = 0; j < body_midtop_info_model.count; j++) {
+                            //                 let item = body_midtop_info_model.get(j)
+                            //                 console.log(item.key)
+                            //                 if(Global.displayMidTop===item.key)
+                            //                 {
+                            //                     //不存在，创建一个新的auto_loader页面，页面指向这个页面，添加到tab中
+                            //                     tab_view.appendTab(item.key,item.icon,item.title,com_page)
+                            //                     tab_view.tab_nav.currentIndex=tab_view.tab_model.count-1;
+                            //                     return
+                            //                 }
+                            //             }
+
+                            //             throw new Error(`updateTabView '${Global.displayMidTop}' not found!`);
+                            //         }
+                            //     }
+
+                            //     //根据当前选择的视图 Global.displayMidTop,新建/切换窗格
+                            //     function updateTabView(){
+
+                            //         //从tab_view中查找是否已经存在该页面
+                            //         for(var i=0;i<tab_view.tab_model.count;i++)
+                            //         {
+                            //             let item=tab_view.tab_model.get(i)
+                            //             if(Global.displayMidTop===item.key)
+                            //             {
+                            //                 //存在，页面切换到页面的current_index
+                            //                 tab_view.tab_nav.currentIndex=i;
+                            //                 return
+                            //             }
+                            //         }
+
+                            //         //不存在，创建一个新窗格，查找指定的key的信息
+                            //         for (var j = 0; j < body_midtop_info_model.count; j++) {
+                            //             let item = body_midtop_info_model.get(j)
+                            //             console.log(item.key)
+                            //             if(Global.displayMidTop===item.key)
+                            //             {
+                            //                 //不存在，创建一个新的auto_loader页面，页面指向这个页面，添加到tab中
+                            //                 tab_view.appendTab(item.key,item.icon,item.title,com_page)
+                            //                 return
+                            //             }
+                            //         }
+
+                            //         throw new Error(`updateTabView '${Global.displayMidTop}' not found!`);
+                            //     }
+
+                            // }
+
+
                             PageRouterView{
                                 id: midtop_panne
                                 anchors.fill: parent
@@ -515,32 +688,20 @@ Item{
                                 clip: true
 
                                 Component.onCompleted: {
-                                    body_midtop_router.go("/body/midtop/blank")
+                                    body_midtop_router.go(Global.displayMidTop)
                                 }
 
                                 Connections{
                                     target:Global
-
-                                    function onDisplayPageChanged(){
-                                        // console.log("change:",Global.displayScreen)
-
-                                        if(Global.displayPage==2)
-                                        {
-                                            body_midtop_router.go("/body/midtop/main")
-                                        }
-                                        else if(Global.displayPage==1) //=1
-                                        {
-                                             body_midtop_router.go("/body/midtop/map")
-                                        }
-                                        else
-                                        {
-                                             body_midtop_router.go("/body/midtop/blank")
-                                        }
+                                    function onDisplayMidTopChanged(){
+                                        body_midtop_router.go(Global.displayMidTop)
                                     }
-
                                 }
 
                             }
+
+
+
 
                         }
 
@@ -558,7 +719,14 @@ Item{
                                 clip: true
 
                                 Component.onCompleted: {
-                                    body_midbottom_router.go("/body/midbottom")
+                                    body_midbottom_router.go(Global.displayMidBottom)
+                                }
+
+                                Connections{
+                                    target:Global
+                                    function onDisplayMidBottomChanged(){
+                                        body_midbottom_router.go(Global.displayMidBottom)
+                                    }
                                 }
                             }
                         }
@@ -592,9 +760,15 @@ Item{
                                 //anchors.topMargin: header_extra.visible?header_extra.height:0
                                 router: body_righttop_router
                                 clip: true
-
                                 Component.onCompleted: {
-                                    body_righttop_router.go("/body/righttop")
+                                    body_righttop_router.go(Global.displayRightTop)
+                                }
+
+                                Connections{
+                                    target:Global
+                                    function onDisplayRightTopChanged(){
+                                        body_righttop_router.go(Global.displayRightTop)
+                                    }
                                 }
                             }
                         }
@@ -615,7 +789,14 @@ Item{
                                 clip: true
 
                                 Component.onCompleted: {
-                                    body_rightbottom_router.go("/body/rightbottom")
+                                    body_rightbottom_router.go(Global.displayRightBottom)
+                                }
+
+                                Connections{
+                                    target:Global
+                                    function onDisplayRightBottomChanged(){
+                                        body_rightbottom_router.go(Global.displayRightBottom)
+                                    }
                                 }
                             }
                         }

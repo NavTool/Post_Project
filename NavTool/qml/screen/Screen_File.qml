@@ -9,6 +9,9 @@ Item{
 
     id:root
 
+    property string title
+    property PageContext context
+
     width: parent.width
     height: 460
     property list<QtObject> originalItems : [
@@ -93,7 +96,7 @@ Item{
             (item)=>{
                 if(item.key){
                     if(item.title===""){
-                        Global.displayScreen=1
+                        Global.displayScreen="/screen/main"
                     }
                     else
                     {

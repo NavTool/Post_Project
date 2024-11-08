@@ -2,29 +2,6 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="en_US">
 <context>
-    <name>AppBarEX</name>
-    <message>
-        <location filename="qml/extra/AppBarEX.qml" line="105"/>
-        <source>Minimized</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/extra/AppBarEX.qml" line="122"/>
-        <source>Restore</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/extra/AppBarEX.qml" line="122"/>
-        <source>Maximized</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/extra/AppBarEX.qml" line="152"/>
-        <source>Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>DataGridController</name>
     <message>
         <location filename="src/DataGridController.h" line="20"/>
@@ -197,119 +174,6 @@
     <message>
         <location filename="module/plot/Eharts_Plot.qml" line="198"/>
         <source>Auout</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>MainScreen</name>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="183"/>
-        <source>自动保存</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="209"/>
-        <source>AutoSave is Turn On!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="212"/>
-        <source>AutoSave is Turn Off!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="230"/>
-        <source>The project has been saved!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="669"/>
-        <source>Hide Top Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="669"/>
-        <source>Show Top Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="678"/>
-        <source>Show Menu Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="694"/>
-        <source>Hide Left Sidebar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="694"/>
-        <source>Show Left Sidebar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="702"/>
-        <source>Hide Right Sidebar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="702"/>
-        <source>Show Right Sidebar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="711"/>
-        <source>Hide Bottom Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="711"/>
-        <source>Show Bottom Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="723"/>
-        <source>Settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="730"/>
-        <source>About</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="738"/>
-        <source>More</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="814"/>
-        <source>Show Left Top Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="823"/>
-        <source>Show Left Bottom Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="892"/>
-        <source>Show Right Top Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="901"/>
-        <source>Show Right Bottom Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="951"/>
-        <source>Show Mid Top Bar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/screen/MainScreen.qml" line="960"/>
-        <source>Show Mid Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -651,120 +515,120 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="101"/>
+        <location filename="qml/component/NavBar_NET.qml" line="106"/>
         <source>查看解算结果</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="111"/>
+        <location filename="qml/component/NavBar_NET.qml" line="116"/>
         <source>输出解算结果</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="126"/>
+        <location filename="qml/component/NavBar_NET.qml" line="131"/>
         <source>基线</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="144"/>
+        <location filename="qml/component/NavBar_NET.qml" line="149"/>
         <source>网平差</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="156"/>
+        <location filename="qml/component/NavBar_NET.qml" line="161"/>
         <source>平差配置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="167"/>
+        <location filename="qml/component/NavBar_NET.qml" line="172"/>
         <source>站点管理</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="181"/>
+        <location filename="qml/component/NavBar_NET.qml" line="186"/>
         <source>查看平差结果</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="192"/>
+        <location filename="qml/component/NavBar_NET.qml" line="197"/>
         <source>清除平差结果</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="225"/>
-        <location filename="qml/component/NavBar_NET.qml" line="243"/>
+        <location filename="qml/component/NavBar_NET.qml" line="230"/>
+        <location filename="qml/component/NavBar_NET.qml" line="248"/>
         <source>生成报告</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="260"/>
-        <location filename="qml/component/NavBar_NET.qml" line="335"/>
+        <location filename="qml/component/NavBar_NET.qml" line="265"/>
+        <location filename="qml/component/NavBar_NET.qml" line="340"/>
         <source>File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="261"/>
+        <location filename="qml/component/NavBar_NET.qml" line="266"/>
         <source>生成基线报告</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="262"/>
+        <location filename="qml/component/NavBar_NET.qml" line="267"/>
         <source>生成平差报告</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="263"/>
+        <location filename="qml/component/NavBar_NET.qml" line="268"/>
         <source>生成闭合环报告</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="266"/>
+        <location filename="qml/component/NavBar_NET.qml" line="271"/>
         <source>生成静态网报告</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="206"/>
+        <location filename="qml/component/NavBar_NET.qml" line="211"/>
         <source>平差</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="276"/>
+        <location filename="qml/component/NavBar_NET.qml" line="281"/>
         <source>报告配置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="287"/>
+        <location filename="qml/component/NavBar_NET.qml" line="292"/>
         <source>查看输出</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="300"/>
-        <location filename="qml/component/NavBar_NET.qml" line="318"/>
+        <location filename="qml/component/NavBar_NET.qml" line="305"/>
+        <location filename="qml/component/NavBar_NET.qml" line="323"/>
         <source>查看报告</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="336"/>
+        <location filename="qml/component/NavBar_NET.qml" line="341"/>
         <source>New...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="337"/>
+        <location filename="qml/component/NavBar_NET.qml" line="342"/>
         <source>Open...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="338"/>
+        <location filename="qml/component/NavBar_NET.qml" line="343"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="341"/>
+        <location filename="qml/component/NavBar_NET.qml" line="346"/>
         <source>Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_NET.qml" line="356"/>
+        <location filename="qml/component/NavBar_NET.qml" line="361"/>
         <source>报告</source>
         <translation type="unfinished"></translation>
     </message>
@@ -772,138 +636,138 @@
 <context>
     <name>NavBar_Start</name>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="51"/>
+        <location filename="qml/component/NavBar_Start.qml" line="50"/>
         <source>导入</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="64"/>
+        <location filename="qml/component/NavBar_Start.qml" line="63"/>
         <source>导入配置</source>
         <oldsource>配置</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="106"/>
+        <location filename="qml/component/NavBar_Start.qml" line="105"/>
         <source>新建站点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="118"/>
+        <location filename="qml/component/NavBar_Start.qml" line="117"/>
         <source>管理站点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="129"/>
+        <location filename="qml/component/NavBar_Start.qml" line="128"/>
         <source>编辑站点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="143"/>
+        <location filename="qml/component/NavBar_Start.qml" line="142"/>
         <source>站点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="89"/>
+        <location filename="qml/component/NavBar_Start.qml" line="88"/>
         <source>文件</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="206"/>
+        <location filename="qml/component/NavBar_Start.qml" line="205"/>
         <source>视图</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="192"/>
+        <location filename="qml/component/NavBar_Start.qml" line="191"/>
         <source>图层管理</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="243"/>
+        <location filename="qml/component/NavBar_Start.qml" line="239"/>
         <source>站点列表</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="267"/>
+        <location filename="qml/component/NavBar_Start.qml" line="274"/>
         <source>基线列表</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="253"/>
+        <location filename="qml/component/NavBar_Start.qml" line="255"/>
         <source>文件列表</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="75"/>
+        <location filename="qml/component/NavBar_Start.qml" line="74"/>
         <source>基线重构</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="160"/>
+        <location filename="qml/component/NavBar_Start.qml" line="159"/>
         <source>平面视图</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="177"/>
+        <location filename="qml/component/NavBar_Start.qml" line="176"/>
         <source>显示格网</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="226"/>
+        <location filename="qml/component/NavBar_Start.qml" line="222"/>
         <source>资源视图</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="278"/>
+        <location filename="qml/component/NavBar_Start.qml" line="325"/>
         <source>数据区间</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="292"/>
+        <location filename="qml/component/NavBar_Start.qml" line="309"/>
         <source>闭合环</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="303"/>
+        <location filename="qml/component/NavBar_Start.qml" line="291"/>
         <source>数据检核</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="319"/>
+        <location filename="qml/component/NavBar_Start.qml" line="345"/>
         <source>资源管理</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="340"/>
+        <location filename="qml/component/NavBar_Start.qml" line="366"/>
         <source>工程信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="352"/>
+        <location filename="qml/component/NavBar_Start.qml" line="378"/>
         <source>工程配置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="365"/>
+        <location filename="qml/component/NavBar_Start.qml" line="391"/>
         <source>显示配置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="376"/>
+        <location filename="qml/component/NavBar_Start.qml" line="402"/>
         <source>存储配置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="387"/>
+        <location filename="qml/component/NavBar_Start.qml" line="413"/>
         <source>保存</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="398"/>
+        <location filename="qml/component/NavBar_Start.qml" line="424"/>
         <source>导出</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="412"/>
+        <location filename="qml/component/NavBar_Start.qml" line="438"/>
         <source>工程</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1255,117 +1119,250 @@
     </message>
 </context>
 <context>
-    <name>Page_Table</name>
+    <name>Page_Station</name>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="110"/>
+        <location filename="qml/page/Page_Station.qml" line="110"/>
         <source>Up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="119"/>
+        <location filename="qml/page/Page_Station.qml" line="119"/>
         <source>Down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="134"/>
+        <location filename="qml/page/Page_Station.qml" line="134"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="185"/>
+        <location filename="qml/page/Page_Station.qml" line="185"/>
         <source>Clear</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="191"/>
+        <location filename="qml/page/Page_Station.qml" line="191"/>
         <source>Add a row of Data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="197"/>
+        <location filename="qml/page/Page_Station.qml" line="197"/>
         <source>Insert a Row</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="200"/>
+        <location filename="qml/page/Page_Station.qml" line="200"/>
         <source>Focus not acquired: Please click any item in the form as the target for insertion!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="207"/>
+        <location filename="qml/page/Page_Station.qml" line="207"/>
         <source>Deletes the selected row of data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="211"/>
+        <location filename="qml/page/Page_Station.qml" line="211"/>
         <source>Please select a row of data first!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="218"/>
+        <location filename="qml/page/Page_Station.qml" line="218"/>
         <source>Modify the first row of data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="243"/>
+        <location filename="qml/page/Page_Station.qml" line="243"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="250"/>
+        <location filename="qml/page/Page_Station.qml" line="250"/>
         <source>Avatar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="258"/>
+        <location filename="qml/page/Page_Station.qml" line="258"/>
         <source>Age</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="264"/>
+        <location filename="qml/page/Page_Station.qml" line="264"/>
         <source>Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="270"/>
+        <location filename="qml/page/Page_Station.qml" line="270"/>
         <source>Description</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="276"/>
+        <location filename="qml/page/Page_Station.qml" line="276"/>
         <source>Move</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table.qml" line="285"/>
+        <location filename="qml/page/Page_Station.qml" line="285"/>
         <source>Action</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>SidePage_Info</name>
+    <name>Screen_Main</name>
     <message>
-        <location filename="qml/component/SidePage_Info.qml" line="15"/>
+        <location filename="qml/screen/Screen_Main.qml" line="74"/>
+        <source>空白页</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="75"/>
+        <source>平面视图</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="76"/>
+        <source>资源视图</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="77"/>
+        <source>数据区间</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="215"/>
+        <source>自动保存</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="241"/>
+        <source>AutoSave is Turn On!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="244"/>
+        <source>AutoSave is Turn Off!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="262"/>
+        <source>The project has been saved!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="850"/>
+        <source>Hide Top Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="850"/>
+        <source>Show Top Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="859"/>
+        <source>Show Menu Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="875"/>
+        <source>Hide Left Sidebar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="875"/>
+        <source>Show Left Sidebar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="883"/>
+        <source>Hide Right Sidebar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="883"/>
+        <source>Show Right Sidebar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="892"/>
+        <source>Hide Bottom Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="892"/>
+        <source>Show Bottom Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="904"/>
+        <source>Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="911"/>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="919"/>
+        <source>More</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="995"/>
+        <source>Show Left Top Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="1004"/>
+        <source>Show Left Bottom Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="1073"/>
+        <source>Show Right Top Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="1082"/>
+        <source>Show Right Bottom Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="1132"/>
+        <source>Show Mid Top Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Main.qml" line="1141"/>
+        <source>Show Mid Bottom Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SidePage_Layer</name>
+    <message>
+        <location filename="qml/component/SidePage_Layer.qml" line="15"/>
         <source>图层管理</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Info.qml" line="25"/>
+        <location filename="qml/component/SidePage_Layer.qml" line="25"/>
         <source>Screenshots</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Info.qml" line="37"/>
+        <location filename="qml/component/SidePage_Layer.qml" line="37"/>
         <source>Send Message</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Info.qml" line="49"/>
+        <location filename="qml/component/SidePage_Layer.qml" line="49"/>
         <source>Open Gallery</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Info.qml" line="61"/>
+        <location filename="qml/component/SidePage_Layer.qml" line="61"/>
         <source>Lock Gallery</source>
         <translation type="unfinished"></translation>
     </message>

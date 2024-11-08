@@ -36,17 +36,10 @@ cmake_path(SET QT_SDK_DIR NORMALIZE ${QT_SDK_DIR})
 set(QML_FILES
     qml/App.qml
     qml/window/MainWindow.qml
-    qml/screen/RootScreen.qml
-    qml/screen/InitScreen.qml
-    qml/screen/MainScreen.qml
-    qml/screen/FileScreen.qml
-    qml/page/Page_Home.qml
-    qml/page/Page_Open.qml
-    qml/page/Page_New.qml
-    qml/page/Page_Start.qml
-    qml/page/Page_About.qml
-    qml/page/Page_Setting.qml
-    module/plot/Eharts_Plot.qml
+    qml/screen/Screen_Root.qml
+    qml/screen/Screen_Init.qml
+    qml/screen/Screen_Main.qml
+    qml/screen/Screen_File.qml
     qml/component/NavBar_Start.qml
     qml/component/NavBar_View.qml
     qml/component/NavBar_GNSS.qml
@@ -54,15 +47,31 @@ set(QML_FILES
     qml/component/NavBar_INS.qml
     qml/component/NavBar_Tool.qml
     qml/component/NavBar_Support.qml
-    qml/component/SidePage_Info.qml
+    qml/component/SidePage_Layer.qml
     qml/component/SidePage_Log.qml
     qml/component/SidePage_Property.qml
     qml/component/SidePage_Resource.qml
     qml/component/SidePage_Status.qml
-    qml/page/Page_Main.qml
-    qml/page/Page_Map.qml
-    qml/page/Page_Table.qml
+    qml/page/Page_About.qml
+    qml/page/Page_Baseline.qml
     qml/page/Page_Blank.qml
+    qml/page/Page_Check.qml
+    qml/page/Page_CloseLoop.qml
+    qml/page/Page_DataSpan.qml
+    qml/page/Page_Home.qml
+    qml/page/Page_Map.qml
+    qml/page/Page_New.qml
+    qml/page/Page_ObsFile.qml
+    qml/page/Page_Open.qml
+    qml/page/Page_Option.qml
+    qml/page/Page_Setting.qml
+    qml/page/Page_Start.qml
+    qml/page/Page_Station.qml
+    qml/page/Page_Table.qml
+
+    module/plot/Eharts_Plot.qml
+
+    qml/extra/TabViewEx.qml
 
 )
 

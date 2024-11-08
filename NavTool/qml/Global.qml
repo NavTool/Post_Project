@@ -15,12 +15,25 @@ QtObject {
     property var windowName: INFO_APP_NAME
     property string windowIcon: "qrc:/qt/qml/NavTool/res/logo.png"
 
+    property string displayScreen: "/screen/init"  //主视窗显示内容
 
-    property int displayScreen:0   //0:初始页面  1：主要页面  2：文件页面
+    //初始化页面
+    property string displayInitScreen:"/page/start"
+    //文件管理页面
 
-    property int displayPage:0   //0:blink  1：map  2：main
+    //主页面
+    property string displayMidTop:"/page/blank"   //Main视窗主页面显示内容
+    property string displayMidBottom:"/sidepage/log"   //Main视窗主页面底部显示内容
+    property string displayLeftTop:"/sidepage/resource"   //Main视窗左上显示内容
+    property string displayLeftBottom:"/sidepage/layer"   //Main视窗左上下页面显示内容
+    property string displayRightTop:"/sidepage/property"   //Main视窗右上主页面显示内容
+    property string displayRightBottom:"/sidepage/status"   //Main视窗右下主页面显示内容
 
-    property int mainScreenHeaderBarCurrentIndex:1   //主页面当前停留的菜单编号（从0开始）
+    //子页面显示内容
+    property string displayTablePage:"/page/station"  //资源视图显示内容
+
+    //顶部菜单栏
+    property int navbarCurrentIndex:1   //主页面当前停留的菜单编号（从0开始），这边变量主要是为了保证当点击到文件页面后又返回的时候，能够切换回上一次选中的页面
 
 
     //主页页面可视控制
@@ -69,6 +82,14 @@ QtObject {
             visable_mid_side=false
         }
     }
+
+
+
+
+
+
+
+
 
 
 

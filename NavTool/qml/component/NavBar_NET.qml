@@ -94,6 +94,11 @@ Item{
                                     icon.height: iconbutton_size
                                     spacing: iconbutton_spacing
                                     display: IconButton.TextUnderIcon
+
+                                    onClicked: {
+                                        Global.displayMidTop="/page/main"
+                                        Global.displayMidTop="/page/baseline"
+                                    }
                                 }
 
                                 Column {

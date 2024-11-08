@@ -10,7 +10,6 @@ Item{
     id:root
 
     anchors.fill: parent
-
     property string title
     property PageContext context
     property int group_height:root.height-function_box.padding*2
@@ -168,7 +167,7 @@ Item{
                                     display: IconButton.TextUnderIcon
 
                                     onClicked: {
-                                        Global.displayPage=1
+                                        Global.displayMidTop="/page/map"
                                     }
                                 }
                                 Column {
@@ -211,9 +210,6 @@ Item{
                     }
                 }
 
-
-
-
                 Frame{
                     width: implicitWidth
 
@@ -234,7 +230,7 @@ Item{
                                     display: IconButton.TextUnderIcon
 
                                     onClicked: {
-                                        Global.displayPage=2
+                                        Global.displayMidTop="/page/table"
                                     }
                                 }
 
@@ -248,6 +244,12 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
+
+                                        onClicked: {
+                                            Global.displayMidTop="/page/table"
+                                            Global.displayTablePage="/page/station"
+                                        }
+
                                     }
                                     IconButton {
                                         text: qsTr("文件列表")
@@ -258,6 +260,11 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
+
+                                        onClicked: {
+                                            Global.displayMidTop="/page/table"
+                                            Global.displayTablePage="/page/obsfile"
+                                        }
                                     }
 
                                 }
@@ -272,18 +279,28 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
+
+                                        onClicked: {
+                                            Global.displayMidTop="/page/table"
+                                            Global.displayTablePage="/page/baseline"
+                                        }
                                     }
 
+
                                     IconButton {
-                                        text: qsTr("数据区间")
+                                        text: qsTr("数据检核")
                                         // width: iconbutton_width
                                         // height: function_height.height*0.4// 半高按钮的高度
 
-                                        icon.name: FluentIcons.graph_BulletedList
+                                        icon.name: FluentIcons.graph_CheckList
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
 
+                                        onClicked: {
+                                            Global.displayMidTop="/page/table"
+                                            Global.displayTablePage="/page/check"
+                                        }
                                     }
                                 }
 
@@ -297,19 +314,28 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
+
+                                        onClicked: {
+                                            Global.displayMidTop="/page/table"
+                                            Global.displayTablePage="/page/closeloop"
+                                        }
                                     }
 
                                     IconButton {
-                                        text: qsTr("数据检核")
+                                        text: qsTr("数据区间")
                                         // width: iconbutton_width
                                         // height: function_height.height*0.4// 半高按钮的高度
 
-                                        icon.name: FluentIcons.graph_CheckList
+                                        icon.name: FluentIcons.graph_BulletedList
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
 
+                                        onClicked: {
+                                            Global.displayMidTop="/page/dataspan"
+                                        }
                                     }
+
                                 }
 
                             }

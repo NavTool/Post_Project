@@ -14,7 +14,7 @@ ScrollablePage{
             spacing: 5
 
             onClicked:{
-                Global.displayScreen=0
+                Global.displayScreen="/screen/init"
             }
         }
         Button{
@@ -25,7 +25,7 @@ ScrollablePage{
             spacing: 5
 
             onClicked:{
-                Global.displayScreen=1
+                Global.displayScreen="/screen/main"
             }
         }
         Button{
@@ -36,7 +36,7 @@ ScrollablePage{
             spacing: 5
 
             onClicked:{
-                Global.displayScreen=2
+                Global.displayScreen="/screen/file"
             }
         }
     }
