@@ -48,10 +48,10 @@ Rectangle {
     PageRouter{
         id: page_router
         routes: {
-            "/start/start": R.resolvedUrl("qml/page/Page_Start.qml"),
-            "/start/new": R.resolvedUrl("qml/page/Page_New.qml"),
-            "/start/open": R.resolvedUrl("qml/page/Page_Open.qml"),
-            "/start/setting": R.resolvedUrl("qml/page/Page_Setting.qml")
+            "/start/start":R.resolvedUrl("qml/page/Page_Start.qml"),
+            "/start/new":R.resolvedUrl("qml/page/Page_New.qml"),
+            "/start/open":R.resolvedUrl("qml/page/Page_Open.qml"),
+            "/start/setting":R.resolvedUrl("qml/page/Page_Setting.qml")
         }
     }
 

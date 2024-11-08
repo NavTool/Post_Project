@@ -5,7 +5,6 @@ import FluentUI.impl
 import NavTool
 
 Frame{
-
     anchors.fill: parent
 
     property string title
@@ -50,12 +49,12 @@ Frame{
     PageRouter{
         id: page_router
         routes: {
-            "/page/station": "qrc:/qt/qml/NavTool/qml/page/Page_Station.qml",
-            "/page/obsfile": "qrc:/qt/qml/NavTool/qml/page/Page_ObsFile.qml",
-            "/page/baseline": "qrc:/qt/qml/NavTool/qml/page/Page_Baseline.qml",
-            "/page/closeloop": "qrc:/qt/qml/NavTool/qml/page/Page_CloseLoop.qml",
-            "/page/check": "qrc:/qt/qml/NavTool/qml/page/Page_Check.qml",
-            "/page/option": "qrc:/qt/qml/NavTool/qml/page/Page_Option.qml",
+            "/page/station":{url: R.resolvedUrl("qml/page/Page_Station.qml"),singleton:true},
+            "/page/obsfile":{url: R.resolvedUrl("qml/page/Page_ObsFile.qml"),singleton:true},
+            "/page/baseline":{url: R.resolvedUrl("qml/page/Page_Baseline.qml"),singleton:true},
+            "/page/closeloop":{url: R.resolvedUrl("qml/page/Page_CloseLoop.qml"),singleton:true},
+            "/page/check":{url: R.resolvedUrl("qml/page/Page_Check.qml"),singleton:true},
+            "/page/option":{url: R.resolvedUrl("qml/page/Page_Option.qml"),singleton:true}
         }
     }
     NavigationView{

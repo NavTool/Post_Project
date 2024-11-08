@@ -17,8 +17,8 @@ Item{
         id: screen_router
         routes: {
             "/screen/init": R.resolvedUrl("qml/screen/Screen_Init.qml"),
-            "/screen/main": R.resolvedUrl("qml/screen/Screen_Main.qml"),
-            "/screen/file": R.resolvedUrl("qml/screen/Screen_File.qml"),
+            "/screen/main": {url:R.resolvedUrl("qml/screen/Screen_Main.qml"),singleton:true},
+            "/screen/file": R.resolvedUrl("qml/screen/Screen_File.qml")
         }
     }
 

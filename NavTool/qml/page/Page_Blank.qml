@@ -15,6 +15,12 @@ Item {
     property PageContext context
 
 
+
+    Label{
+        text: "起始页，可以放一些帮助和说明"
+    }
+
+
     // ListModel{
     //     id: tab_info
     //     ListElement{path:"/page/map";title:qsTr("xxxx");icon:""}

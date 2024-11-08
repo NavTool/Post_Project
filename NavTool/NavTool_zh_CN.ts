@@ -1229,7 +1229,7 @@
     <name>Screen_Main</name>
     <message>
         <location filename="qml/screen/Screen_Main.qml" line="74"/>
-        <source>空白页</source>
+        <source>起始页</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1268,92 +1268,92 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="850"/>
+        <location filename="qml/screen/Screen_Main.qml" line="819"/>
         <source>Hide Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="850"/>
+        <location filename="qml/screen/Screen_Main.qml" line="819"/>
         <source>Show Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="859"/>
+        <location filename="qml/screen/Screen_Main.qml" line="828"/>
         <source>Show Menu Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="875"/>
+        <location filename="qml/screen/Screen_Main.qml" line="844"/>
         <source>Hide Left Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="875"/>
+        <location filename="qml/screen/Screen_Main.qml" line="844"/>
         <source>Show Left Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="883"/>
+        <location filename="qml/screen/Screen_Main.qml" line="852"/>
         <source>Hide Right Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="883"/>
+        <location filename="qml/screen/Screen_Main.qml" line="852"/>
         <source>Show Right Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="892"/>
+        <location filename="qml/screen/Screen_Main.qml" line="861"/>
         <source>Hide Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="892"/>
+        <location filename="qml/screen/Screen_Main.qml" line="861"/>
         <source>Show Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="904"/>
+        <location filename="qml/screen/Screen_Main.qml" line="873"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="911"/>
+        <location filename="qml/screen/Screen_Main.qml" line="880"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="919"/>
+        <location filename="qml/screen/Screen_Main.qml" line="888"/>
         <source>More</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="995"/>
+        <location filename="qml/screen/Screen_Main.qml" line="964"/>
         <source>Show Left Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="1004"/>
+        <location filename="qml/screen/Screen_Main.qml" line="973"/>
         <source>Show Left Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="1073"/>
+        <location filename="qml/screen/Screen_Main.qml" line="1042"/>
         <source>Show Right Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="1082"/>
+        <location filename="qml/screen/Screen_Main.qml" line="1051"/>
         <source>Show Right Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="1132"/>
+        <location filename="qml/screen/Screen_Main.qml" line="1101"/>
         <source>Show Mid Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="1141"/>
+        <location filename="qml/screen/Screen_Main.qml" line="1110"/>
         <source>Show Mid Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>

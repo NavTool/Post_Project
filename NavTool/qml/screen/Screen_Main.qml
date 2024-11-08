@@ -71,25 +71,25 @@ Item{
     //主页面导航栏
     ListModel{
         id: body_midtop_info_model
-        ListElement{key:"/page/blank";title:qsTr("空白页");icon:""}
+        ListElement{key:"/page/blank";title:qsTr("起始页");icon:""}
         ListElement{key:"/page/map";title:qsTr("平面视图");icon:""}
         ListElement{key:"/page/table";title:qsTr("资源视图");icon:""}
         ListElement{key:"/page/dataspan";title:qsTr("数据区间");icon:""}
     }
     PageRouter{
         id: body_midtop_router
-        routes: {
+        routes:{
             "/page/blank": R.resolvedUrl("qml/page/Page_Blank.qml"),
-            "/page/map": R.resolvedUrl("qml/page/Page_Map.qml"),
-            "/page/table": R.resolvedUrl("qml/page/Page_Table.qml"),
-            "/page/dataspan": R.resolvedUrl("qml/page/Page_DataSpan.qml")
+            "/page/map": {url:R.resolvedUrl("qml/page/Page_Map.qml"),singleton:true},
+            "/page/table": {url:R.resolvedUrl("qml/page/Page_Table.qml"),singleton:true},
+            "/page/dataspan": {url:R.resolvedUrl("qml/page/Page_DataSpan.qml"),singleton:true}
         }
     }
     //中下导航栏
     PageRouter{
         id: body_midbottom_router
         routes: {
-            "/sidepage/log": R.resolvedUrl("qml/component/SidePage_Log.qml")
+            "/sidepage/log":{url: R.resolvedUrl("qml/component/SidePage_Log.qml"),singleton:true},
         }
     }
 
@@ -97,7 +97,7 @@ Item{
     PageRouter{
         id: body_lefttop_router
         routes: {
-            "/sidepage/resource": R.resolvedUrl("qml/component/SidePage_Resource.qml"),
+            "/sidepage/resource":{url: R.resolvedUrl("qml/component/SidePage_Resource.qml"),singleton:true},
             "/sidepage/layer": R.resolvedUrl("qml/component/SidePage_Layer.qml"),
             "/sidepage/property": R.resolvedUrl("qml/component/SidePage_Property.qml"),
             "/sidepage/status": R.resolvedUrl("qml/component/SidePage_Status.qml")
@@ -107,7 +107,7 @@ Item{
     PageRouter{
         id: body_leftbottom_router
         routes: {
-            "/sidepage/resource": R.resolvedUrl("qml/component/SidePage_Resource.qml"),
+            "/sidepage/resource":{url: R.resolvedUrl("qml/component/SidePage_Resource.qml"),singleton:true},
             "/sidepage/layer": R.resolvedUrl("qml/component/SidePage_Layer.qml"),
             "/sidepage/property": R.resolvedUrl("qml/component/SidePage_Property.qml"),
             "/sidepage/status": R.resolvedUrl("qml/component/SidePage_Status.qml")
@@ -118,7 +118,7 @@ Item{
     PageRouter{
         id: body_righttop_router
         routes: {
-            "/sidepage/resource": R.resolvedUrl("qml/component/SidePage_Resource.qml"),
+            "/sidepage/resource":{url: R.resolvedUrl("qml/component/SidePage_Resource.qml"),singleton:true},
             "/sidepage/layer": R.resolvedUrl("qml/component/SidePage_Layer.qml"),
             "/sidepage/property": R.resolvedUrl("qml/component/SidePage_Property.qml"),
             "/sidepage/status": R.resolvedUrl("qml/component/SidePage_Status.qml")
@@ -128,7 +128,7 @@ Item{
     PageRouter{
         id: body_rightbottom_router
         routes: {
-            "/sidepage/resource": R.resolvedUrl("qml/component/SidePage_Resource.qml"),
+            "/sidepage/resource":{url: R.resolvedUrl("qml/component/SidePage_Resource.qml"),singleton:true},
             "/sidepage/layer": R.resolvedUrl("qml/component/SidePage_Layer.qml"),
             "/sidepage/property": R.resolvedUrl("qml/component/SidePage_Property.qml"),
             "/sidepage/status": R.resolvedUrl("qml/component/SidePage_Status.qml")
@@ -401,6 +401,7 @@ Item{
                     if(navbar_items[bar.currentIndex].key=="/")
                     {
                         Global.displayScreen="/screen/file";
+                        bar.currentIndex=Global.navbarCurrentIndex
                     }
                     else
                     {
@@ -553,152 +554,121 @@ Item{
                             // SplitView.minimumHeight: header_extra.visible?header_extra.height:0
 
 
-                            // Item{
-                            //     anchors.fill: parent
-
-
-                            //     Component{
-                            //         id:com_page
-                            //         Item{
-                            //             id:root
-                            //             property var initialItem
-                            //             anchors.fill: parent
-
-                            //             property string title
-                            //             property PageContext context
-
-                            //             HotLoader{
-                            //                 id: loader_container
-                            //                 FluentUI.dark: control.FluentUI.dark
-                            //                 anchors{
-                            //                     fill: parent
-                            //                     topMargin: fitsAppBarWindows ? 0 : layout_appbar.height
-                            //                 }
-                            //                 source: {
-                            //                     if(root.initialItem){
-                            //                         return root.initialItem
-                            //                     }
-                            //                     return ""
-                            //                 }
-                            //             }
-                            //             Component.onCompleted:{
-                            //                 initialItem=body_midtop_router.toUrl(Global.displayMidTop)
-                            //             }
-                            //         }
-                            //     }
-
-
-                            //     Component.onCompleted: {
-                            //         //创建一个新窗格，查找指定的key的信息
-                            //         for (var j = 0; j < body_midtop_info_model.count; j++) {
-                            //             let item = body_midtop_info_model.get(j)
-                            //             console.log(item.key)
-                            //             if(Global.displayMidTop===item.key)
-                            //             {
-                            //                 //不存在，创建一个新的auto_loader页面，页面指向这个页面，添加到tab中
-                            //                 tab_view.appendTab(item.key,item.icon,item.title,com_page)
-                            //                 return
-                            //             }
-                            //         }
-
-                            //         throw new Error(`updateTabView '${Global.displayMidTop}' not found!`);
-                            //     }
-
-                            //     Item{
-                            //         anchors.fill: parent
-                            //         TabViewEx{
-                            //             id:tab_view
-                            //             addButtonVisibility:false
-                            //             tabWidthBehavior:TabViewType.SizeToContent
-                            //             closeButtonVisibility:TabViewType.OnHover
-                            //         }
-                            //     }
-
-                            //     Connections{
-                            //         target:Global
-                            //         function onDisplayMidTopChanged(){
-                            //             //从tab_view中查找是否已经存在该页面
-                            //             for(var i=0;i<tab_view.tab_model.count;i++)
-                            //             {
-                            //                 let item=tab_view.tab_model.get(i)
-                            //                 if(Global.displayMidTop===item.key)
-                            //                 {
-                            //                     //存在，页面切换到页面的current_index
-                            //                     console.log(i)
-                            //                     tab_view.tab_nav.currentIndex=i;
-                            //                     return
-                            //                 }
-                            //             }
-
-                            //             //不存在，创建一个新窗格，查找指定的key的信息
-                            //             for (var j = 0; j < body_midtop_info_model.count; j++) {
-                            //                 let item = body_midtop_info_model.get(j)
-                            //                 console.log(item.key)
-                            //                 if(Global.displayMidTop===item.key)
-                            //                 {
-                            //                     //不存在，创建一个新的auto_loader页面，页面指向这个页面，添加到tab中
-                            //                     tab_view.appendTab(item.key,item.icon,item.title,com_page)
-                            //                     tab_view.tab_nav.currentIndex=tab_view.tab_model.count-1;
-                            //                     return
-                            //                 }
-                            //             }
-
-                            //             throw new Error(`updateTabView '${Global.displayMidTop}' not found!`);
-                            //         }
-                            //     }
-
-                            //     //根据当前选择的视图 Global.displayMidTop,新建/切换窗格
-                            //     function updateTabView(){
-
-                            //         //从tab_view中查找是否已经存在该页面
-                            //         for(var i=0;i<tab_view.tab_model.count;i++)
-                            //         {
-                            //             let item=tab_view.tab_model.get(i)
-                            //             if(Global.displayMidTop===item.key)
-                            //             {
-                            //                 //存在，页面切换到页面的current_index
-                            //                 tab_view.tab_nav.currentIndex=i;
-                            //                 return
-                            //             }
-                            //         }
-
-                            //         //不存在，创建一个新窗格，查找指定的key的信息
-                            //         for (var j = 0; j < body_midtop_info_model.count; j++) {
-                            //             let item = body_midtop_info_model.get(j)
-                            //             console.log(item.key)
-                            //             if(Global.displayMidTop===item.key)
-                            //             {
-                            //                 //不存在，创建一个新的auto_loader页面，页面指向这个页面，添加到tab中
-                            //                 tab_view.appendTab(item.key,item.icon,item.title,com_page)
-                            //                 return
-                            //             }
-                            //         }
-
-                            //         throw new Error(`updateTabView '${Global.displayMidTop}' not found!`);
-                            //     }
-
-                            // }
-
-
-                            PageRouterView{
-                                id: midtop_panne
+                            Item{
                                 anchors.fill: parent
-                                // anchors.topMargin: header_extra.visible?header_extra.height:0
-                                router: body_midtop_router
-                                clip: true
+
+                                Component{
+                                    id:com_page
+                                    PageRouterView{
+                                        id: midtop_panne
+                                        anchors.fill: parent
+                                        // anchors.topMargin: header_extra.visible?header_extra.height:0
+                                        router: body_midtop_router
+                                        clip: true
+
+                                        Component.onCompleted: {
+                                            body_midtop_router.go(Global.displayMidTop)
+                                        }
+
+                                        Connections{
+                                            target:Global
+                                            function onDisplayMidTopChanged(){
+                                                body_midtop_router.go(Global.displayMidTop)
+                                            }
+                                        }
+                                    }
+                                }
+
 
                                 Component.onCompleted: {
-                                    body_midtop_router.go(Global.displayMidTop)
+                                    //创建一个新窗格，查找指定的key的信息
+                                    for (var j = 0; j < body_midtop_info_model.count; j++) {
+                                        let item = body_midtop_info_model.get(j)
+                                        console.log(item.key)
+                                        if(Global.displayMidTop===item.key)
+                                        {
+                                            //不存在，创建一个新的auto_loader页面，页面指向这个页面，添加到tab中
+                                            tab_view.appendTab(item.key,item.icon,item.title,com_page)
+                                            tab_view.tab_nav.currentIndex=tab_view.tab_model.count-1;
+                                            return
+                                        }
+                                    }
+
+                                    throw new Error(`updateTabView '${Global.displayMidTop}' not found!`);
+                                }
+
+                                Frame{
+                                    anchors.fill: parent
+                                    TabViewEx{
+                                        id:tab_view
+                                        tab_nav.height: 25
+                                        addButtonVisibility:false
+                                        tabWidthBehavior:TabViewType.SizeToContent
+                                        closeButtonVisibility:TabViewType.OnHover
+
+                                        onTab_nav_clicked:(index) => {
+                                            let item=tab_view.tab_model.get(index)
+                                            Global.displayMidTop=item.key
+                                        }
+                                    }
                                 }
 
                                 Connections{
                                     target:Global
                                     function onDisplayMidTopChanged(){
-                                        body_midtop_router.go(Global.displayMidTop)
+                                        //从tab_view中查找是否已经存在该页面
+                                        for(var i=0;i<tab_view.tab_model.count;i++)
+                                        {
+                                            let item=tab_view.tab_model.get(i)
+                                            console.log("find exist "+Global.displayMidTop+" result "+item.key)
+                                            if(Global.displayMidTop===item.key)
+                                            {
+                                                //存在，页面切换到页面的current_index
+                                                console.log(i)
+                                                tab_view.tab_nav.currentIndex=i;
+                                                return
+                                            }
+                                        }
+
+                                        //不存在，创建一个新窗格，查找指定的key的信息
+                                        for (var j = 0; j < body_midtop_info_model.count; j++) {
+                                            let item = body_midtop_info_model.get(j)
+                                            console.log(item.key)
+                                            if(Global.displayMidTop===item.key)
+                                            {
+                                                //不存在，创建一个新的auto_loader页面，页面指向这个页面，添加到tab中
+                                                tab_view.appendTab(item.key,item.icon,item.title,com_page)
+                                                tab_view.tab_nav.currentIndex=tab_view.tab_model.count-1;
+                                                return
+                                            }
+                                        }
+
+                                        throw new Error(`updateTabView '${Global.displayMidTop}' not found!`);
                                     }
                                 }
 
                             }
+
+
+                            // PageRouterView{
+                            //     id: midtop_panne
+                            //     anchors.fill: parent
+                            //     // anchors.topMargin: header_extra.visible?header_extra.height:0
+                            //     router: body_midtop_router
+                            //     clip: true
+
+                            //     Component.onCompleted: {
+                            //         body_midtop_router.go(Global.displayMidTop)
+                            //     }
+
+                            //     Connections{
+                            //         target:Global
+                            //         function onDisplayMidTopChanged(){
+                            //             body_midtop_router.go(Global.displayMidTop)
+                            //         }
+                            //     }
+
+                            // }
 
 
 

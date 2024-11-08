@@ -13,6 +13,7 @@ Item {
     property bool addButtonVisibility: true
     property alias tab_model:tab_model
     property alias tab_nav:tab_nav
+    signal tab_nav_clicked(int index)
 
     signal newPressed
     id:control
@@ -131,7 +132,7 @@ Item {
                     drag.target: item_container
                     drag.axis: Drag.XAxis
                     onClicked: {
-                        tab_nav.currentIndex = model.index
+                        tab_nav_clicked(model.index)
                     }
                 }
                 Rectangle{
