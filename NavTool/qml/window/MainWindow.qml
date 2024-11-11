@@ -9,6 +9,7 @@ import Qt.labs.platform as P
 
 FramelessWindow {
     id: window
+
     property alias infoBarManager: infobar_manager
     property alias tourSteps: tour.steps
     width: 1280

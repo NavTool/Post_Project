@@ -6,6 +6,52 @@ import FluentUI.Controls
 import FluentUI.impl
 import NavTool
 
+
+
+/*
+
+导航路由说明（路由表，结构分配）
+
+/screen  视图路由（零级路由，位于Screen_Root.qml)
+    /screen/init
+    /screen/main
+    /screen/file
+
+（一级路由，位于Screen_Main.qml)
+/page    主页面路由
+    /page/map
+    /page/table                     在page_table.qml
+        /page/table/station
+        /page/table/obsfile
+        /page/table/baseline
+        /page/table/check
+        /page/table/closeloop
+        /page/table/option
+    /page/span
+/navbar   导航栏路由
+    navbar/start
+/sidepage  侧边栏路由
+    navbar/property/
+        navbar/property/station
+
+
+
+（一级路由，位于Screen_Main.qml)
+
+
+
+（一级路由，位于Screen_File.qml)
+
+
+*/
+
+
+
+
+
+
+
+
 QtObject {
     id: control
     property var starter
@@ -17,11 +63,12 @@ QtObject {
 
     property string displayScreen: "/screen/init"  //主视窗显示内容
 
-    //初始化页面
+    //初始化页面显示内容
     property string displayInitScreen:"/page/start"
-    //文件管理页面
+    //文件管理页面显示内容
+    property string displayFileScreen:"/page/start"
 
-    //主页面
+    //主页面显示内容
     property string displayMidTop:"/page/blank"   //Main视窗主页面显示内容
     property string displayMidBottom:"/sidepage/log"   //Main视窗主页面底部显示内容
     property string displayLeftTop:"/sidepage/resource"   //Main视窗左上显示内容
@@ -30,11 +77,12 @@ QtObject {
     property string displayRightBottom:"/sidepage/status"   //Main视窗右下主页面显示内容
 
     //子页面显示内容
-    property string displayTablePage:"/page/station"  //资源视图显示内容
+    property string displayTablePage:"/page/table/station"  //资源视图显示内容
+    //测页面显示内容
+    property string displayPropertyPage:"/sidepage/property/balnk"  //属性侧边栏显示内容
 
     //顶部菜单栏
     property int navbarCurrentIndex:1   //主页面当前停留的菜单编号（从0开始），这边变量主要是为了保证当点击到文件页面后又返回的时候，能够切换回上一次选中的页面
-
 
     //主页页面可视控制
     property bool visable_header:true  //顶部菜单栏可视（顶部的那一排功能（文件、开始...））

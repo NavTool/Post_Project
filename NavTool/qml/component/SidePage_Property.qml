@@ -1,47 +1,47 @@
 import QtQuick
+import QtQuick.Layouts
 import QtQuick.Controls
 import FluentUI.Controls
 import FluentUI.impl
+import NavTool
 
-Frame{
+Item{
     id:root
-
-    anchors.fill: parent
 
     property string title
     property PageContext context
 
-    Label{
-        text:qsTr("目标属性栏")
+    anchors.fill:parent
+
+    PageRouter{
+        id: property_router
+        routes: {
+            "/sidepage/property/blank": R.resolvedUrl("qml/component/SidePage_Blank.qml"),
+            "/sidepage/property/obsfile": R.resolvedUrl("qml/component/SidePage_Property_ObsFile.qml"),
+            "/sidepage/property/baseline": R.resolvedUrl("qml/component/SidePage_Property_Baseline.qml"),
+            "/sidepage/property/station": R.resolvedUrl("qml/component/SidePage_Property_Station.qml"),
+            "/sidepage/property/obsfile": R.resolvedUrl("qml/component/SidePage_Property_ObsFile.qml"),
+            "/sidepage/property/baseline": R.resolvedUrl("qml/component/SidePage_Property_Baseline.qml")
+        }
+    }
+
+    PageRouterView{
+        id: property_panne
+        anchors.fill: parent
+        router: property_router
+        clip: true
+
+        Component.onCompleted: {
+            property_router.go(Global.displayPropertyPage)
+        }
+    }
+
+    Connections{
+        target:Global
+        function onDisplayPropertyPageChanged(){
+            property_router.go(Global.displayPropertyPage)
+        }
     }
 
 
-    Column{
-        anchors.centerIn: parent
-
-        spacing: 20
-        ProgressRing{
-            indeterminate: true
-        }
-        ProgressRing{
-            FluentUI.primaryColor: Qt.rgba(13/255,110/255,253/255,1)
-            indeterminate: true
-        }
-        ProgressRing{
-            FluentUI.primaryColor: Qt.rgba(25/255,135/255,84/255,1)
-            indeterminate: true
-        }
-        ProgressRing{
-            FluentUI.primaryColor: Qt.rgba(220/255,53/255,69/255,1)
-            indeterminate: true
-        }
-        ProgressRing{
-            FluentUI.primaryColor: Qt.rgba(255/255,193/255,7/255,1)
-            indeterminate: true
-        }
-        ProgressRing{
-            FluentUI.primaryColor: Qt.rgba(13/255,202/255,240/255,1)
-            indeterminate: true
-        }
-    }
 }

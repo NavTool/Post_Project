@@ -180,88 +180,88 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="37"/>
+        <location filename="qml/window/MainWindow.qml" line="38"/>
         <source>Light</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="37"/>
+        <location filename="qml/window/MainWindow.qml" line="38"/>
         <source>Dark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="55"/>
+        <location filename="qml/window/MainWindow.qml" line="56"/>
         <source>Sticky on Top cancelled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="55"/>
-        <location filename="qml/window/MainWindow.qml" line="63"/>
+        <location filename="qml/window/MainWindow.qml" line="56"/>
+        <location filename="qml/window/MainWindow.qml" line="64"/>
         <source>Sticky on Top</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="62"/>
+        <location filename="qml/window/MainWindow.qml" line="63"/>
         <source>Dark Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="62"/>
+        <location filename="qml/window/MainWindow.qml" line="63"/>
         <source>Here you can switch to night mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="63"/>
+        <location filename="qml/window/MainWindow.qml" line="64"/>
         <source>From here, you can switch to the top of the window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="90"/>
+        <location filename="qml/window/MainWindow.qml" line="91"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="161"/>
+        <location filename="qml/window/MainWindow.qml" line="162"/>
         <source>Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="168"/>
+        <location filename="qml/window/MainWindow.qml" line="169"/>
         <source>Are you sure you want to exit the program?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="173"/>
+        <location filename="qml/window/MainWindow.qml" line="174"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="179"/>
+        <location filename="qml/window/MainWindow.qml" line="180"/>
         <source>Minimize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="181"/>
+        <location filename="qml/window/MainWindow.qml" line="182"/>
         <source>Friendly Reminder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="181"/>
+        <location filename="qml/window/MainWindow.qml" line="182"/>
         <source>FluentUI-Gallery is hidden from the tray, click on the tray to activate the window again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="187"/>
+        <location filename="qml/window/MainWindow.qml" line="188"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="202"/>
+        <location filename="qml/window/MainWindow.qml" line="203"/>
         <source>Friendly reminder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="210"/>
+        <location filename="qml/window/MainWindow.qml" line="211"/>
         <source>The program is already running. The parameter is -&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1119,89 +1119,494 @@
     </message>
 </context>
 <context>
-    <name>Page_Station</name>
+    <name>Page_Table_Baseline</name>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="110"/>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="110"/>
         <source>Up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="119"/>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="119"/>
         <source>Down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="134"/>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="134"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="185"/>
-        <source>Clear</source>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="250"/>
+        <source>基线ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="191"/>
-        <source>Add a row of Data</source>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="263"/>
+        <source>起点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="197"/>
-        <source>Insert a Row</source>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="269"/>
+        <source>终点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="200"/>
-        <source>Focus not acquired: Please click any item in the form as the target for insertion!</source>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="275"/>
+        <source>解算类型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="207"/>
-        <source>Deletes the selected row of data</source>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="281"/>
+        <source>利用率</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="211"/>
-        <source>Please select a row of data first!</source>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="287"/>
+        <source>同步时间</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="218"/>
-        <source>Modify the first row of data</source>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="293"/>
+        <source>Ratio</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="243"/>
-        <source>Name</source>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="299"/>
+        <source>RMS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="250"/>
-        <source>Avatar</source>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="305"/>
+        <source>合格</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="258"/>
-        <source>Age</source>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="311"/>
+        <source>Dx</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="264"/>
-        <source>Address</source>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="317"/>
+        <source>StdDx</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="270"/>
-        <source>Description</source>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="323"/>
+        <source>Dy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="276"/>
-        <source>Move</source>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="329"/>
+        <source>StdDy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Station.qml" line="285"/>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="335"/>
+        <source>Dz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="341"/>
+        <source>StdDz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="347"/>
+        <source>距离</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="353"/>
+        <source>使用</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="257"/>
+        <source>基线类型</source>
+        <oldsource>北坐标</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Baseline.qml" line="359"/>
+        <source>Action</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Table_Check</name>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="110"/>
+        <source>Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="119"/>
+        <source>Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="134"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="250"/>
+        <source>文件名</source>
+        <oldsource>站点名</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="257"/>
+        <source>测站</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="269"/>
+        <source>结束时间</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="275"/>
+        <source>检核</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="281"/>
+        <source>利用率</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="287"/>
+        <source>MP1(L1/B1/G1/E1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="293"/>
+        <source>MP2(L2/B2/G2/E5a)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="299"/>
+        <source>MP3(L5/B3/G3/E5b)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="305"/>
+        <source>MP4(E5)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="311"/>
+        <source>MP5(E6)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="317"/>
+        <source>nSlip
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="324"/>
+        <source>SNR(L1/B1/G1/E1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="330"/>
+        <source>SNR(L2/B2/G2/E5a)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="336"/>
+        <source>SNR(L5/B3/G3/E5b)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="342"/>
+        <source>SNR(E5)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="348"/>
+        <source>SNR(E6)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="263"/>
+        <source>开始时间</source>
+        <oldsource>东坐标</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Check.qml" line="354"/>
+        <source>Action</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Table_CloseLoop</name>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="110"/>
+        <source>Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="119"/>
+        <source>Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="134"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="250"/>
+        <source>站点名</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="257"/>
+        <source>北坐标</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="263"/>
+        <source>东坐标</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="269"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="323"/>
+        <source>高程</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="275"/>
+        <source>当地经度</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="281"/>
+        <source>当地纬度</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="287"/>
+        <source>大地高</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="293"/>
+        <source>X</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="299"/>
+        <source>Y</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="305"/>
+        <source>Z</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="311"/>
+        <source>经度</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="317"/>
+        <source>纬度</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="329"/>
+        <source>Action</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Table_ObsFile</name>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="110"/>
+        <source>Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="119"/>
+        <source>Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="134"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="250"/>
+        <source>文件名</source>
+        <oldsource>站点名</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="257"/>
+        <source>文件类型</source>
+        <oldsource>北坐标</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="263"/>
+        <source>测站</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="269"/>
+        <source>开始时间</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="275"/>
+        <source>结束时间</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="281"/>
+        <source>时间段</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="287"/>
+        <source>量测方式</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="293"/>
+        <source>量测天线高</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="299"/>
+        <source>天线相位中心高</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="305"/>
+        <source>天线座底部高</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="311"/>
+        <source>天线厂商</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="317"/>
+        <source>天线类型</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="323"/>
+        <source>接收机/SN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="329"/>
+        <source>接收机类型</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="335"/>
+        <source>文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="341"/>
+        <source>Action</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Page_Table_Station</name>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="110"/>
+        <source>Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="119"/>
+        <source>Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="134"/>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="250"/>
+        <source>站点名</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="257"/>
+        <source>北坐标</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="263"/>
+        <source>东坐标</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="269"/>
+        <location filename="qml/page/Page_Table_Station.qml" line="323"/>
+        <source>高程</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="275"/>
+        <source>当地经度</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="281"/>
+        <source>当地纬度</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="287"/>
+        <source>大地高</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="293"/>
+        <source>X</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="299"/>
+        <source>Y</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="305"/>
+        <source>Z</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="311"/>
+        <source>经度</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="317"/>
+        <source>纬度</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Table_Station.qml" line="329"/>
         <source>Action</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1209,132 +1614,132 @@
 <context>
     <name>Screen_Main</name>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="74"/>
+        <location filename="qml/screen/Screen_Main.qml" line="75"/>
         <source>起始页</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="75"/>
+        <location filename="qml/screen/Screen_Main.qml" line="76"/>
         <source>平面视图</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="76"/>
+        <location filename="qml/screen/Screen_Main.qml" line="77"/>
         <source>资源视图</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="77"/>
+        <location filename="qml/screen/Screen_Main.qml" line="78"/>
         <source>数据区间</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="215"/>
+        <location filename="qml/screen/Screen_Main.qml" line="216"/>
         <source>自动保存</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="241"/>
+        <location filename="qml/screen/Screen_Main.qml" line="242"/>
         <source>AutoSave is Turn On!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="244"/>
+        <location filename="qml/screen/Screen_Main.qml" line="245"/>
         <source>AutoSave is Turn Off!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="262"/>
+        <location filename="qml/screen/Screen_Main.qml" line="263"/>
         <source>The project has been saved!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="819"/>
+        <location filename="qml/screen/Screen_Main.qml" line="821"/>
         <source>Hide Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="819"/>
+        <location filename="qml/screen/Screen_Main.qml" line="821"/>
         <source>Show Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="828"/>
+        <location filename="qml/screen/Screen_Main.qml" line="830"/>
         <source>Show Menu Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="844"/>
+        <location filename="qml/screen/Screen_Main.qml" line="846"/>
         <source>Hide Left Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="844"/>
+        <location filename="qml/screen/Screen_Main.qml" line="846"/>
         <source>Show Left Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="852"/>
+        <location filename="qml/screen/Screen_Main.qml" line="854"/>
         <source>Hide Right Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="852"/>
+        <location filename="qml/screen/Screen_Main.qml" line="854"/>
         <source>Show Right Sidebar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="861"/>
+        <location filename="qml/screen/Screen_Main.qml" line="863"/>
         <source>Hide Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="861"/>
+        <location filename="qml/screen/Screen_Main.qml" line="863"/>
         <source>Show Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="873"/>
+        <location filename="qml/screen/Screen_Main.qml" line="875"/>
         <source>Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="880"/>
+        <location filename="qml/screen/Screen_Main.qml" line="882"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="888"/>
+        <location filename="qml/screen/Screen_Main.qml" line="890"/>
         <source>More</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="964"/>
+        <location filename="qml/screen/Screen_Main.qml" line="966"/>
         <source>Show Left Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="973"/>
+        <location filename="qml/screen/Screen_Main.qml" line="975"/>
         <source>Show Left Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="1042"/>
+        <location filename="qml/screen/Screen_Main.qml" line="1044"/>
         <source>Show Right Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="1051"/>
+        <location filename="qml/screen/Screen_Main.qml" line="1053"/>
         <source>Show Right Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="1101"/>
+        <location filename="qml/screen/Screen_Main.qml" line="1103"/>
         <source>Show Mid Top Bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Main.qml" line="1110"/>
+        <location filename="qml/screen/Screen_Main.qml" line="1112"/>
         <source>Show Mid Bottom Bar</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1368,10 +1773,255 @@
     </message>
 </context>
 <context>
-    <name>SidePage_Property</name>
+    <name>SidePage_Property_Baseline</name>
     <message>
-        <location filename="qml/component/SidePage_Property.qml" line="15"/>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="19"/>
         <source>目标属性栏</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="59"/>
+        <source>基线ID</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="65"/>
+        <source>起点文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="71"/>
+        <source>终点文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="77"/>
+        <source>起点名</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="83"/>
+        <source>终点名</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="89"/>
+        <source>同步时段</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="105"/>
+        <source>RMS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="111"/>
+        <source>Ratio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="117"/>
+        <source>Dx</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="123"/>
+        <source>Dy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="129"/>
+        <source>Dz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="135"/>
+        <source>平距</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="141"/>
+        <source>斜距</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="147"/>
+        <source>高差</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="153"/>
+        <source>站点名称</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="159"/>
+        <source>NS前进方位角</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="165"/>
+        <source>椭球距离</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="171"/>
+        <source>大地高</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="177"/>
+        <source>RDOP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="183"/>
+        <source>PDOP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="189"/>
+        <source>HDOP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Baseline.qml" line="195"/>
+        <source>VDOP</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SidePage_Property_ObsFile</name>
+    <message>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="19"/>
+        <source>目标属性栏</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="59"/>
+        <source>站点名称</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="75"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="149"/>
+        <source>测量方式</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="81"/>
+        <source>测量天线高</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="87"/>
+        <source>天线高一致性补偿</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="93"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="161"/>
+        <source>厂商</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="99"/>
+        <source>天线型号</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="105"/>
+        <source>天线SN号</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="121"/>
+        <source>接收机/SN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="127"/>
+        <source>接收机类型</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="133"/>
+        <source>接收机版本号</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="155"/>
+        <source>天线高</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="167"/>
+        <source>天线类型</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>SidePage_Property_Station</name>
+    <message>
+        <location filename="qml/component/SidePage_Property_Station.qml" line="19"/>
+        <source>目标属性栏</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Station.qml" line="59"/>
+        <source>点名</source>
+        <oldsource>站点名称</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Station.qml" line="65"/>
+        <source>编码</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Station.qml" line="71"/>
+        <source>站点备注</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Station.qml" line="87"/>
+        <source>坐标来源</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Station.qml" line="109"/>
+        <source>纬度</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Station.qml" line="115"/>
+        <source>经度</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Station.qml" line="121"/>
+        <source>大地高</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Station.qml" line="137"/>
+        <source>X</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Station.qml" line="143"/>
+        <source>Y</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Station.qml" line="149"/>
+        <source>Z</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Property_Station.qml" line="93"/>
+        <source>坐标类型</source>
+        <oldsource>厂商</oldsource>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1391,8 +2041,13 @@
 <context>
     <name>SidePage_Status</name>
     <message>
-        <location filename="qml/component/SidePage_Status.qml" line="15"/>
+        <location filename="qml/component/SidePage_Status.qml" line="43"/>
         <source>任务状态栏</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/SidePage_Status.qml" line="124"/>
+        <source>删除</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

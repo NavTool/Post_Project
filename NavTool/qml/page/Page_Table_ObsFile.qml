@@ -181,45 +181,45 @@ Frame{
             top: parent.top
             left: parent.left
         }
-        Button{
-            text: qsTr("Clear")
-            onClicked: {
-                dataModel.clear()
-            }
-        }
-        Button{
-            text: qsTr("Add a row of Data")
-            onClicked: {
-                dataModel.append(controller.generateRowData())
-            }
-        }
-        Button{
-            text: qsTr("Insert a Row")
-            onClicked: {
-                if(dataGrid.view.currentIndex < 0){
-                    infoBarManager.showWarning(qsTr("Focus not acquired: Please click any item in the form as the target for insertion!"))
-                    return
-                }
-                dataModel.insert(dataGrid.view.currentIndex+1,controller.generateRowData())
-            }
-        }
-        Button{
-            text: qsTr("Deletes the selected row of data")
-            onClicked: {
-                var checkedItems = dataGrid.selectionModel.selectedIndexes
-                if(checkedItems.length === 0){
-                    infoBarManager.showWarning(qsTr("Please select a row of data first!"))
-                    return
-                }
-                dataModel.removeItems(checkedItems)
-            }
-        }
-        Button{
-            text: qsTr("Modify the first row of data")
-            onClicked: {
-                dataModel.set(0,controller.generateRowData())
-            }
-        }
+        // Button{
+        //     text: qsTr("Clear")
+        //     onClicked: {
+        //         dataModel.clear()
+        //     }
+        // }
+        // Button{
+        //     text: qsTr("Add a row of Data")
+        //     onClicked: {
+        //         dataModel.append(controller.generateRowData())
+        //     }
+        // }
+        // Button{
+        //     text: qsTr("Insert a Row")
+        //     onClicked: {
+        //         if(dataGrid.view.currentIndex < 0){
+        //             infoBarManager.showWarning(qsTr("Focus not acquired: Please click any item in the form as the target for insertion!"))
+        //             return
+        //         }
+        //         dataModel.insert(dataGrid.view.currentIndex+1,controller.generateRowData())
+        //     }
+        // }
+        // Button{
+        //     text: qsTr("Deletes the selected row of data")
+        //     onClicked: {
+        //         var checkedItems = dataGrid.selectionModel.selectedIndexes
+        //         if(checkedItems.length === 0){
+        //             infoBarManager.showWarning(qsTr("Please select a row of data first!"))
+        //             return
+        //         }
+        //         dataModel.removeItems(checkedItems)
+        //     }
+        // }
+        // Button{
+        //     text: qsTr("Modify the first row of data")
+        //     onClicked: {
+        //         dataModel.set(0,controller.generateRowData())
+        //     }
+        // }
     }
     DataGrid{
         id: dataGrid
@@ -227,59 +227,115 @@ Frame{
             top: layout_actions.bottom
             bottom: parent.bottom
             left: parent.left
+            leftMargin: 5
             right: parent.right
-            topMargin: 24
-            bottomMargin: 10
+            rightMargin: 5
+            topMargin: 5
+            bottomMargin: 5
         }
+
+
+
         sourceModel: dataModel
         onRowClicked:(model)=>{
                          console.debug(model.name)
+                         Global.displayPropertyPage="/sidepage/property/obsfile"
                      }
         onRowRightClicked:(model)=>{
                               console.debug(model.name)
+                              Global.displayPropertyPage="/sidepage/property/blank"
                           }
         columnSourceModel: ListModel{
             ListElement{
-                title: qsTr("Name")
+                title: qsTr("文件名")
                 dataIndex: "name"
                 width: 100
                 frozen: true
                 delegate: function(){return comp_column_frozen}
             }
             ListElement{
-                title: qsTr("Avatar")
-                dataIndex: "avatar"
-                width: 100
-                frozen: false
-                rowDelegate: function(){return comp_row_avatar}
-                delegate: function(){return comp_column_frozen}
-            }
-            ListElement{
-                title: qsTr("Age")
+                title: qsTr("文件类型")
                 dataIndex: "age"
                 editDelegate: function(){return comp_edit_combobox}
                 width: 100
             }
             ListElement{
-                title: qsTr("Address")
-                dataIndex: "address"
-                width: 200
-                delegate: function(){return comp_column_close}
+                title: qsTr("测站")
+                dataIndex: "age"
+                editDelegate: function(){return comp_edit_combobox}
+                width: 100
             }
             ListElement{
-                title: qsTr("Description")
-                dataIndex: "description"
-                width: 200
-                delegate: function(){return comp_column_close}
+                title: qsTr("开始时间")
+                dataIndex: "age"
+                editDelegate: function(){return comp_edit_combobox}
+                width: 100
             }
             ListElement{
-                title: qsTr("Move")
-                dataIndex: "move"
-                width: 160
-                frozen: true
-                rowDelegate: function(){return comp_row_move}
-                delegate: function(){return comp_column_frozen}
-                minimumWidth: 120
+                title: qsTr("结束时间")
+                dataIndex: "age"
+                editDelegate: function(){return comp_edit_combobox}
+                width: 100
+            }
+            ListElement{
+                title: qsTr("时间段")
+                dataIndex: "age"
+                editDelegate: function(){return comp_edit_combobox}
+                width: 100
+            }
+            ListElement{
+                title: qsTr("量测方式")
+                dataIndex: "age"
+                editDelegate: function(){return comp_edit_combobox}
+                width: 100
+            }
+            ListElement{
+                title: qsTr("量测天线高")
+                dataIndex: "age"
+                editDelegate: function(){return comp_edit_combobox}
+                width: 100
+            }
+            ListElement{
+                title: qsTr("天线相位中心高")
+                dataIndex: "age"
+                editDelegate: function(){return comp_edit_combobox}
+                width: 100
+            }
+            ListElement{
+                title: qsTr("天线座底部高")
+                dataIndex: "age"
+                editDelegate: function(){return comp_edit_combobox}
+                width: 100
+            }
+            ListElement{
+                title: qsTr("天线厂商")
+                dataIndex: "age"
+                editDelegate: function(){return comp_edit_combobox}
+                width: 100
+            }
+            ListElement{
+                title: qsTr("天线类型")
+                dataIndex: "age"
+                editDelegate: function(){return comp_edit_combobox}
+                width: 100
+            }
+            ListElement{
+                title: qsTr("接收机/SN")
+                dataIndex: "age"
+                editDelegate: function(){return comp_edit_combobox}
+                width: 100
+            }
+            ListElement{
+                title: qsTr("接收机类型")
+                dataIndex: "age"
+                editDelegate: function(){return comp_edit_combobox}
+                width: 100
+            }
+            ListElement{
+                title: qsTr("文件")
+                dataIndex: "age"
+                editDelegate: function(){return comp_edit_combobox}
+                width: 100
             }
             ListElement{
                 title: qsTr("Action")
@@ -292,7 +348,7 @@ Frame{
         }
     }
     Component.onCompleted: {
-        controller.loadData(1000)
+        controller.loadData(5)
     }
     Pane{
         id: panel_loading

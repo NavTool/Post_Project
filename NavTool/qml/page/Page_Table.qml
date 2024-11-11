@@ -13,27 +13,27 @@ Frame{
 
     property list<QtObject> originalItems : [
         PaneItem{
-            key: "/page/station"
+            key: "/page/table/station"
             title: "站点列表"
             icon.name: FluentIcons.graph_MapPin
         },
         PaneItem{
-            key: "/page/obsfile"
+            key: "/page/table/obsfile"
             title: "观测文件列表"
             icon.name: FluentIcons.graph_Page
         },
         PaneItem{
-            key: "/page/baseline"
+            key: "/page/table/baseline"
             title: "基线列表"
             icon.name: FluentIcons.graph_ResizeTouchLarger
         },
         PaneItem{
-            key: "/page/check"
+            key: "/page/table/check"
             title: "检核列表"
             icon.name: FluentIcons.graph_Shield
         },
         PaneItem{
-            key: "/page/closeloop"
+            key: "/page/table/closeloop"
             title: "闭合环"
             icon.name: FluentIcons.graph_DialShape2
         }
@@ -42,19 +42,19 @@ Frame{
     property list<QtObject> originalFooterItems : [
         PaneItem{
             icon.name: FluentIcons.graph_Settings
-            key: "/page/option"
+            key: "/page/table/option"
             title: "Option"
         }
     ]
     PageRouter{
         id: page_router
         routes: {
-            "/page/station":{url: R.resolvedUrl("qml/page/Page_Station.qml"),singleton:true},
-            "/page/obsfile":{url: R.resolvedUrl("qml/page/Page_ObsFile.qml"),singleton:true},
-            "/page/baseline":{url: R.resolvedUrl("qml/page/Page_Baseline.qml"),singleton:true},
-            "/page/closeloop":{url: R.resolvedUrl("qml/page/Page_CloseLoop.qml"),singleton:true},
-            "/page/check":{url: R.resolvedUrl("qml/page/Page_Check.qml"),singleton:true},
-            "/page/option":{url: R.resolvedUrl("qml/page/Page_Option.qml"),singleton:true}
+            "/page/table/station":{url: R.resolvedUrl("qml/page/Page_Table_Station.qml"),singleton:true},
+            "/page/table/obsfile":{url: R.resolvedUrl("qml/page/Page_Table_ObsFile.qml"),singleton:true},
+            "/page/table/baseline":{url: R.resolvedUrl("qml/page/Page_Table_Baseline.qml"),singleton:true},
+            "/page/table/closeloop":{url: R.resolvedUrl("qml/page/Page_Table_CloseLoop.qml"),singleton:true},
+            "/page/table/check":{url: R.resolvedUrl("qml/page/Page_Table_Check.qml"),singleton:true},
+            "/page/table/option":{url: R.resolvedUrl("qml/page/Page_Table_Option.qml"),singleton:true}
         }
     }
     NavigationView{

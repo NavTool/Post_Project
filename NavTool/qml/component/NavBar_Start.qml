@@ -247,7 +247,7 @@ Item{
 
                                         onClicked: {
                                             Global.displayMidTop="/page/table"
-                                            Global.displayTablePage="/page/station"
+                                            Global.displayTablePage="/page/table/station"
                                         }
 
                                     }
@@ -263,7 +263,7 @@ Item{
 
                                         onClicked: {
                                             Global.displayMidTop="/page/table"
-                                            Global.displayTablePage="/page/obsfile"
+                                            Global.displayTablePage="/page/table/obsfile"
                                         }
                                     }
 
@@ -282,7 +282,7 @@ Item{
 
                                         onClicked: {
                                             Global.displayMidTop="/page/table"
-                                            Global.displayTablePage="/page/baseline"
+                                            Global.displayTablePage="/page/table/baseline"
                                         }
                                     }
 
@@ -299,7 +299,7 @@ Item{
 
                                         onClicked: {
                                             Global.displayMidTop="/page/table"
-                                            Global.displayTablePage="/page/check"
+                                            Global.displayTablePage="/page/table/check"
                                         }
                                     }
                                 }
@@ -317,7 +317,7 @@ Item{
 
                                         onClicked: {
                                             Global.displayMidTop="/page/table"
-                                            Global.displayTablePage="/page/closeloop"
+                                            Global.displayTablePage="/page/table/closeloop"
                                         }
                                     }
 
