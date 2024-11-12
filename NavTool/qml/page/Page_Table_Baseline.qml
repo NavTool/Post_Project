@@ -240,6 +240,7 @@ Frame{
         onRowClicked:(model)=>{
                          console.debug(model.name)
                          Global.displayPropertyPage="/sidepage/property/baseline"
+                         Global.update_visable()
                      }
         onRowRightClicked:(model)=>{
                               console.debug(model.name)

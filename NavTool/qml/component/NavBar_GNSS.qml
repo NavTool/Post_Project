@@ -129,7 +129,6 @@ Item{
                     }
                 }
 
-
                 Frame{
                     width: implicitWidth
 

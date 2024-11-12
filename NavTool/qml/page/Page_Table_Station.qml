@@ -234,12 +234,12 @@ Frame{
             bottomMargin: 5
         }
 
-
-
         sourceModel: dataModel
         onRowClicked:(model)=>{
                          console.debug(model.name)
+                         Global.visable_right_top_side=true
                          Global.displayPropertyPage="/sidepage/property/station"
+                         Global.update_visable()
                      }
         onRowRightClicked:(model)=>{
                               console.debug(model.name)

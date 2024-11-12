@@ -196,6 +196,18 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
+
+                                        onClicked: {
+                                            if(Global.visable_left_bottom_side)
+                                            {
+                                                Global.visable_left_bottom_side=false
+                                            }
+                                            else
+                                            {
+                                                Global.visable_left_bottom_side=true
+                                            }
+                                            Global.update_visable()
+                                        }
                                     }
                                 }
                             }
@@ -343,6 +355,72 @@ Item{
                         Label{
                             height:groupname_height
                             text:qsTr("资源管理")
+                            font:Typography.bodyStrong
+                            // color:Theme.res.textFillColorPrimary
+                            anchors.horizontalCenter: parent.horizontalCenter
+                        }
+                    }
+                }
+
+                Frame{
+                    width: implicitWidth
+
+                    Column{
+                        Frame{
+                            width: implicitWidth
+                            Row {
+                                padding: group_padding
+
+                                IconButton {
+                                    text: qsTr("任务队列")
+                                    // width: iconbutton_width
+                                    height:function_height.height  // 设置按键的高度
+
+                                    icon.name: FluentIcons.graph_TaskView
+                                    icon.width: iconbutton_size
+                                    icon.height: iconbutton_size
+                                    spacing: iconbutton_spacing
+                                    display: IconButton.TextUnderIcon
+
+                                    onClicked: {
+                                        Global.displayMidTop="/page/task"
+                                    }
+                                }
+
+                                Column {
+                                    IconButton {
+                                        text: qsTr("处理选项")
+                                        // width: iconbutton_width
+                                        // height: function_height.height*0.4// 半高按钮的高度
+
+                                        icon.name: FluentIcons.graph_SpeedHigh
+                                        icon.width: iconbutton_size*0.8
+                                        icon.height: iconbutton_size*0.8
+                                        spacing: 5
+                                    }
+
+                                    IconButton {
+                                        text: qsTr("状态监控")
+                                        // width: iconbutton_width
+                                        // height: function_height.height*0.4// 半高按钮的高度
+
+                                        icon.name: FluentIcons.graph_Diagnostic
+                                        icon.width: iconbutton_size*0.8
+                                        icon.height: iconbutton_size*0.8
+                                        spacing: 5
+
+                                        onClicked: {
+                                            Global.visable_right_bottom_side=!Global.visable_right_bottom_side
+                                            Global.update_visable()
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                        Label{
+                            height:groupname_height
+                            text:qsTr("任务管理")
                             font:Typography.bodyStrong
                             // color:Theme.res.textFillColorPrimary
                             anchors.horizontalCenter: parent.horizontalCenter

@@ -89,15 +89,15 @@ QtObject {
     property bool visable_header_extra:true  //顶部菜单栏可视控制（顶部的具体功能页）
     property bool visable_footer:true  //底部状态栏可视控制（最底部那一排）
     //主要布局控制（左、中、右各两格）
-    property bool visable_left_side:true //左侧可视（左状态栏）
-    property bool visable_right_side:true //右侧可视（右状态栏）
+    property bool visable_left_side:false //左侧可视（左状态栏）
+    property bool visable_right_side:false //右侧可视（右状态栏）
     property bool visable_mid_side:true //中间可视（主页面+底部状态栏）
-    property bool visable_left_top_side:true //左侧上部可视
-    property bool visable_left_bottom_side:true //左侧下部可视
+    property bool visable_left_top_side:false //左侧上部可视
+    property bool visable_left_bottom_side:false //左侧下部可视
     property bool visable_mid_top_side:true //中间上部可视（主页面）
-    property bool visable_mid_bottom_side:true //中间下部可视（日志栏）
-    property bool visable_right_top_side:true //右侧上部可视
-    property bool visable_right_bottom_side:true //右侧下部可视
+    property bool visable_mid_bottom_side:false //中间下部可视（日志栏）
+    property bool visable_right_top_side:false //右侧上部可视
+    property bool visable_right_bottom_side:false //右侧下部可视
 
     //当主页面可视化更新的时候，根据更新的状态来配置联动可视化状态
     function update_visable()
@@ -130,15 +130,6 @@ QtObject {
             visable_mid_side=false
         }
     }
-
-
-
-
-
-
-
-
-
 
 
 }

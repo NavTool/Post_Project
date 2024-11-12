@@ -165,6 +165,7 @@ ScrollablePage{
                         anchors.fill: parent
                         hoverEnabled: true
                         onClicked: {
+                            //Theme.primaryColor = model.color()
                             Theme.accentColor = model.color()
                         }
                     }

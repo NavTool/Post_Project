@@ -3,70 +3,54 @@ import QtQuick.Layouts
 import QtQuick.Controls
 import FluentUI.Controls
 import FluentUI.impl
+import NavTool
 
-Frame {
-
-    anchors.fill: parent
+Item{
+    id:root
 
     property string title
     property PageContext context
 
-    Label{
-        text:qsTr("图层管理")
+    anchors.fill:parent
+    GroupBox{
+        id:function_box
+        anchors.fill: parent
+        padding: 5
+        Item{
+            width: parent.width
+            height: 30
+            Label{
+                anchors{
+                    left: parent.left
+                    leftMargin: 10
+                    verticalCenter: parent.verticalCenter
+                }
+                text:qsTr("图层管理栏")
+                font:Qt.font({pixelSize : 14, weight: Font.Bold})
+            }
+
+            IconButton{
+                anchors{
+                    right: parent.right
+                    rightMargin: 10
+                    verticalCenter: parent.verticalCenter
+                }
+                icon.source: FluentIcons.graph_Pin
+                icon.width: 15
+                icon.height: 15
+            }
+        }
+
+
+        Item{
+            anchors.fill: parent
+            anchors.topMargin: 30
+
+
+        }
     }
 
-    Column{
-
-        anchors.centerIn: parent
-
-        RowLayout{
-            Layout.topMargin: 24
-            Label{
-                text: qsTr("Screenshots")
-                Layout.preferredWidth: 90
-                Layout.alignment: Qt.AlignVCenter
-            }
-            ShortcutPicker{
-                implicitWidth: 90
-                Layout.alignment: Qt.AlignVCenter
-                current: ["Alt","A"]
-            }
-        }
-        RowLayout{
-            Label{
-                text: qsTr("Send Message")
-                Layout.preferredWidth: 90
-                Layout.alignment: Qt.AlignVCenter
-            }
-            ShortcutPicker{
-                implicitWidth: 90
-                Layout.alignment: Qt.AlignVCenter
-                current: ["Enter"]
-            }
-        }
-        RowLayout{
-            Label{
-                text: qsTr("Open Gallery")
-                Layout.preferredWidth: 90
-                Layout.alignment: Qt.AlignVCenter
-            }
-            ShortcutPicker{
-                implicitWidth: 90
-                Layout.alignment: Qt.AlignVCenter
-                current: ["Ctrl","Alt","W"]
-            }
-        }
-        RowLayout{
-            Label{
-                text: qsTr("Lock Gallery")
-                Layout.preferredWidth: 90
-                Layout.alignment: Qt.AlignVCenter
-            }
-            ShortcutPicker{
-                implicitWidth: 90
-                Layout.alignment: Qt.AlignVCenter
-                current: ["Ctrl","L"]
-            }
-        }
-    }
 }
+
+
+

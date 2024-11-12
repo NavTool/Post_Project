@@ -76,6 +76,7 @@ Item{
         ListElement{key:"/page/map";title:qsTr("平面视图");icon:""}
         ListElement{key:"/page/table";title:qsTr("资源视图");icon:""}
         ListElement{key:"/page/dataspan";title:qsTr("数据区间");icon:""}
+        ListElement{key:"/page/task";title:qsTr("任务队列");icon:""}
     }
     PageRouter{
         id: body_midtop_router
@@ -83,7 +84,8 @@ Item{
             "/page/blank": R.resolvedUrl("qml/page/Page_Blank.qml"),
             "/page/map": {url:R.resolvedUrl("qml/page/Page_Map.qml"),singleton:true},
             "/page/table": {url:R.resolvedUrl("qml/page/Page_Table.qml"),singleton:true},
-            "/page/dataspan": {url:R.resolvedUrl("qml/page/Page_DataSpan.qml"),singleton:true}
+            "/page/dataspan": {url:R.resolvedUrl("qml/page/Page_DataSpan.qml"),singleton:true},
+            "/page/task": {url:R.resolvedUrl("qml/page/Page_Task.qml"),singleton:true}
         }
     }
     //中下导航栏
@@ -399,7 +401,7 @@ Item{
                 }
 
                 onCurrentIndexChanged: {
-                    if(navbar_items[bar.currentIndex].key=="/")
+                    if(navbar_items[bar.currentIndex].key==="/")
                     {
                         Global.displayScreen="/screen/file";
                         bar.currentIndex=Global.navbarCurrentIndex
@@ -706,7 +708,7 @@ Item{
                 Item {
                     clip: true
                     visible:Global.visable_right_side
-                    implicitWidth: body.width*0.15
+                    implicitWidth: body.width*0.2
                     implicitHeight: body.height
                     SplitView {
                         id:split_layout3
@@ -808,9 +810,6 @@ Item{
             }
             width:parent.width
             height:25
-
-
-
 
             Menu {
                 id:footer_menu
@@ -931,15 +930,32 @@ Item{
                     display: IconButton.IconOnly
                     icon.color:"Grey"
 
+
+                    property bool pre_left_top_visible
+                    property bool pre_left_bottom_visible
+
+                    Component.onCompleted:
+                    {
+                        pre_left_top_visible=Global.visable_left_top_side
+                        pre_left_bottom_visible==Global.visable_left_bottom_side
+                    }
+
                     onClicked:{
                         Global.visable_left_side=!Global.visable_left_side
                         if(Global.visable_left_side)
                         {
                             if(!Global.visable_left_top_side && !Global.visable_left_bottom_side)
                             {
-                                Global.visable_left_top_side=true;
-                                Global.visable_left_bottom_side=true;
+                                Global.visable_left_top_side=pre_left_top_visible;
+                                Global.visable_left_bottom_side=pre_left_bottom_visible;
                             }
+                        }
+                        else
+                        {
+                            pre_left_top_visible=Global.visable_left_top_side
+                            pre_left_bottom_visible=Global.visable_left_bottom_side
+                            Global.visable_left_top_side=false
+                            Global.visable_left_bottom_side=false
                         }
                     }
 
@@ -1010,15 +1026,31 @@ Item{
                     rotation:180
                     icon.color:"Grey"
 
+                    property bool pre_right_top_visible
+                    property bool pre_right_bottom_visible
+
+                    Component.onCompleted:
+                    {
+                        pre_right_top_visible=Global.visable_right_top_side
+                        pre_right_bottom_visible==Global.visable_right_bottom_side
+                    }
+
                     onClicked:{
                         Global.visable_right_side=!Global.visable_right_side
                         if(Global.visable_right_side)
                         {
                             if(!Global.visable_right_top_side && !Global.visable_right_bottom_side)
                             {
-                                Global.visable_right_top_side=true;
-                                Global.visable_right_bottom_side=true;
+                                Global.visable_right_top_side=pre_right_top_visible;
+                                Global.visable_right_bottom_side=pre_right_bottom_visible;
                             }
+                        }
+                        else
+                        {
+                            pre_right_top_visible=Global.visable_right_top_side
+                            pre_right_bottom_visible=Global.visable_right_bottom_side
+                            Global.visable_right_top_side=false
+                            Global.visable_right_bottom_side=false
                         }
                     }
                     MouseArea {

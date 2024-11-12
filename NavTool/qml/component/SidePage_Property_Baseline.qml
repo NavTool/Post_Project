@@ -1,7 +1,11 @@
 import QtQuick
 import QtQuick.Controls
-import FluentUI.Controls
+import QtQuick.Layouts
+import QtQuick.Window
 import FluentUI.impl
+import FluentUI.Controls
+import NavTool
+import "../extra"
 
 Frame{
     id:root
@@ -11,49 +15,52 @@ Frame{
     property string title
     property PageContext context
 
-    property int item_name_width:width*0.4
-    property int item_value_width:width*0.6
-    property int item_height:40
+    property int item_name_width:width*0.35
+    property int item_value_width:width*0.65
+    property int item_height:27
 
-    Label{
-        text:qsTr("目标属性栏")
-    }
+    Flickable{
+        anchors.fill: parent
+        contentHeight: columnItem.height
+        // contentHeight: rowItem.height
+        interactive: contentHeight > height
 
-    component ComItem:Item{
-        property string item_name;
-        property Component delegate
+        Column{
+            id:columnItem
+            width: root.width
 
-        width: item_name_width
-        height:item_height
-        // anchors.verticalCenter: parent.verticalCenter
-        Row{
-            Item{
-                width: item_name_width
-                height:item_height
-                anchors.verticalCenter: parent.verticalCenter
-                IconButton{
-                    anchors.fill: parent
-                    text: item_name
+            ExpanderEX{
+                width: parent.width
+                expander_height:30
+
+                expanded:true
+                header: Label{
+                    text: "基线属性"
+                    verticalAlignment: Qt.AlignVCenter
                 }
+                content: com_baseline
             }
-            Item{
-                width: item_name_width
-                height:item_height
-                AutoLoader{
-                    anchors{
-                        verticalCenter: parent.verticalCenter
-                    }
-                    sourceComponent: delegate
+            ExpanderEX{
+                width: parent.width
+                expander_height:30
+
+                expanded:true
+                header: Label{
+                    text: "解"
+                    verticalAlignment: Qt.AlignVCenter
                 }
+                content: com_solution
             }
         }
     }
 
+
     Component{
         id:com_baseline
         Item{
-            height: 240
+            height: 180
             Column{
+                spacing: 3
                 anchors.fill: parent
                 ComItem{
                     item_name:qsTr("基线ID")
@@ -98,8 +105,9 @@ Frame{
     Component{
         id:com_solution
         Item{
-            height: 640
+            height: 480
             Column{
+                spacing: 3
                 anchors.fill: parent
                 ComItem{
                     item_name:qsTr("RMS")
@@ -202,42 +210,201 @@ Frame{
     }
 
 
+    component ComItem:Item{
+        property string item_name;
+        property Component delegate
 
-
-    Flickable{
-        anchors.fill: parent
-        contentHeight: columnItem.height
-        // contentHeight: rowItem.height
-        interactive: contentHeight > height
-
-        Column{
-            id:columnItem
-            width: root.width
-
-            Expander{
-                width: parent.width
-
-                expanded:true
-                header: Label{
-                    text: "基线属性"
-                    verticalAlignment: Qt.AlignVCenter
+        width: item_name_width
+        height:item_height
+        // anchors.verticalCenter: parent.verticalCenter
+        Row{
+            spacing: 0
+            Item{
+                width: item_name_width
+                height:item_height
+                IconButton{
+                    anchors.fill: parent
+                    text: item_name
                 }
-                content: com_baseline
             }
-            Expander{
-                width: parent.width
-
-                expanded:true
-                header: Label{
-                    text: "解"
-                    verticalAlignment: Qt.AlignVCenter
+            Frame{
+                width: item_value_width
+                height:item_height
+                AutoLoader{
+                    anchors{
+                        fill:parent
+                    }
+                    sourceComponent: delegate
                 }
-                content: com_solution
             }
         }
     }
 
-
+    // component ExpanderEX:Item {
+    //     FluentUI.theme: Theme.of(control)
+    //     property bool expanded: false
+    //     property Component content
+    //     property Component header: comp_header
+    //     property Component leading
+    //     property Component trailing
+    //     property string title
+    //     property int expander_height
+    //     id:control
+    //     implicitHeight: Math.max((layout_control.height + layout_container.height),layout_control.height)
+    //     implicitWidth: 400
+    //     QtObject{
+    //         id:d
+    //         property bool flag: false
+    //         property int contentHeight: Math.max(loader_content.height,30)
+    //         function toggle(){
+    //             d.flag = true
+    //             expanded = !expanded
+    //             d.flag = false
+    //         }
+    //     }
+    //     Component{
+    //         id: comp_header
+    //         Label{
+    //             text: control.title
+    //             horizontalAlignment: Qt.AlignHCenter
+    //             verticalAlignment: Qt.AlignVCenter
+    //         }
+    //     }
+    //     clip: true
+    //     Button{
+    //         id: layout_control
+    //         width: parent.width
+    //         height: expander_height
+    //         FluentUI.radius: 6
+    //         activeFocusOnTab: true
+    //         Keys.onSpacePressed: {
+    //             d.toggle()
+    //         }
+    //         onClicked: {
+    //             d.toggle()
+    //         }
+    //         RowLayout{
+    //             anchors.fill: parent
+    //             spacing: 0
+    //             Loader{
+    //                 Layout.fillHeight: true
+    //                 sourceComponent: control.header
+    //                 Layout.leftMargin: 20
+    //             }
+    //             Loader{
+    //                 Layout.fillHeight: true
+    //                 sourceComponent: control.leading
+    //                 Layout.leftMargin: 10
+    //                 visible: sourceComponent !== undefined
+    //             }
+    //             Item{
+    //                 Layout.fillHeight: true
+    //                 Layout.fillWidth: true
+    //             }
+    //             Loader{
+    //                 sourceComponent: control.trailing
+    //                 Layout.leftMargin: 8
+    //                 Layout.alignment: Qt.AlignVCenter
+    //                 visible: sourceComponent !== undefined
+    //             }
+    //             Item{
+    //                 implicitWidth: 50
+    //                 Layout.fillHeight: true
+    //                 IconButton{
+    //                     id: btn_icon
+    //                     anchors.centerIn: parent
+    //                     width: 30
+    //                     height: 30
+    //                     Icon{
+    //                         anchors.centerIn: parent
+    //                         rotation: expanded ? 0 : -180
+    //                         source: FluentIcons.graph_ChevronUp
+    //                         width: 15
+    //                         height: 15
+    //                         color: control.enabled ? control.FluentUI.theme.res.textFillColorPrimary : control.FluentUI.theme.res.textFillColorDisabled
+    //                         Behavior on rotation {
+    //                             NumberAnimation{
+    //                                 duration: Theme.fastAnimationDuration
+    //                                 easing.type: Theme.animationCurve
+    //                             }
+    //                         }
+    //                     }
+    //                     onClicked: {
+    //                         d.toggle()
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     Item{
+    //         id:layout_container
+    //         anchors{
+    //             top: layout_control.bottom
+    //             topMargin: -1
+    //             left: layout_control.left
+    //         }
+    //         visible: d.contentHeight+container.anchors.topMargin !== 0
+    //         height: d.contentHeight+container.anchors.topMargin
+    //         width: parent.width
+    //         z:-999
+    //         clip: true
+    //         Rectangle{
+    //             id:container
+    //             anchors.fill: parent
+    //             radius: 6
+    //             clip: true
+    //             border.color: control.FluentUI.theme.res.cardStrokeColorDefault
+    //             color: control.FluentUI.theme.res.cardBackgroundFillColorSecondary
+    //             anchors.topMargin: -d.contentHeight
+    //             Loader{
+    //                 id: loader_content
+    //                 width: parent.width
+    //                 sourceComponent: {
+    //                     if(control.expanded){
+    //                         return control.content
+    //                     }
+    //                     return undefined
+    //                 }
+    //             }
+    //             states: [
+    //                 State{
+    //                     name:"expand"
+    //                     when: control.expanded
+    //                     PropertyChanges {
+    //                         target: container
+    //                         anchors.topMargin:0
+    //                     }
+    //                 },
+    //                 State{
+    //                     name:"collapsed"
+    //                     when: !control.expanded
+    //                     PropertyChanges {
+    //                         target: container
+    //                         anchors.topMargin: -d.contentHeight
+    //                     }
+    //                 }
+    //             ]
+    //             transitions: [
+    //                 Transition {
+    //                     to:"expand"
+    //                     NumberAnimation {
+    //                         properties: "anchors.topMargin"
+    //                         duration: Theme.fastAnimationDuration
+    //                         easing.type: Theme.animationCurve
+    //                     }
+    //                 },
+    //                 Transition {
+    //                     to:"collapsed"
+    //                     NumberAnimation {
+    //                         properties: "anchors.topMargin"
+    //                         duration: Theme.fastAnimationDuration
+    //                         easing.type: Theme.animationCurve
+    //                     }
+    //                 }
+    //             ]
+    //         }
+    //     }
+    // }
 
 
 

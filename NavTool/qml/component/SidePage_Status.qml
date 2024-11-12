@@ -4,7 +4,7 @@ import QtQuick.Layouts
 import Qt.labs.qmlmodels
 import FluentUI.Controls
 import FluentUI.impl
-
+import NavTool
 /*
 //功能设计，这个主要就是根据当前选择的处理了任务，根据任务来获取状态信息，状态信息返回的是一个json字符串，通过解析json字符串，就能获取实时的信息了
 //这个实时字符串包含的内容有：
@@ -30,129 +30,70 @@ import FluentUI.impl
 
 */
 
-
-Frame{
+Item{
     id:root
-
-    anchors.fill: parent
 
     property string title
     property PageContext context
 
-    Label{
-        text:qsTr("任务状态栏")
-    }
+    anchors.fill:parent
+    GroupBox{
+        id:function_box
+        anchors.fill: parent
+        padding: 5
+        Item{
+            width: parent.width
+            height: 30
+            Label{
+                anchors{
+                    left: parent.left
+                    leftMargin: 10
+                    verticalCenter: parent.verticalCenter
+                }
+                text:qsTr("任务状态栏")
+                font:Qt.font({pixelSize : 14, weight: Font.Bold})
+            }
 
-
-   Column{
-    anchors.fill: parent
-
-
-    Item{
-        width: root.width
-        height: 60
-
-
-    Row{
-
-
-        Icon{
-            source: FluentIcons.graph_Dial
+            IconButton{
+                anchors{
+                    right: parent.right
+                    rightMargin: 10
+                    verticalCenter: parent.verticalCenter
+                }
+                icon.source: FluentIcons.graph_Pin
+                icon.width: 15
+                icon.height: 15
+            }
         }
 
 
-        ProgressBar{
-            from: 0
-            to: 1
-            value: 1
-            anchors.verticalCenter: parent.verticalCenter
+        Item{
+            anchors.fill: parent
+            anchors.topMargin: 30
+
+            Column{
+                anchors.fill: parent
+
+                Row{
+                    Icon{
+                        source: FluentIcons.graph_Dial
+                    }
+                    ProgressBar{
+                        from: 0
+                        to: 1
+                        value: 1
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+                }
+            }
         }
     }
-
-
-    }
-
-
-
-       Item{
-
-           width: root.width
-           height: 120
-
-
-           ScrollView {
-               id:scrollview
-
-               // visible: false
-
-
-
-               TableView {
-                   id: tableView
-                   clip: true
-                   interactive: true
-                   rowSpacing: 2
-                   columnSpacing: 10
-
-
-                   model:option_model
-
-                   selectionModel: ItemSelectionModel {}
-                   delegate:DelegateChooser {
-                       DelegateChoice {
-                           column: 0
-                           delegate: Label {
-                               text: model.display
-                           }
-                       }
-                       DelegateChoice {
-                           column: 1
-                           delegate: Label {
-                               text: model.display
-                           }
-                       }
-                       DelegateChoice {
-                           column: 2
-                           delegate: Switch {
-                               checked: model.display
-                               onToggled: model.display = checked
-                           }
-                       }
-                       DelegateChoice {
-                           column: 3
-                           delegate:Button {
-                               text: qsTr("删除")
-                           }
-                       }
-                   }
-               }
-           }
-
-           TableModel {
-               id:option_model
-
-               TableModelColumn { display: "option_name" }
-               TableModelColumn { display: "option_value" }
-               TableModelColumn { display: "option_enable" }
-               TableModelColumn { display: "delete_option" }
-               rows: [
-                   {
-                       option_name: 0,
-                       option_value: 0,
-                       option_enable: false,
-                       delete_option: false
-                   }
-               ]
-
-           }
-       }
-
-   }
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+

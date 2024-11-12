@@ -2,8 +2,9 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 import FluentUI.Controls
-import NavTool
 import FluentUI.impl
+import NavTool
+
 
 Frame{
     id:root
@@ -239,7 +240,9 @@ Frame{
         sourceModel: dataModel
         onRowClicked:(model)=>{
                          console.debug(model.name)
+                         Global.visable_right_top_side=true
                          Global.displayPropertyPage="/sidepage/property/obsfile"
+                         Global.update_visable()
                      }
         onRowRightClicked:(model)=>{
                               console.debug(model.name)

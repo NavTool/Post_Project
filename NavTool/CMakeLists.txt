@@ -72,9 +72,11 @@ set(QML_FILES
     qml/page/Page_Table_ObsFile.qml
     qml/page/Page_Table_Option.qml
     qml/page/Page_Table_Station.qml
+    qml/page/Page_Task.qml
 
     module/plot/Eharts_Plot.qml
     qml/extra/TabViewEx.qml
+    qml/extra/ExpanderEx.qml
 
 )
 
