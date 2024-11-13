@@ -2,8 +2,9 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 import FluentUI.Controls
-import NavTool
 import FluentUI.impl
+import NavTool
+import "../extra"
 
 
 Frame{
@@ -222,7 +223,7 @@ Frame{
         //     }
         // }
     }
-    DataGrid{
+    DataGridEx{
         id: dataGrid
         anchors{
             top: layout_actions.bottom
@@ -235,6 +236,10 @@ Frame{
             bottomMargin: 5
         }
 
+        defaultHeight: 25
+        defaultminimumHeight:25
+        defaultmaximumHeight:240
+        horizonalHeaderHeight:30
 
 
         sourceModel: dataModel

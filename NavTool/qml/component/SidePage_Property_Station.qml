@@ -30,7 +30,7 @@ Frame{
             id:columnItem
             width: root.width
 
-            ExpanderEX{
+            ExpanderEx{
                 width: parent.width
                 expander_height:30
 
@@ -41,7 +41,7 @@ Frame{
                 }
                 content: com_common
             }
-            ExpanderEX{
+            ExpanderEx{
                 width: parent.width
                 expander_height:30
 
@@ -52,7 +52,7 @@ Frame{
                 }
                 content: com_coord
             }
-            ExpanderEX{
+            ExpanderEx{
                 width: parent.width
                 expander_height:30
 
@@ -63,7 +63,7 @@ Frame{
                 }
                 content: com_llh
             }
-            ExpanderEX{
+            ExpanderEx{
                 width: parent.width
                 expander_height:30
 
@@ -87,19 +87,19 @@ Frame{
                 ComItem{
                     item_name:qsTr("点名")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusStation.station_name
                     }
                 }
                 ComItem{
                     item_name:qsTr("编码")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusStation.station_name
                     }
                 }
                 ComItem{
                     item_name:qsTr("站点备注")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: ""
                     }
                 }
             }
@@ -116,13 +116,13 @@ Frame{
                 ComItem{
                     item_name:qsTr("坐标来源")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: "WGS84坐标系统"
                     }
                 }
                 ComItem{
                     item_name:qsTr("坐标类型")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: "WGS-84"
                     }
                 }
             }
@@ -139,19 +139,19 @@ Frame{
                 ComItem{
                     item_name:qsTr("纬度")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusStation.llh_lat
                     }
                 }
                 ComItem{
                     item_name:qsTr("经度")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusStation.llh_lon
                     }
                 }
                 ComItem{
                     item_name:qsTr("大地高")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusStation.llh_height
                     }
                 }
             }
@@ -168,19 +168,19 @@ Frame{
                 ComItem{
                     item_name:qsTr("X")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusStation.ecef_x
                     }
                 }
                 ComItem{
                     item_name:qsTr("Y")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusStation.ecef_y
                     }
                 }
                 ComItem{
                     item_name:qsTr("Z")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusStation.ecef_z
                     }
                 }
             }
@@ -221,7 +221,7 @@ Frame{
         }
     }
 
-    // component ExpanderEX:Item {
+    // component ExpanderEx:Item {
     //     FluentUI.theme: Theme.of(control)
     //     property bool expanded: false
     //     property Component content

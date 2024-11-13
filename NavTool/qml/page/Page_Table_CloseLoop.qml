@@ -2,8 +2,9 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 import FluentUI.Controls
-import NavTool
 import FluentUI.impl
+import NavTool
+import "../extra"
 
 Frame{
     id:root
@@ -181,47 +182,8 @@ Frame{
             top: parent.top
             left: parent.left
         }
-        // Button{
-        //     text: qsTr("Clear")
-        //     onClicked: {
-        //         dataModel.clear()
-        //     }
-        // }
-        // Button{
-        //     text: qsTr("Add a row of Data")
-        //     onClicked: {
-        //         dataModel.append(controller.generateRowData())
-        //     }
-        // }
-        // Button{
-        //     text: qsTr("Insert a Row")
-        //     onClicked: {
-        //         if(dataGrid.view.currentIndex < 0){
-        //             infoBarManager.showWarning(qsTr("Focus not acquired: Please click any item in the form as the target for insertion!"))
-        //             return
-        //         }
-        //         dataModel.insert(dataGrid.view.currentIndex+1,controller.generateRowData())
-        //     }
-        // }
-        // Button{
-        //     text: qsTr("Deletes the selected row of data")
-        //     onClicked: {
-        //         var checkedItems = dataGrid.selectionModel.selectedIndexes
-        //         if(checkedItems.length === 0){
-        //             infoBarManager.showWarning(qsTr("Please select a row of data first!"))
-        //             return
-        //         }
-        //         dataModel.removeItems(checkedItems)
-        //     }
-        // }
-        // Button{
-        //     text: qsTr("Modify the first row of data")
-        //     onClicked: {
-        //         dataModel.set(0,controller.generateRowData())
-        //     }
-        // }
     }
-    DataGrid{
+    DataGridEx{
         id: dataGrid
         anchors{
             top: layout_actions.bottom
@@ -234,6 +196,10 @@ Frame{
             bottomMargin: 5
         }
 
+        defaultHeight: 25
+        defaultminimumHeight:25
+        defaultmaximumHeight:240
+        horizonalHeaderHeight:30
 
 
         sourceModel: dataModel

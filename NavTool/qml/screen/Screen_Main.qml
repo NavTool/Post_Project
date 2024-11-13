@@ -342,7 +342,7 @@ Item{
 
         TextBox{
 
-            placeholderText: "TextBox"
+            placeholderText: "搜索"
             trailing: IconButton{
                 implicitWidth: 30
                 implicitHeight: 20
@@ -1173,7 +1173,7 @@ Item{
             verticalAlignment: Qt.AlignVCenter
         }
         header: Label{
-            text: "xxxxxxx测试工程xxxx.cps"
+            text: "测试工程0101.cps"
             verticalAlignment: Qt.AlignVCenter
         }
         content: Frame{

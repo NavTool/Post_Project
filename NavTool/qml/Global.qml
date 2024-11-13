@@ -46,12 +46,6 @@ import NavTool
 */
 
 
-
-
-
-
-
-
 QtObject {
     id: control
     property var starter
@@ -78,8 +72,11 @@ QtObject {
 
     //子页面显示内容
     property string displayTablePage:"/page/table/station"  //资源视图显示内容
-    //测页面显示内容
+    //侧边页面显示内容
     property string displayPropertyPage:"/sidepage/property/balnk"  //属性侧边栏显示内容
+    property var focusStation
+    property var focusObsFile
+    property var focusBaseline
 
     //顶部菜单栏
     property int navbarCurrentIndex:1   //主页面当前停留的菜单编号（从0开始），这边变量主要是为了保证当点击到文件页面后又返回的时候，能够切换回上一次选中的页面

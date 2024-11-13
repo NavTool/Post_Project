@@ -75,9 +75,9 @@ set(QML_FILES
     qml/page/Page_Task.qml
 
     module/plot/Eharts_Plot.qml
-    qml/extra/TabViewEx.qml
+    qml/extra/DataGridEx.qml
     qml/extra/ExpanderEx.qml
-
+    qml/extra/TabViewEx.qml
 )
 
 # qml单例对象
@@ -128,6 +128,7 @@ set(SOURCE_FILES
     src/TreeDataGridController.h src/TreeDataGridController.cpp
     src/FileTreeDataController.h src/FileTreeDataController.cpp
     src/DataGridController.h src/DataGridController.cpp
+    src/ResourceDataController.h src/ResourceDataController.cpp
     module/module.hpp
 )
 

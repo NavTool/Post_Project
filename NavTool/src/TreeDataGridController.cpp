@@ -36,9 +36,9 @@ QVariantMap TreeDataGridController::generateRowData() {
         {"avatar", m_avatars.at(QRandomGenerator::global()->bounded(m_avatars.size()))},
         {"description",
          m_descriptions.at(QRandomGenerator::global()->bounded(m_descriptions.size()))},
-        {"height", 48},
-        {"minimumHeight", 40},
-        {"maximumHeight", 240},
+        // {"height", 48},
+        // {"minimumHeight", 40},
+        // {"maximumHeight", 240},
         {"expanded", false},
     };
 }

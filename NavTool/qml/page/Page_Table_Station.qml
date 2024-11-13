@@ -2,8 +2,9 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 import FluentUI.Controls
-import NavTool
 import FluentUI.impl
+import NavTool
+import "../extra"
 
 Frame{
     id:root
@@ -13,16 +14,176 @@ Frame{
     property string title
     property PageContext context
 
-    DataGridController{
-        id: controller
-        onLoadDataStart: {
+    Connections{
+        target: ResourceDataController
+        function onLoadDataStart(){
             panel_loading.visible = true
         }
-        onLoadDataSuccess: {
-            dataModel.sourceData  = controller.data
+        function onLoadDataSuccess(){
+            dataModel.sourceData  = ResourceDataController.station_data
             panel_loading.visible = false
         }
     }
+
+    Component.onCompleted: {
+        ResourceDataController.loadData()
+    }
+    Component{
+        id:comp_common
+        Item{
+            Label{
+                text: String(display)
+                elide: Label.ElideRight
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                anchors{
+                    verticalCenter: parent.verticalCenter
+                    left: parent.left
+                    leftMargin: 10
+                    right: parent.right
+                    rightMargin: 10
+                }
+            }
+        }
+    }
+
+    Component{
+        id:comp_lat2dms
+        Item{
+            Label{
+                text: toDMS(display)
+                elide: Label.ElideRight
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                anchors{
+                    verticalCenter: parent.verticalCenter
+                    left: parent.left
+                    leftMargin: 10
+                    right: parent.right
+                    rightMargin: 10
+                }
+
+                function toDMS(degrees) {
+                    // 判断正负，决定南北纬
+                    let isPositive = degrees >= 0;
+                    let direction = isPositive ? "N" : "S"; // 正数是北纬，负数是南纬
+
+                    // 获取度数的绝对值（度数部分始终为正数）
+                    let d = Math.abs(Math.floor(degrees));  // 取绝对值，避免负号影响后续显示
+
+                    // 获取分数部分
+                    let remainder = (Math.abs(degrees) - d) * 60;
+                    let m = Math.floor(remainder);
+
+                    // 获取秒数部分的小数部分
+                    let sTotal = (remainder - m) * 60;
+                    let sInteger = Math.floor(sTotal);  // 秒数的整数部分
+                    let sDecimal = (sTotal - sInteger).toFixed(5).slice(1); // 秒数的小数部分，保留 5 位小数
+
+                    // 确保秒数的整数部分总是两位，且小数部分保留五位
+                    let sIntegerStr = sInteger.toString().padStart(2, '0');
+
+                    // 补充空格：确保度数部分为三位数
+                    let degreeStr = d.toString().padStart(3, ' ');
+
+                    // 返回度分秒格式，加入南北纬信息
+                    return `${degreeStr}° ${m.toString().padStart(2, '0')}' ${sIntegerStr}${sDecimal}" ${direction}`;
+                }
+            }
+        }
+    }
+
+    Component{
+        id:comp_lon2dms
+        Item{
+            Label{
+                text: toDMS(display)
+                elide: Label.ElideRight
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                anchors{
+                    verticalCenter: parent.verticalCenter
+                    left: parent.left
+                    leftMargin: 10
+                    right: parent.right
+                    rightMargin: 10
+                }
+
+                function toDMS(degrees) {
+                    // 判断正负，决定东西经
+                    let isPositive = degrees >= 0;
+                    let direction = isPositive ? "E" : "W"; // 正数是东经，负数是西经
+
+                    // 获取度数的绝对值（度数部分始终为正数）
+                    let d = Math.abs(Math.floor(degrees));  // 取绝对值，避免负号影响后续显示
+
+                    // 获取分数部分
+                    let remainder = (Math.abs(degrees) - d) * 60;
+                    let m = Math.floor(remainder);
+
+                    // 获取秒数部分的小数部分
+                    let sTotal = (remainder - m) * 60;
+                    let sInteger = Math.floor(sTotal);  // 秒数的整数部分
+                    let sDecimal = (sTotal - sInteger).toFixed(5).slice(1); // 秒数的小数部分，保留 5 位小数
+
+                    // 确保秒数的整数部分总是两位，且小数部分保留五位
+                    let sIntegerStr = sInteger.toString().padStart(2, '0');
+
+                    // 补充空格：确保度数部分为三位数
+                    let degreeStr = d.toString().padStart(3, ' ');
+
+                    // 返回度分秒格式，加入南北纬信息
+                    return `${degreeStr}° ${m.toString().padStart(2, '0')}' ${sIntegerStr}${sDecimal}" ${direction}`;
+                }
+            }
+        }
+    }
+
+
+    Component{
+        id:comp_degree2dms
+        Item{
+            Label{
+                text: toDMS(display)
+                elide: Label.ElideRight
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                anchors{
+                    verticalCenter: parent.verticalCenter
+                    left: parent.left
+                    leftMargin: 10
+                    right: parent.right
+                    rightMargin: 10
+                }
+
+                function toDMS(degrees) {
+                    // 获取度数的整数部分
+                    let d = Math.floor(degrees);
+
+                    // 获取分数部分
+                    let remainder = (degrees - d) * 60;
+                    let m = Math.floor(remainder);
+
+                    // 获取秒数部分的小数部分
+                    let sTotal = (remainder - m) * 60;
+                    let sInteger = Math.floor(sTotal);  // 秒数的整数部分
+                    let sDecimal = (sTotal - sInteger).toFixed(5).slice(1); // 秒数的小数部分，保留 5 位小数
+
+                    // 确保秒数的整数部分总是两位，且小数部分保留五位
+                    let sIntegerStr = sInteger.toString().padStart(2, '0');
+
+                    // 补充空格：确保度数部分为三位数
+                    let degreeStr = d.toString().padStart(3, ' ');
+
+                    // 返回度分秒格式
+                    return `${degreeStr}° ${m.toString().padStart(2, '0')}' ${sIntegerStr}${sDecimal}"`;
+                }
+
+            }
+        }
+    }
+
+
     Component{
         id: comp_row_avatar
         Item{
@@ -181,47 +342,8 @@ Frame{
             top: parent.top
             left: parent.left
         }
-        // Button{
-        //     text: qsTr("Clear")
-        //     onClicked: {
-        //         dataModel.clear()
-        //     }
-        // }
-        // Button{
-        //     text: qsTr("Add a row of Data")
-        //     onClicked: {
-        //         dataModel.append(controller.generateRowData())
-        //     }
-        // }
-        // Button{
-        //     text: qsTr("Insert a Row")
-        //     onClicked: {
-        //         if(dataGrid.view.currentIndex < 0){
-        //             infoBarManager.showWarning(qsTr("Focus not acquired: Please click any item in the form as the target for insertion!"))
-        //             return
-        //         }
-        //         dataModel.insert(dataGrid.view.currentIndex+1,controller.generateRowData())
-        //     }
-        // }
-        // Button{
-        //     text: qsTr("Deletes the selected row of data")
-        //     onClicked: {
-        //         var checkedItems = dataGrid.selectionModel.selectedIndexes
-        //         if(checkedItems.length === 0){
-        //             infoBarManager.showWarning(qsTr("Please select a row of data first!"))
-        //             return
-        //         }
-        //         dataModel.removeItems(checkedItems)
-        //     }
-        // }
-        // Button{
-        //     text: qsTr("Modify the first row of data")
-        //     onClicked: {
-        //         dataModel.set(0,controller.generateRowData())
-        //     }
-        // }
     }
-    DataGrid{
+    DataGridEx{
         id: dataGrid
         anchors{
             top: layout_actions.bottom
@@ -234,110 +356,129 @@ Frame{
             bottomMargin: 5
         }
 
+        defaultHeight: 30
+        defaultminimumHeight:25
+        defaultmaximumHeight:240
+        horizonalHeaderHeight:30
+
+
         sourceModel: dataModel
         onRowClicked:(model)=>{
-                         console.debug(model.name)
-                         Global.visable_right_top_side=true
-                         Global.displayPropertyPage="/sidepage/property/station"
-                         Global.update_visable()
+                        console.debug(model.station_name)
+                        Global.focusStation=model
+                        Global.visable_right_top_side=true
+                        Global.displayPropertyPage="/sidepage/property/station"
+                        Global.update_visable()
                      }
         onRowRightClicked:(model)=>{
-                              console.debug(model.name)
+                              console.debug(model.station_name)
                               Global.displayPropertyPage="/sidepage/property/blank"
                           }
         columnSourceModel: ListModel{
             ListElement{
                 title: qsTr("站点名")
-                dataIndex: "name"
+                dataIndex: "station_name"
                 width: 100
                 frozen: true
                 delegate: function(){return comp_column_frozen}
+                rowDelegate: function(){return comp_common}
             }
             ListElement{
-                title: qsTr("北坐标")
-                dataIndex: "age"
-                editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                title: qsTr("北坐标(m)")
+                dataIndex: "utm_n"
+                width: 120
+                delegate: function(){return comp_column_frozen}
+                rowDelegate: function(){return comp_common}
+
             }
             ListElement{
-                title: qsTr("东坐标")
-                dataIndex: "age"
-                editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                title: qsTr("东坐标(m)")
+                dataIndex: "utm_e"
+                delegate: function(){return comp_column_frozen}
+                rowDelegate: function(){return comp_common}
+                width: 120
             }
             ListElement{
-                title: qsTr("高程")
-                dataIndex: "age"
-                editDelegate: function(){return comp_edit_combobox}
+                title: qsTr("高程(m)")
+                dataIndex: "utm_u"
+                delegate: function(){return comp_column_frozen}
+                rowDelegate: function(){return comp_common}
                 width: 100
             }
             ListElement{
                 title: qsTr("当地经度")
-                dataIndex: "age"
-                editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                dataIndex: "llh_lon"
+                delegate: function(){return comp_column_frozen}
+                rowDelegate: function(){return comp_lon2dms}
+                width: 150
             }
             ListElement{
                 title: qsTr("当地纬度")
-                dataIndex: "age"
-                editDelegate: function(){return comp_edit_combobox}
+                dataIndex: "llh_lat"
+                delegate: function(){return comp_column_frozen}
+                rowDelegate: function(){return comp_lat2dms}
+                width: 150
+            }
+            ListElement{
+                title: qsTr("大地高(m)")
+                dataIndex: "llh_height"
+                delegate: function(){return comp_column_frozen}
+                rowDelegate: function(){return comp_common}
                 width: 100
             }
             ListElement{
-                title: qsTr("大地高")
-                dataIndex: "age"
-                editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                title: qsTr("X(m)")
+                dataIndex: "ecef_x"
+                delegate: function(){return comp_column_frozen}
+                rowDelegate: function(){return comp_common}
+                width: 120
             }
             ListElement{
-                title: qsTr("X")
-                dataIndex: "age"
-                editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                title: qsTr("Y(m)")
+                dataIndex: "ecef_y"
+                delegate: function(){return comp_column_frozen}
+                rowDelegate: function(){return comp_common}
+                width: 120
             }
             ListElement{
-                title: qsTr("Y")
-                dataIndex: "age"
-                editDelegate: function(){return comp_edit_combobox}
-                width: 100
-            }
-            ListElement{
-                title: qsTr("Z")
-                dataIndex: "age"
-                editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                title: qsTr("Z(m)")
+                dataIndex: "ecef_z"
+                delegate: function(){return comp_column_frozen}
+                rowDelegate: function(){return comp_common}
+                width: 120
             }
             ListElement{
                 title: qsTr("经度")
-                dataIndex: "age"
-                editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                dataIndex: "llh_lon"
+                delegate: function(){return comp_column_frozen}
+                rowDelegate: function(){return comp_lon2dms}
+                width: 150
             }
             ListElement{
                 title: qsTr("纬度")
-                dataIndex: "age"
-                editDelegate: function(){return comp_edit_combobox}
-                width: 100
-            }
-            ListElement{
-                title: qsTr("高程")
-                dataIndex: "age"
-                editDelegate: function(){return comp_edit_combobox}
-                width: 100
-            }
-            ListElement{
-                title: qsTr("Action")
-                dataIndex: "action"
-                width: 100
-                frozen: true
-                rowDelegate: function(){return comp_row_action}
+                dataIndex: "llh_lat"
                 delegate: function(){return comp_column_frozen}
+                rowDelegate: function(){return comp_lat2dms}
+                width: 150
             }
+            ListElement{
+                title: qsTr("高程(m)")
+                dataIndex: "llh_height"
+                delegate: function(){return comp_column_frozen}
+                rowDelegate: function(){return comp_common}
+                width: 100
+            }
+            // ListElement{
+            //     title: qsTr("Action")
+            //     dataIndex: "action"
+            //     width: 100
+            //     frozen: true
+            //     rowDelegate: function(){return comp_row_action}
+            //     delegate: function(){return comp_column_frozen}
+            // }
         }
     }
-    Component.onCompleted: {
-        controller.loadData(5)
-    }
+
     Pane{
         id: panel_loading
         anchors.fill: dataGrid

@@ -29,7 +29,7 @@ Frame{
             id:columnItem
             width: root.width
 
-            ExpanderEX{
+            ExpanderEx{
                 width: parent.width
                 expander_height:30
 
@@ -40,7 +40,7 @@ Frame{
                 }
                 content: com_baseline
             }
-            ExpanderEX{
+            ExpanderEx{
                 width: parent.width
                 expander_height:30
 
@@ -65,37 +65,37 @@ Frame{
                 ComItem{
                     item_name:qsTr("基线ID")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.baseline_id
                     }
                 }
                 ComItem{
                     item_name:qsTr("起点文件")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.start_file
                     }
                 }
                 ComItem{
                     item_name:qsTr("终点文件")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.end_file
                     }
                 }
                 ComItem{
                     item_name:qsTr("起点名")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.start_station
                     }
                 }
                 ComItem{
                     item_name:qsTr("终点名")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.end_station
                     }
                 }
                 ComItem{
                     item_name:qsTr("同步时段")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.sync_seconds
                     }
                 }
             }
@@ -112,97 +112,91 @@ Frame{
                 ComItem{
                     item_name:qsTr("RMS")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_rms
                     }
                 }
                 ComItem{
                     item_name:qsTr("Ratio")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_ratio
                     }
                 }
                 ComItem{
                     item_name:qsTr("Dx")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_dx
                     }
                 }
                 ComItem{
                     item_name:qsTr("Dy")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_dy
                     }
                 }
                 ComItem{
                     item_name:qsTr("Dz")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_dz
                     }
                 }
                 ComItem{
                     item_name:qsTr("平距")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_horizontal_distance
                     }
                 }
                 ComItem{
                     item_name:qsTr("斜距")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_slope_distance
                     }
                 }
                 ComItem{
                     item_name:qsTr("高差")
                     delegate:TextField{
-                        placeholderText: "TextField"
-                    }
-                }
-                ComItem{
-                    item_name:qsTr("站点名称")
-                    delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_elevation_difference
                     }
                 }
                 ComItem{
                     item_name:qsTr("NS前进方位角")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_forward_angle
                     }
                 }
                 ComItem{
                     item_name:qsTr("椭球距离")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_ellipsoidal_distance
                     }
                 }
                 ComItem{
                     item_name:qsTr("大地高")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_geodetic_height
                     }
                 }
                 ComItem{
                     item_name:qsTr("RDOP")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                       placeholderText: Global.focusBaseline.solution_RDOP
                     }
                 }
                 ComItem{
                     item_name:qsTr("PDOP")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_PDOP
                     }
                 }
                 ComItem{
                     item_name:qsTr("HDOP")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_HDOP
                     }
                 }
                 ComItem{
                     item_name:qsTr("VDOP")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusBaseline.solution_VDOP
                     }
                 }
             }
@@ -240,7 +234,7 @@ Frame{
         }
     }
 
-    // component ExpanderEX:Item {
+    // component ExpanderEx:Item {
     //     FluentUI.theme: Theme.of(control)
     //     property bool expanded: false
     //     property Component content

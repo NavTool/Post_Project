@@ -2,8 +2,9 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 import FluentUI.Controls
-import NavTool
 import FluentUI.impl
+import NavTool
+import "../extra"
 
 Frame{
     id:root
@@ -13,16 +14,21 @@ Frame{
     property string title
     property PageContext context
 
-    DataGridController{
-        id: controller
-        onLoadDataStart: {
+    Component.onCompleted: {
+        ResourceDataController.loadData()
+    }
+
+    Connections{
+        target: ResourceDataController
+        function onLoadDataStart(){
             panel_loading.visible = true
         }
-        onLoadDataSuccess: {
-            dataModel.sourceData  = controller.data
+        function onLoadDataSuccess(){
+            dataModel.sourceData  = ResourceDataController.baseline_data
             panel_loading.visible = false
         }
     }
+
     Component{
         id: comp_row_avatar
         Item{
@@ -181,47 +187,9 @@ Frame{
             top: parent.top
             left: parent.left
         }
-        // Button{
-        //     text: qsTr("Clear")
-        //     onClicked: {
-        //         dataModel.clear()
-        //     }
-        // }
-        // Button{
-        //     text: qsTr("Add a row of Data")
-        //     onClicked: {
-        //         dataModel.append(controller.generateRowData())
-        //     }
-        // }
-        // Button{
-        //     text: qsTr("Insert a Row")
-        //     onClicked: {
-        //         if(dataGrid.view.currentIndex < 0){
-        //             infoBarManager.showWarning(qsTr("Focus not acquired: Please click any item in the form as the target for insertion!"))
-        //             return
-        //         }
-        //         dataModel.insert(dataGrid.view.currentIndex+1,controller.generateRowData())
-        //     }
-        // }
-        // Button{
-        //     text: qsTr("Deletes the selected row of data")
-        //     onClicked: {
-        //         var checkedItems = dataGrid.selectionModel.selectedIndexes
-        //         if(checkedItems.length === 0){
-        //             infoBarManager.showWarning(qsTr("Please select a row of data first!"))
-        //             return
-        //         }
-        //         dataModel.removeItems(checkedItems)
-        //     }
-        // }
-        // Button{
-        //     text: qsTr("Modify the first row of data")
-        //     onClicked: {
-        //         dataModel.set(0,controller.generateRowData())
-        //     }
-        // }
+
     }
-    DataGrid{
+    DataGridEx{
         id: dataGrid
         anchors{
             top: layout_actions.bottom
@@ -234,141 +202,137 @@ Frame{
             bottomMargin: 5
         }
 
+        defaultHeight: 25
+        defaultminimumHeight:25
+        defaultmaximumHeight:240
+        horizonalHeaderHeight:30
 
 
         sourceModel: dataModel
         onRowClicked:(model)=>{
-                         console.debug(model.name)
+                         console.debug(model.baseline_id)
+                         Global.focusBaseline=model
+                         Global.visable_right_top_side=true
                          Global.displayPropertyPage="/sidepage/property/baseline"
                          Global.update_visable()
                      }
         onRowRightClicked:(model)=>{
-                              console.debug(model.name)
+                              console.debug(model.baseline_id)
                               Global.displayPropertyPage="/sidepage/property/blank"
                           }
         columnSourceModel: ListModel{
             ListElement{
                 title: qsTr("基线ID")
-                dataIndex: "name"
-                width: 100
+                dataIndex: "baseline_id"
+                width: 200
                 frozen: true
                 delegate: function(){return comp_column_frozen}
             }
             ListElement{
                 title: qsTr("基线类型")
-                dataIndex: "age"
+                dataIndex: "baseline_type"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                width: 60
             }
             ListElement{
                 title: qsTr("起点")
-                dataIndex: "age"
+                dataIndex: "start_file"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                width: 200
             }
             ListElement{
                 title: qsTr("终点")
-                dataIndex: "age"
+                dataIndex: "end_file"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                width: 200
             }
             ListElement{
                 title: qsTr("解算类型")
-                dataIndex: "age"
+                dataIndex: "solution_type"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                width: 80
             }
             ListElement{
                 title: qsTr("利用率")
-                dataIndex: "age"
+                dataIndex: "utilization_percentage"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                width: 60
             }
             ListElement{
                 title: qsTr("同步时间")
-                dataIndex: "age"
+                dataIndex: "sync_seconds"
                 editDelegate: function(){return comp_edit_combobox}
                 width: 100
             }
             ListElement{
                 title: qsTr("Ratio")
-                dataIndex: "age"
+                dataIndex: "solution_ratio"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                width: 80
             }
             ListElement{
                 title: qsTr("RMS")
-                dataIndex: "age"
+                dataIndex: "solution_rms"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                width: 80
             }
             ListElement{
                 title: qsTr("合格")
-                dataIndex: "age"
+                dataIndex: "solution_check"
                 editDelegate: function(){return comp_edit_combobox}
                 width: 100
             }
             ListElement{
                 title: qsTr("Dx")
-                dataIndex: "age"
+                dataIndex: "solution_dx"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                width: 110
             }
             ListElement{
                 title: qsTr("StdDx")
-                dataIndex: "age"
+                dataIndex: "solution_stdx"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                width: 70
             }
             ListElement{
                 title: qsTr("Dy")
-                dataIndex: "age"
+                dataIndex: "solution_dy"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                width: 110
             }
             ListElement{
                 title: qsTr("StdDy")
-                dataIndex: "age"
+                dataIndex: "solution_stdy"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                width: 70
             }
             ListElement{
                 title: qsTr("Dz")
-                dataIndex: "age"
+                dataIndex: "solution_dz"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                width: 110
             }
             ListElement{
                 title: qsTr("StdDz")
-                dataIndex: "age"
+                dataIndex: "solution_stdz"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
+                width: 70
             }
             ListElement{
                 title: qsTr("距离")
-                dataIndex: "age"
+                dataIndex: "solution_horizontal_distance"
                 editDelegate: function(){return comp_edit_combobox}
                 width: 100
             }
             ListElement{
                 title: qsTr("使用")
-                dataIndex: "age"
+                dataIndex: "baseline_enuse"
                 editDelegate: function(){return comp_edit_combobox}
-                width: 100
-            }
-            ListElement{
-                title: qsTr("Action")
-                dataIndex: "action"
-                width: 100
-                frozen: true
-                rowDelegate: function(){return comp_row_action}
-                delegate: function(){return comp_column_frozen}
+                width: 80
             }
         }
     }
-    Component.onCompleted: {
-        controller.loadData(5)
-    }
+
     Pane{
         id: panel_loading
         anchors.fill: dataGrid

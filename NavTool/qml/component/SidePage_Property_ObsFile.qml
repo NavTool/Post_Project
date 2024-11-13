@@ -30,7 +30,7 @@ Frame{
             id:columnItem
             width: root.width
 
-            ExpanderEX{
+            ExpanderEx{
                 width: parent.width
                 expander_height:30
 
@@ -41,7 +41,7 @@ Frame{
                 }
                 content: com_station
             }
-            ExpanderEX{
+            ExpanderEx{
                 width: parent.width
                 expander_height:30
 
@@ -52,7 +52,7 @@ Frame{
                 }
                 content: com_ant
             }
-            ExpanderEX{
+            ExpanderEx{
                 width: parent.width
                 expander_height:30
 
@@ -63,7 +63,7 @@ Frame{
                 }
                 content: com_device
             }
-            ExpanderEX{
+            ExpanderEx{
                 width: parent.width
                 expander_height:30
 
@@ -89,7 +89,7 @@ Frame{
                 ComItem{
                     item_name:qsTr("站点名称")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.station_name
                     }
                 }
             }
@@ -106,37 +106,37 @@ Frame{
                 ComItem{
                     item_name:qsTr("测量方式")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.measurement_method
                     }
                 }
                 ComItem{
                     item_name:qsTr("测量天线高")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.measurement_ant_height
                     }
                 }
                 ComItem{
                     item_name:qsTr("天线高一致性补偿")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.ant_height_corrent
                     }
                 }
                 ComItem{
                     item_name:qsTr("厂商")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.ant_manufacturer
                     }
                 }
                 ComItem{
                     item_name:qsTr("天线型号")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.ant_type
                     }
                 }
                 ComItem{
                     item_name:qsTr("天线SN号")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.ant_sn
                     }
                 }
             }
@@ -154,19 +154,19 @@ Frame{
                 ComItem{
                     item_name:qsTr("接收机/SN")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.receiver_sn
                     }
                 }
                 ComItem{
                     item_name:qsTr("接收机类型")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.receiver_type
                     }
                 }
                 ComItem{
                     item_name:qsTr("接收机版本号")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.receiver_version
                     }
                 }
             }
@@ -183,25 +183,25 @@ Frame{
                 ComItem{
                     item_name:qsTr("测量方式")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.rinex_measurement_method
                     }
                 }
                 ComItem{
                     item_name:qsTr("天线高")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.rinex_ant_height
                     }
                 }
                 ComItem{
                     item_name:qsTr("厂商")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.rinex_manufacturer
                     }
                 }
                 ComItem{
                     item_name:qsTr("天线类型")
                     delegate:TextField{
-                        placeholderText: "TextField"
+                        placeholderText: Global.focusObsFile.rinex_ant_type
                     }
                 }
             }
@@ -239,7 +239,7 @@ Frame{
         }
     }
 
-    // component ExpanderEX:Item {
+    // component ExpanderEx:Item {
     //     FluentUI.theme: Theme.of(control)
     //     property bool expanded: false
     //     property Component content
