@@ -173,6 +173,7 @@ jobs:
       - name: Check out FluentUI-Pro  
         uses: actions/checkout@v4
         with:
+          token: ${{ secrets.ACTION_TOKEN }}
           repository: zhuzichu520/FluentUI-Pro
           path: FluentUI-Pro
           submodules: true  # 拉取子模块
