@@ -17,9 +17,9 @@ name: Build App Package
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "Stable" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "Stable" ]
       
 env:
   REPO_NAME: ${{ github.event.repository.name }}
