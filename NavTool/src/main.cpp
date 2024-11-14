@@ -12,8 +12,7 @@
 #include "module/module.hpp"
 #include "frame.hpp"
 
-// #include <QtWebEngineQuick>
-#include <QtWebEngineQuick/qtwebenginequickglobal.h>
+// #include <QtWebEngineQuick/qtwebenginequickglobal.h>
 
 #ifdef FLUENTUI_BUILD_STATIC_LIB
 Q_IMPORT_QML_PLUGIN(FluentUIPlugin)
@@ -33,7 +32,7 @@ int main(int argc, char *argv[])
 
     //初始化WebEngine
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
-    QtWebEngineQuick::initialize();
+    // QtWebEngineQuick::initialize();
 
     //初始化日志，传入可执行程序路径和应用程序名称
     Log::setup(argv, EXE_APPLICATION_DISPLAY_NAME);

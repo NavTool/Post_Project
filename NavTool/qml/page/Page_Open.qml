@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import FluentUI.Controls
 import FluentUI.impl
-import QtWebEngine
+// import QtWebEngine
 ScrollablePage{
 
     Column{
@@ -56,17 +56,17 @@ ScrollablePage{
      }
 
 
-    WebEngineView {
-        id:web2
-        width:1280
-        height: 720
-        url: "https://echarts.apache.org/examples/zh/editor.html?c=line-race"
+    // WebEngineView {
+    //     id:web2
+    //     width:1280
+    //     height: 720
+    //     url: "https://echarts.apache.org/examples/zh/editor.html?c=line-race"
 
 
-        onNewWindowRequested: (url) =>{
-            web2.url=url
-        }
-    }
+    //     onNewWindowRequested: (url) =>{
+    //         web2.url=url
+    //     }
+    // }
 
 
 }
