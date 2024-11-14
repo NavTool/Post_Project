@@ -51,15 +51,15 @@ QVariantMap ResourceDataController::generateStationData(const QString &station_n
 {
     return {
         {"station_name",station_name},
-        {"utm_n", (QRandomGenerator::global()->bounded(34000000000, 35000000000)/10000.0)},
-        {"utm_e", QRandomGenerator::global()->bounded(5000000000, 6000000000)/10000.0},
+        {"utm_n", (QRandomGenerator::global()->bounded(340000000, 350000000)/100.0)},
+        {"utm_e", QRandomGenerator::global()->bounded(500000000, 600000000)/1000.0},
         {"utm_u", QRandomGenerator::global()->bounded(500000, 2000000)/10000.0},
         {"llh_lat", QRandomGenerator::global()->bounded(300000000, 320000000)/10000000.0},
         {"llh_lon", QRandomGenerator::global()->bounded(1120000000, 1140000000)/10000000.0},
         {"llh_height", QRandomGenerator::global()->bounded(800000, 2000000)/10000.0},
-        {"ecef_x", -(QRandomGenerator::global()->bounded(2000000000, 2200000000)/1000.0)},
-        {"ecef_y", QRandomGenerator::global()->bounded(5030000000, 5070000000)/1000.0},
-        {"ecef_z", QRandomGenerator::global()->bounded(3200000000, 3400000000)/1000.0},
+        {"ecef_x", -(QRandomGenerator::global()->bounded(200000000, 220000000)/100.0)},
+        {"ecef_y", QRandomGenerator::global()->bounded(503000000, 507000000)/100.0},
+        {"ecef_z", QRandomGenerator::global()->bounded(320000000, 340000000)/100.0},
         // {"height", 30},
         // {"minimumHeight", 25},
         // {"maximumHeight", 240}
