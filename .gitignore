@@ -41,6 +41,6 @@ cmake-build-*
 package
 dist
 
-*.qm
+# *.qm
 
 FluentUI-Pro
