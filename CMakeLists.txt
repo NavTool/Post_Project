@@ -26,7 +26,6 @@ add_subdirectory(NavTool)
 
 
 
-
 # 默认版本号
 set(VERSION_MAJOR 1)
 set(VERSION_MINOR 0)
@@ -95,7 +94,7 @@ else()
 endif()
 
 # 获取Qt版本和编译器信息
-find_package(Qt6 COMPONENTS Core QUIET)
+find_package(Qt6 COMPONENTS Quick QUIET)
 if (NOT Qt6_FOUND)
     find_package(Qt5 COMPONENTS Core REQUIRED)
 endif()
@@ -147,6 +146,11 @@ message(STATUS "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 # message(STATUS "CMAKE_CXX_COMPILER_ID: ${CMAKE_CXX_COMPILER_ID}")
 # message(STATUS "CMAKE_CXX_COMPILER_VERSION: ${CMAKE_CXX_COMPILER_VERSION}")
 message(STATUS "QT_COMPILER_VERSION: ${QT_COMPILER_VERSION}")
+
+
+#设定version.h中的具体信息
+
+
 
 #基于version.h.in 生成 version.h
 configure_file(${CMAKE_SOURCE_DIR}/Version.h.in Version.h @ONLY)

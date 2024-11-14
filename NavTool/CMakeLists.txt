@@ -29,7 +29,7 @@ add_definitions(-DAPP_VERSION=${VERSION_STR})
 set(QML_IMPORT_PATH ${CMAKE_BINARY_DIR}/qt/qml CACHE STRING "" FORCE)
 
 # find_package(Qt6 COMPONENTS Quick WebEngineQuick REQUIRED)
-find_package(Qt6 COMPONENTS Quick REQUIRED)
+find_package(Qt6 COMPONENTS Quick QuickControls2 REQUIRED)
 
 set(QT_SDK_DIR "${Qt6_DIR}/../../..")
 cmake_path(SET QT_SDK_DIR NORMALIZE ${QT_SDK_DIR})
