@@ -42,121 +42,121 @@ env:
   
 jobs:
   
-  build-win:
-    name: Windows
-    runs-on: windows-2019
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.ACTION_TOKEN }}
-          fetch-depth: 0
-          fetch-tags: true  # 获取所有的 Git 标签
-          submodules: true  # 拉取子模块
+  # build-win:
+  #   name: Windows
+  #   runs-on: windows-2019
+  #   steps:
+  #     - name: Check out repository
+  #       uses: actions/checkout@v4
+  #       with:
+  #         token: ${{ secrets.ACTION_TOKEN }}
+  #         fetch-depth: 0
+  #         fetch-tags: true  # 获取所有的 Git 标签
+  #         submodules: true  # 拉取子模块
 
-      - name: Check out FluentUI-Pro  
-        uses: actions/checkout@v4
-        with:
-          repository: zhuzichu520/FluentUI-Pro
-          path: FluentUI-Pro
-          submodules: true  # 拉取子模块
+  #     - name: Check out FluentUI-Pro  
+  #       uses: actions/checkout@v4
+  #       with:
+  #         repository: zhuzichu520/FluentUI-Pro
+  #         path: FluentUI-Pro
+  #         submodules: true  # 拉取子模块
       
-      - name: Setup ninja
-        uses: seanmiddleditch/gha-setup-ninja@v4
-        with:
-          version: 1.10.2
+  #     - name: Setup ninja
+  #       uses: seanmiddleditch/gha-setup-ninja@v4
+  #       with:
+  #         version: 1.10.2
           
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v4
-        with:
-          version: ${{ env.QT_VERSION }}
-          arch: ${{ env.QT_ARCH_WIN_MSVC }}
-          modules: ${{ env.QT_MODULES }}
+  #     - name: Install Qt
+  #       uses: jurplel/install-qt-action@v4
+  #       with:
+  #         version: ${{ env.QT_VERSION }}
+  #         arch: ${{ env.QT_ARCH_WIN_MSVC }}
+  #         modules: ${{ env.QT_MODULES }}
           
-      - name: msvc-build
-        id: build
-        shell: cmd
-        run: |
-          call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" ${{ env.QT_MSVC_ARCH }}
-          mkdir build
-          cd build
-          cmake -DCMAKE_MESSAGE_LOG_LEVEL=STATUS -DCMAKE_PREFIX_PATH=D:/a/${{ env.REPO_NAME }}/Qt/${{ env.QT_VERSION }}/msvc2019_64 -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DCMAKE_BUILD_TYPE=Release -GNinja ..
-          cmake --build . --target all --config Release --parallel
-          cmake --build . --target Gallery_dist
+  #     - name: msvc-build
+  #       id: build
+  #       shell: cmd
+  #       run: |
+  #         call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvarsall.bat" ${{ env.QT_MSVC_ARCH }}
+  #         mkdir build
+  #         cd build
+  #         cmake -DCMAKE_MESSAGE_LOG_LEVEL=STATUS -DCMAKE_PREFIX_PATH=D:/a/${{ env.REPO_NAME }}/Qt/${{ env.QT_VERSION }}/msvc2019_64 -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DCMAKE_BUILD_TYPE=Release -GNinja ..
+  #         cmake --build . --target all --config Release --parallel
+  #         cmake --build . --target Gallery_dist
       
-      - name: Install Inno Setup
-        uses: zhuzichu520/inno-setup-action@v1.0.1
-        with:
-          filepath: ./package/InstallerScript.iss
+  #     - name: Install Inno Setup
+  #       uses: zhuzichu520/inno-setup-action@v1.0.1
+  #       with:
+  #         filepath: ./package/InstallerScript.iss
           
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ${{ env.APP_NAME }}_${{  env.OS_WIN }}_Qt${{ env.QT_VERSION }}
-          path: ./package/installer.exe
+  #     - uses: actions/upload-artifact@v4
+  #       with:
+  #         name: ${{ env.APP_NAME }}_${{  env.OS_WIN }}_Qt${{ env.QT_VERSION }}
+  #         path: ./package/installer.exe
              
-      - name: uploadRelease
-        if: startsWith(github.event.ref, 'refs/tags/')
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./package/installer.exe
-          asset_name: ${{ env.APP_NAME }}_${{ github.ref_name }}_${{  env.OS_WIN }}_Qt${{ env.QT_VERSION }}.exe
-          tag: ${{ github.ref }}
-          overwrite: true
+  #     - name: uploadRelease
+  #       if: startsWith(github.event.ref, 'refs/tags/')
+  #       uses: svenstaro/upload-release-action@v2
+  #       with:
+  #         repo_token: ${{ secrets.GITHUB_TOKEN }}
+  #         file: ./package/installer.exe
+  #         asset_name: ${{ env.APP_NAME }}_${{ github.ref_name }}_${{  env.OS_WIN }}_Qt${{ env.QT_VERSION }}.exe
+  #         tag: ${{ github.ref }}
+  #         overwrite: true
           
-  build-macos:
-    name: macOS
-    runs-on: macos-14
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.ACTION_TOKEN }}
-          fetch-depth: 0
-          fetch-tags: true  # 获取所有的 Git 标签
-          submodules: true  # 拉取子模块
+  # build-macos:
+  #   name: macOS
+  #   runs-on: macos-14
+  #   steps:
+  #     - name: Check out repository
+  #       uses: actions/checkout@v4
+  #       with:
+  #         token: ${{ secrets.ACTION_TOKEN }}
+  #         fetch-depth: 0
+  #         fetch-tags: true  # 获取所有的 Git 标签
+  #         submodules: true  # 拉取子模块
 
-      - name: Check out FluentUI-Pro  
-        uses: actions/checkout@v4
-        with:
-          repository: zhuzichu520/FluentUI-Pro
-          path: FluentUI-Pro
-          submodules: true  # 拉取子模块
+  #     - name: Check out FluentUI-Pro  
+  #       uses: actions/checkout@v4
+  #       with:
+  #         repository: zhuzichu520/FluentUI-Pro
+  #         path: FluentUI-Pro
+  #         submodules: true  # 拉取子模块
           
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v4
-        with:
-          version: ${{ env.QT_VERSION }}
-          arch: ${{ env.QT_ARCH_MAC }}
-          modules: ${{ env.QT_MODULES }}
+  #     - name: Install Qt
+  #       uses: jurplel/install-qt-action@v4
+  #       with:
+  #         version: ${{ env.QT_VERSION }}
+  #         arch: ${{ env.QT_ARCH_MAC }}
+  #         modules: ${{ env.QT_MODULES }}
           
-      - name: Set up Ninja
-        uses: seanmiddleditch/gha-setup-ninja@v4
-        with:
-          version: 1.10.2
+  #     - name: Set up Ninja
+  #       uses: seanmiddleditch/gha-setup-ninja@v4
+  #       with:
+  #         version: 1.10.2
           
-      - name: build macos
-        run: |
-          mkdir build
-          cd build
-          cmake -DCMAKE_MESSAGE_LOG_LEVEL=STATUS -DCMAKE_PREFIX_PATH=/Users/runner/work/${{ env.REPO_NAME }}/Qt/${{ env.QT_VERSION }}/macos -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_BUILD_TYPE=Release -GNinja ..
-          cmake --build . --target all --config Release --parallel
-          cmake --build . --target Gallery_dist
+  #     - name: build macos
+  #       run: |
+  #         mkdir build
+  #         cd build
+  #         cmake -DCMAKE_MESSAGE_LOG_LEVEL=STATUS -DCMAKE_PREFIX_PATH=/Users/runner/work/${{ env.REPO_NAME }}/Qt/${{ env.QT_VERSION }}/macos -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_BUILD_TYPE=Release -GNinja ..
+  #         cmake --build . --target all --config Release --parallel
+  #         cmake --build . --target Gallery_dist
           
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ${{ env.APP_NAME }}_${{ env.OS_MAC }}_Qt${{ env.QT_VERSION }}
-          path: ./dist/${{ env.APP_NAME }}.dmg
+  #     - uses: actions/upload-artifact@v4
+  #       with:
+  #         name: ${{ env.APP_NAME }}_${{ env.OS_MAC }}_Qt${{ env.QT_VERSION }}
+  #         path: ./dist/${{ env.APP_NAME }}.dmg
           
-      - name: uploadRelease
-        if: startsWith(github.event.ref, 'refs/tags/')
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./dist/${{ env.APP_NAME }}.dmg
-          asset_name: ${{ env.APP_NAME }}_${{ github.ref_name }}_${{ env.OS_MAC }}_Qt${{ env.QT_VERSION }}.dmg
-          tag: ${{ github.ref }}
-          overwrite: true
+  #     - name: uploadRelease
+  #       if: startsWith(github.event.ref, 'refs/tags/')
+  #       uses: svenstaro/upload-release-action@v2
+  #       with:
+  #         repo_token: ${{ secrets.GITHUB_TOKEN }}
+  #         file: ./dist/${{ env.APP_NAME }}.dmg
+  #         asset_name: ${{ env.APP_NAME }}_${{ github.ref_name }}_${{ env.OS_MAC }}_Qt${{ env.QT_VERSION }}.dmg
+  #         tag: ${{ github.ref }}
+  #         overwrite: true
 
   build-ubuntu:
     name: Ubuntu
@@ -204,7 +204,7 @@ jobs:
           rm -rf /home/runner/work/${{ env.REPO_NAME }}/Qt/${{ env.QT_VERSION }}/gcc_64/plugins/sqldrivers/libqsqlmysql.so
           cmake -DCMAKE_MESSAGE_LOG_LEVEL=STATUS -DCMAKE_PREFIX_PATH=/home/runner/work/${{ env.REPO_NAME }}/Qt/${{ env.QT_VERSION }}/gcc_64 -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -DCMAKE_BUILD_TYPE=Release -GNinja ..
           cmake --build . --target all --config Release --parallel
-          cmake --build . --target Gallery_dist
+          cmake --build . --target NavTool
           
       - name: package
         run: |
