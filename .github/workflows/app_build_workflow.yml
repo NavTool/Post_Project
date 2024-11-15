@@ -208,6 +208,8 @@ jobs:
           
       - name: package
         run: |
+          chmod 755 /package/DEBIAN/postinst
+          chmod 775 /package/DEBIAN/postrm
           dpkg -b ./package ${{ env.APP_NAME }}_${{ env.OS_LINUX }}_Qt${{ env.QT_VERSION }}.deb
         
       - uses: actions/upload-artifact@v4
