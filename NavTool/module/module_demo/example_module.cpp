@@ -64,7 +64,8 @@ namespace ModuleB {
 
     json ExampleModule::get_status()
     {
-
+        std::cout <<"["<< typeid(ExampleModule).name() <<"]:["<<__func__ <<"] called!"<< std::endl;
+        return json();
     }
 
 }
