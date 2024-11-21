@@ -31,3 +31,4 @@ set(VERSION_EXTRA 0)
 
 add_subdirectory(FluentUI-Pro/FluentUI/)
 add_subdirectory(NavTool)
+add_subdirectory(NavTool/module)
