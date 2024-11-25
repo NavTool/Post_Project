@@ -82,7 +82,7 @@ Item{
         id: body_midtop_router
         routes:{
             "/page/blank": R.resolvedUrl("qml/page/Page_Blank.qml"),
-            "/page/map": {url:R.resolvedUrl("qml/page/Page_Map.qml"),singleton:true},
+            "/page/map": {url:R.resolvedUrl("qml/page/Page_Map.qml"),singleton:true},"/page/map": R.resolvedUrl("qml/page/Page_Map.qml"),//
             "/page/table": {url:R.resolvedUrl("qml/page/Page_Table.qml"),singleton:true},
             "/page/dataspan": {url:R.resolvedUrl("qml/page/Page_DataSpan.qml"),singleton:true},
             "/page/task": {url:R.resolvedUrl("qml/page/Page_Task.qml"),singleton:true}

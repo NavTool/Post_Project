@@ -1,79 +1,128 @@
-#include "example_module.h".h"
+#include "example_module.h"
 #include <iostream>
 
 // 构造函数
 #define __class__ "ExampleModule"
 
-namespace ModuleA {
-
-    void ExampleModule::run()
+namespace ModuleA
+{
+    int ExampleModule::run()
     {
-        std::cout <<"["<< typeid(ExampleModule).name() <<"]:["<<__func__ <<"] called!"<< std::endl;
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+        return 0;
     }
 
-    void ExampleModule::pause()
+    int ExampleModule::pause()
     {
-        std::cout <<"["<< typeid(ExampleModule).name() <<"]:["<<__func__ <<"] called!"<< std::endl;
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+        return 0;
     }
 
-    void ExampleModule::stop()
+    int ExampleModule::stop()
     {
-        std::cout <<"["<< typeid(ExampleModule).name() <<"]:["<<__func__ <<"] called!"<< std::endl;
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+        return 0;
     }
 
-    void ExampleModule::set_para(json)
+    int ExampleModule::set_para(json)
     {
-        std::cout <<"["<< typeid(ExampleModule).name() <<"]:["<<__func__ <<"] called!"<< std::endl;
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+        return 0;
     }
 
     json ExampleModule::get_para()
     {
-        std::cout <<"["<< typeid(ExampleModule).name() <<"]:["<<__func__ <<"] called!"<< std::endl;
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
         return json();
     }
 
 }
 
-namespace ModuleB {
+namespace ModuleB
+{
 
-    void ExampleModule::run()
+    int ExampleModule::run()
     {
-        std::cout <<"["<< typeid(ExampleModule).name() <<"]:["<<__func__ <<"] called!"<< std::endl;
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+          return 0;
     }
 
-    void ExampleModule::pause()
+    int ExampleModule::pause()
     {
-        std::cout <<"["<< typeid(ExampleModule).name() <<"]:["<<__func__ <<"] called!"<< std::endl;
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+          return 0;
     }
 
-    void ExampleModule::stop()
+    int ExampleModule::stop()
     {
-        std::cout <<"["<< typeid(ExampleModule).name() <<"]:["<<__func__ <<"] called!"<< std::endl;
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+        return 0;
     }
 
-    void ExampleModule::set_para(json)
+    int ExampleModule::set_para(json)
     {
-        std::cout <<"["<< typeid(ExampleModule).name() <<"]:["<<__func__ <<"] called!"<< std::endl;
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+          return 0;
     }
 
     json ExampleModule::get_para()
     {
-        std::cout <<"["<< typeid(ExampleModule).name() <<"]:["<<__func__ <<"] called!"<< std::endl;
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
         return json();
     }
 
     json ExampleModule::get_status()
     {
-        std::cout <<"["<< typeid(ExampleModule).name() <<"]:["<<__func__ <<"] called!"<< std::endl;
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
         return json();
     }
 
 }
 
-namespace ModuleC {
-
-
+namespace ModuleC
+{
 
 }
 
+
+namespace ModuleD
+{
+
+    int ExampleModule::run()
+    {
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+        return 0;
+    }
+
+    int ExampleModule::pause()
+    {
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+        return 0;
+    }
+
+    int ExampleModule::stop()
+    {
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+        return 0;
+    }
+
+    int ExampleModule::set_para(json)
+    {
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+        return 0;
+    }
+
+    json ExampleModule::get_para()
+    {
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+        return json();
+    }
+
+    json ExampleModule::get_status()
+    {
+        LogInfo("[{}:{}]:function called!", __class__, __func__);
+        return json();
+    }
+
+}
 

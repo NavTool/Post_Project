@@ -246,6 +246,8 @@ set(SOURCE_FILES
     src/FileTreeDataController.h src/FileTreeDataController.cpp
     src/DataGridController.h src/DataGridController.cpp
     src/ResourceDataController.h src/ResourceDataController.cpp
+    src/Project.h src/Project.cpp
+    src/Project_Qt.h src/Project_Qt.cpp
     module/module.hpp
 )
 
@@ -301,6 +303,9 @@ if (NOT CMAKE_SYSTEM_NAME STREQUAL "Emscripten")
     )
 add_dependencies(${PROJECT_NAME} ${PROJECT_NAME}_translations)
 endif()
+
+include_directories(${PROJECT_NAME}  ${SPDLOG_INCLUDE_PATH})
+include_directories(${PROJECT_NAME}  ${JSON_INCLUDE_PATH})
 
 target_link_libraries(
     ${PROJECT_NAME} PRIVATE
