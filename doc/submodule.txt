@@ -1,0 +1,12 @@
+在根目录下运行
+
+git submodule add https://github.com/gabime/spdlog.git lib/spdlog
+git checkout tags/v1.14.1
+
+git submodule add https://github.com/jbeder/yaml-cpp.git lib/yaml-cpp
+git checkout tags/0.8.0
+
+git submodule add https://github.com/nlohmann/json.git lib/json
+git checkout tags/v3.11.3
+
+git submodule add https://github.com/zhuzichu520/FluentUI-Pro.git lib/FluentUI-Pro
