@@ -5,6 +5,7 @@
 #include <unordered_map>
 #include <string>
 #include <list>
+#include "ModuleBase.h"
 
 
 using json = nlohmann::json;
@@ -21,7 +22,7 @@ private:
 
     std::unordered_map<std::string,std::string> _result_map;  //key,结果文件的基本信息，结果文件路径
 
-    std::list<std::string> _task_map;   //任务列表
+    std::list<ModuleBase> _task_map;   //任务列表
 
 
 public:

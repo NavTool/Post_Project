@@ -1,2 +1,1 @@
-add_subdirectory(module_base)
 add_subdirectory(post)

@@ -34,11 +34,32 @@ set(JSON_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/rely/json/include")
 #spdlog
 set(SPDLOG_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/rely/spdlog/include")
 
-
+add_subdirectory(app)
 add_subdirectory(rely/FluentUI-Pro/FluentUI/)
 add_subdirectory(rely/rtklib)
-add_subdirectory(app)
 add_subdirectory(plugin)
+add_subdirectory(lib)
+
+
+#包含的源文件和头文件
+include_directories(NavCore ${CMAKE_CURRENT_LIST_DIR}/include)
+include_directories(NavCore ${CMAKE_CURRENT_LIST_DIR}/src)
+include_directories(NavCore  ${SPDLOG_INCLUDE_PATH})
+include_directories(NavCore  ${JSON_INCLUDE_PATH})
+
+#静态库
+set(CORE_SOURCES
+   include/Project.h
+   src/Project.cpp
+)
+add_library(NavCore STATIC ${CORE_SOURCES})
+target_include_directories(NavCore PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+target_link_libraries(NavCore modulebase)
+
+
+
+
 
 
 

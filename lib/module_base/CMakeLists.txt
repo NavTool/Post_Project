@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(demo_module_base LANGUAGES CXX)
+project(modulebase LANGUAGES CXX)
 
 #版本14以下可能会导致abseil不支持
 set(CMAKE_CXX_STANDARD 20)
@@ -16,7 +16,8 @@ set(BASE_SOURCES
    include/ModuleBase.h
    src/ModuleBase.cpp
 )
-add_library(modulebase STATIC ${BASE_SOURCES})
+add_library(${PROJECT_NAME} STATIC ${BASE_SOURCES})
+target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 #测试例子
 set(MAIN_SOURCES
@@ -26,8 +27,6 @@ set(MAIN_SOURCES
 )
 add_executable(module_demo ${MAIN_SOURCES})
 target_link_libraries(module_demo modulebase)
-
-
 
 
 include_directories(${PROJECT_NAME}  ${SPDLOG_INCLUDE_PATH})
