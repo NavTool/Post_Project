@@ -29,16 +29,17 @@ set(VERSION_EXTRA 0)
 
 
 #json
-set(JSON_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/lib/json/include")
+set(JSON_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/rely/json/include")
 
 #spdlog
-set(SPDLOG_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/lib/spdlog/include")
+set(SPDLOG_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/rely/spdlog/include")
 
 
-add_subdirectory(FluentUI-Pro/FluentUI/)
-add_subdirectory(NavTool)
-add_subdirectory(NavTool/module)
+add_subdirectory(rely/FluentUI-Pro/FluentUI/)
+add_subdirectory(rely/rtklib)
+add_subdirectory(app)
+add_subdirectory(plugin)
 
-add_subdirectory(lib/rtklib)
+
 
 

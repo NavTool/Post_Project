@@ -9,7 +9,7 @@
 #include <QtQml/qqmlextensionplugin.h>
 #include <QFont>
 #include "Version.h"
-#include "module/module.hpp"
+// #include "module/module.hpp"
 #include "frame.hpp"
 
 // #include <QtWebEngineQuick/qtwebenginequickglobal.h>
@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    Register_qml_module(); //将自定义模块类型注册到qml中
+    // Register_qml_module(); //将自定义模块类型注册到qml中
     // Register_qml_frame_type(); //将框架模块注类型册到qml中
     Register_qml_frame_define(engine.rootContext());//注册宏定义到qml中
     // Register_qml_frame_instance(engine.rootContext());//注册单例到qml中

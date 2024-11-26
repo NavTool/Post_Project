@@ -191,7 +191,7 @@ set(QML_FILES
     qml/page/Page_Table_Station.qml
     qml/page/Page_Task.qml
 
-    module/plot/Eharts_Plot.qml
+    # module/plot/Eharts_Plot.qml
     qml/extra/DataGridEx.qml
     qml/extra/ExpanderEx.qml
     qml/extra/TabViewEx.qml
@@ -227,8 +227,8 @@ set(RESOURCES_FILES
     res/image/ic_file_text.png
     NavTool_zh_CN.qm
     NavTool_en_US.qm
-    module/plot/echarts.js
-    module/plot/echart_dev.html
+    # module/plot/echarts.js
+    # module/plot/echart_dev.html
 
 )
 include_directories(${PROJECT_NAME} ${CMAKE_BINARY_DIR})
@@ -248,14 +248,14 @@ set(SOURCE_FILES
     src/ResourceDataController.h src/ResourceDataController.cpp
     src/Project.h src/Project.cpp
     src/Project_Qt.h src/Project_Qt.cpp
-    module/module.hpp
+    # module/module.hpp
 )
 
 set_source_files_properties(${QML_SINGLETONS} PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
 
 if (WIN32)
-    configure_file(.cmake/win_app.rc.in ${CMAKE_CURRENT_BINARY_DIR}/win_app.rc)
-    configure_file(.cmake/InstallerScript.iss.in ${CMAKE_SOURCE_DIR}/package/InstallerScript.iss)
+    configure_file(${CMAKE_SOURCE_DIR}/.cmake/win_app.rc.in ${CMAKE_CURRENT_BINARY_DIR}/win_app.rc)
+    configure_file(${CMAKE_SOURCE_DIR}/.cmake/InstallerScript.iss.in ${CMAKE_SOURCE_DIR}/package/InstallerScript.iss)
     set(APP_ICON_RESOURCE_WINDOWS ${CMAKE_CURRENT_BINARY_DIR}/win_app.rc)
     qt_add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${APP_ICON_RESOURCE_WINDOWS})
 elseif(APPLE)
@@ -268,14 +268,14 @@ elseif(APPLE)
     set(CMAKE_OSX_DEPLOYMENT_TARGET "11.0" CACHE STRING "Minimum OS X deployment version" FORCE)
     set(MACOSX_BUNDLE_EXECUTABLE_NAME ${PROJECT_APP_NAME})
     set(MACOSX_BUNDLE_ICON_FILE favicon)
-    configure_file(.cmake/MacOSXBundleInfo.plist.in ${CMAKE_CURRENT_BINARY_DIR}/Info.plist)
+    configure_file(${CMAKE_SOURCE_DIR}/.cmake/MacOSXBundleInfo.plist.in ${CMAKE_CURRENT_BINARY_DIR}/Info.plist)
     set_source_files_properties(${APP_ICON} PROPERTIES MACOSX_PACKAGE_LOCATION "Resources")
     qt_add_executable(${PROJECT_NAME} ${SOURCE_FILES} ${APP_ICON})
 elseif(UNIX)
-    configure_file(.cmake/linux_control.in ${CMAKE_SOURCE_DIR}/package/DEBIAN/control)
-    configure_file(.cmake/linux_postinst.in ${CMAKE_SOURCE_DIR}/package/DEBIAN/postinst)
-    configure_file(.cmake/linux_postrm.in ${CMAKE_SOURCE_DIR}/package/DEBIAN/postrm)
-    configure_file(.cmake/linux.desktop.in ${CMAKE_SOURCE_DIR}/package/opt/${PROJECT_APP_NAME}/${PROJECT_APP_NAME}.desktop)
+    configure_file(${CMAKE_SOURCE_DIR}/.cmake/linux_control.in ${CMAKE_SOURCE_DIR}/package/DEBIAN/control)
+    configure_file(${CMAKE_SOURCE_DIR}/.cmake/linux_postinst.in ${CMAKE_SOURCE_DIR}/package/DEBIAN/postinst)
+    configure_file(${CMAKE_SOURCE_DIR}/.cmake/linux_postrm.in ${CMAKE_SOURCE_DIR}/package/DEBIAN/postrm)
+    configure_file(${CMAKE_SOURCE_DIR}/.cmake/linux.desktop.in ${CMAKE_SOURCE_DIR}/package/opt/${PROJECT_APP_NAME}/${PROJECT_APP_NAME}.desktop)
     qt_add_executable(${PROJECT_NAME} ${SOURCE_FILES})
 else()
     qt_add_executable(${PROJECT_NAME} ${SOURCE_FILES})
