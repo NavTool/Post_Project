@@ -1,109 +1,84 @@
-#include <QtQml/qqmlextensionplugin.h>
-#include <QtWidgets/QApplication>
-#include <QApplication>
-#include <QDir>
-#include <QLoggingCategory>
-#include <QNetworkProxy>
+#include "AppInfo.h"
+#include "Log.h"
+#include "SettingsHelper.h"
+#include <QGuiApplication>
 #include <QProcess>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQuickWindow>
-#include <QSslConfiguration>
-
+#include <QtQml/qqmlextensionplugin.h>
+#include <QFont>
 #include "Version.h"
-#include "AppInfo.h"
-
-#include "src/frame.hpp"
-#include "src/helper/SettingsHelper.h"
-#include "src/helper/TranslateHelper.h"
-#include "src/helper/Network.h"
-#include "src/helper/Log.h"
-
-
 #include "module/module.hpp"
+#include "frame.hpp"
 
+// #include <QtWebEngineQuick/qtwebenginequickglobal.h>
 
 #ifdef FLUENTUI_BUILD_STATIC_LIB
-#if (QT_VERSION > QT_VERSION_CHECK(6, 2, 0))
 Q_IMPORT_QML_PLUGIN(FluentUIPlugin)
-#endif
-#include <FluentUI.h>
-#endif
-
-#ifdef WIN32
-#include "app_dmp.h"
 #endif
 
 int main(int argc, char *argv[])
 {
-    const char *uri = "frame";
+    //设置环境变量
+    qputenv("QT_QUICK_CONTROLS_STYLE", "FluentUI");
 
-#ifdef WIN32
-    ::SetUnhandledExceptionFilter(MyUnhandledExceptionFilter);
-    qputenv("QT_QPA_PLATFORM","windows:darkmode=2");
-#endif
-
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
-    qputenv("QT_QUICK_CONTROLS_STYLE","Basic");
-#else
-    qputenv("QT_QUICK_CONTROLS_STYLE","Default");
-#endif
-
-#ifdef Q_OS_LINUX
-    //fix bug UOSv20 does not print logs
-    qputenv("QT_LOGGING_RULES","");
-    //fix bug UOSv20 v-sync does not work
-    qputenv("QSG_RENDER_LOOP","basic");
-#endif
-
-
-    //设置可执行程序基本信息
-    QGuiApplication::setOrganizationName(EXE_ORGANIZATION_NAME);
-    QGuiApplication::setOrganizationDomain(EXE_ORGANIZATION_DOMAIN);
+    //设置程序的基本信息
     QGuiApplication::setApplicationName(EXE_APPLICATION_NAME);
     QGuiApplication::setApplicationDisplayName(EXE_APPLICATION_DISPLAY_NAME);
     QGuiApplication::setApplicationVersion(EXE_APPLICATION_VERSION);
-    QGuiApplication::setQuitOnLastWindowClosed(false);
+    QGuiApplication::setOrganizationName(EXE_ORGANIZATION_NAME);
+    QGuiApplication::setOrganizationDomain(EXE_ORGANIZATION_DOMAIN);
 
-    //初始化全局配置
+    //初始化WebEngine
+    QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
+    // QtWebEngineQuick::initialize();
+
+    //初始化日志，传入可执行程序路径和应用程序名称
+    Log::setup(argv, EXE_APPLICATION_DISPLAY_NAME);
+    //初始化保存设置和读取设置的实例
     SettingsHelper::getInstance()->init(argv);
-    Log::setup(argv,uri);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
-    QQuickWindow::setGraphicsApi(QSGRendererInterface::OpenGL);
-#endif
-#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QGuiApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 14, 0))
-    QGuiApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::PassThrough);
-#endif
-#endif
+    QGuiApplication app(argc, argv);
 
-    // QGuiApplication app(argc, argv);
-    QApplication app(argc, argv);//由QGuiApplication切换为QApplication，来使得可以只用chart功能
+#ifdef Q_OS_WIN
+    QFont font = QGuiApplication::font();
+    font.setFamily("微软雅黑");
+    QGuiApplication::setFont(font);
+#endif
+    // QGuiApplication::setWindowIcon(QIcon(":/qt/qml/Gallery/res/image/logo.png"));
 
     QQmlApplicationEngine engine;
 
-    TranslateHelper::getInstance()->init(&engine);    //初始化翻译模块，载入对应的qm文件，来显示对应语言
-
     Register_qml_module(); //将自定义模块类型注册到qml中
-    Register_qml_frame_type(); //将框架模块注类型册到qml中
+    // Register_qml_frame_type(); //将框架模块注类型册到qml中
     Register_qml_frame_define(engine.rootContext());//注册宏定义到qml中
-    Register_qml_frame_instance(engine.rootContext());//注册单例到qml中
+    // Register_qml_frame_instance(engine.rootContext());//注册单例到qml中
 
-    const QUrl url(QStringLiteral("qrc:qml/App.qml"));
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-        &app, [url](QObject *obj, const QUrl &objUrl) {
+
+    engine.addImportPath(":/qt/qml");
+
+    AppInfo::getInstance()->init(&engine);
+
+    const QUrl url(u"qrc:/qt/qml/NavTool/qml/App.qml"_qs);
+
+    QObject::connect(
+        &engine, &QQmlApplicationEngine::objectCreated, &app,
+        [url](QObject *obj, const QUrl &objUrl) {
             if (!obj && url == objUrl)
                 QCoreApplication::exit(-1);
-        }, Qt::QueuedConnection);
+        },
+        Qt::QueuedConnection);
+
     engine.load(url);
 
-    const int exec = QApplication::exec();
+    const int exec = QGuiApplication::exec();
+
     if (exec == 931) {
+#ifndef __EMSCRIPTEN__
         QProcess::startDetached(qApp->applicationFilePath(), qApp->arguments());
+#endif
     }
 
-    return app.exec();
+    return exec;
 }

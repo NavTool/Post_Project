@@ -1,224 +1,118 @@
-import QtQuick 2.15
-import QtQuick.Window 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
-import QtQml 2.15
-import Qt.labs.platform 1.1
-import FluentUI 1.0
-import "../global"
-import frame 1.0
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
+import FluentUI.Controls
+import FluentUI.impl
+// import Frame
+import NavTool
+import Qt.labs.platform as P
 
-FluWindow {
+FramelessWindow {
+    id: window
 
-    id:window
-    title: GlobalModel.displayName
-    width: 1000
-    height: 680
-    minimumWidth: 640
-    minimumHeight: 480
-    launchMode: FluWindowType.SingleTask
+    property alias infoBarManager: infobar_manager
+    property alias tourSteps: tour.steps
+    width: 1280
+    height: 720
+    minimumWidth: 480
+    minimumHeight: 320
+    visible: true
     fitsAppBarWindows: true
-    appBar: FluAppBar {
-        width: window.width
-        height: 30
-        showDark: true
-        darkClickListener:(button)=>handleDarkChanged(button)
-        closeClickListener: ()=>{dialog_close.open()}
-        z:7
+    launchMode: WindowType.SingleInstance
+    windowEffect: Global.windowEffect
+    autoDestroy: false
+    appBar: AppBar{
+        implicitHeight: 48
+        windowIcon: Item{}
+        width:parent.width
+        action: RowLayout{
+            IconButton{
+                id: btn_dark
+                implicitWidth: 46
+                padding: 0
+                radius: 0
+                icon.width: 14
+                icon.height: 14
+                icon.name: Theme.dark ? FluentIcons.graph_Brightness : FluentIcons.graph_QuietHours
+                ToolTip.visible: hovered
+                ToolTip.text: Theme.dark ? qsTr("Light") : qsTr("Dark")
+                ToolTip.delay: Theme.toolbarDelay
+                onClicked: handleDarkChanged(this)
+            }
+            Item{
+                width:parent.width-100
+            }
+
+            IconButton{
+                id: btn_stick_on_top
+                implicitWidth: 46
+                padding: 0
+                radius: 0
+                icon.width: 14
+                icon.height: 14
+                icon.name: FluentIcons.graph_Pinned
+                icon.color: window.topmost ? Theme.accentColor.defaultBrushFor() : this.FluentUI.textColor
+                ToolTip.visible: hovered
+                ToolTip.text: window.topmost ? qsTr("Sticky on Top cancelled") : qsTr("Sticky on Top")
+                ToolTip.delay: Theme.toolbarDelay
+                onClicked: {
+                    window.topmost = !window.topmost
+                }
+            }
+            Component.onCompleted: {
+                window.tourSteps.push({title:qsTr("Dark Mode"),description: qsTr("Here you can switch to night mode."),target:()=>btn_dark})
+                window.tourSteps.push({title:qsTr("Sticky on Top"),description: qsTr("From here, you can switch to the top of the window."),target:()=>btn_stick_on_top,isLast: true})
+            }
+        }
     }
 
-    Component.onDestruction: {
-        FluRouter.exit()
+    initialItem: R.resolvedUrl("qml/screen/Screen_Root.qml")
+    Component.onCompleted: {
+        tour.open()
     }
-
-    SystemTrayIcon {
-        id:system_tray
+    onNewInit:
+        (argument)=>{
+            if(argument.type===0){
+                dialog_program_already.argsText = argument.args
+                dialog_program_already.open()
+            }
+        }
+    onCloseListener: function(event){
+        dialog_close.open()
+        event.accepted = false
+    }
+    P.SystemTrayIcon {
+        id: system_tray
         visible: true
-        icon.source: GlobalModel.displayLogo
-        tooltip: GlobalModel.displayName
-        menu: Menu {
-            MenuItem {
-                text: "退出"
+        icon.source: Global.windowIcon
+        tooltip: Global.windowName
+        menu: P.Menu {
+            P.MenuItem {
+                text: qsTr("Exit")
                 onTriggered: {
-                    FluRouter.exit()
+                    WindowRouter.exit(0)
                 }
             }
         }
         onActivated:
             (reason)=>{
-                if(reason === SystemTrayIcon.Trigger){
+                if(reason === P.SystemTrayIcon.Trigger){
                     window.show()
                     window.raise()
                     window.requestActivate()
                 }
             }
     }
-
-    Timer{
-        id: timer_window_hide_delay
-        interval: 150
-        onTriggered: {
-            window.hide()
-        }
+    Tour{
+        id: tour
     }
-
-    FluContentDialog{
-        id: dialog_close
-        title: qsTr("Quit")
-        message: qsTr("Are you sure you want to exit the program?")
-        negativeText: qsTr("Minimize")
-        buttonFlags: FluContentDialogType.NegativeButton | FluContentDialogType.NeutralButton | FluContentDialogType.PositiveButton
-        onNegativeClicked: {
-            system_tray.showMessage(qsTr("Friendly Reminder"),qsTr("FluentUI is hidden from the tray, click on the tray to activate the window again"));
-            timer_window_hide_delay.restart()
-        }
-        positiveText: qsTr("Quit")
-        neutralText: qsTr("Cancel")
-        onPositiveClicked:{
-            FluRouter.exit(0)
-        }
-    }
-
     Component{
-        id: nav_item_right_menu
-        FluMenu{
-            width: 186
-            FluMenuItem{
-                text: qsTr("Open in Separate Window")
-                font: FluTextStyle.Caption
-                onClicked: {
-                    FluRouter.navigate("/pageWindow",{title:modelData.title,url:modelData.url})
-                }
-            }
-        }
-    }
-
-    Flipable{
-        id:flipable
-        anchors.fill: parent
-        property bool flipped: false
-        property real flipAngle: 0
-        transform: Rotation {
-            id: rotation
-            origin.x: flipable.width/2
-            origin.y: flipable.height/2
-            axis { x: 0; y: 1; z: 0 }
-            angle: flipable.flipAngle
-
-        }
-        states: State {
-            PropertyChanges { target: flipable; flipAngle: 180 }
-            when: flipable.flipped
-        }
-        transitions: Transition {
-            NumberAnimation { target: flipable; property: "flipAngle"; duration: 1000 ; easing.type: Easing.OutCubic}
-        }
-        back: Item{
-            anchors.fill: flipable
-            visible: flipable.flipAngle !== 0
-            Row{
-                id:layout_back_buttons
-                z:8
-                anchors{
-                    top: parent.top
-                    left: parent.left
-                    topMargin: FluTools.isMacos() ? 20 : 5
-                    leftMargin: 5
-                }
-                FluIconButton{
-                    iconSource: FluentIcons.ChromeBack
-                    width: 30
-                    height: 30
-                    iconSize: 13
-                    onClicked: {
-                        flipable.flipped = false
-                    }
-                }
-                FluIconButton{
-                    iconSource: FluentIcons.Sync
-                    width: 30
-                    height: 30
-                    iconSize: 13
-                    onClicked: {
-                        loader.reload()
-                    }
-                }
-                Component.onCompleted: {
-                    window.setHitTestVisible(layout_back_buttons)
-                }
-            }
-            FluRemoteLoader{
-                id:loader
-                lazy: true
-                anchors.fill: parent
-                //source: "https://zhu-zichu.gitee.io/Qt_174_LieflatPage.qml"
-            }
-        }
-        front: Item{
-            id:page_front
-            visible: flipable.flipAngle !== 180
-            anchors.fill: flipable
-            FluNavigationView{
-                property int clickCount: 0
-                id:nav_view
-                width: parent.width
-                height: parent.height
-                z:999
-                //Stack模式，每次切换都会将页面压入栈中，随着栈的页面增多，消耗的内存也越多，内存消耗多就会卡顿，这时候就需要按返回将页面pop掉，释放内存。该模式可以配合FluPage中的launchMode属性，设置页面的启动模式
-                //                pageMode: FluNavigationViewType.Stack
-                //NoStack模式，每次切换都会销毁之前的页面然后创建一个新的页面，只需消耗少量内存
-                pageMode: FluNavigationViewType.Stack
-                items: ItemsOriginal
-                footerItems:ItemsFooter
-                topPadding:{
-                    if(window.useSystemAppBar){
-                        return 0
-                    }
-                    return FluTools.isMacos() ? 20 : 0
-                }
-                displayMode: GlobalModel.displayMode//FluNavigationViewType.Minimal//
-                logo: GlobalModel.displayLogo// app left-top logo
-                title: GlobalModel.displayName //app left-top name
-                onLogoClicked:{
-                    clickCount += 1
-                    showSuccess("%1:%2".arg(qsTr("Click Time")).arg(clickCount))
-                    if(clickCount === 5){
-                        loader.reload()
-                        flipable.flipped = true
-                        clickCount = 0
-                    }
-                }
-                autoSuggestBox:FluAutoSuggestBox{
-                    iconSource: FluentIcons.Search
-                    items: ItemsOriginal.getSearchData()
-                    placeholderText: qsTr("Search")
-                    onItemClicked:
-                        (data)=>{
-                            ItemsOriginal.startPageByItem(data)
-                        }
-                }
-                Component.onCompleted: {
-                    ItemsOriginal.navigationView = nav_view
-                    ItemsOriginal.paneItemMenu = nav_item_right_menu
-                    ItemsFooter.navigationView = nav_view
-                    ItemsFooter.paneItemMenu = nav_item_right_menu
-                    window.setHitTestVisible(nav_view.buttonMenu)
-                    window.setHitTestVisible(nav_view.buttonBack)
-                    window.setHitTestVisible(nav_view.imageLogo)
-                    setCurrentIndex(0)
-                }
-            }
-        }
-    }
-
-    Component{
-        id: com_reveal
+        id: comp_reveal
         CircularReveal{
             id: reveal
             target: window.contentItem
             anchors.fill: parent
             onAnimationFinished:{
-                //动画结束后释放资源
                 loader_reveal.sourceComponent = undefined
             }
             onImageChanged: {
@@ -226,66 +120,96 @@ FluWindow {
             }
         }
     }
-
-    FluLoader{
+    InfoBarManager{
+        id: infobar_manager
+        target: window.contentItem
+        messageMaximumWidth: 380
+    }
+    AutoLoader{
         id:loader_reveal
         anchors.fill: parent
+        z: 65535
     }
-
     function distance(x1,y1,x2,y2){
         return Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2))
     }
-
     function handleDarkChanged(button){
-        if(!FluTheme.animationEnabled || window.fitsAppBarWindows === false){
-            changeDark()
-        }else{
-            if(loader_reveal.sourceComponent){
-                return
-            }
-            loader_reveal.sourceComponent = com_reveal
-            var target = window.contentItem
-            var pos = button.mapToItem(target,0,0)
-            var mouseX = pos.x
-            var mouseY = pos.y
-            var radius = Math.max(distance(mouseX,mouseY,0,0),distance(mouseX,mouseY,target.width,0),distance(mouseX,mouseY,0,target.height),distance(mouseX,mouseY,target.width,target.height))
-            var reveal = loader_reveal.item
-            reveal.start(reveal.width*Screen.devicePixelRatio,reveal.height*Screen.devicePixelRatio,Qt.point(mouseX,mouseY),radius)
+        if(loader_reveal.sourceComponent){
+            return
         }
+        loader_reveal.sourceComponent = comp_reveal
+        var target = window.contentItem
+        var pos = button.mapToItem(target,0,0)
+        var centerX = pos.x + button.width/2
+        var centerY = pos.y + button.height/2
+        var radius = Math.max(distance(centerX,centerY,0,0),distance(centerX,centerY,target.width,0),distance(centerX,centerY,0,target.height),distance(centerX,centerY,target.width,target.height))
+        var reveal = loader_reveal.item
+        reveal.start(reveal.width*Screen.devicePixelRatio,reveal.height*Screen.devicePixelRatio,Qt.point(centerX,centerY),radius,Theme.dark)
     }
-
     function changeDark(){
-        if(FluTheme.dark){
-            FluTheme.darkMode = FluThemeType.Light
+        if(Theme.dark){
+            Theme.darkMode = FluentUI.Light
         }else{
-            FluTheme.darkMode = FluThemeType.Dark
+            Theme.darkMode = FluentUI.Dark
         }
     }
-
-    Shortcut {
-        sequence: "F5"
-        context: Qt.WindowShortcut
-        onActivated: {
-            if(flipable.flipped){
-                loader.reload()
+    Dialog {
+        id: dialog_close
+        x: Math.ceil((parent.width - width) / 2)
+        y: Math.ceil((parent.height - height) / 2)
+        parent: Overlay.overlay
+        modal: true
+        title: qsTr("Quit")
+        Column {
+            spacing: 20
+            anchors.fill: parent
+            Label {
+                width: 300
+                wrapMode: Text.WrapAnywhere
+                text: qsTr("Are you sure you want to exit the program?")
+            }
+        }
+        footer: DialogButtonBox{
+            Button{
+                text: qsTr("Cancel")
+                onClicked: {
+                    dialog_close.close()
+                }
+            }
+            Button{
+                text: qsTr("Minimize")
+                onClicked: {
+                    system_tray.showMessage(qsTr("Friendly Reminder"),qsTr("FluentUI-Gallery is hidden from the tray, click on the tray to activate the window again"));
+                    window.hide()
+                    dialog_close.close()
+                }
+            }
+            Button{
+                text: qsTr("Ok")
+                highlighted: true
+                onClicked: {
+                    WindowRouter.exit(0)
+                }
             }
         }
     }
-
-
-    FpsItem{
-        id:fps_item
-    }
-
-    FluText{
-        text: "fps %1".arg(fps_item.fps)
-        opacity: 0.3
-        anchors{
-            bottom: parent.bottom
-            right: parent.right
-            bottomMargin: 5
-            rightMargin: 5
+    Dialog {
+        id: dialog_program_already
+        property string argsText: ""
+        x: Math.ceil((parent.width - width) / 2)
+        y: Math.ceil((parent.height - height) / 2)
+        parent: Overlay.overlay
+        modal: true
+        title: qsTr("Friendly reminder")
+        standardButtons: Dialog.Yes
+        Column {
+            spacing: 20
+            anchors.fill: parent
+            Label {
+                width: 300
+                wrapMode: Text.WrapAnywhere
+                text: qsTr("The program is already running. The parameter is ->")+dialog_program_already.argsText
+            }
         }
     }
-
 }

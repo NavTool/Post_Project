@@ -1,51 +1,32 @@
-import QtQuick 2.15
-import QtQuick.Window 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
-import FluentUI 1.0
-import "global"
+import QtQuick
+import QtQuick.Controls
+import FluentUI.Controls
+import FluentUI.impl
+// import Frame
+import NavTool
 
-FluLauncher {
-    id: app
+Starter {
+    id: starter
+    appId: INFO_APP_NAME
+    singleton: true
+    //windowIcon:Global.windowIcon
+    onActiveApplicationChanged:
+        (args)=> {
+            WindowRouter.go("/",{type:0,args:args})
+        }
     Connections{
-        target: FluTheme
+        target: Theme
         function onDarkModeChanged(){
-            SettingsHelper.saveDarkMode(FluTheme.darkMode)
-        }
-    }
-    Connections{
-        target: FluApp
-        function onUseSystemAppBarChanged(){
-            SettingsHelper.saveUseSystemAppBar(FluApp.useSystemAppBar)
-        }
-    }
-    Connections{
-        target: TranslateHelper
-        function onCurrentChanged(){
-            SettingsHelper.saveLanguage(TranslateHelper.current)
+            SettingsHelper.saveDarkMode(Theme.darkMode)
         }
     }
     Component.onCompleted: {
-        // Network.openLog = false
-        // Network.setInterceptor(function(param){
-        //     param.addHeader("Token","000000000000000000000")
-        // })
-        FluApp.init(app,Qt.locale(TranslateHelper.current))
-        FluApp.windowIcon =GlobalModel.displayLogo
-        FluApp.useSystemAppBar = SettingsHelper.getUseSystemAppBar()
-        FluTheme.darkMode = SettingsHelper.getDarkMode()
-        FluTheme.animationEnabled = true
-        FluRouter.routes = {
-            "/":"qrc:/qml/window/MainWindow.qml",
-            "/hotload":"qrc:/qml/window/HotloadWindow.qml",
-            "/crash":"qrc:/qml/window/CrashWindow.qml",
-            "/pageWindow":"qrc:/qml/window/PageWindow.qml"
+        R.windowIcon =Global.windowIcon
+        Global.starter = starter
+        Theme.darkMode = SettingsHelper.getDarkMode()
+        WindowRouter.routes = {
+            "/": R.resolvedUrl("qml/window/MainWindow.qml")
         }
-        var args = Qt.application.arguments
-        if(args.length>=2 && args[1].startsWith("-crashed=")){
-            FluRouter.navigate("/crash",{crashFilePath:args[1].replace("-crashed=","")})
-        }else{
-            FluRouter.navigate("/")
-        }
+        WindowRouter.go("/")
     }
 }
