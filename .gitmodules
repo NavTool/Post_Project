@@ -13,3 +13,6 @@
 [submodule "rely/json"]
 	path = rely/json
 	url = https://github.com/nlohmann/json.git
+[submodule "lib"]
+	path = lib
+	url = https://github.com/NavTool/navtool_libs.git
