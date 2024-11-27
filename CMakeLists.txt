@@ -5,6 +5,12 @@ project(NavTool)
 option(FLUENTUI_BUILD_STATIC_LIB "Build FluentUI static library." ON)
 option(FLUENTUI_UNIVERSAL_BUILD_MACOS "Universal build FluentUI for macOS." ON)
 
+# # 启用全程序优化和链接时间代码生成
+# if(MSVC)
+#     add_compile_options(/GL)  # 编译时启用全程序优化
+#     add_link_options(/LTCG)   # 链接时启用链接时间代码生成
+# endif()
+
 if(APPLE AND FLUENTUI_UNIVERSAL_BUILD_MACOS)
     set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64" CACHE STRING "" FORCE)
 else()
@@ -59,8 +65,8 @@ target_link_libraries(NavCore modulebase)
 
 
 
-
-
-
-
+message(STATUS "CMAKE_CXX_FLAGS_DEBUG   : ${CMAKE_CXX_FLAGS_DEBUG}")
+message(STATUS "CMAKE_CXX_FLAGS_RELEASE : ${CMAKE_CXX_FLAGS_RELEASE}")
+message(STATUS "CMAKE_BUILD_TYPE        : ${CMAKE_BUILD_TYPE}")
+ 
 

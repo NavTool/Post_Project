@@ -34,9 +34,9 @@ set(TEST_SOURCES
    test/post_demo_main.cpp
 )
 
-add_executable(Post_Demo ${TEST_SOURCES})
-target_link_libraries(Post_Demo ${PROJECT_NAME})
-target_link_libraries(Post_Demo dynamic)
+add_executable(demo_post ${TEST_SOURCES})
+target_link_libraries(demo_post ${PROJECT_NAME})
+target_link_libraries(demo_post dynamic)
 
 
 
