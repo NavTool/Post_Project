@@ -36,6 +36,9 @@ set(TEST_SOURCES
 
 add_executable(Post_Demo ${TEST_SOURCES})
 target_link_libraries(Post_Demo ${PROJECT_NAME})
+target_link_libraries(Post_Demo dynamic)
+
+
 
 
 
