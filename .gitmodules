@@ -16,3 +16,6 @@
 [submodule "lib"]
 	path = lib
 	url = https://github.com/NavTool/navtool_libs.git
+[submodule "rely/abseil-cpp"]
+	path = rely/abseil-cpp
+	url = https://github.com/abseil/abseil-cpp.git
