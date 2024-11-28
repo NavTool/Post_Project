@@ -13,6 +13,49 @@ Item{
 
     anchors.fill:parent
 
+    InfoBarManager{
+        id: info_manager_topright
+        target: root
+        edge: Qt.TopEdge | Qt.RightEdge
+    }
+
+    InfoBarManager{
+        id: info_manager_top
+        target: root
+        edge: Qt.TopEdge
+    }
+
+    InfoBarManager{
+        id: info_manager_topleft
+        target: root
+        edge: Qt.TopEdge | Qt.LeftEdge
+    }
+
+    InfoBarManager{
+        id: info_manager_bottomright
+        target: root
+        edge: Qt.BottomEdge | Qt.RightEdge
+    }
+
+    InfoBarManager{
+        id: info_manager_bottom
+        target: root
+        edge: Qt.BottomEdge
+    }
+
+    InfoBarManager{
+        id: info_manager_bottomleft
+        target: root
+        edge: Qt.BottomEdge | Qt.LeftEdge
+    }
+
+    InfoBarManager{
+        id: info_manager_custom
+        target: root
+        edge: Qt.TopEdge | Qt.RightEdge
+    }
+
+
     PageRouter{
         id: screen_router
         routes: {

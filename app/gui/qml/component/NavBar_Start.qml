@@ -56,8 +56,32 @@ Item{
                                     icon.height: iconbutton_size
                                     spacing: iconbutton_spacing
                                     display: IconButton.TextUnderIcon
-                                }
 
+                                    onClicked: {
+                                        import_file_dialog.open()
+                                    }
+
+                                    Dialog{
+                                        id:import_file_dialog
+
+                                        x: Math.ceil((parent.width - width) / 2)
+                                        y: Math.ceil((parent.height - height) / 2)
+                                        parent: Overlay.overlay
+                                        modal: true
+                                        title: qsTr("导入文件")
+                                        standardButtons: Dialog.Yes | Dialog.No
+
+                                        width: 600
+                                        contentHeight: 300
+                                        Frame{
+                                            anchors.fill: parent
+                                        }
+                                        Component.onCompleted:
+                                        {
+                                            // open()
+                                        }
+                                    }
+                                }
                                 Column {
                                     IconButton {
                                         text: qsTr("导入配置")
@@ -68,6 +92,32 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
+
+                                        onClicked: {
+                                            import_option_dialog.open()
+                                        }
+
+                                        Dialog{
+                                            id:import_option_dialog
+
+                                            x: Math.ceil((parent.width - width) / 2)
+                                            y: Math.ceil((parent.height - height) / 2)
+                                            parent: Overlay.overlay
+                                            modal: true
+                                            title: qsTr("导入文件配置")
+                                            standardButtons: Dialog.Yes | Dialog.No
+
+                                            width: 600
+                                            contentHeight: 300
+                                            Frame{
+                                                anchors.fill: parent
+                                            }
+                                            Component.onCompleted:
+                                            {
+                                                // open()
+                                            }
+                                        }
+
                                     }
 
                                     IconButton {
@@ -79,6 +129,32 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
+
+
+                                        onClicked: {
+                                            baseline_refresh_dialog.open()
+                                        }
+
+                                        Dialog{
+                                            id:baseline_refresh_dialog
+
+                                            x: Math.ceil((parent.width - width) / 2)
+                                            y: Math.ceil((parent.height - height) / 2)
+                                            parent: Overlay.overlay
+                                            modal: true
+                                            title: qsTr("重新组成基线")
+                                            standardButtons: Dialog.Yes | Dialog.No
+
+                                            width: 600
+                                            contentHeight: 300
+                                            Frame{
+                                                anchors.fill: parent
+                                            }
+                                            Component.onCompleted:
+                                            {
+                                                // open()
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -111,6 +187,34 @@ Item{
                                     icon.height: iconbutton_size
                                     spacing: iconbutton_spacing
                                     display: IconButton.TextUnderIcon
+
+
+
+                                    onClicked: {
+                                        add_station_dialog.open()
+                                    }
+
+                                    Dialog{
+                                        id:add_station_dialog
+
+                                        x: Math.ceil((parent.width - width) / 2)
+                                        y: Math.ceil((parent.height - height) / 2)
+                                        parent: Overlay.overlay
+                                        modal: true
+                                        title: qsTr("添加站点")
+                                        standardButtons: Dialog.Yes | Dialog.No
+
+                                        width: 600
+                                        contentHeight: 300
+                                        Frame{
+                                            anchors.fill: parent
+                                        }
+                                        Component.onCompleted:
+                                        {
+                                            // open()
+                                        }
+                                    }
+
                                 }
                                 Column {
                                     IconButton {
@@ -122,6 +226,32 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
+
+                                        onClicked: {
+                                            manage_station_dialog.open()
+                                        }
+
+                                        Dialog{
+                                            id:manage_station_dialog
+
+                                            x: Math.ceil((parent.width - width) / 2)
+                                            y: Math.ceil((parent.height - height) / 2)
+                                            parent: Overlay.overlay
+                                            modal: true
+                                            title: qsTr("管理已经添加的站点")
+                                            standardButtons: Dialog.Yes | Dialog.No
+
+                                            width: 600
+                                            contentHeight: 300
+                                            Frame{
+                                                anchors.fill: parent
+                                            }
+                                            Component.onCompleted:
+                                            {
+                                                // open()
+                                            }
+                                        }
+
                                     }
 
                                     IconButton {
@@ -133,6 +263,31 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
+
+                                        onClicked: {
+                                            edit_station_dialog.open()
+                                        }
+
+                                        Dialog{
+                                            id:edit_station_dialog
+
+                                            x: Math.ceil((parent.width - width) / 2)
+                                            y: Math.ceil((parent.height - height) / 2)
+                                            parent: Overlay.overlay
+                                            modal: true
+                                            title: qsTr("编辑站点的信息,使用的坐标等")
+                                            standardButtons: Dialog.Yes | Dialog.No
+
+                                            width: 600
+                                            contentHeight: 300
+                                            Frame{
+                                                anchors.fill: parent
+                                            }
+                                            Component.onCompleted:
+                                            {
+                                                // open()
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -397,6 +552,31 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
+
+                                        onClicked: {
+                                            process_option_dialog.open()
+                                        }
+
+                                        Dialog{
+                                            id:process_option_dialog
+
+                                            x: Math.ceil((parent.width - width) / 2)
+                                            y: Math.ceil((parent.height - height) / 2)
+                                            parent: Overlay.overlay
+                                            modal: true
+                                            title: qsTr("配置任务队列同时开启的线程等功能，是否输出日志，保存日志等选项")
+                                            standardButtons: Dialog.Yes | Dialog.No
+
+                                            width: 600
+                                            contentHeight: 300
+                                            Frame{
+                                                anchors.fill: parent
+                                            }
+                                            Component.onCompleted:
+                                            {
+                                                // open()
+                                            }
+                                        }
                                     }
 
                                     IconButton {
@@ -428,9 +608,6 @@ Item{
                     }
                 }
 
-
-
-
                 Frame{
                     width: implicitWidth
 
@@ -450,6 +627,33 @@ Item{
                                     icon.height: iconbutton_size
                                     spacing: iconbutton_spacing
                                     display: IconButton.TextUnderIcon
+
+
+                                    onClicked: {
+                                        project_info_dialog.open()
+                                    }
+
+                                    Dialog{
+                                        id:project_info_dialog
+
+                                        x: Math.ceil((parent.width - width) / 2)
+                                        y: Math.ceil((parent.height - height) / 2)
+                                        parent: Overlay.overlay
+                                        modal: true
+                                        title: qsTr("展示这个工程的基本信息，工程名，中央子午线，创建日期等")
+                                        standardButtons: Dialog.Yes | Dialog.No
+
+                                        width: 600
+                                        contentHeight: 300
+                                        Frame{
+                                            anchors.fill: parent
+                                        }
+                                        Component.onCompleted:
+                                        {
+                                            // open()
+                                        }
+                                    }
+
                                 }
 
                                 IconButton {
@@ -462,6 +666,33 @@ Item{
                                     icon.height: iconbutton_size
                                     spacing: iconbutton_spacing
                                     display: IconButton.TextUnderIcon
+
+
+                                    onClicked: {
+                                        project_opotion_dialog.open()
+                                    }
+
+                                    Dialog{
+                                        id:project_opotion_dialog
+
+                                        x: Math.ceil((parent.width - width) / 2)
+                                        y: Math.ceil((parent.height - height) / 2)
+                                        parent: Overlay.overlay
+                                        modal: true
+                                        title: qsTr("配置工程的中央子午线\坐标单位显示等")
+                                        standardButtons: Dialog.Yes | Dialog.No
+
+                                        width: 600
+                                        contentHeight: 300
+                                        Frame{
+                                            anchors.fill: parent
+                                        }
+                                        Component.onCompleted:
+                                        {
+                                            // open()
+                                        }
+                                    }
+
                                 }
 
                                 Column {
@@ -474,6 +705,33 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
+
+
+                                        onClicked: {
+                                            project_display_dialog.open()
+                                        }
+
+                                        Dialog{
+                                            id:project_display_dialog
+
+                                            x: Math.ceil((parent.width - width) / 2)
+                                            y: Math.ceil((parent.height - height) / 2)
+                                            parent: Overlay.overlay
+                                            modal: true
+                                            title: qsTr("配置工程的显示的单位等、语言等")
+                                            standardButtons: Dialog.Yes | Dialog.No
+
+                                            width: 600
+                                            contentHeight: 300
+                                            Frame{
+                                                anchors.fill: parent
+                                            }
+                                            Component.onCompleted:
+                                            {
+                                                // open()
+                                            }
+                                        }
+
                                     }
 
                                     IconButton {
@@ -485,6 +743,32 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
+
+                                        onClicked: {
+                                            project_save_option_dialog.open()
+                                        }
+
+                                        Dialog{
+                                            id:project_save_option_dialog
+
+                                            x: Math.ceil((parent.width - width) / 2)
+                                            y: Math.ceil((parent.height - height) / 2)
+                                            parent: Overlay.overlay
+                                            modal: true
+                                            title: qsTr("配置工程的保存文件的选项")
+                                            standardButtons: Dialog.Yes | Dialog.No
+
+                                            width: 600
+                                            contentHeight: 300
+                                            Frame{
+                                                anchors.fill: parent
+                                            }
+                                            Component.onCompleted:
+                                            {
+                                                // open()
+                                            }
+                                        }
+
                                     }
                                 }
                                 IconButton {
@@ -508,6 +792,33 @@ Item{
                                     icon.height: iconbutton_size
                                     spacing: iconbutton_spacing
                                     display: IconButton.TextUnderIcon
+
+
+                                    onClicked: {
+                                        project_export_dialog.open()
+                                    }
+
+                                    Dialog{
+                                        id:project_export_dialog
+
+                                        x: Math.ceil((parent.width - width) / 2)
+                                        y: Math.ceil((parent.height - height) / 2)
+                                        parent: Overlay.overlay
+                                        modal: true
+                                        title: qsTr("将工程的数据导出的选项，可以导出基线结果，解算结果等")
+                                        standardButtons: Dialog.Yes | Dialog.No
+
+                                        width: 600
+                                        contentHeight: 300
+                                        Frame{
+                                            anchors.fill: parent
+                                        }
+                                        Component.onCompleted:
+                                        {
+                                            // open()
+                                        }
+                                    }
+
                                 }
                             }
                         }
@@ -524,7 +835,5 @@ Item{
             }
         }
     }
-
-
 
 }

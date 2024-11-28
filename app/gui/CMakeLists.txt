@@ -195,6 +195,8 @@ set(QML_FILES
     qml/extra/DataGridEx.qml
     qml/extra/ExpanderEx.qml
     qml/extra/TabViewEx.qml
+
+    qml/component/NavBar_Test.qml
 )
 
 # qml单例对象

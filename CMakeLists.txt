@@ -2,6 +2,13 @@ cmake_minimum_required(VERSION 3.21)
 
 project(NavTool)
 
+#版本14以下可能会导致abseil不支持
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# 设置 Abseil 的选项
+set(ABSL_PROPAGATE_CXX_STD ON CACHE INTERNAL "")
+
 option(FLUENTUI_BUILD_STATIC_LIB "Build FluentUI static library." ON)
 option(FLUENTUI_UNIVERSAL_BUILD_MACOS "Universal build FluentUI for macOS." ON)
 
@@ -43,6 +50,7 @@ set(SPDLOG_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/rely/spdlog/include")
 add_subdirectory(app)
 add_subdirectory(rely/FluentUI-Pro/FluentUI/)
 add_subdirectory(rely/rtklib)
+add_subdirectory(rely/abseil-cpp)
 add_subdirectory(plugin)
 add_subdirectory(lib)
 

@@ -52,6 +52,10 @@ Item{
         PaneItem{
             key: "/navbar/about"
             title: "关于"
+        },
+        PaneItem{
+            key: "/navbar/test"
+            title: "功能测试（正式版需隐藏）"
         }
     ]
 
@@ -65,7 +69,8 @@ Item{
             "/navbar/gnss": R.resolvedUrl("qml/component/NavBar_GNSS.qml"),
             "/navbar/ins": R.resolvedUrl("qml/component/NavBar_INS.qml"),
             "/navbar/tool": R.resolvedUrl("qml/component/NavBar_Tool.qml"),
-            "/navbar/about": R.resolvedUrl("qml/component/NavBar_Support.qml")
+            "/navbar/about": R.resolvedUrl("qml/component/NavBar_Support.qml"),
+            "/navbar/test": R.resolvedUrl("qml/component/NavBar_Test.qml")
         }
     }
 
@@ -136,51 +141,6 @@ Item{
             "/sidepage/property": R.resolvedUrl("qml/component/SidePage_Property.qml"),
             "/sidepage/status": R.resolvedUrl("qml/component/SidePage_Status.qml")
         }
-    }
-
-
-
-
-    InfoBarManager{
-        id: info_manager_topright
-        target: root
-        edge: Qt.TopEdge | Qt.RightEdge
-    }
-
-    InfoBarManager{
-        id: info_manager_top
-        target: root
-        edge: Qt.TopEdge
-    }
-
-    InfoBarManager{
-        id: info_manager_topleft
-        target: root
-        edge: Qt.TopEdge | Qt.LeftEdge
-    }
-
-    InfoBarManager{
-        id: info_manager_bottomright
-        target: root
-        edge: Qt.BottomEdge | Qt.RightEdge
-    }
-
-    InfoBarManager{
-        id: info_manager_bottom
-        target: root
-        edge: Qt.BottomEdge
-    }
-
-    InfoBarManager{
-        id: info_manager_bottomleft
-        target: root
-        edge: Qt.BottomEdge | Qt.LeftEdge
-    }
-
-    InfoBarManager{
-        id: info_manager_custom
-        target: root
-        edge: Qt.TopEdge | Qt.RightEdge
     }
 
 

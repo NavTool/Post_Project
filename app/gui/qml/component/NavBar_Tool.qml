@@ -95,7 +95,17 @@ Item{
                                     icon.height: iconbutton_size
                                     spacing: iconbutton_spacing
                                     display: IconButton.TextUnderIcon
+
+                                    onClicked: {
+                                        info_manager_top.show(InfoBarType.Warning,qsTr("未选中任何观测文件，请选中一个观测文件来查看数据质量！"))
+                                        // info_manager_topleft.show(InfoBarType.Warning,qsTr("未选中任何观测文件，请选中一个观测文件来查看数据质量！"))
+                                        // info_manager_topright.show(InfoBarType.Warning,qsTr("未选中任何观测文件，请选中一个观测文件来查看数据质量！"))
+                                        // info_manager_bottom.show(InfoBarType.Warning,qsTr("未选中任何观测文件，请选中一个观测文件来查看数据质量！"))
+                                        // info_manager_bottomleft.show(InfoBarType.Warning,qsTr("未选中任何观测文件，请选中一个观测文件来查看数据质量！"))
+                                        // info_manager_bottomright.show(InfoBarType.Warning,qsTr("未选中任何观测文件，请选中一个观测文件来查看数据质量！"))
+                                    }
                                 }
+
 
                                 Column {
                                     IconButton {
@@ -107,9 +117,8 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
+
                                     }
-
-
                                 }
                             }
                         }
