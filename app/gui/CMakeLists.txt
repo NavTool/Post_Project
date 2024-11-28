@@ -238,13 +238,13 @@ set(SOURCE_FILES
     src/frame.hpp
     src/AppInfo.h src/AppInfo.cpp
     src/Log.h src/Log.cpp
-    src/FpsItem.h  src/FpsItem.cpp
+    src/CircularReveal.h  src/CircularReveal.cpp
+    src/PerformanceMonitor.h  src/PerformanceMonitor.cpp
     src/SettingsHelper.h   src/SettingsHelper.cpp
-    src/CircularReveal.h   src/CircularReveal.cpp
+    src/ResourceDataController.h src/ResourceDataController.cpp
     src/TreeDataGridController.h src/TreeDataGridController.cpp
     src/FileTreeDataController.h src/FileTreeDataController.cpp
     src/DataGridController.h src/DataGridController.cpp
-    src/ResourceDataController.h src/ResourceDataController.cpp
     src/Project_Qt.h src/Project_Qt.cpp
     # module/module.hpp
 )

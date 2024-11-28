@@ -1151,6 +1151,18 @@ Item{
                     }
 
                 }
+
+
+                PerformanceMonitor{
+                    id:fps_item
+                }
+
+                Text{
+                    text: "fps %1".arg(fps_item.fps)
+                    opacity: 0.3
+                }
+
+
             }
 
         }

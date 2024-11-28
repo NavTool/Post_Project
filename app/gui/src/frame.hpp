@@ -3,38 +3,16 @@
 #include <qqmlcontext.h>
 #include "Version.h"
 #include "AppInfo.h"
-#include "CircularReveal.h"
-// #include "component/FileWatcher.h"
-#include "FpsItem.h"
-// #include "component/OpenGLItem.h"
- #include "SettingsHelper.h"
-// #include "helper/InitializrHelper.h"
-// #include "helper/TranslateHelper.h"
-// #include "helper/Network.h"
-// #include "extra/ExtraIconsDef.h"
-// #include "test.h"
 
-
-inline void Register_qml_frame_type(){
-
-    int major = 1;
-    int minor = 0;
-
-    // qmlRegisterType<DataClass>("frame", major, minor, "DataClass");
-    // qmlRegisterType<TestClass>("frame", major, minor, "TestClass");
-    qmlRegisterType<CircularReveal>("Frame", major, minor, "CircularReveal");
-    // qmlRegisterType<FileWatcher>("frame", major, minor, "FileWatcher");
-    qmlRegisterType<FpsItem>("frame", major, minor, "FpsItem");
-    // qmlRegisterType<NetworkCallable>("frame",major,minor,"NetworkCallable");
-    // qmlRegisterType<NetworkParams>("frame",major,minor,"NetworkParams");
-    // qmlRegisterType<OpenGLItem>("frame",major,minor,"OpenGLItem");
-    // qmlRegisterUncreatableMetaObject(NetworkType::staticMetaObject, "frame", major, minor, "NetworkType", "Access to enums & flags only");
-    // qmlRegisterUncreatableMetaObject(Extra_Regular_Icons::staticMetaObject,"frame", major, minor,"RegularIcons", "Access to enums only");
-}
 
 
 inline void Register_qml_frame_define(QQmlContext *context)
 {
+#ifdef QT_DEBUG  //传递程序的构建类型，来隐藏部分Debug调试使用的功能
+    context->setContextProperty("isDebugBuild",true);
+#else
+    context->setContextProperty("isDebugBuild",false);
+#endif
 
     context->setContextProperty("INFO_APP_NAME",INFO_APP_NAME);
     context->setContextProperty("INFO_VERSION_TYPE",INFO_VERSION_TYPE);
@@ -54,22 +32,7 @@ inline void Register_qml_frame_define(QQmlContext *context)
 
 }
 
-inline void Register_qml_frame_instance(QQmlContext *context)
-{
-#ifdef QT_DEBUG  //传递程序的构建类型，来隐藏部分Debug调试使用的功能
-    context->setContextProperty("isDebugBuild",true);
-#else
-    context->setContextProperty("isDebugBuild",false);
-#endif
 
-    // context->setContextProperty("AppInfo",AppInfo::getInstance());
-    context->setContextProperty("SettingsHelper",SettingsHelper::getInstance());
-    // context->setContextProperty("InitializrHelper",InitializrHelper::getInstance());
-    // context->setContextProperty("TranslateHelper",TranslateHelper::getInstance());
-    // context->setContextProperty("Network",Network::getInstance());
-
-
-}
 
 
 
