@@ -25,7 +25,11 @@ Starter {
         Global.starter = starter
         Theme.darkMode = SettingsHelper.getDarkMode()
         WindowRouter.routes = {
-            "/": R.resolvedUrl("qml/window/MainWindow.qml")
+            "/": R.resolvedUrl("qml/window/MainWindow.qml"),
+            "/standardwindow": R.resolvedUrl("qml/window/StandardWindow.qml"),
+            "/singletaskwindow": R.resolvedUrl("qml/window/SingleTaskWindow.qml"),
+            "/singleinstancewindow": R.resolvedUrl("qml/window/SingleInstanceWindow.qml"),
+            "/page": R.resolvedUrl("qml/window/PageWindow.qml"),
         }
         WindowRouter.go("/")
     }

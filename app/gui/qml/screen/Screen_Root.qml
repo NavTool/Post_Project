@@ -56,6 +56,31 @@ Item{
     }
 
 
+
+    PageRouter{
+        id: dialog_router
+        routes: {
+            "/dialog/project/newproject": R.resolvedUrl("qml/dialog/Dialog_Project_NewProject.qml"),
+
+        }
+    }
+
+
+    // 用于存储多个对话框的Loader
+    HotLoader {
+        id: dialogLoader
+    }
+
+    Connections{
+        target: Global
+
+        function  onOpen_dialog(path)
+        {
+            dialogLoader.source =dialog_router.toUrl(path)
+            dialogLoader.reload()
+        }
+    }
+
     PageRouter{
         id: screen_router
         routes: {

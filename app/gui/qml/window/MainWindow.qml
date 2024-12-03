@@ -3,7 +3,6 @@ import QtQuick.Layouts
 import QtQuick.Controls
 import FluentUI.Controls
 import FluentUI.impl
-// import Frame
 import NavTool
 import Qt.labs.platform as P
 

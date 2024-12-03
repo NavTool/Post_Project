@@ -153,6 +153,10 @@ cmake_path(SET QT_SDK_DIR NORMALIZE ${QT_SDK_DIR})
 set(QML_FILES
     qml/App.qml
     qml/window/MainWindow.qml
+    qml/window/PageWindow.qml
+    qml/window/SingleInstanceWindow.qml
+    qml/window/SingleTaskWindow.qml
+    qml/window/StandardWindow.qml
     qml/screen/Screen_Root.qml
     qml/screen/Screen_Init.qml
     qml/screen/Screen_Main.qml
@@ -191,6 +195,9 @@ set(QML_FILES
     qml/page/Page_Table_Option.qml
     qml/page/Page_Table_Station.qml
     qml/page/Page_Task.qml
+    qml/page/Page_Test.qml
+
+    qml/dialog/Dialog_Project_NewProject.qml
 
     # module/plot/Eharts_Plot.qml
     qml/extra/DataGridEx.qml

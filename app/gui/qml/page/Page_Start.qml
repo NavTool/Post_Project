@@ -168,7 +168,9 @@ ScrollablePage{
                     }
 
                     onClicked:{
-                        Global.displayScreen="/screen/main"
+                        // Global.displayScreen="/screen/main"
+
+                        Global.open_dialog("/dialog/project/newproject")
                     }
                 }
 

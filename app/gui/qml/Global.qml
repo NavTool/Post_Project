@@ -81,6 +81,9 @@ QtObject {
     //顶部菜单栏
     property int navbarCurrentIndex:1   //主页面当前停留的菜单编号（从0开始），这边变量主要是为了保证当点击到文件页面后又返回的时候，能够切换回上一次选中的页面
 
+    //打开对话框（发送信号，在Screen_Root中监听这个信号，并打开相应的Dialog
+    signal open_dialog(string path)
+
     //主页页面可视控制
     property bool visable_header:true  //顶部菜单栏可视（顶部的那一排功能（文件、开始...））
     property bool visable_header_extra:true  //顶部菜单栏可视控制（顶部的具体功能页）
@@ -127,6 +130,9 @@ QtObject {
             visable_mid_side=false
         }
     }
+
+
+
 
 
 }

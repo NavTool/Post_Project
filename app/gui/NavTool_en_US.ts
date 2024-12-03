@@ -105,90 +105,138 @@
     </message>
 </context>
 <context>
+    <name>Dialog_Project_NewProject</name>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="25"/>
+        <source>新建工程</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="39"/>
+        <source>工程设置</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="46"/>
+        <source>工程名称:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="77"/>
+        <source>工程路径:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="128"/>
+        <source>工程信息</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="134"/>
+        <source>时区设置:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="175"/>
+        <source>坐标系统:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="192"/>
+        <source>采集日期:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="215"/>
+        <source>工程备注:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MainWindow</name>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="38"/>
+        <location filename="qml/window/MainWindow.qml" line="37"/>
         <source>Light</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="38"/>
+        <location filename="qml/window/MainWindow.qml" line="37"/>
         <source>Dark</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="56"/>
+        <location filename="qml/window/MainWindow.qml" line="55"/>
         <source>Sticky on Top cancelled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="56"/>
-        <location filename="qml/window/MainWindow.qml" line="64"/>
+        <location filename="qml/window/MainWindow.qml" line="55"/>
+        <location filename="qml/window/MainWindow.qml" line="63"/>
         <source>Sticky on Top</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="63"/>
+        <location filename="qml/window/MainWindow.qml" line="62"/>
         <source>Dark Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="63"/>
+        <location filename="qml/window/MainWindow.qml" line="62"/>
         <source>Here you can switch to night mode.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="64"/>
+        <location filename="qml/window/MainWindow.qml" line="63"/>
         <source>From here, you can switch to the top of the window.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="91"/>
+        <location filename="qml/window/MainWindow.qml" line="90"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="162"/>
+        <location filename="qml/window/MainWindow.qml" line="161"/>
         <source>Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="169"/>
+        <location filename="qml/window/MainWindow.qml" line="168"/>
         <source>Are you sure you want to exit the program?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="174"/>
+        <location filename="qml/window/MainWindow.qml" line="173"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="180"/>
+        <location filename="qml/window/MainWindow.qml" line="179"/>
         <source>Minimize</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="182"/>
+        <location filename="qml/window/MainWindow.qml" line="181"/>
         <source>Friendly Reminder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="182"/>
+        <location filename="qml/window/MainWindow.qml" line="181"/>
         <source>FluentUI-Gallery is hidden from the tray, click on the tray to activate the window again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="188"/>
+        <location filename="qml/window/MainWindow.qml" line="187"/>
         <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="203"/>
+        <location filename="qml/window/MainWindow.qml" line="202"/>
         <source>Friendly reminder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="211"/>
+        <location filename="qml/window/MainWindow.qml" line="210"/>
         <source>The program is already running. The parameter is -&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -980,57 +1028,88 @@
     </message>
     <message>
         <location filename="qml/component/NavBar_Test.qml" line="296"/>
-        <location filename="qml/component/NavBar_Test.qml" line="311"/>
-        <source>结果输出路径</source>
+        <location filename="qml/component/NavBar_Test.qml" line="313"/>
+        <source>结果输出路径:  </source>
+        <oldsource>结果输出路径</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Test.qml" line="320"/>
-        <source>ms</source>
+        <location filename="qml/component/NavBar_Test.qml" line="322"/>
+        <source>   ms     </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Test.qml" line="325"/>
+        <location filename="qml/component/NavBar_Test.qml" line="335"/>
+        <source>文件合并类型:  </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Test.qml" line="356"/>
+        <source>数据合并规则:  </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Test.qml" line="327"/>
         <source>填充缺失历元</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Test.qml" line="333"/>
-        <source>文件合并类型</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/component/NavBar_Test.qml" line="342"/>
+        <location filename="qml/component/NavBar_Test.qml" line="346"/>
         <source>SOL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Test.qml" line="345"/>
+        <location filename="qml/component/NavBar_Test.qml" line="349"/>
         <source>GPGGA</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Test.qml" line="352"/>
-        <source>数据合并规则</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/component/NavBar_Test.qml" line="361"/>
+        <location filename="qml/component/NavBar_Test.qml" line="367"/>
         <source>自动模式</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Test.qml" line="364"/>
+        <location filename="qml/component/NavBar_Test.qml" line="370"/>
         <source>固定率优先</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Test.qml" line="367"/>
+        <location filename="qml/component/NavBar_Test.qml" line="373"/>
         <source>距离优先</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Test.qml" line="385"/>
+        <location filename="qml/component/NavBar_Test.qml" line="380"/>
+        <source>添加外部输入文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Test.qml" line="387"/>
+        <source>已添加的文件：</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Test.qml" line="418"/>
+        <source>删除</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Test.qml" line="439"/>
+        <source>添加文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Test.qml" line="447"/>
+        <source>清除文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Test.qml" line="456"/>
+        <source>执行合并</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Test.qml" line="558"/>
         <source>对话框功能</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1354,32 +1433,37 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Start.qml" line="190"/>
+        <location filename="qml/page/Page_Start.qml" line="192"/>
         <source>工程向导</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Start.qml" line="226"/>
+        <location filename="qml/page/Page_Start.qml" line="221"/>
+        <source>不创建工程</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/page/Page_Start.qml" line="258"/>
         <source>搜索</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Start.qml" line="284"/>
+        <location filename="qml/page/Page_Start.qml" line="316"/>
         <source>最近</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Start.qml" line="287"/>
+        <location filename="qml/page/Page_Start.qml" line="319"/>
         <source>已固定</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Start.qml" line="315"/>
+        <location filename="qml/page/Page_Start.qml" line="347"/>
         <source>名称</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Start.qml" line="327"/>
+        <location filename="qml/page/Page_Start.qml" line="359"/>
         <source>最后修改日期</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1984,7 +2068,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/screen/Screen_Init.qml" line="45"/>
+        <location filename="qml/screen/Screen_Init.qml" line="46"/>
+        <source>测试（正式版需移除）</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/screen/Screen_Init.qml" line="51"/>
         <source>设置</source>
         <translation type="unfinished"></translation>
     </message>

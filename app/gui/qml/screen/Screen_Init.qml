@@ -39,6 +39,12 @@ Rectangle {
         }
     ]
     property list<QtObject> originalFooterItems : [
+
+        PaneItem{
+            icon.name: FluentIcons.graph_DeveloperTools
+            key: "/start/test"
+            title: qsTr("测试（正式版需移除）")
+        },
         PaneItem{
             icon.name: FluentIcons.graph_Settings
             key: "/start/setting"
@@ -51,7 +57,8 @@ Rectangle {
             "/start/start":R.resolvedUrl("qml/page/Page_Start.qml"),
             "/start/new":R.resolvedUrl("qml/page/Page_New.qml"),
             "/start/open":R.resolvedUrl("qml/page/Page_Open.qml"),
-            "/start/setting":R.resolvedUrl("qml/page/Page_Setting.qml")
+            "/start/setting":R.resolvedUrl("qml/page/Page_Setting.qml"),
+            "/start/test":R.resolvedUrl("qml/page/Page_Test.qml")
         }
     }
 
