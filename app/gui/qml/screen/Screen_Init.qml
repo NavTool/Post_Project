@@ -18,21 +18,21 @@ Rectangle {
     property list<QtObject> originalItems : [
         PaneItem{
             key: "/start/start"
-            title: "Start"
+            title: qsTr("开始")
             icon.name: FluentIcons.graph_Home
             icon.width:30
             icon.height:30
         },
         PaneItem{
             key: "/start/new"
-            title: "New"
+            title: qsTr("新建")
             icon.name: FluentIcons.graph_Page
             icon.width:30
             icon.height:30
         },
         PaneItem{
             key: "/start/open"
-            title: "Open"
+            title: qsTr("打开")
             icon.name: FluentIcons.graph_FolderOpen
             icon.width:30
             icon.height:30
@@ -42,7 +42,7 @@ Rectangle {
         PaneItem{
             icon.name: FluentIcons.graph_Settings
             key: "/start/setting"
-            title: "Settings"
+            title: qsTr("设置")
         }
     ]
     PageRouter{

@@ -59,8 +59,8 @@ Item{
 
         Canvas {
             id: canvas   //有个bug，在Canvas里面定义的函数必须要有(ctx)参数，不然就会导致canvas不能绘制
-            anchors.fill: parent
-
+            height: parent.height
+            width:parent.width
 
             // 鼠标事件处理（包括拖动和缩放）
             MouseArea{
@@ -70,54 +70,54 @@ Item{
                 hoverEnabled: true // 允许捕获悬停事件
 
                 onWheel:(wheel)=> {
-                    var delta = wheel.angleDelta.y / 120; // 每次滚轮滚动的级别
-                    //console.log("delta",delta)
-                    if(delta>0)
-                    {
-                        root.cScale=cScale*Math.pow(1 / 2, 1 / 10)
-                    }
-                    else
-                    {
-                        root.cScale=cScale*Math.pow(2, 1 / 10)
-                    }
-                    canvas.requestPaint(); // 请求重绘
-                }
+                            var delta = wheel.angleDelta.y / 120; // 每次滚轮滚动的级别
+                            //console.log("delta",delta)
+                            if(delta>0)
+                            {
+                                root.cScale=cScale*Math.pow(1 / 2, 1 / 10)
+                            }
+                            else
+                            {
+                                root.cScale=cScale*Math.pow(2, 1 / 10)
+                            }
+                            canvas.requestPaint(); // 请求重绘
+                        }
 
                 onPressed:  (mouse)=>{
-                    dragging = true;
-                    initialX = mouse.x;
-                    initialY = mouse.y;
-                }
+                                dragging = true;
+                                initialX = mouse.x;
+                                initialY = mouse.y;
+                            }
 
                 onReleased: {
                     dragging = false;
                 }
 
                 onPositionChanged: (mouse)=>{
-                    if (dragging) {
-                        var deltaX = mouse.x - initialX;
-                        var deltaY = mouse.y - initialY;
-                        offsetX += deltaX;
-                        offsetY += deltaY;
-                        initialX = mouse.x;
-                        initialY = mouse.y;
+                                       if (dragging) {
+                                           var deltaX = mouse.x - initialX;
+                                           var deltaY = mouse.y - initialY;
+                                           offsetX += deltaX;
+                                           offsetY += deltaY;
+                                           initialX = mouse.x;
+                                           initialY = mouse.y;
 
-                        //console.log("deltaX",deltaX)
-                        //console.log("deltaY",deltaY)
+                                           //console.log("deltaX",deltaX)
+                                           //console.log("deltaY",deltaY)
 
-                        root.realCenterX-=deltaX*root.cScale
-                        root.realCenterY+=deltaY*root.cScale
+                                           root.realCenterX-=deltaX*root.cScale
+                                           root.realCenterY+=deltaY*root.cScale
 
-                        canvas.requestPaint(); // 请求重绘
-                    }
-                    else
-                    {
-                        cPixMouse.x=mouse.x.toFixed(3);
-                        cPixMouse.y=mouse.y.toFixed(3);
-                        cRealMouse.x=((root.cPixMouse.x-root.cWidth/2)*root.cScale+root.realCenterX).toFixed(3)
-                        cRealMouse.y=((root.cHeight/2- root.cPixMouse.y)*root.cScale+root.realCenterX).toFixed(3)
-                    }
-                }
+                                           canvas.requestPaint(); // 请求重绘
+                                       }
+                                       else
+                                       {
+                                           cPixMouse.x=mouse.x.toFixed(3);
+                                           cPixMouse.y=mouse.y.toFixed(3);
+                                           cRealMouse.x=((root.cPixMouse.x-root.cWidth/2)*root.cScale+root.realCenterX).toFixed(3)
+                                           cRealMouse.y=((root.cHeight/2- root.cPixMouse.y)*root.cScale+root.realCenterX).toFixed(3)
+                                       }
+                                   }
             }
 
             onPaint: {
@@ -362,6 +362,9 @@ Item{
         }
 
     }
+
+
+
     // 信息弹窗
     Rectangle {
         id: infoPopup
@@ -394,9 +397,43 @@ Item{
                                    y: Math.random() * 100000 // 随机 y 坐标
                                });
         }
-        resizeCanvas()
+
+        timer.start()  // 启动定时器  用定时器是为了解决页面执行到这一行的时候，长宽还没有指定
     }
 
+    Timer {
+            id: timer
+            interval: 100  // 0.1秒 = 100毫秒
+            repeat: false  // 不重复执行
+            onTriggered: {
+                resizeCanvas()
+                canvas.requestPaint(); // 请求重绘
+                // panel_loading.visible = false
+            }
+    }
+
+
+    // Pane{
+    //     id: panel_loading
+    //     anchors.fill: parent
+    //     ProgressRing{
+    //         anchors.centerIn: parent
+    //         indeterminate: true
+    //     }
+    //     background: Rectangle{
+    //         color: Theme.res.solidBackgroundFillColorBase
+    //     }
+    // }
+
+
+    // onCWidthChanged: {
+    //     resizeCanvas()
+    //     // canvas.requestPaint();
+    // }
+    // onCHeightChanged: {
+    //     resizeCanvas()
+    //     // canvas.requestPaint();
+    // }
 
     property int pointRadius: 5 // 点的半径
     onCRealMouseChanged: {

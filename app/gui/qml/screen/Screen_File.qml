@@ -22,43 +22,43 @@ Item{
         },
         PaneItem{
             key: "/file/start"
-            title: "Start"
+            title: qsTr("开始")//"Start"
             icon.name: FluentIcons.graph_Home
         },
         PaneItem{
             key: "/file/new"
-            title: "New"
+            title: qsTr("新建")//"New"
             icon.name: FluentIcons.graph_Page
         },
         PaneItem{
             key: "/file/open"
-            title: "Open"
+            title: qsTr("打开")//"Open"
             icon.name: FluentIcons.graph_FolderOpen
         },
         PaneItemSeparator{},
         PaneItem{
             key: "/file/info"
-            title: "Info"
+            title: qsTr("工程信息")//"Info"
             icon.name: FluentIcons.graph_Tablet
         },
         PaneItem{
             key: "/file/save"
-            title: "Save"
+            title: qsTr("保存")//"Save"
             icon.name: FluentIcons.graph_Save
         },
         PaneItem{
             key: "/file/saveas"
-            title: "Save As"
+            title: qsTr("另存为")//"Save As"
             icon.name: FluentIcons.graph_SaveAs
         },
         PaneItem{
             key: "/file/export"
-            title: "Export"
+            title: qsTr("导出")//"Export"
             icon.name: FluentIcons.graph_Export
         },
         PaneItem{
             key: "/file/close"
-            title: "Close"
+            title: qsTr("关闭")//"Close"
             icon.name: FluentIcons.graph_ChromeClose
         }
     ]
@@ -66,7 +66,7 @@ Item{
         PaneItem{
             icon.name: FluentIcons.graph_Settings
             key: "/file/setting"
-            title: "Settings"
+            title: qsTr("设置")//"Settings"
         }
     ]
     PageRouter{

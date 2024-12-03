@@ -23,39 +23,39 @@ Item{
     property list<QtObject> navbar_items : [
         PaneItem{
             key: "/"
-            title: "文件"
+            title: qsTr("文件")
         },
         PaneItem{
             key: "/navbar/start"
-            title: "开始"
+            title: qsTr("开始")
         },
         PaneItem{
             key: "/navbar/view"
-            title: "视图"
+            title: qsTr("视图")
         },
         PaneItem{
             key: "/navbar/net"
-            title: "静态网"
+            title: qsTr("静态网")
         },
         PaneItem{
             key: "/navbar/gnss"
-            title: "GNSS"
+            title: qsTr("GNSS")
         },
         PaneItem{
             key: "/navbar/ins"
-            title: "组合导航"
+            title: qsTr("组合导航")
         },
         PaneItem{
             key: "/navbar/tool"
-            title: "工具"
+            title: qsTr("工具")
         },
         PaneItem{
             key: "/navbar/about"
-            title: "关于"
+            title: qsTr("关于")
         },
         PaneItem{
             key: "/navbar/test"
-            title: "功能测试（正式版需隐藏）"
+            title: qsTr("功能测试（正式版需隐藏）")
         }
     ]
 
@@ -87,10 +87,11 @@ Item{
         id: body_midtop_router
         routes:{
             "/page/blank": R.resolvedUrl("qml/page/Page_Blank.qml"),
-            "/page/map": {url:R.resolvedUrl("qml/page/Page_Map.qml"),singleton:true},"/page/map": R.resolvedUrl("qml/page/Page_Map.qml"),//
+            "/page/map": {url:R.resolvedUrl("qml/page/Page_Map.qml"),singleton:true},//            "/page/map": R.resolvedUrl("qml/page/Page_Map.qml"),//
             "/page/table": {url:R.resolvedUrl("qml/page/Page_Table.qml"),singleton:true},
             "/page/dataspan": {url:R.resolvedUrl("qml/page/Page_DataSpan.qml"),singleton:true},
-            "/page/task": {url:R.resolvedUrl("qml/page/Page_Task.qml"),singleton:true}
+            "/page/task": {url:R.resolvedUrl("qml/page/Page_Task.qml"),singleton:true},
+            "/page/null":R.resolvedUrl("qml/page/Page_Null.qml"),
         }
     }
     //中下导航栏
@@ -494,8 +495,6 @@ Item{
                 Item {
                     clip: true
                     visible:Global.visable_mid_side
-                    // SplitView.minimumWidth: 50
-                    // SplitView.minimumHeight: 50
                     SplitView.fillWidth: true
                     SplitView.fillHeight: true
                     SplitView {
@@ -512,44 +511,108 @@ Item{
                             implicitHeight: 400
                             SplitView.fillWidth: true
                             SplitView.fillHeight: true
-                            // SplitView.maximumWidth: 400
-                            // SplitView.maximumHeight: 400
-                            // SplitView.minimumHeight: header_extra.visible?header_extra.height:0
 
 
-                            Item{
-                                anchors.fill: parent
+                            Component{
+                                id:com_page
+                                Item{}
+                            }
 
-                                Component{
-                                    id:com_page
-                                    PageRouterView{
-                                        id: midtop_panne
-                                        anchors.fill: parent
-                                        // anchors.topMargin: header_extra.visible?header_extra.height:0
-                                        router: body_midtop_router
-                                        clip: true
-
-                                        Component.onCompleted: {
-                                            body_midtop_router.go(Global.displayMidTop)
-                                        }
-
-                                        Connections{
-                                            target:Global
-                                            function onDisplayMidTopChanged(){
-                                                body_midtop_router.go(Global.displayMidTop)
-                                            }
-                                        }
+                            Component.onCompleted: {
+                                //创建一个新窗格，查找指定的key的信息
+                                for (var j = 0; j < body_midtop_info_model.count; j++) {
+                                    let item = body_midtop_info_model.get(j)
+                                    console.log(item.key)
+                                    if(Global.displayMidTop===item.key)
+                                    {
+                                        //不存在，创建一个新的auto_loader页面，页面指向这个页面，添加到tab中
+                                        tab_view.appendTab(item.key,item.icon,item.title,com_page)
+                                        tab_view.tab_nav.currentIndex=tab_view.tab_model.count-1;
+                                        return
                                     }
                                 }
 
+                                throw new Error(`updateTabView '${Global.displayMidTop}' not found!`);
+                            }
 
-                                Component.onCompleted: {
-                                    //创建一个新窗格，查找指定的key的信息
-                                    for (var j = 0; j < body_midtop_info_model.count; j++) {
-                                        let item = body_midtop_info_model.get(j)
-                                        console.log(item.key)
+                            Frame{
+                                anchors.fill: parent
+                                TabViewEx{
+                                    id:tab_view
+                                    tab_nav.height: 25
+                                    addButtonVisibility:false
+                                    tabWidthBehavior:TabViewType.SizeToContent
+                                    closeButtonVisibility:TabViewType.OnHover
+
+                                    onTab_nav_clicked:(index) => {
+                                                          let item=tab_view.tab_model.get(index)
+                                                          Global.displayMidTop=item.key
+                                                      }
+                                    onTab_close_clicked: (index) => {
+                                                             console.log(index)
+                                                             if(tab_view.tab_nav.currentIndex==index)
+                                                             {
+                                                                 if(index==0)
+                                                                 {
+                                                                     Global.displayMidTop="/page/null"
+                                                                 }
+                                                                 else
+                                                                 {
+                                                                     Global.displayMidTop=tab_view.tab_model.get(index-1).key
+                                                                 }
+                                                             }
+                                                         }
+                                }
+
+                                PageRouterView{
+                                    id: midtop_panne
+                                    anchors{
+                                        fill: parent
+                                        topMargin: 28
+                                    }
+                                    // anchors.topMargin: header_extra.visible?header_extra.height:0
+                                    router: body_midtop_router
+                                    clip: true
+
+                                    Component.onCompleted: {
+                                        console.log("init page")
+                                        body_midtop_router.go(Global.displayMidTop)
+                                    }
+
+                                    Connections{
+                                        target:Global
+                                        function onDisplayMidTopChanged(){
+                                            body_midtop_router.go(Global.displayMidTop)
+                                        }
+                                    }
+                                }
+                            }
+
+                            Connections{
+                                target:Global
+                                function onDisplayMidTopChanged(){
+                                    //从tab_view中查找是否已经存在该页面
+                                    console.log("match page: "+Global.displayMidTop)
+
+                                    for(var i=0;i<tab_view.tab_model.count;i++)
+                                    {
+                                        let item=tab_view.tab_model.get(i)
+                                        console.log("result: "+item.key)
                                         if(Global.displayMidTop===item.key)
                                         {
+                                            //存在，页面切换到页面的current_index
+                                            console.log(i)
+                                            tab_view.tab_nav.currentIndex=i;
+                                            return
+                                        }
+                                    }
+                                    console.log("find failed")
+                                    //不存在，创建一个新窗格，查找指定的key的信息
+                                    for (var j = 0; j < body_midtop_info_model.count; j++) {
+                                        let item = body_midtop_info_model.get(j)
+                                        if(Global.displayMidTop===item.key)
+                                        {
+                                            console.log("add_page:",item.key)
                                             //不存在，创建一个新的auto_loader页面，页面指向这个页面，添加到tab中
                                             tab_view.appendTab(item.key,item.icon,item.title,com_page)
                                             tab_view.tab_nav.currentIndex=tab_view.tab_model.count-1;
@@ -557,60 +620,11 @@ Item{
                                         }
                                     }
 
-                                    throw new Error(`updateTabView '${Global.displayMidTop}' not found!`);
+                                    // throw new Error(`updateTabView '${Global.displayMidTop}' not found!`);
                                 }
-
-                                Frame{
-                                    anchors.fill: parent
-                                    TabViewEx{
-                                        id:tab_view
-                                        tab_nav.height: 25
-                                        addButtonVisibility:false
-                                        tabWidthBehavior:TabViewType.SizeToContent
-                                        closeButtonVisibility:TabViewType.OnHover
-
-                                        onTab_nav_clicked:(index) => {
-                                            let item=tab_view.tab_model.get(index)
-                                            Global.displayMidTop=item.key
-                                        }
-                                    }
-                                }
-
-                                Connections{
-                                    target:Global
-                                    function onDisplayMidTopChanged(){
-                                        //从tab_view中查找是否已经存在该页面
-                                        for(var i=0;i<tab_view.tab_model.count;i++)
-                                        {
-                                            let item=tab_view.tab_model.get(i)
-                                            console.log("find exist "+Global.displayMidTop+" result "+item.key)
-                                            if(Global.displayMidTop===item.key)
-                                            {
-                                                //存在，页面切换到页面的current_index
-                                                console.log(i)
-                                                tab_view.tab_nav.currentIndex=i;
-                                                return
-                                            }
-                                        }
-
-                                        //不存在，创建一个新窗格，查找指定的key的信息
-                                        for (var j = 0; j < body_midtop_info_model.count; j++) {
-                                            let item = body_midtop_info_model.get(j)
-                                            console.log(item.key)
-                                            if(Global.displayMidTop===item.key)
-                                            {
-                                                //不存在，创建一个新的auto_loader页面，页面指向这个页面，添加到tab中
-                                                tab_view.appendTab(item.key,item.icon,item.title,com_page)
-                                                tab_view.tab_nav.currentIndex=tab_view.tab_model.count-1;
-                                                return
-                                            }
-                                        }
-
-                                        throw new Error(`updateTabView '${Global.displayMidTop}' not found!`);
-                                    }
-                                }
-
                             }
+
+
 
 
                             // PageRouterView{
@@ -632,9 +646,6 @@ Item{
                             //     }
 
                             // }
-
-
-
 
                         }
 

@@ -14,7 +14,7 @@ Item {
     property alias tab_model:tab_model
     property alias tab_nav:tab_nav
     signal tab_nav_clicked(int index)
-
+    signal tab_close_clicked(int index)
     signal newPressed
     id:control
     implicitHeight: height
@@ -200,7 +200,9 @@ Item {
                         verticalCenter: parent.verticalCenter
                     }
                     onClicked: {
+                        tab_close_clicked(index)
                         tab_model.remove(index)
+
                     }
                 }
                 Rectangle{

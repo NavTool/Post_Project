@@ -179,6 +179,7 @@ set(QML_FILES
     qml/page/Page_Home.qml
     qml/page/Page_Map.qml
     qml/page/Page_New.qml
+    qml/page/Page_Null.qml
     qml/page/Page_Open.qml
     qml/page/Page_Setting.qml
     qml/page/Page_Start.qml
