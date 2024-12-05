@@ -34,7 +34,7 @@ FramelessWindow {
                 icon.height: 14
                 icon.name: Theme.dark ? FluentIcons.graph_Brightness : FluentIcons.graph_QuietHours
                 ToolTip.visible: hovered
-                ToolTip.text: Theme.dark ? qsTr("Light") : qsTr("Dark")
+                ToolTip.text: Theme.dark ? qsTr("浅色模式") : qsTr("夜间模式")//qsTr("Light") : qsTr("Dark")
                 ToolTip.delay: Theme.toolbarDelay
                 onClicked: handleDarkChanged(this)
             }
@@ -158,33 +158,34 @@ FramelessWindow {
         y: Math.ceil((parent.height - height) / 2)
         parent: Overlay.overlay
         modal: true
-        title: qsTr("Quit")
+        title: qsTr("退出")//qsTr("Quit")
         Column {
             spacing: 20
             anchors.fill: parent
             Label {
                 width: 300
                 wrapMode: Text.WrapAnywhere
-                text: qsTr("Are you sure you want to exit the program?")
+                text: qsTr("是否要关闭程序?")//qsTr("Are you sure you want to exit the program?")
             }
         }
         footer: DialogButtonBox{
             Button{
-                text: qsTr("Cancel")
+                text: qsTr("取消")//qsTr("Cancel")
                 onClicked: {
                     dialog_close.close()
                 }
             }
             Button{
-                text: qsTr("Minimize")
+                text: qsTr("最小化")//qsTr("Minimize")
                 onClicked: {
-                    system_tray.showMessage(qsTr("Friendly Reminder"),qsTr("FluentUI-Gallery is hidden from the tray, click on the tray to activate the window again"));
+                    //system_tray.showMessage(qsTr("Friendly Reminder"),qsTr("NavTool is hidden from the tray, click on the tray to activate the window again"));
+                    system_tray.showMessage(qsTr("友情提示"),qsTr("软件已最小化，可点击状态栏图标显示程序"));
                     window.hide()
                     dialog_close.close()
                 }
             }
             Button{
-                text: qsTr("Ok")
+                text: qsTr("确定")//qsTr("Ok")
                 highlighted: true
                 onClicked: {
                     WindowRouter.exit(0)
@@ -199,7 +200,7 @@ FramelessWindow {
         y: Math.ceil((parent.height - height) / 2)
         parent: Overlay.overlay
         modal: true
-        title: qsTr("Friendly reminder")
+        title:  qsTr("友情提示")//qsTr("Friendly reminder")
         standardButtons: Dialog.Yes
         Column {
             spacing: 20
@@ -207,7 +208,7 @@ FramelessWindow {
             Label {
                 width: 300
                 wrapMode: Text.WrapAnywhere
-                text: qsTr("The program is already running. The parameter is ->")+dialog_program_already.argsText
+                text:  qsTr("程序已运行, 程序名：->")+dialog_program_already.argsText//qsTr("The program is already running. The parameter is ->")+dialog_program_already.argsText
             }
         }
     }

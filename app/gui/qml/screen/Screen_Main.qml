@@ -202,10 +202,10 @@ Item{
 
             onCheckedChanged:{
                 if(checked){
-                    info_manager_top.show(InfoBarType.Success,qsTr("AutoSave is Turn On!"))
+                    tip_top.show(InfoBarType.Success,qsTr("AutoSave is Turn On!"))
                 }
                 else{
-                    info_manager_top.show(InfoBarType.Info,qsTr("AutoSave is Turn Off!"))
+                    tip_top.show(InfoBarType.Info,qsTr("AutoSave is Turn Off!"))
                 }
             }
 
@@ -223,7 +223,7 @@ Item{
             display: IconButton.IconOnly
 
             onClicked:{
-                info_manager_top.show(InfoBarType.Success,qsTr("The project has been saved!"))
+                tip_top.show(InfoBarType.Success,qsTr("The project has been saved!"))
             }
 
             ToolTip.visible: hovered

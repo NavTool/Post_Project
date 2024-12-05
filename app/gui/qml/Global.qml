@@ -133,6 +133,9 @@ QtObject {
 
 
 
+    property bool mapPageOption_Draw_Grid:true
+
+
 
 
 }

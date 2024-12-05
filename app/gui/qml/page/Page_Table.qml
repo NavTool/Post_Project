@@ -50,9 +50,9 @@ Frame{
         id: page_router
         routes: {
             "/page/table/station":{url: R.resolvedUrl("qml/page/Page_Table_Station.qml"),singleton:true},
-            "/page/table/obsfile":{url: R.resolvedUrl("qml/page/Page_Table_ObsFile.qml"),singleton:true},
+            "/page/table/obsfile":{url: R.resolvedUrl("qml/page/Page_Table_Obsfile.qml"),singleton:true},
             "/page/table/baseline":{url: R.resolvedUrl("qml/page/Page_Table_Baseline.qml"),singleton:true},
-            "/page/table/closeloop":{url: R.resolvedUrl("qml/page/Page_Table_CloseLoop.qml"),singleton:true},
+            "/page/table/closeloop":{url: R.resolvedUrl("qml/page/Page_Table_Closeloop.qml"),singleton:true},
             "/page/table/check":{url: R.resolvedUrl("qml/page/Page_Table_Check.qml"),singleton:true},
             "/page/table/option":{url: R.resolvedUrl("qml/page/Page_Table_Option.qml"),singleton:true}
         }

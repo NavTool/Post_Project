@@ -61,7 +61,7 @@ Item{
                                     display: IconButton.TextUnderIcon
 
                                     onClicked: {
-                                        info_manager_bottomright.showCustom(com_custom,10000)
+                                        tip_bottomright.showCustom(com_custom,10000)
                                     }
 
                                     Component{
@@ -106,16 +106,16 @@ Item{
                                         iter=iter%4;
                                         switch (iter) {
                                         case 0:
-                                            info_manager_top.show(InfoBarType.Info,qsTr("工程保存中..."))
+                                            tip_top.show(InfoBarType.Info,qsTr("工程保存中..."))
                                             break;
                                         case 1:
-                                            info_manager_top.show(InfoBarType.Success,qsTr("工程保存成功！"))
+                                            tip_top.show(InfoBarType.Success,qsTr("工程保存成功！"))
                                             break;
                                         case 2:
-                                            info_manager_top.show(InfoBarType.Warning,qsTr("任务处理中，当前状态下无法保存，请等待处理完成或取消正在处理的任务！"),3000)
+                                            tip_top.show(InfoBarType.Warning,qsTr("任务处理中，当前状态下无法保存，请等待处理完成或取消正在处理的任务！"),3000)
                                             break;
                                         case 3:
-                                            info_manager_top.show(InfoBarType.Error,qsTr("工程保存失败！请检查存储空间已满或软件权限不足！"),3000)
+                                            tip_top.show(InfoBarType.Error,qsTr("工程保存失败！请检查存储空间已满或软件权限不足！"),3000)
                                             break;
                                         default:
                                             console.log("Default case");
@@ -142,10 +142,10 @@ Item{
                                         iter=iter%2;
                                         switch (iter) {
                                         case 0:
-                                            info_manager_top.show(InfoBarType.Success,qsTr("站点已添加！"))
+                                            tip_top.show(InfoBarType.Success,qsTr("站点已添加！"))
                                             break;
                                         case 1:
-                                            info_manager_top.show(InfoBarType.Error,qsTr("站点添加失败！请检查是否已存在同名站点！"))
+                                            tip_top.show(InfoBarType.Error,qsTr("站点添加失败！请检查是否已存在同名站点！"))
                                             break;
                                         default:
                                             console.log("Default case");
@@ -171,16 +171,16 @@ Item{
                                         iter=iter%4;
                                         switch (iter) {
                                         case 0:
-                                            info_manager_top.show(InfoBarType.Success,qsTr("文件已添加！"))
+                                            tip_top.show(InfoBarType.Success,qsTr("文件已添加！"))
                                             break;
                                         case 1:
-                                            info_manager_top.show(InfoBarType.Info,qsTr("缺少星历文件，无法进行单点定位"))
+                                            tip_top.show(InfoBarType.Info,qsTr("缺少星历文件，无法进行单点定位"))
                                             break;
                                         case 2:
-                                            info_manager_top.show(InfoBarType.Warning,qsTr("文件解析失败，请检查选择的文件格式是否正确"))
+                                            tip_top.show(InfoBarType.Warning,qsTr("文件解析失败，请检查选择的文件格式是否正确"))
                                             break;
                                         case 3:
-                                            info_manager_top.show(InfoBarType.Error,qsTr("文件添加失败，请检查文件是否移动、删除或程序权限不足！"))
+                                            tip_top.show(InfoBarType.Error,qsTr("文件添加失败，请检查文件是否移动、删除或程序权限不足！"))
                                             break;
                                         default:
                                             console.log("Default case");
@@ -207,16 +207,16 @@ Item{
                                         iter=iter%4;
                                         switch (iter) {
                                         case 0:
-                                            info_manager_bottomright.show(InfoBarType.Info,qsTr("基线B01(SHJD01-SHJD02) 处理任务已添加到队列。"))
+                                            tip_bottomright.show(InfoBarType.Info,qsTr("基线B01(SHJD01-SHJD02) 处理任务已添加到队列。"))
                                             break;
                                         case 1:
-                                            info_manager_bottomright.show(InfoBarType.Warning,qsTr("基线B01(SHJD01-SHJD02) 处理任务已开始处理。"))
+                                            tip_bottomright.show(InfoBarType.Warning,qsTr("基线B01(SHJD01-SHJD02) 处理任务已开始处理。"))
                                             break;
                                         case 2:
-                                            info_manager_bottomright.show(InfoBarType.Success,qsTr("基线B01(SHJD01-SHJD02) 处理任务处理成功！"))
+                                            tip_bottomright.show(InfoBarType.Success,qsTr("基线B01(SHJD01-SHJD02) 处理任务处理成功！"))
                                             break;
                                         case 3:
-                                            info_manager_bottomright.show(InfoBarType.Error,qsTr("基线B01(SHJD01-SHJD02) 处理任务处理失败!"))
+                                            tip_bottomright.show(InfoBarType.Error,qsTr("基线B01(SHJD01-SHJD02) 处理任务处理失败!"))
                                             break;
                                         default:
                                             console.log("Default case");

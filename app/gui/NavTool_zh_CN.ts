@@ -105,6 +105,109 @@
     </message>
 </context>
 <context>
+    <name>Dialog_Project_ImportObs</name>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="66"/>
+        <source>观测文件导入配置</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="74"/>
+        <source>导入文件管理</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="79"/>
+        <source>请检查和配置文件的类型、归属站点、以及需要配置使用星历！</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="122"/>
+        <source>Rinex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="123"/>
+        <source>RTCM3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="124"/>
+        <source>CNB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="197"/>
+        <source>静态</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="198"/>
+        <source>动态</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="310"/>
+        <source>导入文件名</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="319"/>
+        <source>文件格式</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="325"/>
+        <source>选择归属站点</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="331"/>
+        <source>站点类型</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="337"/>
+        <source>使用星历</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="344"/>
+        <source>星历格式</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="351"/>
+        <source>观测文件路径</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="356"/>
+        <source>星历文件路径</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="372"/>
+        <source>重置修改</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="376"/>
+        <source>继续添加文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="383"/>
+        <source>移除所有文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_ImportObs.qml" line="386"/>
+        <source>移除选中文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Dialog_Project_NewProject</name>
     <message>
         <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="25"/>
@@ -112,43 +215,55 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="39"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="45"/>
         <source>工程设置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="46"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="52"/>
         <source>工程名称:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="77"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="81"/>
         <source>工程路径:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="128"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="134"/>
         <source>工程信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="134"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="140"/>
         <source>时区设置:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="175"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="181"/>
         <source>坐标系统:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="192"/>
-        <source>采集日期:</source>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="198"/>
+        <source>工程日期:</source>
+        <oldsource>采集日期:</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="215"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="221"/>
         <source>工程备注:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="244"/>
+        <source>工程创建成功！</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="249"/>
+        <source>取消创建工程</source>
+        <oldsource>取消创建</oldsource>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -175,12 +290,12 @@
     </message>
     <message>
         <location filename="qml/window/MainWindow.qml" line="37"/>
-        <source>Light</source>
+        <source>浅色模式</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="qml/window/MainWindow.qml" line="37"/>
-        <source>Dark</source>
+        <source>夜间模式</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -216,47 +331,43 @@
     </message>
     <message>
         <location filename="qml/window/MainWindow.qml" line="161"/>
-        <source>Quit</source>
+        <source>退出</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="qml/window/MainWindow.qml" line="168"/>
-        <source>Are you sure you want to exit the program?</source>
+        <source>是否要关闭程序?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="qml/window/MainWindow.qml" line="173"/>
-        <source>Cancel</source>
+        <source>取消</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="qml/window/MainWindow.qml" line="179"/>
-        <source>Minimize</source>
+        <source>最小化</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="181"/>
-        <source>Friendly Reminder</source>
+        <location filename="qml/window/MainWindow.qml" line="188"/>
+        <source>确定</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="181"/>
-        <source>FluentUI-Gallery is hidden from the tray, click on the tray to activate the window again</source>
+        <location filename="qml/window/MainWindow.qml" line="182"/>
+        <location filename="qml/window/MainWindow.qml" line="203"/>
+        <source>友情提示</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="187"/>
-        <source>Ok</source>
+        <location filename="qml/window/MainWindow.qml" line="182"/>
+        <source>软件已最小化，可点击状态栏图标显示程序</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/window/MainWindow.qml" line="202"/>
-        <source>Friendly reminder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/window/MainWindow.qml" line="210"/>
-        <source>The program is already running. The parameter is -&gt;</source>
+        <location filename="qml/window/MainWindow.qml" line="211"/>
+        <source>程序已运行, 程序名：-&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -635,213 +746,238 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="87"/>
+        <location filename="qml/component/NavBar_Start.qml" line="95"/>
         <source>导入配置</source>
         <oldsource>配置</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="181"/>
+        <location filename="qml/component/NavBar_Start.qml" line="187"/>
         <source>新建站点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="221"/>
+        <location filename="qml/component/NavBar_Start.qml" line="227"/>
         <source>管理站点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="258"/>
+        <location filename="qml/component/NavBar_Start.qml" line="264"/>
         <source>编辑站点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="297"/>
+        <location filename="qml/component/NavBar_Start.qml" line="303"/>
         <source>站点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="164"/>
+        <location filename="qml/component/NavBar_Start.qml" line="170"/>
         <source>文件</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="372"/>
+        <location filename="qml/component/NavBar_Start.qml" line="386"/>
         <source>视图</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="346"/>
+        <location filename="qml/component/NavBar_Start.qml" line="360"/>
         <source>图层管理</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="406"/>
+        <location filename="qml/component/NavBar_Start.qml" line="420"/>
         <source>站点列表</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="441"/>
+        <location filename="qml/component/NavBar_Start.qml" line="455"/>
         <source>基线列表</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="422"/>
+        <location filename="qml/component/NavBar_Start.qml" line="436"/>
         <source>文件列表</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="124"/>
-        <source>基线重构</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/component/NavBar_Start.qml" line="314"/>
+        <location filename="qml/component/NavBar_Start.qml" line="320"/>
         <source>平面视图</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="331"/>
+        <location filename="qml/component/NavBar_Start.qml" line="337"/>
         <source>显示格网</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="389"/>
+        <location filename="qml/component/NavBar_Start.qml" line="403"/>
         <source>资源视图</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="492"/>
+        <location filename="qml/component/NavBar_Start.qml" line="506"/>
         <source>数据区间</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="476"/>
+        <location filename="qml/component/NavBar_Start.qml" line="490"/>
         <source>闭合环</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="71"/>
+        <location filename="qml/component/NavBar_Start.qml" line="68"/>
         <source>导入文件</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="107"/>
+        <location filename="qml/component/NavBar_Start.qml" line="70"/>
+        <source>观测数据</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Start.qml" line="78"/>
+        <source>广播星历</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Start.qml" line="81"/>
+        <source>精密星历</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Start.qml" line="86"/>
+        <source>惯导原始数据</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Start.qml" line="115"/>
         <source>导入文件配置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="145"/>
+        <location filename="qml/component/NavBar_Start.qml" line="131"/>
+        <source>导入列表</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Start.qml" line="151"/>
         <source>重新组成基线</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="204"/>
+        <location filename="qml/component/NavBar_Start.qml" line="210"/>
         <source>添加站点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="241"/>
+        <location filename="qml/component/NavBar_Start.qml" line="247"/>
         <source>管理已经添加的站点</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="278"/>
+        <location filename="qml/component/NavBar_Start.qml" line="284"/>
         <source>编辑站点的信息,使用的坐标等</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="458"/>
+        <location filename="qml/component/NavBar_Start.qml" line="337"/>
+        <source>隐藏格网</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/component/NavBar_Start.qml" line="472"/>
         <source>数据检核</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="512"/>
+        <location filename="qml/component/NavBar_Start.qml" line="526"/>
         <source>资源管理</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="530"/>
+        <location filename="qml/component/NavBar_Start.qml" line="544"/>
         <source>任务队列</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="547"/>
+        <location filename="qml/component/NavBar_Start.qml" line="561"/>
         <source>处理选项</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="567"/>
+        <location filename="qml/component/NavBar_Start.qml" line="581"/>
         <source>配置任务队列同时开启的线程等功能，是否输出日志，保存日志等选项</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="583"/>
+        <location filename="qml/component/NavBar_Start.qml" line="597"/>
         <source>状态监控</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="603"/>
+        <location filename="qml/component/NavBar_Start.qml" line="617"/>
         <source>任务管理</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="621"/>
+        <location filename="qml/component/NavBar_Start.qml" line="635"/>
         <source>工程信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="643"/>
+        <location filename="qml/component/NavBar_Start.qml" line="657"/>
         <source>展示这个工程的基本信息，工程名，中央子午线，创建日期等</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="660"/>
+        <location filename="qml/component/NavBar_Start.qml" line="674"/>
         <source>工程配置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="682"/>
+        <location filename="qml/component/NavBar_Start.qml" line="696"/>
         <source>配置工程的中央子午线坐标单位显示等</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="700"/>
+        <location filename="qml/component/NavBar_Start.qml" line="714"/>
         <source>显示配置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="721"/>
+        <location filename="qml/component/NavBar_Start.qml" line="735"/>
         <source>配置工程的显示的单位等、语言等</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="738"/>
+        <location filename="qml/component/NavBar_Start.qml" line="752"/>
         <source>存储配置</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="758"/>
+        <location filename="qml/component/NavBar_Start.qml" line="772"/>
         <source>配置工程的保存文件的选项</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="775"/>
+        <location filename="qml/component/NavBar_Start.qml" line="789"/>
         <source>保存</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="786"/>
+        <location filename="qml/component/NavBar_Start.qml" line="800"/>
         <source>导出</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="808"/>
+        <location filename="qml/component/NavBar_Start.qml" line="822"/>
         <source>将工程的数据导出的选项，可以导出基线结果，解算结果等</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/NavBar_Start.qml" line="827"/>
+        <location filename="qml/component/NavBar_Start.qml" line="841"/>
         <source>工程</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1708,165 +1844,163 @@
     </message>
 </context>
 <context>
-    <name>Page_Table_CloseLoop</name>
+    <name>Page_Table_Closeloop</name>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="111"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="111"/>
         <source>Up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="120"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="120"/>
         <source>Down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="135"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="135"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="218"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="218"/>
         <source>站点名</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="225"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="225"/>
         <source>北坐标</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="231"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="231"/>
         <source>东坐标</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="237"/>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="291"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="237"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="291"/>
         <source>高程</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="243"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="243"/>
         <source>当地经度</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="249"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="249"/>
         <source>当地纬度</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="255"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="255"/>
         <source>大地高</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="261"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="261"/>
         <source>X</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="267"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="267"/>
         <source>Y</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="273"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="273"/>
         <source>Z</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="279"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="279"/>
         <source>经度</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="285"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="285"/>
         <source>纬度</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_CloseLoop.qml" line="297"/>
+        <location filename="qml/page/Page_Table_Closeloop.qml" line="297"/>
         <source>Action</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>Page_Table_ObsFile</name>
+    <name>Page_Table_Obsfile</name>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="104"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="104"/>
         <source>文件名</source>
-        <oldsource>站点名</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="111"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="111"/>
         <source>文件类型</source>
-        <oldsource>北坐标</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="117"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="117"/>
         <source>测站</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="123"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="123"/>
         <source>开始时间</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="129"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="129"/>
         <source>结束时间</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="135"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="135"/>
         <source>时间段</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="141"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="141"/>
         <source>量测方式</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="147"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="147"/>
         <source>量测天线高</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="153"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="153"/>
         <source>天线相位中心高</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="159"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="159"/>
         <source>天线座底部高</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="165"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="165"/>
         <source>天线厂商</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="171"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="171"/>
         <source>天线类型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="177"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="177"/>
         <source>接收机/SN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="183"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="183"/>
         <source>接收机类型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_ObsFile.qml" line="189"/>
+        <location filename="qml/page/Page_Table_Obsfile.qml" line="189"/>
         <source>文件</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2406,66 +2540,66 @@
     </message>
 </context>
 <context>
-    <name>SidePage_Property_ObsFile</name>
+    <name>SidePage_Property_Obsfile</name>
     <message>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="90"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="90"/>
         <source>站点名称</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="107"/>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="184"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="107"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="184"/>
         <source>测量方式</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="113"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="113"/>
         <source>测量天线高</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="119"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="119"/>
         <source>天线高一致性补偿</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="125"/>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="196"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="125"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="196"/>
         <source>厂商</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="131"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="131"/>
         <source>天线型号</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="137"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="137"/>
         <source>天线SN号</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="155"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="155"/>
         <source>接收机/SN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="161"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="161"/>
         <source>接收机类型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="167"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="167"/>
         <source>接收机版本号</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="190"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="190"/>
         <source>天线高</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="202"/>
+        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="202"/>
         <source>天线类型</source>
         <translation type="unfinished"></translation>
     </message>

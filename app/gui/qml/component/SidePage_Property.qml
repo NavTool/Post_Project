@@ -50,7 +50,7 @@ Item{
                 id: property_router
                 routes: {
                     "/sidepage/property/blank": R.resolvedUrl("qml/component/SidePage_Blank.qml"),
-                    "/sidepage/property/obsfile":  {url:R.resolvedUrl("qml/component/SidePage_Property_ObsFile.qml"),singleton:true},
+                    "/sidepage/property/obsfile":  {url:R.resolvedUrl("qml/component/SidePage_Property_Obsfile.qml"),singleton:true},
                     "/sidepage/property/baseline":  {url:R.resolvedUrl("qml/component/SidePage_Property_Baseline.qml"),singleton:true},
                     "/sidepage/property/station":  {url:R.resolvedUrl("qml/component/SidePage_Property_Station.qml"),singleton:true}
                 }

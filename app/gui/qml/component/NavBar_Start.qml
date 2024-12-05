@@ -57,29 +57,37 @@ Item{
                                     spacing: iconbutton_spacing
                                     display: IconButton.TextUnderIcon
 
+
+
                                     onClicked: {
-                                        import_file_dialog.open()
+                                        import_menu.popup()
                                     }
-
-                                    Dialog{
-                                        id:import_file_dialog
-
-                                        x: Math.ceil((parent.width - width) / 2)
-                                        y: Math.ceil((parent.height - height) / 2)
-                                        parent: Overlay.overlay
-                                        modal: true
+                                    Menu {
+                                        id:import_menu
+                                        width: 140
                                         title: qsTr("导入文件")
-                                        standardButtons: Dialog.Yes | Dialog.No
+                                        MenuItem{
+                                            text: qsTr("观测数据")
+                                            onTriggered: {
 
-                                        width: 600
-                                        contentHeight: 300
-                                        Frame{
-                                            anchors.fill: parent
+                                            Global.open_dialog("/dialog/project/import_obs")
+                                            }
                                         }
-                                        Component.onCompleted:
-                                        {
-                                            // open()
+                                        MenuSeparator { }
+                                        MenuItem{
+                                            text: qsTr("广播星历")
                                         }
+                                        MenuItem{
+                                            text: qsTr("精密星历")
+                                            enabled: false
+                                        }
+                                        MenuSeparator { }
+                                        MenuItem{
+                                            text: qsTr("惯导原始数据")
+                                            enabled: false
+                                        }
+
+
                                     }
                                 }
                                 Column {
@@ -117,11 +125,10 @@ Item{
                                                 // open()
                                             }
                                         }
-
                                     }
 
                                     IconButton {
-                                        text: qsTr("基线重构")
+                                        text: qsTr("导入列表")
                                         // width: iconbutton_width
                                         // height: function_height.height*0.4// 半高按钮的高度
 
@@ -129,7 +136,6 @@ Item{
                                         icon.width: iconbutton_size*0.8
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
-
 
                                         onClicked: {
                                             baseline_refresh_dialog.open()
@@ -328,7 +334,7 @@ Item{
                                 Column {
 
                                     IconButton {
-                                        text: qsTr("显示格网")
+                                        text: checked?qsTr("隐藏格网"):qsTr("显示格网")
                                         // width: iconbutton_width
                                         // height: function_height.height*0.4// 半高按钮的高度
 
@@ -337,9 +343,17 @@ Item{
                                         icon.height: iconbutton_size*0.8
                                         spacing: 5
 
-                                        highlighted: checked
+                                        // highlighted: checked
                                         checked: false
                                         checkable: true
+
+                                        onClicked: {
+                                            Global.mapPageOption_Draw_Grid=checked
+                                        }
+
+                                        Component.onCompleted: {
+                                            checked=  Global.mapPageOption_Draw_Grid
+                                        }
                                     }
 
                                     IconButton {

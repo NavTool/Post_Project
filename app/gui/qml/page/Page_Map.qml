@@ -44,6 +44,23 @@ Item{
     property real initialY: 0
 
 
+    //一些开关设置
+    property bool draw_grid:Global.mapPageOption_Draw_Grid
+
+    onDraw_gridChanged: {
+        canvas.requestPaint()
+    }
+
+    // Connections{
+    //     target: Global
+
+    //     function onMapPageOption_Draw_GridChanged(){
+
+    //     }
+
+    // }
+
+
 
     Frame{
         id:map_main
@@ -127,7 +144,12 @@ Item{
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
                 // // 绘制格网线
-                drawGridLine(ctx)
+                if(root.draw_grid)
+                {
+                    drawGridLine(ctx)
+                }
+
+
 
                 // 绘制中心十字
                 drawCenter(ctx)
@@ -402,14 +424,14 @@ Item{
     }
 
     Timer {
-            id: timer
-            interval: 100  // 0.1秒 = 100毫秒
-            repeat: false  // 不重复执行
-            onTriggered: {
-                resizeCanvas()
-                canvas.requestPaint(); // 请求重绘
-                // panel_loading.visible = false
-            }
+        id: timer
+        interval: 100  // 0.1秒 = 100毫秒
+        repeat: false  // 不重复执行
+        onTriggered: {
+            resizeCanvas()
+            canvas.requestPaint(); // 请求重绘
+            // panel_loading.visible = false
+        }
     }
 
 

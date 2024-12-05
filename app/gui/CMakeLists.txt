@@ -173,7 +173,7 @@ set(QML_FILES
     qml/component/SidePage_Log.qml
     qml/component/SidePage_Property.qml
     qml/component/SidePage_Property_Baseline.qml
-    qml/component/SidePage_Property_ObsFile.qml
+    qml/component/SidePage_Property_Obsfile.qml
     qml/component/SidePage_Property_Station.qml
     qml/component/SidePage_Resource.qml
     qml/component/SidePage_Status.qml
@@ -190,14 +190,23 @@ set(QML_FILES
     qml/page/Page_Table.qml
     qml/page/Page_Table_Baseline.qml
     qml/page/Page_Table_Check.qml
-    qml/page/Page_Table_CloseLoop.qml
-    qml/page/Page_Table_ObsFile.qml
+    qml/page/Page_Table_Closeloop.qml
+    qml/page/Page_Table_Obsfile.qml
     qml/page/Page_Table_Option.qml
     qml/page/Page_Table_Station.qml
     qml/page/Page_Task.qml
     qml/page/Page_Test.qml
 
+    qml/dialog/Dialog_Project_ImportIMU.qml
+    qml/dialog/Dialog_Project_ImportList.qml
+    qml/dialog/Dialog_Project_ImportNav.qml
+    qml/dialog/Dialog_Project_ImportObs.qml
+    qml/dialog/Dialog_Project_ImportSetting.qml
+    qml/dialog/Dialog_Project_ImportSp3.qml
     qml/dialog/Dialog_Project_NewProject.qml
+    qml/dialog/Dialog_Project_StationEdit.qml
+    qml/dialog/Dialog_Project_StationList.qml
+    qml/dialog/Dialog_Project_StationNew.qml
 
     # module/plot/Eharts_Plot.qml
     qml/extra/DataGridEx.qml

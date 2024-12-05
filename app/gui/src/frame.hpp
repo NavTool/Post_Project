@@ -5,6 +5,9 @@
 #include "AppInfo.h"
 
 
+#include <QObject>
+#include <QtQml>
+
 
 inline void Register_qml_frame_define(QQmlContext *context)
 {
@@ -31,6 +34,43 @@ inline void Register_qml_frame_define(QQmlContext *context)
     context->setContextProperty("SUPPORT_COPYRIGHT",SUPPORT_COPYRIGHT);
 
 }
+
+
+class DefFileFormat: public QObject {
+    Q_OBJECT
+    QML_ELEMENT
+public:
+    enum FileFormat {
+        RINEX = 0x0000,
+        RTCM3 = 0x0001,
+        CNB = 0x0002,
+        UNKNOWN=0x00004,
+    };
+
+    Q_DECLARE_FLAGS(FileFormats, FileFormat)
+    Q_FLAG(FileFormats)
+
+};
+
+class DefStationType: public QObject {
+    Q_OBJECT
+    QML_ELEMENT
+public:
+
+    enum StationType {
+        Dynamic = 0x0000,
+        Static = 0x0001,
+    };
+
+    Q_DECLARE_FLAGS(StationTypes, StationType)
+    Q_FLAG(StationType)
+
+};
+
+
+
+
+
 
 
 

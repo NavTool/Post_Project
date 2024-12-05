@@ -22,6 +22,8 @@ private:
 
     // Q_PROPERTY_AUTO(QList<QVariantMap>, task_map)
 
+    Q_PROPERTY_READONLY_AUTO(QString, project_name)
+
     QML_SINGLETON
     QML_ELEMENT
 public:
