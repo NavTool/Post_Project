@@ -63,8 +63,10 @@ include_directories(NavCore  ${JSON_INCLUDE_PATH})
 
 #静态库
 set(CORE_SOURCES
-   include/Project.h
-   src/Project.cpp
+   include/Project.h src/Project.cpp
+   include/Command.h src/Command.cpp
+   include/Command_Pattern.h
+
 )
 add_library(NavCore STATIC ${CORE_SOURCES})
 target_include_directories(NavCore PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)

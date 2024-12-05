@@ -249,9 +249,7 @@ Item{
             tip_top.show(InfoBarType.Info,qsTr("取消创建工程"))
             // Global.displayScreen="/screen/main"
         }
-
     }
-
 
 
     Component.onCompleted:
