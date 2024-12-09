@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 
-project(NavTool)
+project(CompassSolution)
 
 #版本14以下可能会导致abseil不支持
 set(CMAKE_CXX_STANDARD 20)
@@ -30,7 +30,7 @@ message("Universal build FluentUI for macOS: ${FLUENTUI_UNIVERSAL_BUILD_MACOS}")
 message("------------------------------------------------------------------")
 
 option(HOTLOAD_ENABLED "Enable hot reload" OFF)
-message("---------------------------- NavTool ----------------------------")
+message("---------------------------- CompassSolution ----------------------------")
 message("Enable hot reload: ${HOTLOAD_ENABLED}")
 message("------------------------------------------------------------------")
 

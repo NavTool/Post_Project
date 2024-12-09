@@ -26,19 +26,19 @@
 #define BUILD_COMPILER_VERSION "@QT_COMPILER_VERSION@"    // 编译器版本
 
 // 支持信息
-#define SUPPORT_DEVELOPER "NavTool"                                  // 开发组织
-#define SUPPORT_OFFICIAL_DOMAIN "https://github.com/NavTool"         // 官方网站
-#define SUPPORT_PROJECT_DOMAIN "https://github.com/NavTool/NavTool"  // 项目网站
-#define SUPPORT_FEEDBACK "https://github.com/NavTool"                // 反馈
-#define SUPPORT_COPYRIGHT "\u00A9 2024 NavTool's Lab. All rights reserved." //
+#define SUPPORT_DEVELOPER "CompassSolution"                                  // 开发组织
+#define SUPPORT_OFFICIAL_DOMAIN "https://github.com/CompassSolution"         // 官方网站
+#define SUPPORT_PROJECT_DOMAIN "https://github.com/CompassSolution/CompassSolution"  // 项目网站
+#define SUPPORT_FEEDBACK "https://github.com/CompassSolution"                // 反馈
+#define SUPPORT_COPYRIGHT "\u00A9 2024 CompassSolution's Lab. All rights reserved." //
 
 
 
 //// 这些是用来设置程序的基本信息的（QGuiApplication::setxxxxx）（不暴露给界面）
 // 图形化程序相关信息
-#define EXE_APPLICATION_NAME "NavTool"                       // 应用程序名
-#define EXE_APPLICATION_DISPLAY_NAME "NavTool"               // 应用程序显示名
+#define EXE_APPLICATION_NAME "CompassSolution"                       // 应用程序名
+#define EXE_APPLICATION_DISPLAY_NAME "CompassSolution"               // 应用程序显示名
 #define EXE_APPLICATION_VERSION "@PROJECT_VERSION@"          // 应用程序版本
-#define EXE_ORGANIZATION_NAME "NavTool"                      // 组织名称
-#define EXE_ORGANIZATION_DOMAIN "https://github.com/NavTool" // 组织域名
+#define EXE_ORGANIZATION_NAME "CompassSolution"                      // 组织名称
+#define EXE_ORGANIZATION_DOMAIN "https://github.com/CompassSolution" // 组织域名
 #define EXE_APPLICATION_CDESCRIPTION "A Navigation Tool"

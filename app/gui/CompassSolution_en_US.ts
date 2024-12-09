@@ -1928,163 +1928,163 @@
     </message>
 </context>
 <context>
-    <name>Page_Table_Closeloop</name>
+    <name>Page_Table_CloseLoop</name>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="111"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="111"/>
         <source>Up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="120"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="120"/>
         <source>Down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="135"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="135"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="218"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="218"/>
         <source>站点名</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="225"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="225"/>
         <source>北坐标</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="231"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="231"/>
         <source>东坐标</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="237"/>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="291"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="237"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="291"/>
         <source>高程</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="243"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="243"/>
         <source>当地经度</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="249"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="249"/>
         <source>当地纬度</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="255"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="255"/>
         <source>大地高</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="261"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="261"/>
         <source>X</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="267"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="267"/>
         <source>Y</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="273"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="273"/>
         <source>Z</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="279"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="279"/>
         <source>经度</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="285"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="285"/>
         <source>纬度</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Closeloop.qml" line="297"/>
+        <location filename="qml/page/Page_Table_CloseLoop.qml" line="297"/>
         <source>Action</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>Page_Table_Obsfile</name>
+    <name>Page_Table_ObsFile</name>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="104"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="104"/>
         <source>文件名</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="111"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="111"/>
         <source>文件类型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="117"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="117"/>
         <source>测站</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="123"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="123"/>
         <source>开始时间</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="129"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="129"/>
         <source>结束时间</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="135"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="135"/>
         <source>时间段</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="141"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="141"/>
         <source>量测方式</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="147"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="147"/>
         <source>量测天线高</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="153"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="153"/>
         <source>天线相位中心高</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="159"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="159"/>
         <source>天线座底部高</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="165"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="165"/>
         <source>天线厂商</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="171"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="171"/>
         <source>天线类型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="177"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="177"/>
         <source>接收机/SN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="183"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="183"/>
         <source>接收机类型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/page/Page_Table_Obsfile.qml" line="189"/>
+        <location filename="qml/page/Page_Table_ObsFile.qml" line="189"/>
         <source>文件</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2624,66 +2624,66 @@
     </message>
 </context>
 <context>
-    <name>SidePage_Property_Obsfile</name>
+    <name>SidePage_Property_ObsFile</name>
     <message>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="90"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="90"/>
         <source>站点名称</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="107"/>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="184"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="107"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="184"/>
         <source>测量方式</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="113"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="113"/>
         <source>测量天线高</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="119"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="119"/>
         <source>天线高一致性补偿</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="125"/>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="196"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="125"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="196"/>
         <source>厂商</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="131"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="131"/>
         <source>天线型号</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="137"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="137"/>
         <source>天线SN号</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="155"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="155"/>
         <source>接收机/SN</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="161"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="161"/>
         <source>接收机类型</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="167"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="167"/>
         <source>接收机版本号</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="190"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="190"/>
         <source>天线高</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/component/SidePage_Property_Obsfile.qml" line="202"/>
+        <location filename="qml/component/SidePage_Property_ObsFile.qml" line="202"/>
         <source>天线类型</source>
         <translation type="unfinished"></translation>
     </message>

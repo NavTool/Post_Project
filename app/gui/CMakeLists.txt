@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 
-project(NavTool)
+project(CompassSolution)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -8,10 +8,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # -------------------------设置软件基本信息-------------------------------------------------
 # 设置可执行程序名称
-set(PROJECT_APP_NAME "NavTool")
-set(PROJECT_COMPANY "NavTool")
-set(PROJECT_COPYRIGHT "Copyright (c) 2024 NavTool's Lab. All rights reserved.")
-set(PROJECT_DOMAIN "https://github.com/NavTool/NavTool")
+set(PROJECT_APP_NAME "CompassSolution")
+set(PROJECT_COMPANY "CompassSolution")
+set(PROJECT_COPYRIGHT "Copyright (c) 2024 CompassSolution's Lab. All rights reserved.")
+set(PROJECT_DOMAIN "https://github.com/CompassSolution/CompassSolution")
 set(PROJECT_DESCRIPTION "A Navigation Tool")
 
 # 设置编构建时间
@@ -245,8 +245,8 @@ set(RESOURCES_FILES
     res/image/bg_scenic.webp
     res/image/ic_folder.png
     res/image/ic_file_text.png
-    NavTool_zh_CN.qm
-    NavTool_en_US.qm
+    CompassSolution_zh_CN.qm
+    CompassSolution_en_US.qm
     # module/plot/echarts.js
     # module/plot/echart_dev.html
 
