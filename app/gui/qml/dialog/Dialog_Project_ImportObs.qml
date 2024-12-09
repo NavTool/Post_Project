@@ -273,7 +273,7 @@ Item{
                                     ]
 
                                     onAccepted: {
-                                        var ephpath= toAbsolutePath(selectedFile.toString())
+                                        var ephpath= Util.toAbsolutePath(selectedFile.toString())
                                         var ephname= ephpath.split('/').pop()
                                         eph_model.insert(0,{eph_name:ephname,eph_path:ephpath})
                                         rowModel.eph_name=ephpath
@@ -298,7 +298,7 @@ Item{
 
                         sourceModel: dataModel
                         onRowClicked:(model)=>{
-                                         console.debug("Choose Item:",safeStringify(model))
+                                         console.debug("Choose Item:",Util.safeStringify(model))
 
                                      }
                         onRowRightClicked:(model)=>{
@@ -404,7 +404,7 @@ Item{
             var file_path=""                                    //文件路径
             var eph_path="";                                     //星历路径
 
-            file_path=toAbsolutePath(filepath)
+            file_path=Util.toAbsolutePath(filepath)
             file_name=filepath.split('/').pop()
             station_name=file_name.replace(/\.[^/]+$/, '') // 去除扩展名
 
@@ -454,7 +454,11 @@ Item{
             //     ephpath=""
             // }
 
+            var   IDC=Project_Qt.generate_UniqueKey()
+
+            console.log("IDC",IDC)
             var item={
+
                 file_name: file_name,
                 file_format:file_format,
                 station_name:station_name,
@@ -505,38 +509,38 @@ Item{
 
 
 
-    function toAbsolutePath(fileUrl) {
-        var path = fileUrl;
+    // function toAbsolutePath(fileUrl) {
+    //     var path = fileUrl;
 
-        // Remove the "file://" prefix
-        if (fileUrl.startsWith("file://")) {
-            path = fileUrl.replace("file://", "");
+    //     // Remove the "file://" prefix
+    //     if (fileUrl.startsWith("file://")) {
+    //         path = fileUrl.replace("file://", "");
 
-            // Windows-specific adjustment
-            if (Qt.platform.os === "windows") {
-                // On Windows, paths after "file://" may start with a drive letter (e.g., "C:/")
-                // In this case, an additional slash might be present (e.g., "file:///C:/path")
-                if (path.length > 3 && path.charAt(2) === ':') {
-                    path = path.substring(1); // Remove the leading slash before "C:/"
-                }
-            }
-        }
-        return path;
-    }
+    //         // Windows-specific adjustment
+    //         if (Qt.platform.os === "windows") {
+    //             // On Windows, paths after "file://" may start with a drive letter (e.g., "C:/")
+    //             // In this case, an additional slash might be present (e.g., "file:///C:/path")
+    //             if (path.length > 3 && path.charAt(2) === ':') {
+    //                 path = path.substring(1); // Remove the leading slash before "C:/"
+    //             }
+    //         }
+    //     }
+    //     return path;
+    // }
 
-    function safeStringify(obj, space = 2) {
-        const seen = new WeakSet();
+    // function Util.safeStringify(obj, space = 2) {
+    //     const seen = new WeakSet();
 
-        return JSON.stringify(obj, (key, value) => {
-                                  if (typeof value === 'object' && value !== null) {
-                                      // 检查循环引用
-                                      if (seen.has(value)) {
-                                          return; // 返回 undefined 会跳过该属性
-                                      }
-                                      seen.add(value);
-                                  }
-                                  return value;
-                              }, space);
-    }
+    //     return JSON.stringify(obj, (key, value) => {
+    //                               if (typeof value === 'object' && value !== null) {
+    //                                   // 检查循环引用
+    //                                   if (seen.has(value)) {
+    //                                       return; // 返回 undefined 会跳过该属性
+    //                                   }
+    //                                   seen.add(value);
+    //                               }
+    //                               return value;
+    //                           }, space);
+    // }
 
 }

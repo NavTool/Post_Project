@@ -4,13 +4,17 @@
 
 
 
+void Project_Qt::setInstance(void *prt)
+{
+
+}
+
 std::shared_ptr<Project_Qt> Project_Qt::getInstance() {
     // 在此处确保 g_project 指向 Project_Qt 类型的实例
     if (!g_project) {
         g_project = std::make_shared<Project_Qt>();
     }
-
-           // 使用 dynamic_pointer_cast 将 g_project 转换为 std::shared_ptr<Project_Qt>
+      // 使用 dynamic_pointer_cast 将 g_project 转换为 std::shared_ptr<Project_Qt>
     return std::dynamic_pointer_cast<Project_Qt>(g_project);
 }
 
@@ -181,7 +185,7 @@ bool Project_Qt::Load_Obs_Files(QList<QVariantMap> obslist)
     return true;
 }
 
-QString Project_Qt::Generate_UniqueKey(int key_length)
+QString Project_Qt::generate_UniqueKey(int key_length)
 {
     std::string new_key;
 

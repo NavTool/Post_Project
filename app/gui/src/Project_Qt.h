@@ -12,9 +12,10 @@ class Project_Qt: public QObject,public Project_CPP
 {
 private:
     Q_OBJECT
-    //QML_SINGLETON   //因为需要返回唯一实例，让基类和此派生类都能使用，因此，不能直接用QML的单例宏定义来实现注册到QML中，而是需要在主函数中手动注册
+    QML_SINGLETON   //因为需要返回唯一实例，让基类和此派生类都能使用，因此，不能直接用QML的单例宏定义来实现注册到QML中，而是需要在主函数中手动注册
     QML_ELEMENT
 public:
+    static void setInstance(void* prt);
     static std::shared_ptr<Project_Qt> getInstance();//返回唯一实例，这个实例和基类是一个实例，因此必须先于基类的getInstance()调用
 
     explicit Project_Qt(QObject *parent = nullptr);
@@ -94,7 +95,7 @@ public:
 
 public:
     //-------------随机键值生成器，用于给每个文件、测站、基线、结果生成唯一的key值-------------------
-    Q_INVOKABLE QString Generate_UniqueKey(int key_length=4);
+    Q_INVOKABLE QString generate_UniqueKey(int key_length=4);
 private:
     bool init_unique_generator();//从文件中读取已经生成的键值，保证唯一性
     bool save_unique_generator();//将键值保存到文件中

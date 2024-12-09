@@ -51,11 +51,17 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    engine.rootContext()->setContextProperty("Project_Qt",Project_Qt::getInstance().get());
+    engine.rootContext()->setContextProperty("",Project_Qt::getInstance().get());
+
+    // qmlRegisterSingletonType<Project_Qt>("NavTool", 1, 0, "Project_Qt", [](QQmlEngine *engine, QJSEngine *scriptEngine) -> QObject* {
+    //    return  Project_Qt::getInstance().get();  // 单例实例
+    // });
 
     Register_qml_frame_define(engine.rootContext());//注册宏定义、枚举类型到qml中
 
-
+    // qmlRegisterSingletonType<Project_Qt>("NavTool", 1, 0, "Project_Qt", [](QQmlEngine*, QJSEngine*) -> QObject* {
+    //     Project_Qt::getInstance();
+    // });
 
     engine.addImportPath(":/qt/qml");
 
@@ -72,6 +78,14 @@ int main(int argc, char *argv[])
         Qt::QueuedConnection);
 
     engine.load(url);
+
+
+    QObject *project_qt_obj = engine.rootObjects().first()->findChild<QObject*>("Project_Qt");
+
+    Project_CPP *base1Pointer = qobject_cast<Project_Qt*>(project_qt_obj);
+
+
+
 
     const int exec = QGuiApplication::exec();
 

@@ -100,31 +100,14 @@ Item{
 
                             onAccepted: {
                                 console.log(selectedFolder)
-                                project_create_path.text=toAbsolutePath(selectedFolder.toString())
+                                project_create_path.text=Util.toAbsolutePath(selectedFolder.toString())
                             }
 
-                            function toAbsolutePath(fileUrl) {
-                                var path = fileUrl;
-                                // Remove the "file://" prefix
-                                if (fileUrl.startsWith("file://")) {
-                                    path = fileUrl.replace("file://", "");
 
-                                    // Windows-specific adjustment
-                                    if (Qt.platform.os === "windows") {
-                                        // On Windows, paths after "file://" may start with a drive letter (e.g., "C:/")
-                                        // In this case, an additional slash might be present (e.g., "file:///C:/path")
-                                        if (path.length > 3 && path.charAt(2) === ':') {
-                                            path = path.substring(1); // Remove the leading slash before "C:/"
-                                        }
-                                    }
-                                }
-
-                                return path;
-                            }
 
                             Component.onCompleted: {
                                 console.log(currentFolder)
-                                project_create_path.text=toAbsolutePath(currentFolder.toString())
+                                project_create_path.text=Util.toAbsolutePath(currentFolder.toString())
                             }
                         }
                     }

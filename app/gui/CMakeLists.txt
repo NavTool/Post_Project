@@ -219,6 +219,7 @@ set(QML_FILES
 # qml单例对象
 set(QML_SINGLETONS
     qml/Global.qml
+    qml/Util.qml
 )
 
 set(RESOURCES_FILES

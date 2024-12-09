@@ -230,40 +230,143 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="134"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="117"/>
         <source>工程信息</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="140"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="123"/>
         <source>时区设置:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="181"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="164"/>
         <source>坐标系统:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="198"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="181"/>
         <source>工程日期:</source>
         <oldsource>采集日期:</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="221"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="204"/>
         <source>工程备注:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="244"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="227"/>
         <source>工程创建成功！</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="249"/>
+        <location filename="qml/dialog/Dialog_Project_NewProject.qml" line="232"/>
         <source>取消创建工程</source>
         <oldsource>取消创建</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Dialog_Project_StationNew</name>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="30"/>
+        <source>观测文件导入配置</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="38"/>
+        <source>导入文件管理</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="43"/>
+        <source>请检查和配置文件的类型、归属站点、以及需要配置使用星历！</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="86"/>
+        <source>Rinex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="87"/>
+        <source>RTCM3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="88"/>
+        <source>CNB</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="161"/>
+        <source>静态</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="162"/>
+        <source>动态</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="274"/>
+        <source>导入文件名</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="283"/>
+        <source>文件格式</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="289"/>
+        <source>选择归属站点</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="295"/>
+        <source>站点类型</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="301"/>
+        <source>使用星历</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="308"/>
+        <source>星历格式</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="315"/>
+        <source>观测文件路径</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="320"/>
+        <source>星历文件路径</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="336"/>
+        <source>重置修改</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="340"/>
+        <source>继续添加文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="347"/>
+        <source>移除所有文件</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/dialog/Dialog_Project_StationNew.qml" line="350"/>
+        <source>移除选中文件</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
